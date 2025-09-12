@@ -127,23 +127,9 @@ La problemática es real y frecuente en Lima Metropolitana. Existe una clara dem
 
 ---
 
-## 1.3 Segmentos objetivo
+## 1.3 Segmentos Objetivo
 
-### 1.3.1 Segmento objetivo 1: Estudiantes de pregrado
-**Descripción:**  
-Los estudiantes tienen una vida agitada, una rutina dinámica y ajustada a horarios específicos. Por las mañanas muchos deben desplazarse desde sus residencias hacia sus centros de educación en poco tiempo, además de enfrentar el agobiante tráfico y las deficiencias del transporte público.  
-
-**Características:**  
-- Edad: 18 a 30 años  
-- Ubicación: Zonas urbanas, cercanas a universidades  
-- Nivel socioeconómico: Clase media  
-
-### 1.3.2 Segmento objetivo 2: Arriendatarios de bicicletas
-**Descripción:**  
-Personas que buscan obtener ingresos adicionales alquilando sus bicicletas a través de una aplicación segura y confiable. Este segmento encuentra atractivo el poder monetizar un bien que ya poseen, al mismo tiempo que contribuyen a una solución de transporte sostenible para estudiantes.  
-
-**Características:**  
-- Edad: 20 a 45 años  
-- Ubicación: Zonas urbanas con alta concentración de estudiantes  
-- Nivel socioeconómico: Clase media  
-
+| Segmento | Descripción | Características |
+|----------|-------------|-----------------|
+| **Segmento 1: Estudiantes universitarios** | Los estudiantes tienen una vida agitada, una rutina dinámica y ajustada a horarios específicos. Por las mañanas muchos deben desplazarse desde sus residencias hacia sus centros de educación en poco tiempo, además de enfrentar el agobiante tráfico y las deficiencias del transporte público. | - **Edad:** 18 a 30 años <br> - **Ubicación:** Zonas urbanas, cercanas a universidades <br> - **Nivel socioeconómico:** Clase media |
+| **Segmento 2: Arriendatarios de bicicletas** | Personas que buscan obtener ingresos adicionales alquilando sus bicicletas a través de una aplicación segura y confiable. Este segmento encuentra atractivo el poder monetizar un bien que ya poseen, al mismo tiempo que contribuyen a una solución de transporte sostenible para estudiantes. Además, buscan alquilar a gente confiable para evitar riesgos. | - **Edad:** 20 a 45 años <br> - **Ubicación:** Zonas urbanas con alta concentración de estudiantes <br> - **Nivel socioeconómico:** Clase media <br> - **Preferencias:** Alquilar a usuarios verificados y confiables |
