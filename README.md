@@ -45,7 +45,7 @@
 
 |   Versión |   Fecha   |           Autor           |               Descripción  de modificación               |
 |-----------|-----------|---------------------------|-------------------------------------------|
-|   TB1     |xx/xx/2025 |           x               |                       x                   |
+|   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones      |
 
 ## Project Report Collaboration Insights 
 
@@ -53,7 +53,7 @@
 ## Student Outcome
 | Criterio especifico                       | Acciones realizadas | Conclusiones |
 |-------------------------------------------|---------------------|--------------|
-| Actualizan conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. |                     |              |
+| Actualizan conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | Giancarlo Castañeda - TB1                   |              |
 | Reconocen la necesidad del aprendizaje permanente profesional y el desarrollo de proyectos en soluciones de software. |                     |              |
 
 
