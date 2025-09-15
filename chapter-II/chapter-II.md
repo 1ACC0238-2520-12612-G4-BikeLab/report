@@ -112,7 +112,7 @@ Nuestro modelo está pensado para crecer y transformarse junto con la comunidad.
 | US09 | Editar información de un vehículo registrado |
 | US10 | Marcar vehículo como disponible/no disponible |
 | US11 | Eliminar vehículo de la aplicación |
-| US12 | Consultar historial de alquileres de miS vehículoS |
+| US12 | Consultar historial de alquileres de mis vehículos |
 
 | EP03: Como estudiante o turista quiero buscar y reservar bicicletas/scooters disponibles, para usarlas en mis traslados. |  |
 | :---- | :---- |
