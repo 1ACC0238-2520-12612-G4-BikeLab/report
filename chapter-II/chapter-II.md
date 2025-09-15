@@ -98,6 +98,175 @@ Nuestro modelo está pensado para crecer y transformarse junto con la comunidad.
 
 ### 2.4.3. Product Backlog 
 
+
+| **Competitive Analysis Landscape** | **Escriba en el recuadro la pregunta que busca responder o el objetivo de este análisis.** |
+| :---- | :---- |
+| ¿Por qué llevar a cabo este análisis?  | Deseamos analizar a nuestros competidores para buscar en qué puntos podemos mejorar, contra que nos estamos enfrentando en el mercado y como nos distinguimos de estos |
+
+|  |  |   BikeLab|  CityBikeLima |  Grin | Lime|
+| :---- | :---- | ----- | :---- | :---- | :---- |
+| Perfil | Overview   | Plataforma P2P de micromovilidad (bicicletas y scooters) dirigida a estudiantes universitarios y propietarios de bicis/scooters. | Red de bicicletas compartidas con estaciones fijas en distintos puntos de Lima. | App de micromovilidad (scooters y bicis eléctricas) sin estaciones fijas, operó en Lima y otras ciudades de Latam | Empresa global de micromovilidad (bicis y scooters eléctricos) presente en varias ciudades del mundo |
+|  | Ventaja competitiva ¿Qué valor ofrece a los clientes? | • Modelo colaborativo: estudiantes confían más en pares. <br>• Validación con correo universitario. <br>• Uso de billeteras digitales (Yape/Plin). <br>• Pagos inmediatos a arrendadores | •Disponibilidad 24/7 en estaciones físicas distribuidas por Lima <br>• Respaldo y convenios con municipalidades <br>• Modelo institucional con infraestructura visible (estaciones) <br>• Tarifas estandarizadas, fáciles de comprender para el usuario | • Flexibilidad: scooters y bicicletas disponibles sin necesidad de estaciones <br>• Experiencia 100% digital: registro y uso rápido desde app <br>•Geolocalización en tiempo real para ubicar vehículos | • Empresa global con presencia en múltiples ciudades del mundo  <br>• Escala tecnológica avanzada (gestión de flotas, datos en tiempo real, integración con mapas)<br>•Amplio respaldo financiero e inversión en innovación  |
+| Perfil de Marketing | Mercado objetivo  | • Estudiantes <br>• Arrendatarios | • Público general urbano | • Jóvenes urbanos que buscan rapidez y conveniencia en distancias cortas | • Público urbano global (jóvenes profesionales, turistas y estudiantes) |
+|  | Estrategias de marketing | Enfoque en campus universitarios, redes sociales juveniles (TikTok, IG), embajadores estudiantiles | Publicidad institucional, alianzas con municipalidades, medios tradicionales. | Marketing digital agresivo, descuentos de lanzamiento, convenios con apps de movilidad (Cabify en algunos casos) | Estrategia global, fuerte presencia en medios digitales, sostenibilidad como narrativa de marca. |
+| Perfil de Producto | • Productos & Servicios  | Alquiler colaborativo de bicicletas y scooters (P2P), seguro, validación y pagos digitales. | Bicicletas en estaciones fijas, desbloqueo por app/tarjeta. | Scooters y bicis eléctricas con app móvil y geolocalización. | Scooters y bicis eléctricas premium, integración con transporte público en algunas ciudades. |
+|  | Precios & Costos  |  | • **Pase Diario:** S/ 4.50 <br>• **Pase Mensual:** S/ 20.25 <br>• **Pase Anual:** S/ 157.48 <br>• **Costo tras los primeros 30 min (viajes muy largos):** S/ 2.00 cada 30 min extras para minutos 31-120; S/ 7.00 por hora o fracción si se excede 120 min | • **Desbloqueo monopatín / scooter:**  S/ 1.00 <br>• **Costo por minuto de uso:** S/ 0.60/min <br>• **Plan mensual / de suscripción:** S/139.90 a S/339.90  | • **Desbloqueo:** US$1  <br>• **Tarifa por minuto** US$0.15 / minuto <br>• Promociones de lanzamiento, tarifas más bajas en horarios valle, posibles tarifas por kilometraje o zona |
+|  | Canales de distribución (Web y/o Móvil)  | App móvil (iOS/Android) | App móvil + estaciones físicas | App móvil | App móvil, integraciones con otras plataformas (ej. Google Maps)|
+| Análisis SWOT | Fortalezas | • Modelo P2P innovador que reduce costos de infraestructura <br>• Adaptable a otros dispositivos | • Respaldo institucional y convenios con municipalidades <br>• Amplia red de estaciones en zonas estratégicas <br>• Disponibilidad 24/7 y tarifas accesibles | •Flexibilidad: sin necesidad de estaciones fijas <br>• Experiencia 100% digital con app amigable  | • Presencia global en múltiples ciudades <br>• Reconocimiento de marca internacional |
+|  | Debilidades | • Startup nueva con poca tracción inicial <br>•Oferta limitada de bicicletas/scooters al inicio  <br>•Riesgo de vandalismo <br>• Recursos financieros reducidos frente a grandes competidores. | • Riesgo de vandalismo <br>• Dependencia de infraestructura física (costosa de mantener) <br>• Menor flexibilidad en comparación con apps sin estaciones | • Modelo financiero poco sostenible en LatAm. <br>• Alta dependencia de inversión externa | • Altos costos operativos y de mantenimiento <br>• Dependencia de regulaciones en cada ciudad |
+|  | Oportunidades | • Alianzas con centros educativos o cadenas de turismo <br>• Expansión a más universidades y campus <br>• Posible integración con apps de transporte o delivery | • Creciente interés en ciclovías y transporte sostenible <br>• Posibles ampliaciones de red a más distritos| • Integración con transporte público urbano <br>• Retorno al mercado con un modelo ajustado | •Expansión en ciudades de LatAm con alta congestión <br>• Alianzas con gobiernos para proyectos piloto |
+|  | Amenazas | • Regulaciones de micromovilidad poco claras en Perú <br>• Baja cultura de cuidado de bicicletas compartidas | • Cambios políticos que reduzcan apoyo municipal | • Desconfianza del usuario por problemas de seguridad vial | • Rechazo de comunidades locales por ocupación de espacio público<br>• Crisis económicas que afectan uso de servicios premium |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Este Context Map representa la interacción entre los distintos Bounded Contexts del sistema de **gestión de renta y provisión de vehículos sostenibles**.  
+Se aplican patrones de comunicación del enfoque de **Domain-Driven Design (DDD)**, como relaciones **Upstream/Downstream**, **Shared Kernel**, **Conformist** y **Customer/Supplier**.
+### 1. Renting (Gestión de reservas y alquileres)
+
+**Responsabilidad:** Maneja la creación de reservas, asignación de vehículos, y coordinación con pagos y disponibilidad.
+
+**Downstream de:**
+
+-   **IAM (Autenticación):** consume servicios de autenticación de clientes.
+    
+-   **Payments:** utiliza reglas y servicios de pagos bajo un modelo Conformist.
+    
+-   **Vehicles:** consulta disponibilidad de vehículos (Shared Kernel).
+    
+
+**Upstream de:**
+
+-   Ningún otro contexto lo consume directamente, pero notifica a Payments y Vehicles.
+    
+
+**Relaciones:**
+
+-   **Conformist con Payments:** adopta el modelo de pagos tal como lo define Payments.
+    
+-   **Shared Kernel con Vehicles:** ambos comparten el concepto de disponibilidad de vehículo.
+    
+-   **Customer de IAM:** Renting depende del modelo de usuario de IAM.
+### 2. Providing (Gestión de proveedores y sus vehículos)
+
+**Responsabilidad:** Permite a los proveedores registrar vehículos, actualizar información y recibir pagos.
+
+**Downstream de:**
+
+-   **IAM (Autenticación):** consume servicios para identificar proveedores.
+    
+-   **Payments:** usa servicios de liquidación hacia proveedores.
+    
+-   **Vehicles:** consume la gestión del estado del vehículo.
+    
+
+**Upstream de:**
+
+-   **Vehicles:** Providing provee datos iniciales sobre vehículos que luego Vehicles gestiona.
+    
+
+**Relaciones:**
+
+-   **Customer de IAM:** depende del modelo de usuario de IAM para la identidad de proveedores.
+    
+-   **Customer/Supplier con Vehicles:** Providing provee datos de vehículos, Vehicles gestiona el estado.
+    
+-   **Customer de Payments:** depende de Payments para las liquidaciones económicas.
+### 3. Vehicles (Gestión del estado y disponibilidad de vehículos)
+
+**Responsabilidad:** Administra disponibilidad, estado de mantenimiento y asignación de vehículos.
+
+**Downstream de:**
+
+-   **Providing:** recibe registros de nuevos vehículos.
+    
+
+**Upstream de:**
+
+-   **Renting:** expone disponibilidad y estado de vehículos.
+    
+
+**Relaciones:**
+
+-   **Shared Kernel con Renting:** ambos contextos comparten el modelo de disponibilidad.
+    
+-   **Customer/Supplier con Providing:** Vehicles actúa como downstream de Providing.
+### 4. Payments (Procesamiento de pagos)
+
+**Responsabilidad:** Gestiona cobros a clientes y liquidaciones a proveedores.
+
+**Downstream de:**
+
+-   **IAM (Autenticación):** para la identificación de usuarios en transacciones.
+    
+
+**Upstream de:**
+
+-   **Renting:** provee servicios de cobro para clientes.
+    
+-   **Providing:** gestiona pagos hacia proveedores.
+    
+
+**Relaciones:**
+
+-   **Conformist con Renting:** Renting adopta el modelo de pagos.
+    
+-   **Customer/Supplier con Providing:** Payments provee liquidaciones hacia los proveedores.
+    
+-   **Customer de IAM:** depende del modelo de usuario de IAM.
+- ### 5. IAM (Identity & Access Management)
+
+**Responsabilidad:** Servicio centralizado de autenticación y gestión de identidades (clientes y proveedores).
+
+**Upstream de:**
+
+-   **Renting** (clientes).
+    
+-   **Providing** (proveedores).
+    
+-   **Payments** (usuarios de transacciones).
+    
+
+**Downstream de:**
+
+-   No depende de ningún otro contexto.
+    
+
+**Relaciones:**
+
+-   **Conformist:** Todos los contextos adoptan el modelo de usuario tal como lo define IAM.
+### Patrones de Integración
+
+-   **Conformist:** presente en Renting, Providing y Payments al consumir IAM.
+    
+-   **Shared Kernel:** entre Renting y Vehicles para la disponibilidad de vehículos.
+    
+-   **Customer/Supplier:**
+    
+    -   Providing → Vehicles.
+        
+    -   Payments → Providing.
+        
+-   **ACL:** puede aplicarse entre Renting y Payments si se desea desacoplar el modelo de reservas del modelo de transacciones financieras.
+
+
+
+
+
+
 ## 2.5. Strategic-Level Domain-Driven Design 
 ### 2.5.1. EventStorming 
 ### **Introdución**
@@ -140,17 +309,15 @@ Durante la sesión de Candidate Context Discovery, el equipo utilizó como base 
 | **Payments** | Referido a los métodos de pago con los que cuenta nuestra aplicación. Incluye planes de suscripción y métodos de pago tradicionales. |
 
 
-### **Evidencias**
-
 #### 2.5.1.2. Domain Message Flows Modeling 
 En esta etapa, el equipo aplicó la técnica de Domain Storytelling con el fin de visualizar cómo los bounded contexts previamente identificados colaboran para resolver los principales casos de uso del negocio. El objetivo fue detallar las interacciones entre usuarios y sistema, evidenciando cómo los mensajes fluyen entre los distintos contextos para completar los procesos clave.
 
-- Caso 1: Usuario renta un vehículo
+- **Caso 1**: Usuario renta un vehículo
 Objetivo: Poder trasladarse a su trabajo, universidad o realizar un viaje corto sin necesidad de tener un vehículo propio.
 
 *Imagen*
 
-- Caso 2: Proveedor registra un vehículo
+- **Caso 2**: Proveedor registra un vehículo
 Objetivo: Generar ingresos adicionales poniendo en alquiler una bicicleta que no utiliza todos los días.
 
 *Imagen*
@@ -159,14 +326,149 @@ Objetivo: Generar ingresos adicionales poniendo en alquiler una bicicleta que no
 El Bounded Context Canvas es una herramienta visual utilizada en talleres de Diseño Dirigido por el Dominio (DDD) para definir y documentar explícitamente los límites y las relaciones de diferentes Contextos Delimitados dentro de un sistema más grande.
 Ayuda a los equipos a lograr una comprensión compartida de el nombre y el propósito de cada contexto delimitado, las entidades y agregados que que posee el contexto y las politicas de negocio que poseen
 ### 2.5.2. Context Mapping 
+Este Context Map representa la interacción entre los distintos Bounded Contexts del sistema de **gestión de renta y provisión de vehículos sostenibles**.  
+Se aplican patrones de comunicación del enfoque de **Domain-Driven Design (DDD)**, como relaciones **Upstream/Downstream**, **Shared Kernel**, **Conformist** y **Customer/Supplier**.
+### 1. Renting (Gestión de reservas y alquileres)
+
+**Responsabilidad:** Maneja la creación de reservas, asignación de vehículos, y coordinación con pagos y disponibilidad.
+
+**Downstream de:**
+
+-   **IAM (Autenticación):** consume servicios de autenticación de clientes.
+    
+-   **Payments:** utiliza reglas y servicios de pagos bajo un modelo Conformist.
+    
+-   **Vehicles:** consulta disponibilidad de vehículos (Shared Kernel).
+    
+
+**Upstream de:**
+
+-   Ningún otro contexto lo consume directamente, pero notifica a Payments y Vehicles.
+    
+
+**Relaciones:**
+
+-   **Conformist con Payments:** adopta el modelo de pagos tal como lo define Payments.
+    
+-   **Shared Kernel con Vehicles:** ambos comparten el concepto de disponibilidad de vehículo.
+    
+-   **Customer de IAM:** Renting depende del modelo de usuario de IAM.
+### 2. Providing (Gestión de proveedores y sus vehículos)
+
+**Responsabilidad:** Permite a los proveedores registrar vehículos, actualizar información y recibir pagos.
+
+**Downstream de:**
+
+-   **IAM (Autenticación):** consume servicios para identificar proveedores.
+    
+-   **Payments:** usa servicios de liquidación hacia proveedores.
+    
+-   **Vehicles:** consume la gestión del estado del vehículo.
+    
+
+**Upstream de:**
+
+-   **Vehicles:** Providing provee datos iniciales sobre vehículos que luego Vehicles gestiona.
+    
+
+**Relaciones:**
+
+-   **Customer de IAM:** depende del modelo de usuario de IAM para la identidad de proveedores.
+    
+-   **Customer/Supplier con Vehicles:** Providing provee datos de vehículos, Vehicles gestiona el estado.
+    
+-   **Customer de Payments:** depende de Payments para las liquidaciones económicas.
+### 3. Vehicles (Gestión del estado y disponibilidad de vehículos)
+
+**Responsabilidad:** Administra disponibilidad, estado de mantenimiento y asignación de vehículos.
+
+**Downstream de:**
+
+-   **Providing:** recibe registros de nuevos vehículos.
+    
+
+**Upstream de:**
+
+-   **Renting:** expone disponibilidad y estado de vehículos.
+    
+
+**Relaciones:**
+
+-   **Shared Kernel con Renting:** ambos contextos comparten el modelo de disponibilidad.
+    
+-   **Customer/Supplier con Providing:** Vehicles actúa como downstream de Providing.
+### 4. Payments (Procesamiento de pagos)
+
+**Responsabilidad:** Gestiona cobros a clientes y liquidaciones a proveedores.
+
+**Downstream de:**
+
+-   **IAM (Autenticación):** para la identificación de usuarios en transacciones.
+    
+
+**Upstream de:**
+
+-   **Renting:** provee servicios de cobro para clientes.
+    
+-   **Providing:** gestiona pagos hacia proveedores.
+    
+
+**Relaciones:**
+
+-   **Conformist con Renting:** Renting adopta el modelo de pagos.
+    
+-   **Customer/Supplier con Providing:** Payments provee liquidaciones hacia los proveedores.
+    
+-   **Customer de IAM:** depende del modelo de usuario de IAM.
+- ### 5. IAM (Identity & Access Management)
+
+**Responsabilidad:** Servicio centralizado de autenticación y gestión de identidades (clientes y proveedores).
+
+**Upstream de:**
+
+-   **Renting** (clientes).
+    
+-   **Providing** (proveedores).
+    
+-   **Payments** (usuarios de transacciones).
+    
+
+**Downstream de:**
+
+-   No depende de ningún otro contexto.
+    
+
+**Relaciones:**
+
+-   **Conformist:** Todos los contextos adoptan el modelo de usuario tal como lo define IAM.
+### Patrones de Integración
+
+-   **Conformist:** presente en Renting, Providing y Payments al consumir IAM.
+    
+-   **Shared Kernel:** entre Renting y Vehicles para la disponibilidad de vehículos.
+    
+-   **Customer/Supplier:**
+    
+    -   Providing → Vehicles.
+        
+    -   Payments → Providing.
+        
+-   **ACL:** puede aplicarse entre Renting y Payments si se desea desacoplar el modelo de reservas del modelo de transacciones financieras.
+
 
 ### 2.5.3. Software Architecture 
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams 
 
+*Imagen*
+
 #### 2.5.3.2. Software Architecture Container Level Diagrams 
 
+*Imagen*
+
 #### 2.5.3.3. Software Architecture Deployment Diagrams 
+
+*Imagen*
 
 ## 2.6. Tactical-Level Domain-Driven Design 
 ### 2.6.1. Bounded Context
