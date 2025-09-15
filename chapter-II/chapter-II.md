@@ -104,73 +104,60 @@ Nuestro modelo está pensado para crecer y transformarse junto con la comunidad.
 
 El equipo realizó una sesión de EventStorming con el objetivo de identificar una primera aproximación de alto nivel al dominio de BikeLab, mapeando los principales eventos que suceden dentro del negocio. Esta dinámica permitió alinear la visión de los integrantes, reconocer el flujo natural de interacciones de los usuarios y establecer una base sólida para las siguientes fases de modelado.
 
-La sesión se llevó a cabo a través de Discord como herramienta de comunicación, mientras que para la construcción colaborativa de los diagramas se utilizó una plataforma de whiteboard digital. El tiempo total invertido fue de aproximadamente 1 hora y 30 minutos, suficiente para consolidar los eventos clave sin extender el proceso innecesariamente
+La sesión se llevó a cabo a través de Discord como herramienta de comunicación, mientras que para la construcción colaborativa de los diagramas se utilizó Miro. El tiempo total invertido fue de aproximadamente 1 hora y 30 minutos, suficiente para consolidar los eventos clave sin extender el proceso innecesariamente
 
-### **Actividades Realizadas**
+### **Identificadores**
+- Post It Morado: Evento a realizar
+- Post It Verde: Comando que desataria el evento
+- Post It Amarillo: Actores que realizaran los comandos para accionar los eventos
+  
+*Imagen*
 
-1. **Lluvia de ideas:** Cada miembro del equipo propuso eventos relevantes vinculados con los diferentes actores del dominio (usuarios, propietarios y sistema)
+### **Elementos**
+Al tener ya nuestros segmentos objetivos definidos pudimos sacar facilmente a los actores principales de nuestra aplicación
 
-2. **Identificación de eventos clave:** Se seleccionaron los eventos más representativos para describir la experiencia central del negocio
+*Imagen*
 
-3. **Organización en secuencia:** Los eventos fueron dispuestos en un timeline para reflejar el flujo de interacción de los usuarios con la plataforma
+Identificamos los eventos que contara nuestra aplicación y pensar como serian aplicando una breve simulación mental, como resultado obtuvimos los siguientes eventos
 
-4. **Anotaciones de valor:** Se añadieron observaciones sobre aspectos críticos como confianza, métodos de pago y validación de identidad
+*Imagen*
 
-### **Eventos identificados (preliminares)**
+Finalmente identificamos los comandos con los cuales se puedan acceder a estos eventos en nuestra aplicación 
 
-- Registro del usuario en la plataforma
-
-- Publicación de bicicleta o scooter por parte del propietario
-
-- Validación de la cuenta del estudiante con correo universitario
-
-- Búsqueda de vehículos disponibles por parte del usuario
-
-- Reserva de un vehículo por parte del usuario
-
-- Inicio del alquiler del vehículo
-
-- Procesamiento del pago mediante billetera digital
-
-- Devolución del vehículo por parte del usuario
-
-- Recepción del pago inmediato por parte del propietario
-
-- Calificación o reseña dejada por el usuario
-
-### **Evidencias**
+*Imagen*
 
 #### 2.5.1.1. Candidate Context Discovery 
 
-Durante la sesión de Candidate Context Discovery, el equipo utilizó como base el EventStorming previamente elaborado para identificar los posibles bounded contexts del dominio. El enfoque adoptado fue una combinación de las técnicas start-with-value (para reconocer las áreas con mayor aporte de valor al negocio) y look-for-pivotal-events (para detectar los eventos clave que marcan cambios de estado).
+Durante la sesión de Candidate Context Discovery, el equipo utilizó como base el EventStorming previamente elaborado para identificar los posibles bounded contexts del dominio. El enfoque adoptado fue una combinación de las técnicas start-with-value (para reconocer las áreas con mayor aporte de valor al negocio), look-for-pivotal-events (para detectar los eventos clave que marcan cambios de estado) y Domain-Driven Design (DDD) que propone comenzar el modelado del dominio desde los valores que el sistema debe entregar al usuario final o al negocio.
 
-A partir de esta dinámica, se analizaron los eventos identificados y se discutió cómo agruparlos en contextos delimitados que representen subsistemas autónomos y coherentes dentro del dominio. La sesión tuvo una duración aproximada de 1 hora y se llevó a cabo en Discord con apoyo de una herramienta de whiteboard para organizar las ideas y visualizar las relaciones
+### **Bounded Contexts (Preliminares)**
+| Bounded Context | Descripción |
+|-----------------|-------------|
+| **IAM** | Referido a los usuarios que tendremos en nuestra aplicación. Incluye eventos de registros, inicios de sesión, autenticación y visualización de datos. |
+| **Renting** | Referido a las rentas que realizarán los usuarios en nuestra aplicación. Se muestran eventos relacionados a la reserva y alquiler de vehículos. |
+| **Providing** | Referido a la sección donde los proveedores podrán registrar sus vehículos. Contiene eventos como el registro de vehículos y las acciones que puede realizar el proveedor. |
+| **Vehicles** | Referido a los vehículos que usuarios y proveedores podrán ver, similar a un historial de uso. Incluye eventos como los vehículos registrados por los proveedores y los vehículos usados por los usuarios. |
+| **Payments** | Referido a los métodos de pago con los que cuenta nuestra aplicación. Incluye planes de suscripción y métodos de pago tradicionales. |
 
-### **Bounded Context Identificados (Preliminarmente)**
-
-1. **Gestión de Usuarios**
-Incluye el registro de cuentas, validación de identidad (correo universitario, datos de propietario) y administración del perfil.
-
-2. **Gestión de Vehículos**
-Engloba la publicación de bicicletas y scooters, su disponibilidad, estados de uso y devoluciones.
-
-3. **Gestión de Reservas y Alquileres**
-Contempla la búsqueda de vehículos, las reservas hechas por usuarios, el inicio y finalización del alquiler.
-
-4. **Pagos y Transacciones**
-Abarca el procesamiento de pagos, integración con billeteras digitales, y la transferencia de ingresos al propietario.
-
-5. **Reputación y Feedback**
-Incluye las calificaciones, reseñas y retroalimentación de usuarios sobre propietarios y vehículos.
 
 ### **Evidencias**
 
 #### 2.5.1.2. Domain Message Flows Modeling 
+En esta etapa, el equipo aplicó la técnica de Domain Storytelling con el fin de visualizar cómo los bounded contexts previamente identificados colaboran para resolver los principales casos de uso del negocio. El objetivo fue detallar las interacciones entre usuarios y sistema, evidenciando cómo los mensajes fluyen entre los distintos contextos para completar los procesos clave.
 
-### **Evidencias**
+- Caso 1: Usuario renta un vehículo
+Objetivo: Poder trasladarse a su trabajo, universidad o realizar un viaje corto sin necesidad de tener un vehículo propio.
+
+*Imagen*
+
+- Caso 2: Proveedor registra un vehículo
+Objetivo: Generar ingresos adicionales poniendo en alquiler una bicicleta que no utiliza todos los días.
+
+*Imagen*
 
 #### 2.5.1.3. Bounded Context Canvases 
-
+El Bounded Context Canvas es una herramienta visual utilizada en talleres de Diseño Dirigido por el Dominio (DDD) para definir y documentar explícitamente los límites y las relaciones de diferentes Contextos Delimitados dentro de un sistema más grande.
+Ayuda a los equipos a lograr una comprensión compartida de el nombre y el propósito de cada contexto delimitado, las entidades y agregados que que posee el contexto y las politicas de negocio que poseen
 ### 2.5.2. Context Mapping 
 
 ### 2.5.3. Software Architecture 
