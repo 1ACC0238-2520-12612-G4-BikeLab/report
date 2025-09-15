@@ -92,7 +92,68 @@ Nuestro modelo está pensado para crecer y transformarse junto con la comunidad.
 | Immediate Payout (Pago inmediato) | Beneficio para propietarios de vehículos que reciben sus ganancias instantáneamente al finalizar el alquiler, a través de billeteras digitales. |
 
 ## 2.4. Requirements specification 
-### 2.4.1. User Stories
+### 2.4.1. Epics & User Stories
+### Epics
+| EP01: Como usuario quiero registrarme, iniciar sesión y gestionar mi perfil, para tener acceso seguro y personalizado a la aplicación. |  |
+| :---- | :---- |
+| User Story ID | Título |
+| US01 | Registro de usuario estudiante |
+| US02 | Registro de usuario arrendador |
+| US03 | Registro de usuario arrendador. |
+| US04 | Iniciar sesión en la aplicación |
+| US05 | Recuperar contraseña |
+| US06 | Editar información de perfil (nombre, foto, datos de contacto) |
+| US07 | Cerrar sesión |
+
+| EP02: Como arrendador quiero publicar, editar y administrar mis vehículos para ponerlos a disposición de los estudiantes y turistas.|  |
+| :---- | :---- |
+| User Story ID | Título |
+| US08 | Registrar una bicicleta o scooter en la app |
+| US09 | Editar información de un vehículo registrado |
+| US10 | Marcar vehículo como disponible/no disponible |
+| US11 | Eliminar vehículo de la aplicación |
+| US12 | Consultar historial de alquileres de miS vehículoS |
+
+| EP03: Como estudiante o turista quiero buscar y reservar bicicletas/scooters disponibles, para usarlas en mis traslados. |  |
+| :---- | :---- |
+| User Story ID | Título |
+| US13 | Buscar bicicletas/scooters por cercanía |
+| US14 | Filtrar resultados por tipo de vehículo (bicicleta/scooter) |
+| US15 | Ver información detallada del vehículo y arrendador |
+| US16 | Realizar reserva de vehículo |
+| US17 | Cancelar reserva |
+| US18 | Confirmar inicio de alquiler |
+| US19 | Finalizar alquiler |
+
+| EP04: Como usuario quiero realizar pagos digitales de forma segura y como arrendador quiero recibir mis ingresos sin complicaciones. |  |
+| :---- | :---- |
+| User Story ID | Título |
+| US20 | Vincular método de pago (Yape, Plin, tarjeta) |
+| US21 | Pagar por alquiler al finalizar el uso |
+| US22 | Recibir confirmación de pago |
+| US23 | Recibir notificación de penalización si se excede el tiempo |
+| US24 | Consultar historial de pagos |
+| US25 | Arrendador recibe liquidación automática después del pago |
+
+| EP05: Como usuario quiero sentirme seguro y confiar en otros usuarios de la comunidad. |  |
+| :---- | :---- |
+| User Story ID | Título |
+| US26 | Validación de identidad |
+| US27 | Calificar al arrendador o arrendatario al finalizar un alquiler |
+| US28 | Ver puntuación y reseñas de otros usuarios |
+| US29 | Recibir notificaciones importantes (inicio/final de alquiler, pagos, reservas) |
+| US30 | Acceso a soporte o ayuda dentro de la app |
+
+| EP06: Como administrador quiero gestionar usuarios y vehículos para asegurar el correcto funcionamiento de la aplicación.  |  |
+| :---- | :---- |
+| User Story ID | Título |
+| US31 | Acceder a panel de control con métricas (número de usuarios, alquileres activos, ingresos) |
+| US32 | Gestionar usuarios (activar, suspender, eliminar) |
+| US33 | Gestionar vehículos registrados |
+| US34 | Monitorear reservas y pagos en tiempo real |
+
+### User Stories
+
 
 ### 2.4.2. Impact Mapping 
 
