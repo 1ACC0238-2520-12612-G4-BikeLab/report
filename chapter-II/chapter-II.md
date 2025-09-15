@@ -110,21 +110,39 @@ La sesión se llevó a cabo a través de Discord como herramienta de comunicaci�
 - Post It Morado: Evento a realizar
 - Post It Verde: Comando que desataria el evento
 - Post It Amarillo: Actores que realizaran los comandos para accionar los eventos
-  
-*Imagen*
+
+### **IAM**
+
+<img src="/assets/images/eventstorming/EventStorming1.PNG" alt="IAM Storming" width=700 >
+
+### **Renting**
+
+<img src="/assets/images/eventstorming/EventStorming2.PNG" alt="Renting Storming" width=700 >
+
+### **Providing**
+
+<img src="/assets/images/eventstorming/EventStorming3.PNG" alt="Providing Storming" width=700 >
+
+### **Vehicles**
+
+<img src="/assets/images/eventstorming/EventStorming4.PNG" alt="Vehicles Storming" width=700 >
+
+### **Payments**
+
+<img src="/assets/images/eventstorming/EventStorming5.PNG" alt="Payments Storming" width=700 >
 
 ### **Elementos**
 Al tener ya nuestros segmentos objetivos definidos pudimos sacar facilmente a los actores principales de nuestra aplicación
 
-*Imagen*
+<img src="/assets/images/eventstorming/EventStormingActores.PNG" alt="Actores Storming" width=700 >
 
 Identificamos los eventos que contara nuestra aplicación y pensar como serian aplicando una breve simulación mental, como resultado obtuvimos los siguientes eventos
 
-*Imagen*
+<img src="/assets/images/eventstorming/EventStormingEventos.PNG" alt="Eventos Storming" width=700 >
 
 Finalmente identificamos los comandos con los cuales se puedan acceder a estos eventos en nuestra aplicación 
 
-*Imagen*
+<img src="/assets/images/eventstorming/EventStormingComandos.PNG" alt="Comands Storming" width=700 >
 
 #### 2.5.1.1. Candidate Context Discovery 
 
@@ -146,19 +164,43 @@ En esta etapa, el equipo aplicó la técnica de Domain Storytelling con el fin d
 - **Caso 1**: Usuario renta un vehículo
 Objetivo: Poder trasladarse a su trabajo, universidad o realizar un viaje corto sin necesidad de tener un vehículo propio.
 
-*Imagen*
+<img src="/assets/images/message-flow/MessageFlow1.PNG" alt="Caso 1 MessageFlow">
 
 - **Caso 2**: Proveedor registra un vehículo
 Objetivo: Generar ingresos adicionales poniendo en alquiler una bicicleta que no utiliza todos los días.
 
-*Imagen*
+<img src="/assets/images/message-flow/MessageFlow2.PNG" alt="Caso 2 MessageFlow">
 
 #### 2.5.1.3. Bounded Context Canvases 
 El Bounded Context Canvas es una herramienta visual utilizada en talleres de Diseño Dirigido por el Dominio (DDD) para definir y documentar explícitamente los límites y las relaciones de diferentes Contextos Delimitados dentro de un sistema más grande.
 Ayuda a los equipos a lograr una comprensión compartida de el nombre y el propósito de cada contexto delimitado, las entidades y agregados que que posee el contexto y las politicas de negocio que poseen
+
+### **IAM**
+
+<img src="/assets/images/context-canvas/ContextCanvasIAM.PNG" alt="IAM ContextCanva" >
+
+### **Renting**
+
+<img src="/assets/images/context-canvas/ContextCanvasRenting.PNG" alt="Renting ContextCanva" >
+
+### **Providing**
+
+<img src="/assets/images/context-canvas/ContextCanvasProviding.PNG" alt="Providing ContextCanva" >
+
+### **Vehicles**
+
+<img src="/assets/images/context-canvas/ContextCanvasVehicles.PNG" alt="Vehicles ContextCanva"  >
+
+### **Payments**
+
+<img src="/assets/images/context-canvas/ContextCanvasPayments.PNG" alt="Payments ContextCanva" >
+
 ### 2.5.2. Context Mapping 
 Este Context Map representa la interacción entre los distintos Bounded Contexts del sistema de **gestión de renta y provisión de vehículos sostenibles**.  
 Se aplican patrones de comunicación del enfoque de **Domain-Driven Design (DDD)**, como relaciones **Upstream/Downstream**, **Shared Kernel**, **Conformist** y **Customer/Supplier**.
+
+<img src="/assets/images/ContextMapping.PNG" alt="Context Mapping" width=700 >
+
 ### 1. Renting (Gestión de reservas y alquileres)
 
 **Responsabilidad:** Maneja la creación de reservas, asignación de vehículos, y coordinación con pagos y disponibilidad.
@@ -291,15 +333,15 @@ Se aplican patrones de comunicación del enfoque de **Domain-Driven Design (DDD)
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams 
 
-*Imagen*
+<img src="/assets/images/C4/context/context.png" alt="C4 context" width=700 >
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams 
 
-*Imagen*
+<img src="/assets/images/C4/container/container.png" alt="C4 container" width=700 >
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams 
 
-*Imagen*
+<img src="/assets/images/C4/deployment/deployment.png" alt="C4 deployment" >
 
 ## 2.6. Tactical-Level Domain-Driven Design 
 ### 2.6.1. Bounded Context
