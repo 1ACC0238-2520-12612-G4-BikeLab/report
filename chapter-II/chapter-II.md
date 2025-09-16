@@ -99,7 +99,7 @@ Nuestro modelo está pensado para crecer y transformarse junto con la comunidad.
 | User Story ID | Título |
 | US01 | Registro de usuario estudiante |
 | US02 | Registro de usuario arrendador |
-| US03 | Registro de usuario arrendador. |
+| US03 | Registro de usuario turista |
 | US04 | Iniciar sesión en la aplicación |
 | US05 | Recuperar contraseña |
 | US06 | Editar información de perfil (nombre, foto, datos de contacto) |
