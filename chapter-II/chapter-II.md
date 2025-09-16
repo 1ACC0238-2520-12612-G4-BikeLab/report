@@ -65,9 +65,38 @@ Nuestro modelo está pensado para crecer y transformarse junto con la comunidad.
  
 ### 2.3. Needfinding 
 ### 2.3.1. User Personas
- 
+
+##### **Segmento 1: Estudiantes universitarios**
+
+<img src="/assets/images/valeria-quispe.png" alt="Valeria Quispe" width=auto>
+
+##### **Segmento 2:Arriendatarios de bicicletas**
+
+<img src="/assets/images/luis-alvarado.png" alt="Luis Alvarado" width=auto>
+
 ### 2.3.2. User Task Matrix
- 
+
+Estudiante & Proveedor
+**Escala:** 1 = Rara vez / baja · 3 = Media · 5 = Muy frecuente / crítica
+
+| Tarea (independiente del software)                                  | Estudiante – Frecuencia | Estudiante – Importancia | Proveedor – Frecuencia | Proveedor – Importancia |
+|---------------------------------------------------------------------|:-----------------------:|:------------------------:|:----------------------:|:-----------------------:|
+| 1) Evaluar opciones de transporte para trayectos cortos             | 4 | 4 | 1 | 1 |
+| 2) Desplazarse puntual dentro/alrededor del campus                  | 5 | 5 | 1 | 2 |
+| 3) Planificar tiempo entre clases/actividades                       | 4 | 5 | 2 | 3 |
+| 4) Encontrar un vehículo cercano y adecuado                         | 4 | 5 | 2 | 3 |
+| 5) Verificar seguridad y zonas permitidas (geocercas, parqueo)      | 3 | 5 | 3 | 5 |
+| 6) Pagar y gestionar presupuesto personal de movilidad              | 4 | 4 | 1 | 2 |
+| 7) Iniciar/terminar el uso y estacionar correctamente               | 4 | 5 | 2 | 3 |
+| 8) Reportar incidencias o solicitar soporte                         | 1 | 3 | 2 | 5 |
+| 9) Decidir publicar/retirar un vehículo para alquiler               | 1 | 1 | 4 | 5 |
+| 10) Verificar confiabilidad de arrendatarios (identidad/reputación) | 1 | 2 | 3 | 5 |
+| 11) Realizar mantenimiento básico / recarga                         | 1 | 1 | 3 | 5 |
+| 12) Definir precio/horario/zonas de disponibilidad                  | 1 | 1 | 4 | 5 |
+| 13) Llevar control de ingresos y retiros (payouts)                  | 1 | 1 | 4 | 5 |
+| 14) Gestionar disputas/daños/multas                                 | 1 | 4 | 2 | 5 |
+
+
 ### 2.3.3. User Journey Mapping 
 
 ### 2.3.4. Empathy Mapping
