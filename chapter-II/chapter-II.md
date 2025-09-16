@@ -96,10 +96,20 @@ Estudiante & Proveedor
 | 13) Llevar control de ingresos y retiros (payouts)                  | 1 | 1 | 4 | 5 |
 | 14) Gestionar disputas/daños/multas                                 | 1 | 4 | 2 | 5 |
 
-
 ### 2.3.3. User Journey Mapping 
 
+##### **Segmento 1: Estudiantes universitarios**
+
+<img src="/assets/images/mapping-valeria.png" alt="Valeria Mapping" width=auto>
+
+##### **Segmento 2:Arriendatarios de bicicletas**
+
+<img src="/assets/images/mapping-luis.png" alt="Luis Mapping" width=auto>
+
 ### 2.3.4. Empathy Mapping
+
+<img src="/assets/images/empathy_quadrants.png" alt="quadrants" width=auto>
+<img src="/assets/images/empathy_analysis.png" alt="analysis" width=auto>
 
 ### 2.3.5. Ubiquitous Language 
 
@@ -221,6 +231,8 @@ Estudiante & Proveedor
 | **US34** | **Monitorear reservas y pagos** | Como arrendador quiero monitorear reservas y pagos | **Escenario 1**: Dado que accedo al panel, cuando consulto, entonces veo reservas activas. <br><br> **Escenario 2**: Dado que un usuario paga, cuando ocurre, entonces aparece "pagado". <br><br> **Escenario 3:** Dado que ocurre una falla de pago, cuando se detecta, entonces recibo alerta.<br><br> | **EP06** |
 
 ### 2.4.2. Impact Mapping 
+
+<img src="/assets/images/impact-map.png" alt="Impact Mapping" width=auto>
 
 ### 2.4.3. Product Backlog 
 
