@@ -482,14 +482,1470 @@ Se aplican patrones de comunicación del enfoque de **Domain-Driven Design (DDD)
 <img src="/assets/images/C4/deployment/deployment.png" alt="C4 deployment" >
 
 ## 2.6. Tactical-Level Domain-Driven Design 
-### 2.6.1. Bounded Context
-#### 2.6.1.1. Domain Layer 
+
+### 2.6.1. Bounded Context: IAM
+
+##### 2.6.1.1. Domain Layer
+
+## 1) Agregados, Entidades y VOs
+
+### A. `User` *(Aggregate Root)*
+- **Atributos clave**
+  - `UserId` (UUID)
+  - `FullName`
+  - `Email` *(VO)*
+  - `Roles: Set<Role>` *(VO)*
+  - `Status: UserStatus = Pending|Active|Suspended`
+  - `Reputation: Rating` *(VO {avg,count})*
+  - `CreatedAt`, `UpdatedAt`
+- **Invariantes**
+  - `Email` **único** en el sistema.
+  - `Status=Active` **requiere** `EmailVerifiedAt` (en `Verification`).
+  - Siempre existe el rol **User**; el rol **Provider** solo si llega `ProviderVerified`.
+- **Operaciones de dominio**
+  - `register(fullName, email)`
+  - `verifyEmail(domain)`
+  - `assignRole(role)`
+  - `suspend(reason)`
+  - `updateProfile(data)`
+  - `applyRating(score)`
+- **Eventos que publica**
+  - `UserRegistered {userId,email,fullName}`
+  - `EmailVerified {userId,domain,verifiedAt}`
+  - `RoleAssigned {userId,role}`
+  - `UserSuspended {userId,reason}`
+  - `UserProfileUpdated {userId,fields}`
+
+### B. `Credential` *(Entidad asociada a User)*
+- **Atributos**: `UserId`, `PasswordHash`, `PasswordSalt`, `MfaEnabled`, `LastLoginAt?`
+- **Reglas**: hash **Argon2/BCrypt**; bloqueo por intentos; jamás se guarda el password plano.
+
+### C. `Verification` *(Entidad/VO)*
+- **Atributos**: `UserId`, `EmailToken`, `EmailVerifiedAt?`, `UniversityDomain?`
+- **Reglas**
+  - `EmailToken` expira en **N minutos**; un token solo se puede usar una vez.
+  - `UniversityDomain` debe pertenecer a la lista blanca de dominios *.edu* configurables.
+
+### D. **Value Objects**
+- `Email {address, domain}` → valida formato y dominio permitido.
+- `Role {name: User|Provider|Admin, grants: Set<Scope>}`
+- `Rating {avg: decimal(0..5), count: int}` → solo se modifica vía `applyRating(score)` (entrada por evento externo confiable).
+- `Scope` (p.ej., `iam.read`, `iam.write`, `iam.admin`)
+
+---
+
+## 2) Servicios de Dominio
+- **IdentityVerificationService**
+  - Responsabilidad: validar token/dominio, marcar verificación y garantizar idempotencia.
+- **PasswordPolicyService**
+  - Responsabilidad: complejidad y expiración opcional de credenciales.
+
+---
+
+## 3) Repositorios (interfaces del dominio)
+- `UserRepository` → `findById`, `findByEmail`, `save`, `existsEmail`.
+- `CredentialRepository` → `save`, `getByUserId`, `updateLastLogin`, `checkHash`.
+- `VerificationRepository` → `issueToken(userId)`, `verifyToken(token)`.
+
+> **Nota:** las interfaces viven en el dominio; sus implementaciones van en *Infrastructure*.
+
+---
+
+## 4) Suscripciones a eventos externos (colaboraciones)
+- `ProviderVerified {userId}` **(desde Providing)** → dispara `assignRole(Provider)`.
+- `RatingGiven {targetUserId, score}` **(desde Renting/Vehicles)** → `applyRating(score)`.
+
+---
+
+## 5) Políticas y reglas de negocio (resumen)
+- **P1.** No se permite **login** si `Status ≠ Active`.
+- **P2.** `Role=Provider` requiere evento **ProviderVerified**.
+- **P3.** El cambio a `Suspended` deshabilita tokens activos (regla orquestada en App, pero **decisión** del dominio).
+- **P4.** Toda modificación de perfil dispara `UserProfileUpdated` (auditabilidad).
+- **P5.** `applyRating(score)` recalcula `avg` con **media incremental** y aumenta `count`.
+
+---
+
+## 6) Máquinas de estado (texto)
+
+- **User.Status**: `Pending →(EmailVerified)→ Active →(Suspend)→ Suspended`  
+  - *Guardas:* `EmailVerified` solo si token válido; `Suspend` requiere `reason`.
+
+- **Verification**: `TokenIssued →(verify)→ Verified | →(expire)→ Expired`  
+  - *Tiempo límite:* N minutos; idempotencia: `verify` sobre estado `Verified` **no** duplica efectos.
+
+---
+
+## 7) Lenguaje ubicuo (extracto)
+- **Usuario** (User), **Verificación**, **Rol**, **Reputación**, **Estado**, **Token**, **Dominio .edu**, **Suspensión**, **Evento de identidad**.
+
+---
+
+## 8) **Alcance propuesto – Sprint 1 (MVP de IAM)**
+- **Incluye**
+  - Agregado **User** con estados *Pending/Active*, VO **Email/Role**.
+  - Entidades **Credential** y **Verification** con políticas de caducidad.
+  - Servicios de dominio **IdentityVerificationService** y **PasswordPolicyService**.
+  - Eventos: `UserRegistered`, `EmailVerified`, `RoleAssigned(User)`.
+  - Suscripción **ProviderVerified → assignRole(Provider)** (idempotente).
+- **Excluye (post-S1)**
+  - **Suspensiones** administrativas avanzadas y auditoría granular.
+  - **MFA** y rotación de contraseñas.
+  - Reglas de **borrado/anonimización** (se planifican en S2).
+- **Trazabilidad con US (cap. 2)**: **US01, US04, US06, US07** (onboarding/login/perfil) y parte de **US31–US34** para administración básica.
+
+---
 
 #### 2.6.1.2. Interface Layer 
 
+**Base path:** `/api/v1/iam`
+**Auth:** `Authorization: Bearer <accessToken>` (JWT RS256)
+**Formato:** `application/json; charset=utf-8`
+**Error shape común:** `{ "error": { "code": "STRING_CODE", "message": "texto", "details": {} } }`
+**Rate-limits (S1):** `/auth/login` y `/users/verify-email` → 5 req/min/IP
+**Versionado:** `v1` en la URL · `X-Request-Id` para trazabilidad
+
+---
+
+#### 1) Endpoints principales (Sprint 1)
+
+| Método | Ruta                  | Propósito                                  | Auth / Rol             | 2xx |
+| ------ | --------------------- | ------------------------------------------ | ---------------------- | --- |
+| POST   | `/users/register`     | Registro con correo **.edu**               | Pública                | 201 |
+| POST   | `/users/verify-email` | Verificar token de correo                  | Pública                | 200 |
+| POST   | `/auth/login`         | Iniciar sesión (devuelve access y refresh) | Pública                | 200 |
+| POST   | `/auth/refresh`       | Renovar access token                       | Refresh token          | 200 |
+| POST   | `/auth/logout`        | Revocar refresh token                      | Bearer                 | 204 |
+| GET    | `/users/me`           | Perfil propio + roles                      | Bearer                 | 200 |
+| PATCH  | `/users/me`           | Actualizar nombre/avatar                   | Bearer                 | 200 |
+| POST   | `/users/{id}/roles`   | Asignar rol (User/Provider/Admin)          | Admin                  | 201 |
+| POST   | `/users/{id}:suspend` | Suspender usuario (motivo)                 | Admin                  | 200 |
+| GET    | `/users/{id}`         | Perfil público limitado                    | Bearer (Admin o dueño) | 200 |
+
+> Trazabilidad con US del capítulo 2: US01, US04, US06, US07 (onboarding/login/perfil) y base para US31–US34 (acciones admin).
+
+---
+
+#### 2) Contratos compactos (ejemplos)
+
+* **POST /users/register**
+  Body:
+
+  ```
+  { "fullName":"Valeria Quispe", "email":"v.quispe@universidad.edu.pe", "password":"P4ssw0rd!" }
+  ```
+
+  201:
+
+  ```
+  { "userId":"a8d3…", "status":"Pending" }
+  ```
+
+  Errores: `EMAIL_INVALID`, `EMAIL_ALREADY_EXISTS`, `PASSWORD_WEAK`.
+
+* **POST /users/verify-email**
+  Body:
+
+  ```
+  { "token":"eyJ...t0ken" }
+  ```
+
+  200:
+
+  ```
+  { "verified":true, "domain":"universidad.edu.pe", "userId":"a8d3…" }
+  ```
+
+  Error: `TOKEN_INVALID_OR_EXPIRED` (422).
+
+* **POST /auth/login**
+  Body:
+
+  ```
+  { "email":"v.quispe@universidad.edu.pe", "password":"P4ssw0rd!" }
+  ```
+
+  200:
+
+  ```
+  { "accessToken":"<jwt>", "refreshToken":"<jwt>", "expiresIn":3600 }
+  ```
+
+  Errores: `INVALID_CREDENTIALS` (401), `USER_NOT_ACTIVE` (403), `TOO_MANY_ATTEMPTS` (429).
+
+* **GET /users/me**
+  200:
+
+  ```
+  { "userId":"a8d3…", "fullName":"Valeria Quispe", "email":"v.quispe@universidad.edu.pe", "roles":["User"], "status":"Active" }
+  ```
+
+* **POST /users/{id}/roles** (Admin)
+  Body:
+
+  ```
+  { "role":"Provider" }
+  ```
+
+  201 → emite `RoleAssigned`.
+
+* **POST /users/{id}\:suspend** (Admin)
+  Body:
+
+  ```
+  { "reason":"Fraude sospechoso" }
+  ```
+
+  200 → emite `UserSuspended`.
+
+---
+
+#### 3) Reglas de autorización (resumen)
+
+* `users/me`, `auth/*` → **User** autenticado.
+* `users/{id}/roles`, `users/{id}:suspend` → **Admin**.
+* Tokens con scopes: `iam.read`, `iam.write`, `iam.admin`.
+
+---
+
+#### 4) Alcance de **Sprint 1** (Interface)
+
+* Endpoints incluidos: todos los de la tabla.
+* Validaciones base: email `.edu`, política de contraseña, token/verificación, rate-limit.
+* Respuestas estandarizadas con `error.code`.
+* Logs con `X-Request-Id`.
+
 #### 2.6.1.3. Application Layer 
 
-#### 2.6.1.4 Infrastructure Layer 
+#### 1) Use cases / Command Handlers (S1)
+
+| Caso de uso                                | Precondiciones                    | Pasos (resumen)                                                                                                                                     | Postcondiciones / Eventos                   | Errores típicos                                               |
+| ------------------------------------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------- |
+| **RegisterUserCommand**                    | Email `.edu` válido; no existente | 1) Crear `User(Pending)` y `Credential` 2) Emitir `UserRegistered` 3) `VerificationRepository.issueToken()` 4) `EmailSenderPort.sendVerification()` | `iam.events.UserRegistered` · token emitido | `EMAIL_ALREADY_EXISTS`, `PASSWORD_WEAK`                       |
+| **VerifyEmailCommand**                     | Token vigente                     | 1) `VerificationRepository.verifyToken()` 2) `user.verifyEmail()` → `Active` 3) Emitir `EmailVerified`                                              | `iam.events.EmailVerified`                  | `TOKEN_INVALID_OR_EXPIRED`, `USER_ALREADY_VERIFIED`           |
+| **LoginCommand**                           | Usuario `Active`                  | 1) `CredentialRepository.checkHash()` 2) `TokenServicePort.issue(access, refresh)` 3) `Credential.lastLoginAt=now()`                                | tokens emitidos                             | `INVALID_CREDENTIALS`, `USER_NOT_ACTIVE`, `TOO_MANY_ATTEMPTS` |
+| **RefreshTokenCommand**                    | Refresh válido                    | 1) Validar/rotar refresh 2) Emitir nuevo access                                                                                                     | tokens renovados                            | `REFRESH_INVALID_OR_REVOKED`                                  |
+| **LogoutCommand**                          | Autenticado                       | 1) Revocar refresh actual                                                                                                                           | sesión cerrada                              | —                                                             |
+| **UpdateProfileCommand**                   | Autenticado                       | 1) `user.updateProfile()` 2) Guardar 3) Emitir `UserProfileUpdated`                                                                                 | `iam.events.UserProfileUpdated`             | `VALIDATION_ERROR`                                            |
+| **AssignRoleCommand** *(admin/automático)* | Usuario `Active`                  | 1) `user.assignRole(role)` (idempotente) 2) Guardar 3) Emitir `RoleAssigned`                                                                        | `iam.events.RoleAssigned`                   | `FORBIDDEN`, `ROLE_INVALID`                                   |
+| **SuspendUserCommand** *(admin)*           | —                                 | 1) `user.suspend(reason)` 2) Guardar 3) `TokenServicePort.revokeAll(userId)` 4) Emitir `UserSuspended`                                              | `iam.events.UserSuspended`                  | `FORBIDDEN`                                                   |
+
+> Implementar **idempotencia** en `AssignRoleCommand` y `VerifyEmailCommand` (reintentos/entrega al menos una vez).
+
+---
+
+#### 2) Event Handlers (suscripciones S1)
+
+* **OnProviderVerified** ← `providing.events.ProviderVerified`
+  Acción: `AssignRoleCommand(role=Provider)` (idempotente).
+* **OnRatingGiven** ← `renting.events.RatingGiven`
+  Acción: `user.applyRating(score)` → `UserRepository.save()`.
+
+> Handlers **idempotentes** y con *dead-letter queue* para análisis de errores.
+
+---
+
+#### 3) Puertos (Ports) usados por Application
+
+* **Repos de dominio**: `UserRepository`, `CredentialRepository`, `VerificationRepository`.
+* **Mensajería**: `DomainEventPublisherPort` (outbox → broker), `DomainEventSubscriberPort`.
+* **Autenticación**: `TokenServicePort` (emitir/validar/rotar/revocar).
+* **Correo**: `EmailSenderPort` (verificación/avisos).
+* **Tiempo/caché**: `ClockPort`, `CachePort` (perfil `/me`, TTL corto).
+* **Rate Limiter**: `RateLimiterPort` (login/verify).
+
+---
+
+#### 4) Orquestaciones clave (de punta a punta)
+
+* **Registro → Verificación**
+  `RegisterUser` → *issueToken* → enviar correo → `VerifyEmail(token)` → `EmailVerified` → usuario pasa a **Active**.
+
+* **Login/Refresh/Logout**
+  `Login` (valida credenciales) → emitir **access/refresh** → `Refresh` (rotación segura) → `Logout` (revocar refresh).
+
+* **Alta de Proveedor por evento**
+  `Providing.ProviderVerified` → `AssignRole(Provider)` → `RoleAssigned` (idempotente; si ya tiene Provider no hace nada).
+
+* **Suspensión**
+  `SuspendUser` → revocar tokens → `UserSuspended` (otras bounded contexts pueden reaccionar si lo requieren).
+
+---
+
+#### 5) Transaccionalidad y consistencia
+
+* **Atomicidad local**: comandos persisten cambios del agregado + registran evento en **Outbox** (misma transacción).
+* **Publicación**: *OutboxProcessor* asegura “**transactional outbox**” hacia el broker (`iam.events.*`).
+* **Reintentos**: backoff exponencial y detección de duplicados por `eventId`.
+* **Trazabilidad**: `X-Request-Id` propagado a logs/metricas.
+
+---
+
+#### 6) Validación, mapping y errores
+
+* **Validaciones**: VO `Email`, políticas de contraseña, tamaños y formatos.
+* **Mapping**: `User` → `UserDTO` (ocultar PII y campos sensibles).
+* **Errores**: se mapean a `error.code` estándar (p. ej., `EMAIL_ALREADY_EXISTS`, `TOKEN_INVALID_OR_EXPIRED`, `USER_NOT_ACTIVE`).
+
+---
+
+#### 7) Alcance **Sprint 1** (Application)
+
+* Handlers: `RegisterUser`, `VerifyEmail`, `Login`, `Refresh`, `Logout`, `UpdateProfile`, `AssignRole(Provider)`.
+* Event handlers: `OnProviderVerified`.
+* Outbox + publicación a `iam.events.*`.
+* Métricas: tasa de registro verificado, éxito de login, errores por código.
+
+#### 2.6.1.4 Infrastructure Layer
+
+#### 1) Adaptadores (Ports → Adapters)
+
+* **Repositorios (ORM/JPA)**
+
+  * `SqlUserRepository`
+  * `SqlCredentialRepository`
+  * `SqlVerificationRepository`
+  * `SqlUserRoleRepository`
+* **Mensajería**
+
+  * `OutboxPublisher` → broker (RabbitMQ/Kafka) con *routing keys*:
+    `iam.user.registered`, `iam.email.verified`, `iam.role.assigned`, `iam.user.suspended`, `iam.user.updated`.
+  * `EventConsumer` ← `providing.provider.verified`, `renting.rating.given`.
+* **Email**
+
+  * `SendGridEmailAdapter` (o `SmtpEmailAdapter`) para **sendVerification(email, token)** y notificaciones.
+* **Tokens**
+
+  * `JwtTokenService` (RS256). *Private key* en **KeyVault/Secrets**; *public JWK* expuesto en `/.well-known/jwks.json`.
+  * `RefreshTokenStore`: Redis (clave `iam:rt:{userId}:{jti}`) con TTL y lista de revocados.
+* **Rate-limiting & Cache**
+
+  * `RedisRateLimiter` (ventana deslizante).
+  * `ProfileCache` (GET `/users/me`, TTL 60 s).
+* **Reloj y Tracing**
+
+  * `SystemClockAdapter`; OpenTelemetry exporter (OTLP).
+
+---
+
+#### 2) Persistencia (MySQL) — esquema mínimo y *outbox*
+
+Tablas principales (índices incluidos):
+
+```
+CREATE TABLE iam_users(
+  id BIGINT PRIMARY KEY,
+  full_name VARCHAR(120) NOT NULL,
+  email VARCHAR(160) NOT NULL UNIQUE,
+  status VARCHAR(12) NOT NULL,            -- Pending|Active|Suspended
+  reputation_avg DECIMAL(3,2) DEFAULT 0,
+  reputation_count INT DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL
+);
+CREATE INDEX idx_iam_users_status ON iam_users(status);
+
+CREATE TABLE iam_credentials(
+  user_id BIGINT PRIMARY KEY,
+  password_hash VARCHAR(255) NOT NULL,
+  password_salt VARCHAR(255) NOT NULL,
+  mfa_enabled BOOLEAN DEFAULT FALSE,
+  last_login_at TIMESTAMP NULL,
+  FOREIGN KEY (user_id) REFERENCES iam_users(id)
+);
+
+CREATE TABLE iam_verifications(
+  user_id BIGINT PRIMARY KEY,
+  email_token VARCHAR(120) UNIQUE,
+  email_verified_at TIMESTAMP NULL,
+  university_domain VARCHAR(80),
+  token_expires_at TIMESTAMP NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES iam_users(id)
+);
+
+CREATE TABLE iam_user_roles(
+  user_id BIGINT NOT NULL,
+  role VARCHAR(20) NOT NULL,              -- User|Provider|Admin
+  PRIMARY KEY(user_id, role),
+  FOREIGN KEY (user_id) REFERENCES iam_users(id)
+);
+
+-- Outbox transaccional
+CREATE TABLE iam_outbox(
+  id BIGINT PRIMARY KEY,
+  aggregate_id BIGINT NOT NULL,
+  event_type VARCHAR(80) NOT NULL,
+  payload JSON NOT NULL,
+  status VARCHAR(12) NOT NULL DEFAULT 'PENDING',
+  attempts INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  published_at TIMESTAMP NULL,
+  last_error VARCHAR(500) NULL
+);
+CREATE INDEX idx_outbox_pending ON iam_outbox(status, created_at);
+```
+---
+
+#### 3) Mensajería (topología sugerida)
+
+* **Exchange/Topic:** `iam.events`
+
+  * `iam.user.registered` → consumidores interesados (Providing, Renting).
+  * `iam.email.verified`, `iam.role.assigned`, `iam.user.suspended`, `iam.user.updated`.
+* **Entrantes:**
+
+  * `providing.provider.verified` → `OnProviderVerified` (asignar rol).
+  * `renting.rating.given` → `OnRatingGiven` (reputación).
+
+**Contratos (payload resumido):**
+
+* `UserRegistered`: `{ eventId, occurredAt, userId, email, fullName }`
+* `EmailVerified`: `{ eventId, occurredAt, userId, domain }`
+* `RoleAssigned`: `{ eventId, occurredAt, userId, role }`
+
+---
+
+#### 4) Configuración y *secrets* (env)
+
+* `DB_URL`, `DB_USER`, `DB_PASS`
+* `REDIS_URL`
+* `JWT_PRIVATE_KEY` (o `JWT_PRIVATE_KEY_PATH`), `JWT_ISSUER`, `JWT_AUDIENCE`, `JWT_TTL`
+* `REFRESH_TTL`, `RATE_LIMIT_LOGIN`, `RATE_LIMIT_VERIFY`
+* `SENDGRID_API_KEY` / `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`
+* `BROKER_URL` (RabbitMQ/Kafka), `BROKER_USER`, `BROKER_PASS`
+* `ALLOWED_EDU_DOMAINS` (lista separada por comas)
+
+> **Se gestionan** en Key Vault/Secrets Manager; *no* en el repositorio.
+
+---
+
+#### 5) Observabilidad y operación
+
+* **Logs**: JSON estructurado, `X-Request-Id`, nivel `INFO/WARN/ERROR`.
+* **Métricas** (Prometheus/OpenTelemetry):
+
+  * `iam_login_success_total`, `iam_login_error_total_by_code`
+  * `iam_verification_sent_total`, `iam_verification_success_total`
+  * `iam_outbox_pending`, `iam_outbox_publish_latency_seconds`
+* **Tracing**: spans para `RegisterUser`, `VerifyEmail`, `Login` y publicación de eventos.
+* **Alertas**:
+
+  * Outbox `pending` > umbral N durante 5 min.
+  * Tasa de error login/verificación > X%.
+
+---
+
+#### 6) Seguridad y *hardening*
+
+* **TLS** extremo a extremo; cookies `Secure` si se usan.
+* **Hash** de passwords **Argon2id** (o BCrypt cost alto).
+* **CORS** restringido a dominios de frontend conocidos.
+* **Brute force**: rate-limit + *account lock* temporal.
+* **Rotación de claves JWT** (JWKs) y revocación de refresh por `jti`.
+* **PII**: minimizar en logs; `email` ofuscado en eventos públicos si aplica.
+
+---
+
+#### 7) CI/CD y migraciones
+
+* **Migraciones** con **Flyway/Liquibase** (scripts anteriores).
+* **Pipelines**: build + test + migraciones → despliegue en **Azure Web App**; variables por entorno.
+* **Seed (entorno dev):** crear usuario admin, dominios `.edu` permitidos y claves de prueba.
+
+---
+
+#### 8) Alcance **Sprint 1** (Infra de IAM)
+
+* MySQL con tablas `iam_users`, `iam_credentials`, `iam_verifications`, `iam_user_roles`, `iam_outbox`.
+* Redis para **refresh tokens** y **rate-limit**.
+* `JwtTokenService` operativo (par de claves RSA generado y almacenado).
+* `SendGridEmailAdapter` funcional (correo de verificación).
+* `OutboxPublisher` + `EventConsumer(OnProviderVerified)` en broker.
+* Monitoreo básico: métricas de login/verify y *outbox lag*.
+
+### 2.6.2. Bounded Context: **Vehicles**
+
+#### 2.6.2.1. Domain Layer
+
+**Agregados y Entidades**
+
+* **Vehicle** *(Aggregate Root)*
+  Atributos:
+  `VehicleId`, `ProviderId`, `Specs`(VO), `Location`(VO), `Status`{Available, Reserved, Active, Unavailable},
+  `PublishedAt?`, `VerifiedAt?`, `IsDeleted=false`, `Rating`(VO {avg,count}).
+  Invariantes:
+
+  * Un vehículo solo puede estar **Reserved**/**Active** por **una** reserva/alquiler a la vez.
+  * Si `IsDeleted=true` no puede cambiar de estado.
+  * `Status=Available` requiere `PublishedAt` no nulo.
+    Operaciones: `publish()`, `updateDetails(partial)`, `setLocation(loc)`, `setStatus(s, reason?)`, `applyRating(score)`, `softDelete()`.
+
+* **MediaAsset** *(Entidad)*: `MediaId`, `VehicleId`, `url`, `kind`{photo}, `createdAt`.
+
+**Value Objects**
+
+* **Specs**: `type`{bike|scooter}, `brand`, `model`, `color?`, `year?`, `batteryLevel?`(0..100 para e-scooter), `lockType`{BLE|QR|none}.
+* **Location**: `lat`, `lng` (con validación y tolerancia de geocerca).
+* **Rating**: `avg`(0..5), `count` (se modifica solo vía `applyRating`).
+
+**Servicios de Dominio**
+
+* **AvailabilityPolicy**: reglas de transición de estado (p.ej., Available→Reserved solo si no hay alquiler activo).
+* **RatingService**: media incremental y anticorrupción contra ratings duplicados.
+
+**Repositorios (interfaces)**
+
+* `VehicleRepository` (`findById`, `save`, `searchNearby`, `findByProvider`, `softDelete`)
+* `VehicleMediaRepository` (`add`, `remove`, `list`)
+* `VehicleRatingRepository` (`addIfNotExists(rentalId,userId)`, `listByVehicle`)
+
+**Eventos que publica**
+
+* `VehicleListed {vehicleId, providerId, specs, location}`
+* `VehicleUpdated {vehicleId, fields}`
+* `VehicleStatusChanged {vehicleId, status, reason?}`
+* `VehicleDeleted {vehicleId}`
+* `VehicleRated {vehicleId, score, userId}`
+
+**Suscripciones (eventos entrantes)**
+
+* De **Providing**:
+  `VehiclePublished`, `VehicleUpdated`, `VehicleRemoved` → crear/actualizar/eliminar `Vehicle`.
+* De **Renting**:
+  `ReservationCreated` → `setStatus(Reserved)`
+  `ReservationCancelled|Expired` → `setStatus(Available)`
+  `RentalStarted` → `setStatus(Active)`
+  `RentalFinished` → `setStatus(Available)`
+  `RentalOverdue` → `setStatus(Unavailable,"overdue")`
+
+**Políticas clave**
+
+* Cambios de estado son **idempotentes** y auditados.
+* `applyRating(score)` exige validar **rentalId** legítimo (puerto a Renting).
+
+---
+
+#### 2.6.2.2. Interface Layer
+
+**Base path:** `/api/v1/vehicles` · **Formato:** JSON · **Auth:** pública para lectura; proveedor/admin para escritura.
+
+**Endpoints públicos**
+
+* `GET /`
+  Parámetros: `near=lat,lng` · `radius=m` (default 600) · `type=bike|scooter` · `status=Available`
+  Respuesta: lista resumida (id, type, battery?, distance, rating, photo, lat/lng aproximados).
+* `GET /{vehicleId}`
+  Detalle completo público (oculta datos sensibles del proveedor).
+* `GET /{vehicleId}/ratings`
+  Paginado por fecha.
+
+**Endpoints para Proveedor**
+
+* `GET /me` → vehículos del proveedor.
+* `PATCH /me/{vehicleId}` → `updateDetails` (solo campos permitidos: `photo`, `description`, `color` …).
+* `POST /me/{vehicleId}:availability` → `{ available: true|false }` (internamente mapea a `Available/Unavailable`, solo si no está Active).
+* `DELETE /me/{vehicleId}` → `softDelete()` (si no está Active/Reserved).
+
+**Calificaciones**
+
+* `POST /{vehicleId}/ratings`
+  Body: `{ rentalId, score(1..5), comment? }`
+  Reglas: una calificación por `rentalId`. Verificación con Renting.
+
+**Códigos de error frecuentes**
+`404 NOT_FOUND`, `409 INVALID_STATE`, `403 FORBIDDEN_OWNER`, `422 VALIDATION_ERROR`.
+
+---
+
+#### 2.6.2.3. Application Layer
+
+**Casos de uso**
+
+* `ListVehiclesNearby(query)` → `VehicleRepository.searchNearby()`
+* `GetVehicleDetails(id)` → `VehicleRepository.findById()`
+* `ProviderUpdateVehicle(cmd)` → `vehicle.updateDetails()` → `VehicleUpdated`
+* `SetVehicleAvailability(cmd)` → `AvailabilityPolicy` → `vehicle.setStatus()` → `VehicleStatusChanged`
+* `DeleteVehicle(cmd)` → `vehicle.softDelete()` → `VehicleDeleted`
+* `AddVehicleRating(cmd)` → valida con `RentingPort.verifyRental(rentalId,userId,vehicleId)` → `vehicle.applyRating(score)` → `VehicleRated`
+
+**Event Handlers (suscripciones)**
+
+* `OnProvidingVehiclePublished(event)` → crear `Vehicle` y `VehicleListed` (si se expone a externos).
+* `OnProvidingVehicleUpdated` → `updateDetails`.
+* `OnProvidingVehicleRemoved` → `softDelete`.
+* `OnReservationCreated/Cancelled/Expired/RentalStarted/Finished/Overdue` → transiciones de estado con **idempotencia**.
+
+**Puertos (Ports)**
+
+* `RentingPort` → `verifyRental(rentalId,userId,vehicleId)` y suscripción a eventos de ciclo de alquiler.
+* `ProvidingPort` → suscripción a onboard/updates del proveedor.
+* `GeoIndexPort` (opcional) → soporte a búsquedas cercanas (en S1 basta MySQL con índice espacial).
+* `MediaStoragePort` (S2) → subida/transformación de imágenes.
+
+**Transaccionalidad**
+
+* Cambios en agregados + registro en **Outbox** en la misma transacción.
+* Publicación eventual al tópico `vehicles.events.*`.
+* Deduplicación por `eventId`.
+
+**Métricas clave (S1)**
+
+* Tasa de conversión de `Available→Reserved→Active`.
+* Tiempo en estado `Reserved` (indicador de *no-show*).
+* Disponibilidad promedio por vehículo.
+
+---
+
+#### 2.6.2.4 Infrastructure Layer
+
+**Adaptadores**
+
+* **Persistencia (MySQL/JPA)**: `SqlVehicleRepository`, `SqlVehicleMediaRepository`, `SqlVehicleRatingRepository`.
+* **Mensajería**: `OutboxPublisher` → `vehicles.events.*` y `EventConsumer` ← `providing.events.*`, `renting.events.*`.
+* **Geo**: uso de `POINT(lat,lng)` + índice espacial; fallback a Haversine si no hay soporte.
+* **Cache**: caché de resultados de `searchNearby` por cuadrícula (TTL corto).
+
+**Esquema mínimo (SQL)**
+
+```
+CREATE TABLE vehicles(
+  id BIGINT PRIMARY KEY,
+  provider_id BIGINT NOT NULL,
+  type VARCHAR(10) NOT NULL,            -- bike|scooter
+  brand VARCHAR(60), model VARCHAR(60), color VARCHAR(30), year SMALLINT,
+  battery_level TINYINT NULL,
+  lock_type VARCHAR(10) NOT NULL,       -- BLE|QR|none
+  location POINT NOT NULL,              -- SRID 4326
+  status VARCHAR(12) NOT NULL,          -- Available|Reserved|Active|Unavailable
+  rating_avg DECIMAL(3,2) DEFAULT 0,
+  rating_count INT DEFAULT 0,
+  published_at TIMESTAMP NULL,
+  verified_at TIMESTAMP NULL,
+  is_deleted BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  SPATIAL INDEX idx_location (location),
+  INDEX idx_status (status),
+  INDEX idx_provider (provider_id)
+);
+
+CREATE TABLE vehicle_media(
+  id BIGINT PRIMARY KEY,
+  vehicle_id BIGINT NOT NULL,
+  url VARCHAR(255) NOT NULL,
+  kind VARCHAR(10) NOT NULL,            -- photo
+  created_at TIMESTAMP NOT NULL,
+  FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)
+);
+
+CREATE TABLE vehicle_status_history(
+  id BIGINT PRIMARY KEY,
+  vehicle_id BIGINT NOT NULL,
+  from_status VARCHAR(12),
+  to_status VARCHAR(12) NOT NULL,
+  reason VARCHAR(60),
+  changed_at TIMESTAMP NOT NULL,
+  FOREIGN KEY (vehicle_id) REFERENCES vehicles(id),
+  INDEX idx_vsh_vehicle (vehicle_id, changed_at)
+);
+
+CREATE TABLE vehicle_ratings(
+  vehicle_id BIGINT NOT NULL,
+  rental_id BIGINT NOT NULL,
+  user_id BIGINT NOT NULL,
+  score TINYINT NOT NULL,               -- 1..5
+  comment VARCHAR(300),
+  created_at TIMESTAMP NOT NULL,
+  PRIMARY KEY (rental_id),              -- evita duplicados por alquiler
+  FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)
+);
+
+CREATE TABLE vehicles_outbox(
+  id BIGINT PRIMARY KEY,
+  aggregate_id BIGINT NOT NULL,
+  event_type VARCHAR(80) NOT NULL,
+  payload JSON NOT NULL,
+  status VARCHAR(12) NOT NULL DEFAULT 'PENDING',
+  attempts INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  published_at TIMESTAMP NULL
+);
+```
+
+**Topología de eventos**
+
+* **Salida:** `vehicles.vehicle.listed`, `vehicles.vehicle.updated`, `vehicles.vehicle.status.changed`, `vehicles.vehicle.deleted`, `vehicles.vehicle.rated`.
+* **Entrada:** `providing.vehicle.published|updated|removed`, `renting.reservation.created|cancelled|expired|rental.started|rental.finished|rental.overdue`.
+
+**Seguridad operativa**
+
+* Autorización de endpoints de proveedor con **policy owner** (`providerId == auth.sub`).
+* Sanitización de PII (nunca exponer info de contacto del proveedor en endpoints públicos).
+* Rate-limit en `searchNearby` para evitar scraping agresivo.
+
+**Alcance Sprint 1 (Vehicles)**
+
+* Ingesta de `VehiclePublished/Updated/Removed` desde **Providing**.
+* Endpoints: `GET /`, `GET /{id}`, `GET /me`, `PATCH /me/{id}`, `POST /me/{id}:availability`, `POST /{id}/ratings`.
+* Transiciones de estado por eventos de **Renting** con idempotencia.
+* Búsqueda cercana con índice espacial; sin subida binaria de fotos (solo URL).
+
+### 2.6.3. Bounded Context: **Renting**
+
+#### 2.6.3.1. Domain Layer
+
+**Agregados y Entidades**
+
+* **Reservation** *(Aggregate Root)*
+  Atributos: `ReservationId`, `UserId`, `VehicleId`, `TimeWindow{start, ttlMinutes}`, `Status{Created|Edited|Cancelled|Expired}`, `PriceEstimate{unlock, perMinute, perKm?, currency}`, `CreatedAt`.
+  Invariantes: 1) Un vehículo **no** puede tener >1 reserva **activa**. 2) Cambiar a `Expired` al exceder TTL si no inició.
+  Operaciones: `edit(window)`, `cancel(reason)`, `expire()`.
+
+* **Rental** *(Aggregate Root)*
+  Atributos: `RentalId`, `ReservationId`, `UserId`, `VehicleId`, `StartAt`, `EndAt?`, `Status{Active|Paused|Finished|Overdue}`, `Pricing{unlock, perMinute, perKm?, penalties}`, `Total?`.
+  Invariantes: 1) `Active` solo si reserva válida y **PaymentAuthorized**. 2) `Finished` solo si **PaymentCaptured**.
+  Operaciones: `start()`, `pause()`, `resume()`, `finish(measures)`, `markOverdue()`.
+
+**Value Objects**
+
+* `TimeWindow`, `Price`, `Money`, `GeoPoint(lat,lng)`, `Pricing` (tarifas vigentes al inicio), `Penalty(kind, amount)`.
+
+**Servicios de Dominio**
+
+* **AvailabilityService**: verifica disponibilidad con Vehicles (regla de reserva única).
+* **PricingService**: calcula estimación y total (unlock + minuto \[+ km]).
+* **PenaltyPolicy**: reglas por *overdue*, *out-of-zone*, daño (solo declara, Payments cobra).
+
+**Repositorios (interfaces)**
+
+* `ReservationRepository` (`findActiveByVehicle`, `save`, `get`, `cancel/expire`)
+* `RentalRepository` (`save`, `get`, `findActiveByUser`, `close`)
+
+**Eventos (publish)**
+
+* `ReservationCreated|Edited|Cancelled|Expired`
+* `RentalStarted|Paused|Resumed|Finished|Overdue`
+* `PenaltyApplied {rentalId, userId, type, amount}` *(opcional S1: solo notifica)*
+
+**Suscripciones (subscribe)**
+
+* `VehicleStatusChanged` ← Vehicles *(para reconciliación si hiciera falta)*
+* `PaymentAuthorized|PaymentCaptured|PaymentFailed|PenaltyCharged` ← Payments
+
+**Políticas clave**
+
+* Reserva **expira** a `ttlMinutes` si no pasa a alquiler.
+* Inicio del alquiler requiere **autorización** previa del importe estimado.
+* Finalización del alquiler intenta **captura**; si falla → `Overdue` + reintentos.
+
+---
+
+#### 2.6.3.2. Interface Layer
+
+**Base path:** `/api/v1/renting` · **Auth:** Bearer (rol `User`) · **Formato:** JSON
+
+**Reservas**
+
+* `POST /reservations` → crea reserva
+  Body: `{ vehicleId, startAt?, ttlMinutes? }` → `201 { reservationId, priceEstimate, expiresAt }`
+* `PATCH /reservations/{id}` → editar ventana (si `Created`)
+* `DELETE /reservations/{id}` → cancelar (si `Created`)
+* `GET /reservations/{id}` / `GET /users/me/reservations?status=` → consulta
+
+**Inicio / Ciclo de alquiler**
+
+* `POST /reservations/{id}:start` → inicia alquiler (autoriza pago estimado y cambia vehículo a `Active`)
+  `200 { rentalId }`
+* `POST /rentals/{id}:pause` / `POST /rentals/{id}:resume`
+* `POST /rentals/{id}:finish` → cierra y **captura** pago
+  Respuesta: `{ total, breakdown, receiptId }`
+* `GET /rentals/{id}` / `GET /users/me/rentals` (historial)
+
+**Estimación**
+
+* `GET /pricing/estimate?vehicleId=...&minutes=...&km=?` → `{ unlock, perMinute, perKm?, total }`
+
+**Errores comunes**
+
+* `409 INVALID_STATE`, `409 VEHICLE_ALREADY_RESERVED`, `422 RESERVATION_EXPIRED`, `402 PAYMENT_REQUIRED` (falló autorización/captura).
+
+**Webhooks/eventos externos (si se exponen)**
+
+* `renting.events.*`: `reservation.created|cancelled|expired`, `rental.started|finished`, etc.
+
+---
+
+#### 2.6.3.3. Application Layer
+
+**Use Cases / Command Handlers**
+
+* `CreateReservation(cmd)`
+
+  1. `AvailabilityService.check(vehicleId)`
+  2. `PricingService.estimate(...)`
+  3. Persistir `Reservation(Created)` + **Outbox** `ReservationCreated`.
+* `EditReservation(cmd)` → valida estado + actualiza + `ReservationEdited`.
+* `CancelReservation(cmd)` → `ReservationCancelled`.
+* `StartRental(cmd)`
+
+  1. Verifica `Reservation` válida/no expirada
+  2. `PaymentsPort.authorize(user, estimate, reservationId)`
+  3. `VehiclesPort.activate(vehicleId)`
+  4. Persistir `Rental(Active)` + `RentalStarted` y marcar reserva “consumida”.
+* `PauseRental(cmd)` / `ResumeRental(cmd)` → `RentalPaused/Resumed`.
+* `FinishRental(cmd)`
+
+  1. Calcula total (duración \[+ km])
+  2. `PaymentsPort.capture(rentalId, total)`
+  3. `VehiclesPort.release(vehicleId)`
+  4. `RentalFinished` (+ `PenaltyApplied` si corresponde).
+* **Jobs**: `ExpireReservationsJob` (cada 1 min) → `ReservationExpired`; `OverdueSweepJob` (detecta alquileres sin *finish*).
+
+**Event Handlers**
+
+* `OnPaymentAuthorized` → continuar inicio si modelo fuera *async*.
+* `OnPaymentCaptured` → cerrar alquiler y emitir recibo.
+* `OnPaymentFailed` → transición a `Overdue` y reintentos.
+* `OnVehicleStatusChanged` → reconciliar estados (opcional).
+
+**Puertos (Ports)**
+
+* `VehiclesPort` → `reserve/activate/release` (o solo `activate/release` si la reserva se maneja internamente).
+* `PaymentsPort` → `authorize`, `capture`, `chargePenalty`, `refund` (si aplica).
+* `ClockPort`, `GeoPort` (opt), `EventPublisherPort`.
+
+**Trazabilidad con US (cap. 2)**
+
+* **US16** crear reserva, **US18** iniciar alquiler, **US19** pausar/reanudar, **US17** finalizar, **US23** penalidades, **US24** historial.
+
+**Consistencia**
+
+* Patrón **Transactional Outbox**; idempotencia por `commandId` y `eventId`.
+* Optimistic locking (`version`) en `Reservation`/`Rental`.
+
+---
+
+#### 2.6.3.4 Infrastructure Layer
+
+**Adaptadores**
+
+* **Repos**: `SqlReservationRepository`, `SqlRentalRepository` (JPA/ORM).
+* **Mensajería**: `OutboxPublisher` → `renting.events.*`; `EventConsumer` ← `payments.events.*`, `vehicles.events.*`.
+* **HTTP Clients (ACLs)**: `PaymentsClient` (idempotency-key por `reservationId`/`rentalId`), `VehiclesClient`.
+* **Jobs/Scheduler**: `ExpireReservationsJob`, `OverdueSweepJob`.
+* **Cache**: caché corto de estimaciones.
+
+**Esquema SQL mínimo**
+
+```
+CREATE TABLE renting_reservations(
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  vehicle_id BIGINT NOT NULL,
+  start_at TIMESTAMP NOT NULL,
+  ttl_minutes INT NOT NULL,
+  status VARCHAR(12) NOT NULL,        -- Created|Edited|Cancelled|Expired
+  price_unlock DECIMAL(10,2) NOT NULL,
+  price_per_minute DECIMAL(10,2) NOT NULL,
+  price_per_km DECIMAL(10,2) DEFAULT 0,
+  currency CHAR(3) NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  version INT NOT NULL,
+  INDEX idx_vehicle_active (vehicle_id, status),
+  INDEX idx_user (user_id)
+);
+
+CREATE TABLE renting_rentals(
+  id BIGINT PRIMARY KEY,
+  reservation_id BIGINT NOT NULL,
+  user_id BIGINT NOT NULL,
+  vehicle_id BIGINT NOT NULL,
+  start_at TIMESTAMP NOT NULL,
+  end_at TIMESTAMP NULL,
+  status VARCHAR(12) NOT NULL,        -- Active|Paused|Finished|Overdue
+  unlock_fee DECIMAL(10,2) NOT NULL,
+  per_minute DECIMAL(10,2) NOT NULL,
+  per_km DECIMAL(10,2) DEFAULT 0,
+  penalty_total DECIMAL(10,2) DEFAULT 0,
+  total DECIMAL(10,2) NULL,
+  currency CHAR(3) NOT NULL,
+  version INT NOT NULL,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  INDEX idx_user_status (user_id, status),
+  FOREIGN KEY (reservation_id) REFERENCES renting_reservations(id)
+);
+
+CREATE TABLE renting_outbox(
+  id BIGINT PRIMARY KEY,
+  aggregate_id BIGINT NOT NULL,
+  event_type VARCHAR(80) NOT NULL,
+  payload JSON NOT NULL,
+  status VARCHAR(12) NOT NULL DEFAULT 'PENDING',
+  attempts INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  published_at TIMESTAMP NULL
+);
+```
+
+**Topología de eventos**
+
+* **Salida:** `renting.reservation.created|edited|cancelled|expired`, `renting.rental.started|paused|resumed|finished|overdue`, `renting.penalty.applied`.
+* **Entrada:** `payments.authorized|captured|failed`, `vehicles.status.changed` (opcional).
+
+**Seguridad/Operación**
+
+* Autorización: un usuario solo accede a **sus** reservas/alquileres.
+* Idempotencia en `start/finish` (clave `Idempotency-Key`).
+* Alerta por reservas expiradas > X/min o `capture` fallidos.
+
+### 2.6.4. Bounded Context: **Providing**
+
+#### 2.6.4.1. Domain Layer
+
+**Agregados y Entidades**
+
+* **Provider** *(Aggregate Root)*
+  Atributos: `ProviderId`, `UserId`, `Status{Pending|Verified|Suspended}`, `FullName`, `DocumentId`, `Phone`, `Address`(VO), `CreatedAt`, `VerifiedAt?`, `StrikeCount=0`.
+  Invariantes:
+
+  * `Verified` requiere documentos válidos y contacto confirmado.
+  * `Suspended` bloquea cualquier aprobación nueva.
+    Operaciones: `requestVerification(docs)`, `verify()`, `reject(reason)`, `suspend(reason)`, `incrementStrike()`.
+
+* **VehicleApplication** *(Aggregate Root)*
+  Atributos: `ApplicationId`, `ProviderId`, `Specs`(VO), `Photos[]`(VO), `LockType`, `OwnershipProof`(VO), `Inspection`(Entidad), `Status{Draft|Submitted|Approved|Rejected|Published}`, `Notes?`, `SubmittedAt?`, `ReviewedAt?`.
+  Invariantes:
+
+  * Solo `Submitted` puede pasar a `Approved/Rejected`.
+  * `Published` solo si `Provider.Status=Verified`.
+    Operaciones: `submit()`, `approve()`, `reject(reason)`, `publish()`.
+
+* **Inspection** *(Entidad)*: `InspectorId`, `Checklist{brakes, lights, tires, lock}`, `Photos[]`, `Result{Pass|Fail}`, `Comments`.
+
+**Value Objects**
+
+* **Specs**: `type{bike|scooter}`, `brand`, `model`, `year?`, `color?`.
+* **Photo**: `url`, `kind{front|side|serial|lock}`.
+* **OwnershipProof**: `docType{invoice|declaration}`, `docNumber`, `fileUrl`.
+* **Address**: `street`, `district`, `city`.
+
+**Repositorios (interfaces)**
+
+* `ProviderRepository` (`findByUserId`, `save`, `get`)
+* `VehicleApplicationRepository` (`save`, `get`, `findByProvider`, `findSubmitted`, `approve`, `reject`, `publish`)
+
+**Eventos (publish)**
+
+* `ProviderVerified {providerId,userId,verifiedAt}`
+* `ProviderSuspended {providerId,reason}`
+* `VehicleOnboarded {applicationId, providerId, specs, photos, lockType}` *(señal de alta aprobada)*
+* `VehicleApplicationApproved {applicationId, providerId}`
+* `VehicleApplicationRejected {applicationId, providerId, reason}`
+
+**Suscripciones (subscribe)**
+
+* `RoleAssigned {userId,role=Provider}` ← **IAM** → crea/busca `Provider` y lo deja en `Pending`.
+* `PayoutMethodLinked {providerId}` ← **Payments** (opcional S2) para validar prerrequisitos operativos.
+
+**Políticas clave**
+
+* Un **Provider** no verificado no puede **publish()**.
+* `publish()` dispara **VehicleOnboarded**; **Vehicles** es quien **lista** y gestiona estados operativos.
+* Idempotencia en `verify()` y `approve()/publish()`.
+
+---
+
+#### 2.6.4.2. Interface Layer
+
+**Base path:** `/api/v1/providing` · **Auth:** Bearer.
+
+* **Proveedor**: rol `Provider` (dueño).
+* **Admin**: rol `Admin` (revisión y aprobación).
+
+**Endpoints de Proveedor**
+
+* `GET /providers/me` → estado y datos básicos del proveedor.
+* `POST /providers/me/verification` → enviar documentos (payload con URLs/ids de archivo).
+* `POST /vehicles/applications` → crear solicitud de vehículo (draft).
+* `PATCH /vehicles/applications/{id}` → actualizar draft (specs, fotos, lock).
+* `POST /vehicles/applications/{id}:submit` → enviar a revisión.
+* `GET /vehicles/applications?mine=true` → listar solicitudes propias y estados.
+
+**Endpoints de Revisor/Admin**
+
+* `GET /vehicles/applications?status=Submitted` → bandeja de revisión.
+* `POST /vehicles/applications/{id}:approve` → aprueba e **inicia publish()**.
+* `POST /vehicles/applications/{id}:reject` → con `reason`.
+* `POST /providers/{id}:verify` / `POST /providers/{id}:reject` / `POST /providers/{id}:suspend`
+
+**Errores típicos**
+
+* `403 FORBIDDEN_OWNER` (editar app ajena), `409 INVALID_STATE` (aprobar un draft), `422 VALIDATION_ERROR`, `404 NOT_FOUND`.
+
+---
+
+#### 2.6.4.3. Application Layer
+
+**Use Cases / Command Handlers**
+
+* `CreateOrGetProvider(userId)` → asegura agregado `Provider(Pending)` si no existe (trigger tras `RoleAssigned:Provider`).
+* `RequestProviderVerification(cmd)` → `provider.requestVerification(docs)` → guardar.
+* `VerifyProvider(cmd)` *(admin)* → `provider.verify()` → **ProviderVerified**.
+* `SubmitVehicleApplication(cmd)` → `app.submit()` → guardar.
+* `ApproveVehicleApplication(cmd)` *(admin)* → `app.approve()` → `app.publish()` → **VehicleApplicationApproved** + **VehicleOnboarded**.
+* `RejectVehicleApplication(cmd)` *(admin)* → `app.reject(reason)` → **VehicleApplicationRejected**.
+* `SuspendProvider(cmd)` *(admin)* → `provider.suspend(reason)` → **ProviderSuspended**.
+
+**Event Handlers**
+
+* `OnRoleAssignedProvider` ← **IAM**: `CreateOrGetProvider(userId)`.
+* `OnPayoutMethodLinked` ← **Payments** (opcional): marcar checklist de operatividad.
+
+**Puertos (Ports)**
+
+* `VehiclesPort.publish(vehicleOnboarded)` → evento/ACL hacia **Vehicles**.
+* `StoragePort` (validación de fotos, S2).
+* `PaymentsPort` (leer estado de payout method, S2).
+* `EventPublisherPort` (outbox → broker).
+
+**Métricas (S1)**
+
+* Tiempo de **onboarding**: `RoleAssigned → ProviderVerified`.
+* Tasa de **aprobación** de vehículos y tiempo a **Published**.
+* Devoluciones por “falta de evidencias”.
+
+**Consistencia**
+
+* Transactional Outbox para `ProviderVerified` y `VehicleOnboarded`.
+* Idempotencia en aprobaciones/publicaciones.
+
+---
+
+#### 2.6.4.4 Infrastructure Layer
+
+**Adaptadores**
+
+* **Repos**: `SqlProviderRepository`, `SqlVehicleApplicationRepository`.
+* **Mensajería**: `OutboxPublisher` → `providing.events.*`; consumidores para `iam.role.assigned`.
+* **ACL hacia Vehicles** (si se usa HTTP en vez de evento puro en S1): `VehiclesClient.publishOnboarded()` (recomendado evento puro).
+* **Storage** (S2): firma de URLs, validación MIME.
+
+**Esquema SQL mínimo**
+
+```
+CREATE TABLE providing_providers(
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT NOT NULL UNIQUE,
+  full_name VARCHAR(120),
+  document_id VARCHAR(30),
+  phone VARCHAR(20),
+  address_street VARCHAR(120),
+  address_district VARCHAR(80),
+  address_city VARCHAR(80),
+  status VARCHAR(12) NOT NULL,           -- Pending|Verified|Suspended
+  strike_count INT DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  verified_at TIMESTAMP NULL
+);
+
+CREATE TABLE providing_vehicle_applications(
+  id BIGINT PRIMARY KEY,
+  provider_id BIGINT NOT NULL,
+  type VARCHAR(10) NOT NULL,             -- bike|scooter
+  brand VARCHAR(60), model VARCHAR(60), year SMALLINT, color VARCHAR(30),
+  lock_type VARCHAR(10) NOT NULL,        -- BLE|QR|none
+  ownership_doc_type VARCHAR(20),
+  ownership_doc_number VARCHAR(40),
+  ownership_file_url VARCHAR(255),
+  status VARCHAR(12) NOT NULL,           -- Draft|Submitted|Approved|Rejected|Published
+  notes VARCHAR(300),
+  submitted_at TIMESTAMP NULL,
+  reviewed_at TIMESTAMP NULL,
+  created_at TIMESTAMP NOT NULL,
+  updated_at TIMESTAMP NOT NULL,
+  INDEX idx_provider (provider_id),
+  INDEX idx_status (status),
+  FOREIGN KEY (provider_id) REFERENCES providing_providers(id)
+);
+
+CREATE TABLE providing_application_photos(
+  id BIGINT PRIMARY KEY,
+  application_id BIGINT NOT NULL,
+  url VARCHAR(255) NOT NULL,
+  kind VARCHAR(20) NOT NULL,             -- front|side|serial|lock
+  created_at TIMESTAMP NOT NULL,
+  FOREIGN KEY (application_id) REFERENCES providing_vehicle_applications(id)
+);
+
+CREATE TABLE providing_outbox(
+  id BIGINT PRIMARY KEY,
+  aggregate_id BIGINT NOT NULL,
+  event_type VARCHAR(80) NOT NULL,
+  payload JSON NOT NULL,
+  status VARCHAR(12) NOT NULL DEFAULT 'PENDING',
+  attempts INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  published_at TIMESTAMP NULL
+);
+```
+
+**Topología de eventos**
+
+* **Salida:**
+
+  * `providing.provider.verified`
+  * `providing.vehicle.application.approved`
+  * `providing.vehicle.onboarded`
+* **Entrada:**
+
+  * `iam.role.assigned` (filtrar `role=Provider`)
+  * `payments.payout.linked` (opcional)
+
+**Seguridad/Operación**
+
+* Policy **owner**: un proveedor solo ve/edita **sus** aplicaciones.
+* Validación de enlaces (fotos/documentos).
+* Auditoría de aprobaciones/rechazos (quién y cuándo).
+
+### 2.6.5. Bounded Context: **Payments**
+
+#### 2.6.5.1. Domain Layer
+
+**Agregados y Entidades**
+
+* **PaymentMethod** *(Aggregate Root)*
+  Atributos: `PaymentMethodId`, `UserId`, `Type{card|yape|plin}`, `Status{Pending|Verified|Failed|Disabled}`, `PspTokenRef`, `Brand?`, `Last4?`, `IsDefault`, `CreatedAt`.
+  Invariantes:
+
+  * Un usuario puede marcar **un** método por defecto.
+  * `Status=Verified` exige token válido del PSP.
+    Operaciones: `verify(pspToken)`, `setDefault()`, `disable()`.
+
+* **Authorization** *(Aggregate Root)*
+  Atributos: `AuthorizationId`, `UserId`, `ReservationId?`, `RentalId?`, `AmountEstimate(Money)`, `Currency`, `Status{Created|Authorized|Failed|Voided}`, `HoldExpiresAt?`, `PspAuthRef`.
+  Invariantes:
+
+  * Solo se puede **capturar** si `Status=Authorized`.
+  * Una reserva/alquiler tiene a lo sumo **una** autorización activa.
+    Operaciones: `markAuthorized(pspRef, hold)`, `fail(reason)`, `void()`.
+
+* **Charge** *(Aggregate Root)*
+  Atributos: `ChargeId`, `UserId`, `RentalId`, `AuthorizationId?`, `AmountFinal(Money)`, `Currency`, `Status{Captured|Failed|Refunded}`, `Breakdown{unlock, perMinute, penalties?}`, `PspChargeRef`, `CreatedAt`.
+  Invariantes:
+
+  * `Captured` requiere confirmación PSP o política de “pending\_capture” con conciliación.
+    Operaciones: `capture(amount)`, `refund(partial?)`.
+
+* **Penalty** *(Entidad ligada a Charge/Authorization)*
+  Atributos: `PenaltyId`, `RentalId`, `Type{overdue|out_of_zone|damage}`, `Amount(Money)`, `Status{Pending|Charged|Failed}`, `Reason?`.
+
+* **Payout** *(Aggregate Root)*
+  Atributos: `PayoutId`, `ProviderId`, `Period{start,end}`, `Amount(Money)`, `Status{Scheduled|Processing|Paid|Failed}`, `PspPayoutRef?`, `CreatedAt`, `PaidAt?`.
+  Invariantes:
+
+  * Un período y proveedor generan **un único** payout (idempotencia por `ProviderId+Period`).
+    Operaciones: `schedule()`, `markPaid(ref)`, `fail(reason)`.
+
+**Value Objects**
+
+* `Money{amount, currency}` (inmut.)
+* `FeeBreakdown{unlock, perMinute, perKm?, penalties}`
+* `WalletId/ExternalRef` (cuando aplique)
+* `PspError(code,message)` (mapea errores externos a internos)
+
+**Servicios de Dominio**
+
+* **FeeCalculatorService**: calcula totales según tarifas vigentes.
+* **AntiFraudPolicy** (básica S1): verificación mínima de riesgo (monto, historial de fallas).
+* **PayoutPolicy**: define frecuencia (S1 semanal), mínimos y retenciones.
+
+**Repositorios (interfaces)**
+
+* `PaymentMethodRepository`, `AuthorizationRepository`, `ChargeRepository`, `PenaltyRepository`, `PayoutRepository`.
+
+**Eventos publicados**
+
+* `PaymentMethodVerified {userId, methodId, type}`
+* `PaymentAuthorized {authorizationId, userId, rentalId?, reservationId?, amount, currency, holdExpiresAt}`
+* `PaymentCaptured {chargeId, userId, rentalId, amount, currency}`
+* `PaymentFailed {context, id, reason}`
+* `PenaltyCharged {penaltyId, rentalId, amount, type}`
+* `RefundProcessed {chargeId, amount}`
+* `PayoutSettled {payoutId, providerId, amount, period}`
+
+**Suscripciones (entrantes)**
+
+* De **Renting**:
+
+  * `ReservationCreated` *(opcional si se preautoriza en reserva)*
+  * `RentalStarted` → **Authorize**
+  * `RentalFinished` → **Capture**
+  * `PenaltyApplied` → **ChargePenalty**
+* De **Providing**:
+
+  * `ProviderVerified` (checklist de payout)
+* De **IAM**:
+
+  * `UserSuspended` (bloquear cargos nuevos)
+
+**Políticas clave**
+
+* Autorización **previa** al inicio; captura **al finalizar**.
+* Reintentos con backoff en fallas PSP; idempotencia por `Idempotency-Key`.
+* No se expone **datos sensibles** (solo `PspTokenRef`).
+
+---
+
+#### 2.6.5.2. Interface Layer
+
+**Base path:** `/api/v1/payments` · **Auth:** Bearer · **Formato:** JSON
+
+**Métodos de pago (User)**
+
+* `POST /methods` → alta/verify de método
+  Body:
+
+  ```
+  { "type":"card|yape|plin", "pspToken":"tok_…" , "setDefault":true|false }
+  ```
+
+  201:
+
+  ```
+  { "methodId":"pm_…", "status":"Verified", "brand":"VISA", "last4":"1234", "isDefault":true }
+  ```
+* `GET /methods` → listar propios
+* `POST /methods/{id}:default` → marcar por defecto
+* `POST /methods/{id}:disable` → deshabilitar
+
+**Autorización/Captura (desde Renting o app del usuario)**
+
+* `POST /authorizations`
+  Body:
+
+  ```
+  { "reservationId":"res_…", "rentalId":null, "amount":"12.50", "currency":"PEN", "methodId":"pm_…" }
+  ```
+
+  201:
+
+  ```
+  { "authorizationId":"auth_…", "status":"Authorized", "holdExpiresAt":"…" }
+  ```
+* `POST /charges` *(captura)*
+  Body:
+
+  ```
+  { "rentalId":"rent_…", "authorizationId":"auth_…", "amount":"18.20", "currency":"PEN", "breakdown":{ "unlock":"1.50","perMinute":"16.70" } }
+  ```
+
+  201:
+
+  ```
+  { "chargeId":"ch_…", "status":"Captured", "receiptId":"inv_…" }
+  ```
+
+**Penalidades y reembolsos**
+
+* `POST /penalties`
+  Body:
+
+  ```
+  { "rentalId":"rent_…", "type":"overdue|out_of_zone|damage", "amount":"5.00", "currency":"PEN" }
+  ```
+
+  201:
+
+  ```
+  { "penaltyId":"pen_…", "status":"Charged" }
+  ```
+* `POST /charges/{id}:refund`
+  Body: `{ "amount":"3.00" }` → 200 `{ "status":"Refunded" }`
+
+**Payouts (Proveedor/Admin)**
+
+* `GET /payouts?mine=true` → listar del proveedor
+* `POST /payouts:simulate` *(preview)*
+  Body: `{ "periodStart":"YYYY-MM-DD", "periodEnd":"YYYY-MM-DD" }`
+* `POST /payouts:run` *(admin/job manual)* → crea `Payout(Scheduled)`
+* `GET /payouts/{id}` → estado del payout
+
+**Historial**
+
+* `GET /users/me/charges?from=&to=&status=`
+* `GET /providers/me/payouts?from=&to=&status=`
+
+**Webhooks**
+
+* `POST /webhooks/psp` *(firma HMAC/JWK)* → recibe `authorized|captured|failed|payout.paid|charge.refunded`.
+
+**Errores comunes**
+
+* `402 PAYMENT_REQUIRED` (AUTH\_DECLINED, CAPTURE\_FAILED)
+* `409 INVALID_STATE` (capturar sin auth)
+* `422 METHOD_NOT_VERIFIED`, `422 INVALID_AMOUNT`
+* `503 PSP_UNAVAILABLE`
+
+**Trazabilidad con US**
+US20/US21/US22 (métodos, pagar), US23 (penalidades), US24 (historial), US25 (payouts).
+
+---
+
+#### 2.6.5.3. Application Layer
+
+**Use Cases / Command Handlers**
+
+* `AddPaymentMethod(cmd)` → `PaymentMethod.verify(pspToken)` via `PspClient.tokenVerify()` → guardar → `PaymentMethodVerified`.
+* `AuthorizePayment(cmd)` → valida método por defecto o `methodId` → `AntiFraudPolicy.check()` → `PspClient.authorize()` → `Authorization.markAuthorized(pspRef, hold)` → `PaymentAuthorized`.
+* `CapturePayment(cmd)` → busca `Authorization(Authorized)` → `PspClient.capture()` → crear `Charge(Captured)` con `Breakdown` → `PaymentCaptured`.
+* `ChargePenalty(cmd)` → `PspClient.charge(amount)` → `Penalty.Charged` → `PenaltyCharged`.
+* `RefundCharge(cmd)` → `PspClient.refund()` → `RefundProcessed`.
+* `SchedulePayoutsJob()` → agrega `Payout(Scheduled)` por proveedor/periodo → `ProcessPayout(cmd)` → `PspClient.payout()` → `PayoutSettled`.
+
+**Event Handlers**
+
+* `OnRentalStarted` ← Renting → `AuthorizePayment(reservationId/rentalId, estimate)` (si el flujo es asíncrono).
+* `OnRentalFinished` ← Renting → `CapturePayment(rentalId, total)` (asíncrono).
+* `OnPenaltyApplied` ← Renting → `ChargePenalty(rentalId,type,amount)`.
+
+**Puertos (Ports)**
+
+* `PspClient` (ACL a la pasarela: Stripe/Yape/Plin/Agregador)
+
+  * `tokenVerify(pspToken)`, `authorize(amount,currency,methodRef, idempotencyKey)`, `capture(pspAuthRef, amount, key)`, `charge(amount, methodRef, key)`, `refund(pspChargeRef, amount?, key)`, `payout(providerExternalRef, amount, key)`
+* `EventPublisherPort` (outbox → `payments.events.*`)
+* `ClockPort`, `IdempotencyStorePort` (Redis), `ConfigPort` (fees/currency)
+
+**Consistencia e Idempotencia**
+
+* **Transactional Outbox** para todos los eventos.
+* Idempotency-Key = `contextId` (`reservationId`/`rentalId`/`payoutPeriod+providerId`).
+* Retries con backoff; DLQ para errores PSP.
+
+**Métricas S1**
+
+* Tasa de **éxito** `authorize/capture`.
+* GMV por día/periodo; contracargos (si aplica).
+* Tiempo promedio de **payout**.
+
+**Reglas de seguridad**
+
+* Nunca loguear `pspToken` ni PAN; enmascarar `last4/brand`.
+* Validar **webhook signature**; tolerar *replay* con nonce/ts.
+
+---
+
+#### 2.6.5.4. Infrastructure Layer
+
+**Adaptadores**
+
+* **Repos (MySQL/JPA)**: `SqlPaymentMethodRepository`, `SqlAuthorizationRepository`, `SqlChargeRepository`, `SqlPenaltyRepository`, `SqlPayoutRepository`.
+* **PSP Client (HTTP)**: `StripeAdapter` / `YapePlinAdapter` (timeout, retries, circuit breaker).
+* **Mensajería**: `OutboxPublisher` → `payments.events.*`; `WebhookHandler` firmado.
+* **Idempotencia/Caché**: Redis (`idemp:{key}` con TTL), locks para evitar *double-capture*.
+* **Clock/Config**: adaptadores simples.
+
+**Esquema SQL mínimo**
+
+```
+CREATE TABLE pay_methods(
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  type VARCHAR(10) NOT NULL,             -- card|yape|plin
+  status VARCHAR(12) NOT NULL,           -- Pending|Verified|Failed|Disabled
+  psp_token_ref VARCHAR(120) NOT NULL,
+  brand VARCHAR(20), last4 CHAR(4),
+  is_default BOOLEAN DEFAULT FALSE,
+  created_at TIMESTAMP NOT NULL,
+  UNIQUE(user_id, is_default) WHERE is_default = TRUE
+);
+
+CREATE TABLE pay_authorizations(
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  reservation_id BIGINT NULL,
+  rental_id BIGINT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  currency CHAR(3) NOT NULL,
+  status VARCHAR(12) NOT NULL,           -- Created|Authorized|Failed|Voided
+  psp_auth_ref VARCHAR(120),
+  hold_expires_at TIMESTAMP NULL,
+  created_at TIMESTAMP NOT NULL,
+  UNIQUE(reservation_id),
+  UNIQUE(rental_id)
+);
+
+CREATE TABLE pay_charges(
+  id BIGINT PRIMARY KEY,
+  user_id BIGINT NOT NULL,
+  rental_id BIGINT NOT NULL,
+  authorization_id BIGINT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  currency CHAR(3) NOT NULL,
+  status VARCHAR(12) NOT NULL,           -- Captured|Failed|Refunded
+  breakdown JSON,
+  psp_charge_ref VARCHAR(120),
+  receipt_id VARCHAR(60),
+  created_at TIMESTAMP NOT NULL,
+  INDEX idx_user (user_id),
+  UNIQUE(rental_id)
+);
+
+CREATE TABLE pay_penalties(
+  id BIGINT PRIMARY KEY,
+  rental_id BIGINT NOT NULL,
+  type VARCHAR(20) NOT NULL,             -- overdue|out_of_zone|damage
+  amount DECIMAL(10,2) NOT NULL,
+  currency CHAR(3) NOT NULL,
+  status VARCHAR(12) NOT NULL,           -- Pending|Charged|Failed
+  reason VARCHAR(200),
+  created_at TIMESTAMP NOT NULL,
+  INDEX idx_rental (rental_id)
+);
+
+CREATE TABLE pay_payouts(
+  id BIGINT PRIMARY KEY,
+  provider_id BIGINT NOT NULL,
+  period_start DATE NOT NULL,
+  period_end DATE NOT NULL,
+  amount DECIMAL(10,2) NOT NULL,
+  status VARCHAR(12) NOT NULL,           -- Scheduled|Processing|Paid|Failed
+  psp_payout_ref VARCHAR(120),
+  created_at TIMESTAMP NOT NULL,
+  paid_at TIMESTAMP NULL,
+  UNIQUE(provider_id, period_start, period_end)
+);
+
+CREATE TABLE payments_outbox(
+  id BIGINT PRIMARY KEY,
+  aggregate_id BIGINT NOT NULL,
+  event_type VARCHAR(80) NOT NULL,
+  payload JSON NOT NULL,
+  status VARCHAR(12) NOT NULL DEFAULT 'PENDING',
+  attempts INT NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL,
+  published_at TIMESTAMP NULL
+);
+```
+
+**Topología de eventos**
+
+* **Salida:** `payments.method.verified`, `payments.authorized`, `payments.captured`, `payments.failed`, `payments.penalty.charged`, `payments.payout.settled`, `payments.refund.processed`.
+* **Entrada:** `renting.rental.started`, `renting.rental.finished`, `renting.penalty.applied`, `providing.provider.verified`.
+
+**Operación y observabilidad**
+
+* **Logs** estructurados sin PII/PCI.
+* **Métricas**: `payments_authorize_success_total`, `payments_capture_success_total`, `payments_payout_paid_total`, `psp_latency_seconds`.
+* **Alertas**: tasa de fallo PSP > umbral; backlog de outbox.
+
+**Seguridad**
+
+* TLS, secretos en **KeyVault**.
+* Webhooks con validación de firma y ventana de tiempo.
+* Cumplimiento PCI-DSS (tokenización vía PSP; no almacenamos PAN/CVV).
 
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams 
 
