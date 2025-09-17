@@ -1948,10 +1948,88 @@ CREATE TABLE payments_outbox(
 * Cumplimiento PCI-DSS (tokenización vía PSP; no almacenamos PAN/CVV).
 
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams 
+Este diagrama representa la descomposición interna del container IAM Application, correspondiente al bounded context de identidad y autenticación (IAM) dentro de la plataforma de bicicletas. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), ilustrado en el Nivel 3 del C4 Model (Component Diagram).
+
+
+<img src="/assets/images/bdc1.png" alt="bdc1" width=auto>
+
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams 
-
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams 
+Este diagrama de clases ilustra la capa de dominio del bounded context IAM, con sus Agregados, Entidades y Value Objects.
+
+
+<img src="/assets/images/uml1.png" alt="bdc1" width=auto>
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
+El siguiente diagrama muestra el diseño de la base de datos relacional para el contexto IAM, incluyendo las tablas principales relacionadas con usuarios, credenciales y verificaciones.
+
+<img src="/assets/images/uml2.png" alt="bdc1" width=auto>
+
+Tabla: users
+| Nombre           | Descripción                                                         |
+|------------------|---------------------------------------------------------------------|
+| id               | Identificador único del usuario (UUID, PK).                          |
+| full_name        | Nombre completo del ciclista/proveedor.                              |
+| username         | Nombre de usuario único (opcional, para login/display).              |
+| email            | Correo electrónico único del usuario (identificador de login).       |
+| status           | Estado del usuario: Pending, Active, Suspended.                      |
+| reputation_avg   | Promedio de calificaciones recibidas por el usuario (0.00–5.00).     |
+| reputation_count | Cantidad de calificaciones recibidas.                                |
+| avatar_url       | URL de la foto de perfil (opcional).                                |
+| created_at       | Fecha y hora de creación del registro.                              |
+| updated_at       | Fecha y hora de la última actualización.                            |
+
+Tabla: credentials
+| Nombre              | Descripción                                                         |
+|---------------------|---------------------------------------------------------------------|
+| id                  | Identificador único de la credencial (UUID, PK).                    |
+| user_id             | Referencia al usuario propietario (FK → users.id).                  |
+| password_hash       | Hash de la contraseña (Argon2/BCrypt).                              |
+| password_salt       | Salt usado en el hash (si aplica).                                  |
+| mfa_enabled         | Booleano: indica si MFA/TOTP está activado.                         |
+| failed_attempts     | Contador de intentos fallidos de login.                             |
+| locked_until        | Timestamp hasta el cual la cuenta está bloqueada.                   |
+| last_login_at       | Fecha y hora del último inicio de sesión exitoso.                   |
+| password_changed_at | Fecha y hora de la última modificación de contraseña.               |
+
+Tabla: verifications
+| Nombre            | Descripción                                                           |
+|-------------------|-----------------------------------------------------------------------|
+| id                | Identificador único de la verificación (UUID, PK).                    |
+| user_id           | Usuario relacionado (FK → users.id).                                  |
+| token             | Token de verificación único enviado por email.                        |
+| issued_at         | Fecha y hora en que se emitió el token.                               |
+| expires_at        | Fecha y hora de expiración del token.                                 |
+| used_at           | Fecha y hora en que el token fue usado (null si no usado).            |
+| type              | Tipo de verificación (email, university_domain, etc.).                |
+| university_domain | Dominio universitario validado (ej. `uni.edu`) — opcional.            |
+
+Tabla: roles
+| Nombre      | Descripción                                               |
+|-------------|-----------------------------------------------------------|
+| id          | Identificador único del rol (UUID, PK).                   |
+| name        | Nombre del rol (User, Provider, Admin, etc.).             |
+| grants      | Conjunto de permisos/alcances del rol (JSON / array).     |
+| description | Descripción breve del propósito del rol.                  |
+
+Tabla: user_roles
+| Nombre      | Descripción                                               |
+|-------------|-----------------------------------------------------------|
+| user_id     | Referencia al usuario (FK → users.id).                    |
+| role_id     | Referencia al rol (FK → roles.id).                        |
+| assigned_at | Fecha y hora en que se asignó el rol.                     |
+| granted_by  | (Opcional) ID del admin o proceso que asignó el rol.      |
+
+Tabla: refresh_tokens (opcional, para sesiones seguras)
+| Nombre      | Descripción                                               |
+|-------------|-----------------------------------------------------------|
+| id          | Identificador único del refresh token (UUID, PK).         |
+| user_id     | Usuario asociado (FK → users.id).                         |
+| token_hash  | Hash del refresh token (no se guarda en texto plano).     |
+| issued_at   | Fecha y hora de emisión.                                  |
+| expires_at  | Fecha y hora de expiración.                               |
+| revoked     | Booleano: true si fue revocado.                           |
+| revoked_at  | Fecha y hora de revocación (si aplica).                   |
+| device_info | Metadata del dispositivo/navegador (opcional).            |
 
