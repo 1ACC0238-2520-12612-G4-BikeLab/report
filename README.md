@@ -142,7 +142,51 @@
 
 ## 2.2. Entrevistas
 ### 2.2.1. Diseño de entrevistas
+
+📌 Segmento 1: Estudiantes universitarios
+
+¿Qué medios de transporte utilizas actualmente para llegar a tu universidad?
+
+¿Cuánto gastas en promedio al mes en transporte y cómo afecta eso a tu economía?
+
+¿Has considerado usar bicicleta o scooter como alternativa de transporte? ¿Por qué sí o no?
+
+¿Qué factores te generan más confianza al usar un servicio de alquiler entre estudiantes (ejemplo: validación de correo universitario, seguro, reseñas)?
+
+¿Qué medio de pago usarías con mayor frecuencia (Yape, Plin, tarjeta, efectivo)?
+
+¿Qué tan importante es para ti que el servicio sea rápido y esté disponible cerca de tu universidad?
+
+¿Qué nivel de importancia le das a la sostenibilidad y al cuidado del medio ambiente en tu elección de transporte?
+
+📌 Segmento 2: Arriendatarios mayoristas (tiendas, talleres, negocios)
+
+¿Qué cantidad de bicicletas o scooters disponibles tienes actualmente que podrías destinar al alquiler?
+
+¿Qué factores considerarías importantes para asociarte con una aplicación de micromovilidad (confianza, seguridad, volumen de clientes, soporte técnico)?
+
+¿Qué tipo de modelo de pago sería más atractivo para tu negocio (por viaje, por día, porcentajes compartidos, suscripción)?
+
+¿Qué nivel de visibilidad o marketing esperas obtener al publicar tus vehículos en la plataforma?
+
+¿Qué preocupaciones tendrías sobre el mantenimiento y desgaste de las bicicletas alquiladas?
+
+¿Qué condiciones contractuales o garantías mínimas te darían seguridad para participar (seguro contra robos, cobertura de daños, validación de usuarios)?
+
+¿Qué beneficios adicionales te motivarían a convertirte en socio mayorista (ejemplo: reportes de uso, analítica de demanda, promociones especiales)?
+
+¿Qué criterios usarías para decidir si este modelo de negocio de alquiler digital se ajusta a tu estrategia actual?
+
 ### 2.2.2. Registro de entrevistas
+
+Entrevista 1:https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/Eb09DNQIOrNAgHZEnJ9kiGsB32TVRoCHvMBzbltHFB1Chw?e=EWt1ze&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+Entrevista 2:https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EaLcyxSecJ5DpmX_k21mLBgBi-ibfaZUPxQntKvZBrNDyQ?e=2BoNki&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+Entrevista 3:https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EUtJCs-lM8ZHq5C39LZWi5MBabb5DPlqp38Dftk8CxMkDQ?e=cmYjXi&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+Entrevista 4:
+
 ### 2.2.3. Análisis de entrevistas
 
 ## 2.3. Needfinding
