@@ -1986,16 +1986,24 @@ CREATE TABLE payments_outbox(
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams 
 Este diagrama representa la descomposición interna del container IAM Application, correspondiente al bounded context de identidad y autenticación (IAM) dentro de la plataforma de bicicletas. Se trata de un backend desarrollado bajo los principios de Clean Architecture y Domain-Driven Design (DDD), ilustrado en el Nivel 3 del C4 Model (Component Diagram).
 
-
 <img src="/assets/images/bdc1.png" alt="bdc1" width=auto>
+
+Este diagrama muestra la descomposición interna del container Renting Application.
+
+<img src="/assets/images/bdc2.png" alt="bdc1" width=auto>
+
 
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams 
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams 
 Este diagrama de clases ilustra la capa de dominio del bounded context IAM, con sus Agregados, Entidades y Value Objects.
 
-
 <img src="/assets/images/uml1.png" alt="bdc1" width=auto>
+
+Diagrama de clases del dominio Renting:
+
+<img src="/assets/images/uml3.png" alt="bdc1" width=auto>
+
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
 El siguiente diagrama muestra el diseño de la base de datos relacional para el contexto IAM, incluyendo las tablas principales relacionadas con usuarios, credenciales y verificaciones.
@@ -2069,3 +2077,59 @@ Tabla: refresh_tokens (opcional, para sesiones seguras)
 | revoked_at  | Fecha y hora de revocación (si aplica).                   |
 | device_info | Metadata del dispositivo/navegador (opcional).            |
 
+
+Diagrama entidad–relación del contexto Renting:
+
+<img src="/assets/images/uml4.png" alt="bdc1" width=auto>
+
+Tabla: rentals  
+| Nombre         | Descripción                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| id             | Identificador único del alquiler (UUID, PK).                                |
+| user_id        | Identificador del usuario que alquila (FK → users en IAM).                  |
+| bicycle_id     | Identificador de la bicicleta alquilada (FK → bicycles en Inventory).       |
+| station_start  | Estación donde inicia el alquiler (FK → stations).                         |
+| station_end    | Estación donde termina el alquiler (FK → stations).                        |
+| start_time     | Fecha y hora de inicio del alquiler.                                        |
+| end_time       | Fecha y hora de fin del alquiler (puede ser NULL si está en curso).         |
+| status         | Estado del alquiler: Active, Completed, Cancelled.                          |
+| total_cost     | Costo total del alquiler calculado.                                         |
+| created_at     | Fecha y hora de creación del registro.                                      |
+| updated_at     | Fecha y hora de la última actualización.                                    |
+
+
+Tabla: rental_details  
+| Nombre        | Descripción                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| id            | Identificador único del detalle (UUID, PK).                                 |
+| rental_id     | Identificador del alquiler asociado (FK → rentals).                         |
+| segment_start | Punto de inicio del tramo (coordenadas GPS o estación).                     |
+| segment_end   | Punto de fin del tramo (coordenadas GPS o estación).                        |
+| distance_km   | Distancia recorrida en kilómetros en el tramo.                              |
+| duration_min  | Duración del tramo en minutos.                                              |
+| cost_segment  | Costo parcial asociado al tramo.                                            |
+| created_at    | Fecha y hora de creación del registro.                                      |
+
+Tabla: payments  
+| Nombre        | Descripción                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| id            | Identificador único del pago (UUID, PK).                                    |
+| rental_id     | Identificador del alquiler asociado (FK → rentals).                         |
+| amount        | Monto pagado en la transacción.                                             |
+| method        | Método de pago: CreditCard, DebitCard, Wallet, Cash.                        |
+| status        | Estado del pago: Pending, Successful, Failed, Refunded.                     |
+| transaction_at| Fecha y hora de la transacción.                                             |
+| created_at    | Fecha y hora de creación del registro.                                      |
+
+
+Tabla: stations  
+| Nombre        | Descripción                                                                 |
+|---------------|-----------------------------------------------------------------------------|
+| id            | Identificador único de la estación (UUID, PK).                              |
+| code          | Código único de la estación.                                                |
+| name          | Nombre de la estación.                                                      |
+| location      | Dirección o coordenadas de ubicación.                                       |
+| capacity      | Número máximo de bicicletas que puede albergar.                             |
+| available     | Cantidad de bicicletas disponibles en el momento.                           |
+| created_at    | Fecha y hora de creación del registro.                                      |
+| updated_at    | Fecha y hora de la última actualización.                                    |
