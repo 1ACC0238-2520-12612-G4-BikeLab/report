@@ -58,19 +58,14 @@ Medimos la magnitud del problema a través de entrevistas realizadas a un públi
 
 <img src="assets/images/charts/5.png" width=800>  
 
-Link a encuesta enviada: [https://docs.google.com/forms/d/e/1FAIpQLSeA6pLs-rQHjfQKjtP-qf2gnkVFpHTSa95WKuD-IgsjbufGUw/viewform?usp=dialog](https://docs.google.com/forms/d/e/1FAIpQLSeA6pLs-rQHjfQKjtP-qf2gnkVFpHTSa95WKuD-IgsjbufGUw/viewform?usp=dialog)  
+Link a encuesta enviada: https://docs.google.com/forms/d/e/1FAIpQLSeuQVsIGy44tBfqXXjuoK1ufCO_TC3EtfsLWnLcvZysprAnhQ/viewform?usp=header
 
-Link a resultados de encuesta: [https://docs.google.com/spreadsheets/d/1tCFJkLHdxL313atSLzJCLOHC-6f2ujesVNoaYFEerGg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1tCFJkLHdxL313atSLzJCLOHC-6f2ujesVNoaYFEerGg/edit?usp=sharing)  
+De acuerdo con encuestas realizadas a 20 personas que transitan diariamente por Lima Metropolitana:    
 
-De acuerdo con encuestas realizadas a 30 personas que transitan diariamente por Lima Metropolitana:  
-- El **86.7%** no cuenta con un transporte fijo.  
-- El **63.3%** afirma sufrir retrasos constantes por el tráfico.  
-- El **93.3%** estaría cómodo usando bicicletas como medio de transporte seguro, económico y fácil.  
-- El **96.7%** prioriza precios accesibles y el **90%** exige seguridad en el servicio.  
-- El **80%** considera que una aplicación de alquiler de bicicletas les ayudaría a movilizarse mejor.  
+
 
 ### Conclusión  
-La problemática es real y frecuente en Lima Metropolitana. Existe una clara demanda por alternativas de movilidad más confiables, sostenibles y seguras, especialmente dentro de la comunidad universitaria. Asimismo, las personas dispuestas a alquilar sus bicicletas encuentran aquí una oportunidad para ofrecer un servicio seguro y rentable, contribuyendo a una movilidad más eficiente para los estudiantes.  
+La problemática es real y frecuente en Lima Metropolitana. Existe una clara demanda por alternativas de movilidad más confiables, sostenibles y seguras, especialmente dentro de la comunidad universitaria. Asimismo, las personas dispuestas a alquilar sus bicicletas y scooters encuentran aquí una oportunidad para ofrecer un servicio seguro y rentable, contribuyendo a una movilidad más eficiente para los estudiantes.  
 
 ### 1.2.2. Lean UX Process  
 
