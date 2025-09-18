@@ -178,8 +178,8 @@
 <h4>📌 Segmento 2: Arriendatarios mayoristas</h4>
 <ul>
   <li><a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EUtJCs-lM8ZHq5C39LZWi5MBabb5DPlqp38Dftk8CxMkDQ?e=cmYjXi">Entrevista 1</a></li>
-  <li><a href="https://drive.google.com/file/d/1-G37ulqainGwlK9ZI8ALFZUa1Wn3BwPZ/view?usp=sharing">Entrevista 2/a></li>
-  <li><a href="https://drive.google.com/file/d/12XLj3TCCUFz9v7L5zJ_-OIr03b62N-37/view?usp=sharing">Entrevista 3/a></li>
+  <li><a href="https://drive.google.com/file/d/1-G37ulqainGwlK9ZI8ALFZUa1Wn3BwPZ/view?usp=sharing">Entrevista 2</a></li>
+  <li><a href="https://drive.google.com/file/d/12XLj3TCCUFz9v7L5zJ_-OIr03b62N-37/view?usp=sharing">Entrevista 3</a></li>
 </ul>
 
 ### 2.2.3. Análisis de entrevistas
