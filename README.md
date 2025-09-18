@@ -91,6 +91,7 @@ En los años siguientes a mi graduación, mi propósito es incorporarme a un equ
 – **Cameron Bustamante**
 
 **Objetivo** 1 (Largo Plazo): Desarrollar una carrera sólida como Software Developer, fortaleciendo mis conocimientos en tecnologías y procesos, y creando un portafolio que refleje proyectos profesionales y creativos.
+
 **Objetivo 2** (Largo Plazo): Integrarme en un equipo de desarrollo de software donde pueda aplicar mis habilidades, adquirir experiencia práctica y crecer continuamente como profesional dentro de la industria tecnológica.
 
 - [Capítulo I: Presentación]()
