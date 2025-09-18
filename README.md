@@ -34,7 +34,7 @@
 | Pedro Omar Lecca Villalobos         | |
 
 
-**10 de setiembre de 2025**
+**10 de septiembre de 2025**
 
 </div>
 
@@ -53,14 +53,19 @@
 ## Student Outcome
 | Criterio especifico                       | Acciones realizadas | Conclusiones |
 |-------------------------------------------|---------------------|--------------|
-| Actualizan conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | Giancarlo Castañeda - TB1                   |              |
-| Reconocen la necesidad del aprendizaje permanente profesional y el desarrollo de proyectos en soluciones de software. |                     |              |
+| Actualizan conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | **Giancarlo Castañeda - TB1:** <br> Redacté y estructuré el Context Overview, identifiqué los bounded contexts y elaboré los primeros *Bounded Context Canvases*, detallando sus reglas de negocio, lenguaje ubicuo y dependencias. Además, desarrollé la propuesta inicial del Context Mapping aplicando patrones de Domain-Driven Design para mostrar las relaciones entre los contextos <br> |  **TB1:** <br> Como grupo concluimos que estas actividades fortalecieron nuestros conocimientos en modelado estratégico y táctico con DDD, permitiéndonos organizar de manera clara la arquitectura del sistema y entender cómo los contextos colaboran para cubrir las necesidades del negocio            |
+| Reconocen la necesidad del aprendizaje permanente profesional y el desarrollo de proyectos en soluciones de software. |  **Giancarlo Castañeda - TB1:** <br> investigué las mejores prácticas para el diseño de contextos dentro de proyectos de software basados en DDD, adapté ejemplos de referencia al caso específico de Bikelab y realicé ajustes a las vistas de arquitectura con el fin de alinearlas a un escenario real   | **TB1:** <br> Como grupo comprendimos que el aprendizaje permanente es esencial para el desarrollo profesional, ya que siempre surgen nuevas técnicas y enfoques que deben adaptarse a los proyectos. Reconocimos la importancia de la mejora continua y la iteración como parte del ciclo de construcción de software  |
 
 
 ## Objetivos SMART
 
+- Giancarlo Castañeda
 
-## Contenido
+**Objetivo 1:**
+Al finalizar el primer año después de mi graduación, habré obtenido mi maestria en la carrera de Ingenieria de Software, dedicando al menos 6 horas semanales al estudio y preparación, con el fin de fortalecer mis competencias en diseño de sistemas escalables y aumentar mis oportunidades laborales en el sector.
+
+**Objetivo 2:**  
+En un plazo máximo de dos años tras mi graduación, lograré tener un trabajo estable y pudiendo dedicarme enteramente a ello, con el proposito de consolidar mi experiencia practica, mejorar mis habilidades de trabajo en equipo y posicionarme como un profesional capaz de liderar iniciativas de desarrollo
 
 - [Capítulo I: Presentación]()
   - [1.1. Startup Profile]()
