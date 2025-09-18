@@ -43,3 +43,8 @@
 
 ### Domain-Driven Software Architecture / C4 Diagrams:
 - Link a Structurizr: [https://structurizr.com/share/106219/13db1628-7b4d-4d6a-abfb-f37559b7c04b](https://structurizr.com/share/106219/13db1628-7b4d-4d6a-abfb-f37559b7c04b)
+
+## Anexo B: Exposiciones:
+
+### TB1:
+- [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz)
