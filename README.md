@@ -74,6 +74,13 @@ En un plazo máximo de dos años tras mi graduación, lograré tener un trabajo 
 
 **Objetivo 2:** En un plazo de **12–18 meses** tras mi graduación, conseguiré un **puesto full-time** como **Software Engineer (backend/DDD)** y lideraré al menos **una feature end-to-end** en un entorno productivo. Para ello enviaré **≥20 postulaciones/mes**, prepararé **2 katas por semana**, realizaré **1 mock interview quincenal**, y actualizaré CV/LinkedIn/portafolio en las próximas **2 semanas**. Daré por logrado el objetivo con **1 oferta aceptada**, una tasa de pase a *onsite* ≥ **30%**, y un *post-mortem* de la feature liderada con **defectos <2 por release**.
 
+- Henry Diaz
+**Objetivo 1:**
+Durante el segundo año después de graduarme, quiero fortalecer mi perfil profesional alcanzando una certificación en el área de desarrollo backend o arquitectura de software. Para lograrlo, aprovecharé mi tiempo libre en la preparación, exploraré recursos prácticos y crearé un proyecto personal que refleje lo aprendido, con el fin de demostrar mis capacidades y abrir nuevas oportunidades laborales.
+
+**Objetivo 2:**
+En los años siguientes a mi graduación, mi propósito es incorporarme a un equipo de trabajo como Software Engineer y crecer dentro de un entorno profesional estable. Aspiro a involucrarme en proyectos desafiantes que me permitan aplicar mis conocimientos, perfeccionar mis habilidades en colaboración con otros profesionales y avanzar hacia un rol con mayor impacto dentro de la industria tecnológica.
+
 
 - [Capítulo I: Presentación]()
   - [1.1. Startup Profile]()
