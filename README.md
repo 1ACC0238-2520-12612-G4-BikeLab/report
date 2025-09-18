@@ -178,8 +178,8 @@
 <h4>📌 Segmento 2: Arriendatarios mayoristas</h4>
 <ul>
   <li><a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EUtJCs-lM8ZHq5C39LZWi5MBabb5DPlqp38Dftk8CxMkDQ?e=cmYjXi">Entrevista 1</a></li>
-  <li>Entrevista 2</li>
-  <li>Entrevista 3</li>
+  <li><a href="https://drive.google.com/file/d/1-G37ulqainGwlK9ZI8ALFZUa1Wn3BwPZ/view?usp=sharing">Entrevista 2/a></li>
+  <li><a href="https://drive.google.com/file/d/12XLj3TCCUFz9v7L5zJ_-OIr03b62N-37/view?usp=sharing">Entrevista 3/a></li>
 </ul>
 
 ### 2.2.3. Análisis de entrevistas
@@ -195,8 +195,11 @@
 <h4>📌 Segmento 2: Arriendatarios mayoristas</h4>
 <p><b>Entrevista 1:</b> La entrevista realizada al Sr. Carlos Mendoza (29 años), perteneciente al segmento 2: arriendatarios mayoristas, revela un perfil claramente orientado al negocio de la micromovilidad. Actualmente cuenta con un stock de 300 a 400 bicicletas, con capacidad de ampliar hasta 1000 más según la demanda, lo que demuestra un enfoque escalable. Para asociarse con una aplicación, considera clave la seguridad (validación de usuarios, cobertura contra robos y daños) y el volumen de clientes, pues ambos inciden directamente en la confianza y la rentabilidad. Prefiere un modelo de pago por suscripción, ya que asegura ingresos recurrentes y predecibles. Valora fuertemente la visibilidad y el marketing que pueda otorgar la plataforma para captar más clientes. Aunque no muestra gran preocupación por el desgaste de las bicicletas —pues contempla opciones de remate o donación—, recalca la importancia de contar con garantías contractuales. Además, considera como beneficio adicional los reportes y analíticas de uso, lo que le permitiría optimizar su estrategia comercial. En general, su decisión de participar dependería del nivel de adopción tecnológica y la frecuencia de uso de la aplicación, confirmando que este segmento busca escalabilidad, seguridad y datos de negocio más que el uso personal del servicio.</p>
 
-<p><b>Entrevista 2:</b> Pendiente.</p>
-<p><b>Entrevista 3:</b> Pendiente.</p>
+<p><b>Entrevista 2:</b> La entrevista a Luis Ángel Becerra, dueño de un taller con 4 bicicletas y 2 scooters, muestra la visión de los proveedores sobre la micromovilidad. Considera suficiente esa cantidad para iniciar y probar la rentabilidad del negocio. Valora principalmente la confianza en la aplicación, la seguridad, el volumen de clientes y el soporte técnico. Prefiere un modelo de pago por viaje con porcentajes compartidos, aunque también le interesa una opción fija mensual. Busca visibilidad en la plataforma para vincular el alquiler con la promoción de su taller, pero le preocupan el mantenimiento, el desgaste y los robos, por lo que considera esenciales los seguros, la validación de usuarios y pagos claros. Como beneficios adicionales, destaca los reportes de uso, la analítica de demanda y las promociones. Evalúa este modelo de negocio en función de si le genera ganancias estables, baja carga de gestión y diferenciación frente a la competencia. </p>
+
+<p><b>Entrevista 3:</b> La entrevista a Junior Clemente refleja que su interés principal al asociarse con una plataforma de micromovilidad está en la transparencia de los pagos, la validación adecuada de los usuarios y la existencia de soporte técnico ante problemas. Considera que un esquema mixto de pago, combinando la modalidad por viaje con un mínimo garantizado mensual, le daría mayor seguridad financiera y flexibilidad frente a la demanda.
+Entre sus preocupaciones resalta el cuidado de los vehículos y el riesgo de pérdidas por mal uso o robos, por lo que considera fundamentales los seguros, políticas claras de devolución y medidas estrictas de control. A su vez, valora la posibilidad de que la plataforma le brinde visibilidad adicional, destacando su negocio y servicios complementarios, lo que podría atraer clientes más allá del alquiler. También identifica como beneficios relevantes los informes de desempeño, programas de fidelización y promociones especiales que incentiven el uso constante.
+Junior evalúa la viabilidad del modelo en función de si le permite obtener ingresos estables, minimizar riesgos operativos y diferenciar su negocio frente a la competencia, integrando el alquiler digital con el crecimiento de su propio emprendimiento.</p>
 
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
