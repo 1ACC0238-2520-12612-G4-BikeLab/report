@@ -34,6 +34,7 @@
 | Pedro Omar Lecca Villalobos         | U202223293 |
 
 
+
 </div>
 
 
@@ -43,7 +44,6 @@
 
 |   Versión |   Fecha   |           Autor           |               Descripción  de modificación               |
 |-----------|-----------|---------------------------|-------------------------------------------|
-
 |   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones      |
 | TB1 | 14/09/2025 | Hernandez Poma, Sebastian Eduardo | Elaboración, diseño y análisis de entrevistas a los segmentos objetivos (estudiantes universitarios y arrendatarios mayoristas). Incluyó la preparación de las guías de entrevista, recolección de hallazgos y sistematización de resultados para alimentar la definición de requisitos del proyecto. |
 | TB1 | 14/09/2025 | Pedro Omar, Lecca Villalobos | Realizó todo el punto 'Tactical-Level Domain-Driven Design' y lás imágenes en UXPRESSIA (User Journey Mapping, Empathy Mapping, User Persona, User Task Matrix y Impact Mapping) |
@@ -57,8 +57,8 @@
 | Reconocen la necesidad del aprendizaje permanente profesional y el desarrollo de proyectos en soluciones de software.                    | **Giancarlo Castañeda - TB1:** <br> investigué las mejores prácticas para el diseño de contextos dentro de proyectos de software basados en DDD, adapté ejemplos de referencia al caso específico de Bikelab y realicé ajustes a las vistas de arquitectura con el fin de alinearlas a un escenario real. <br><br>**Pedro Lecca – TB1:** Investigué prácticas recomendadas para modelado táctico (diseño de agregados, partición de transacciones, publicación de eventos) y las adapté al contexto de **Bikelab**. Iteré los diagramas y las vistas de arquitectura con feedback del equipo, refinando límites de agregados y reglas de negocio. Documenté *trade-offs* (consistencia vs. rendimiento, sincrónico vs. asincrónico) y ajusté los artefactos de UXPRESSIA para mantenerlos alineados con el diseño del dominio. <br><br>**Henry Diaz - TB1:** <br> Investigué las mejores prácticas para la gestión de requisitos en proyectos de software, adapté ejemplos de referencia al caso específico de Bikelab y elaboré las epics, user stories y el product backlog. Además, realicé los ajustes necesarios para que la planificación y priorización de funcionalidades se alinearan con un escenario real de desarrollo. <br><br> **Sebastián Hernández - TB1:** <br> Investigué metodologías y buenas prácticas para el diseño y análisis de entrevistas en proyectos de software. Ajusté las guías al contexto de **Bikelab** y realicé un análisis de patrones de respuesta para validar hipótesis iniciales. Además, documenté aprendizajes sobre cómo la investigación de usuarios contribuye a construir soluciones más precisas y alineadas con escenarios reales. <br><br> **Cameron Bustamante – TB1:** <br> Investigué referentes y buenas prácticas de modelado para la elaboración de **Component Level Diagrams**, **Class Diagrams** y **Database Design Diagrams** aplicados a contextos delimitados. A partir de ello, actualicé mis conocimientos en patrones de diseño y arquitectura, reconociendo la necesidad de mantener un aprendizaje continuo para poder aplicar enfoques técnicos modernos y alineados con escenarios reales en proyectos de software.                                                                                                                                                                                                                                                                                             | **TB1:** <br> Como grupo comprendimos que el aprendizaje permanente es esencial para el desarrollo profesional, ya que siempre surgen nuevas técnicas y enfoques que deben adaptarse a los proyectos. Reconocimos la importancia de la mejora continua y la iteración, tanto en el diseño del dominio como en la investigación de usuarios, como parte del ciclo de construcción de software.          |
 
 
-
 ## Objetivos SMART
+
 
 
 - Giancarlo Castañeda
@@ -94,6 +94,7 @@ En los años siguientes a mi graduación, mi propósito es incorporarme a un equ
 **Objetivo** 1 (Largo Plazo): Desarrollar una carrera sólida como Software Developer, fortaleciendo mis conocimientos en tecnologías y procesos, y creando un portafolio que refleje proyectos profesionales y creativos.
 
 **Objetivo 2** (Largo Plazo): Integrarme en un equipo de desarrollo de software donde pueda aplicar mis habilidades, adquirir experiencia práctica y crecer continuamente como profesional dentro de la industria tecnológica.
+
 
 
 - [Capítulo I: Presentación]()
@@ -178,7 +179,6 @@ En los años siguientes a mi graduación, mi propósito es incorporarme a un equ
 ### 2.2.1. Diseño de entrevistas
 ### 2.2.2. Registro de entrevistas
 ### 2.2.3. Análisis de entrevistas
-
 ## 2.3. Needfinding
 ### 2.3.1. User Personas
 ### 2.3.2. User Task Matrix
