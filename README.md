@@ -31,7 +31,7 @@
 | Giancarlo Santiago Castañeda Guimas       |U202310601 |
 | Henry Kevin Diaz Gutierrez            | U201819674 |
 | Sebastian Eduardo Hernandez Poma          | U20231c996 |
-| Pedro Omar Lecca Villalobos         | |
+| Pedro Omar Lecca Villalobos         | U202223293 |
 
 
 **10 de septiembre de 2025**
