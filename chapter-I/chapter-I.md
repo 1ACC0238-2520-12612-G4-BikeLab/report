@@ -49,21 +49,21 @@ Cada día, miles de estudiantes intentan movilizarse al mismo tiempo por rutas y
 ### How much? (¿Cuál es la magnitud del problema?)  
 Medimos la magnitud del problema a través de entrevistas realizadas a un público de 30 personas que transitan diariamente en Lima Metropolitana:  
 
-<img src="assets/images/charts/1.png" width=800>  
+<img src="/assets/images/chapter-I/charts/1.png" width=800>  
 
-<img src="assets/images/charts/2.png" width=800>  
+<img src="/assets/images/chapter-I/charts/2.png" width=800>  
 
-<img src="assets/images/charts/3.png" width=800>  
+<img src="/assets/images/chapter-I/charts/3.png" width=800>  
 
-<img src="assets/images/charts/4.png" width=800>  
+<img src="/assets/images/chapter-I/charts/4.png" width=800>  
 
-<img src="assets/images/charts/5.png" width=800>  
+<img src="/assets/images/chapter-I/charts/5.png" width=800>  
 
-<img src="assets/images/charts/6.png" width=800> 
+<img src="/assets/images/chapter-I/charts/6.png" width=800>  
 
-<img src="assets/images/charts/7.png" width=800> 
+<img src="/assets/images/chapter-I/charts/7.png" width=800>  
 
-<img src="assets/images/charts/8.png" width=800>  
+<img src="/assets/images/chapter-I/charts/8.png" width=800>  
 
 
 Link a encuesta enviada: https://docs.google.com/forms/d/e/1FAIpQLSeuQVsIGy44tBfqXXjuoK1ufCO_TC3EtfsLWnLcvZysprAnhQ/viewform?usp=header
