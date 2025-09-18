@@ -87,9 +87,6 @@ Funciones más valoradas:
 - No usan alternativas como bicicletas, pero están dispuestos a adoptarlas.
 - Buscan comodidad, rapidez y economía, todo lo que Bikelab puede ofrecer.
 
-Conclusión final:
-La encuesta demuestra que existe un mercado potencial interesado en una solución de movilidad ágil, económica y accesible, lo que justifica la necesidad de Bikelab como servicio de alquiler de bicicletas y scooters en Lima Metropolitana.
-
 ### Conclusión  
 La problemática es real y frecuente en Lima Metropolitana. Existe una clara demanda por alternativas de movilidad más confiables, sostenibles y seguras, especialmente dentro de la comunidad universitaria. Asimismo, las personas dispuestas a alquilar sus bicicletas y scooters encuentran aquí una oportunidad para ofrecer un servicio seguro y rentable, contribuyendo a una movilidad más eficiente para los estudiantes.  
 
