@@ -1992,6 +1992,9 @@ Este diagrama muestra la descomposición interna del container Renting Applicati
 
 <img src="/assets/images/bdc2.png" alt="bdc1" width=auto>
 
+El Providing Bounded Context se centra en la gestión de los vehículos que los proveedores ponen a disposición de los usuarios.
+
+<img src="/assets/images/bdc3.png" alt="bdc1" width=auto>
 
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams 
@@ -2003,6 +2006,10 @@ Este diagrama de clases ilustra la capa de dominio del bounded context IAM, con 
 Diagrama de clases del dominio Renting:
 
 <img src="/assets/images/uml3.png" alt="bdc1" width=auto>
+
+Diagrama de clases del dominio Providing:
+
+<img src="/assets/images/uml5.png" alt="bdc1" width=auto>
 
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
@@ -2078,7 +2085,7 @@ Tabla: refresh_tokens (opcional, para sesiones seguras)
 | device_info | Metadata del dispositivo/navegador (opcional).            |
 
 
-Diagrama entidad–relación del contexto Renting:
+Contexto Renting:
 
 <img src="/assets/images/uml4.png" alt="bdc1" width=auto>
 
@@ -2133,3 +2140,49 @@ Tabla: stations
 | available     | Cantidad de bicicletas disponibles en el momento.                           |
 | created_at    | Fecha y hora de creación del registro.                                      |
 | updated_at    | Fecha y hora de la última actualización.                                    |
+
+Contexto Providing:
+<img src="/assets/images/uml6.png" alt="bdc1" width=auto>
+
+Proveedor
+
+| Nombre        | Descripción                                  |
+|--------------|-----------------------------------------------|
+| id_proveedor  | Identificador único del proveedor (PK).      |
+| nombre       | Nombre o razón social del proveedor.        |
+| email         | Correo electrónico del proveedor.                |
+| telefono      | Número de contacto del proveedor.                |
+
+
+Bicicleta
+
+| Nombre        | Descripción                                              |
+| ------------- | -------------------------------------------------------- |
+| id\_vehiculo  | Identificador único del vehículo (PK).                   |
+| tipo          | Tipo de vehículo (`bicicleta` o `scooter`).              |
+| marca         | Marca del vehículo.                                      |
+| modelo        | Modelo del vehículo.                                     |
+| año           | Año de fabricación del vehículo.                         |
+| id\_proveedor | Relación con el proveedor que registró el vehículo (FK). |
+| id\_categoria | Relación con la categoría asignada (FK).                 |
+
+
+
+Categoría
+
+| Nombre        | Descripción                             |
+|---------------|-----------------------------------------|
+| id_categoria  | Identificador único de la categoría (PK). |
+| nombre        | Nombre de la categoría (urbana, MTB, etc.). |
+| descripcion   | Breve descripción de la categoría.       |
+
+
+Historial
+
+| Nombre        | Descripción                                          |
+|---------------|------------------------------------------------------|
+| id_historial  | Identificador único del registro en el historial (PK). |
+| id_bicicleta  | Relación con la bicicleta registrada (FK).            |
+| fecha         | Fecha y hora del cambio o evento.                    |
+| estado        | Estado de la bicicleta (ej. activa, en reparación).  |
+| comentario    | Observaciones o detalles adicionales.                |
