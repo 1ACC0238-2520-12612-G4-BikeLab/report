@@ -1996,6 +1996,9 @@ El Providing Bounded Context se centra en la gestión de los vehículos que los 
 
 <img src="/assets/images/bdc3.png" alt="bdc1" width=auto>
 
+Dominio Vehicles:
+
+<img src="/assets/images/dc2.png" alt="bdc1" width=auto>
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams 
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams 
@@ -2003,14 +2006,17 @@ Este diagrama de clases ilustra la capa de dominio del bounded context IAM, con 
 
 <img src="/assets/images/uml1.png" alt="bdc1" width=auto>
 
-Diagrama de clases del dominio Renting:
+Diagrama del dominio Renting:
 
 <img src="/assets/images/uml3.png" alt="bdc1" width=auto>
 
-Diagrama de clases del dominio Providing:
+Diagrama del dominio Providing:
 
 <img src="/assets/images/uml5.png" alt="bdc1" width=auto>
 
+Diagrama del dominio Vehicles:
+
+<img src="/assets/images/dc1.png" alt="bdc1" width=auto>
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
 El siguiente diagrama muestra el diseño de la base de datos relacional para el contexto IAM, incluyendo las tablas principales relacionadas con usuarios, credenciales y verificaciones.
@@ -2186,3 +2192,52 @@ Historial
 | fecha         | Fecha y hora del cambio o evento.                    |
 | estado        | Estado de la bicicleta (ej. activa, en reparación).  |
 | comentario    | Observaciones o detalles adicionales.                |
+
+Contexto Vehicles:
+<img src="/assets/images/er2.png" alt="bdc1" width=auto>
+
+Usuario
+| Nombre      | Descripción                          |
+| ----------- | ------------------------------------ |
+| id\_usuario | Identificador único del usuario (PK) |
+| nombre      | Nombre completo                      |
+| email       | Correo electrónico único             |
+| telefono    | Número de contacto                   |
+| created\_at | Fecha de creación                    |
+| updated\_at | Fecha de última actualización        |
+
+Vehiculo 
+| Nombre         | Descripción                              |
+| -------------- | ---------------------------------------- |
+| id\_vehiculo   | Identificador único del vehículo (PK)    |
+| tipo           | Tipo de vehículo (bicicleta o scooter)   |
+| marca          | Marca del vehículo                       |
+| modelo         | Modelo del vehículo                      |
+| anio           | Año de fabricación                       |
+| id\_proveedor  | FK al proveedor que registró el vehículo |
+| id\_categoria  | FK a la categoría del vehículo           |
+| serial\_number | Número de serie opcional                 |
+| created\_at    | Fecha de creación                        |
+| updated\_at    | Fecha de actualización                   |
+
+Categoria
+| Nombre        | Descripción                              |
+| ------------- | ---------------------------------------- |
+| id\_categoria | Identificador único de la categoría (PK) |
+| nombre        | Nombre de la categoría                   |
+| descripcion   | Breve descripción                        |
+| created\_at   | Fecha de creación                        |
+| updated\_at   | Fecha de última actualización            |
+
+Historial de uso
+
+| Nombre        | Descripción                                    |
+| ------------- | ---------------------------------------------- |
+| id\_historial | Identificador del registro de uso (PK)         |
+| id\_vehiculo  | FK al vehículo usado                           |
+| id\_usuario   | FK al usuario que usó el vehículo              |
+| fecha\_inicio | Fecha y hora de inicio del uso                 |
+| fecha\_fin    | Fecha y hora de fin del uso                    |
+| estado        | Estado del uso (activo, finalizado, cancelado) |
+| comentario    | Observaciones o notas                          |
+
