@@ -59,11 +59,36 @@ Medimos la magnitud del problema a través de entrevistas realizadas a un públi
 
 <img src="assets/images/charts/5.png" width=800>  
 
+<img src="assets/images/charts/6.png" width=800> 
+
+<img src="assets/images/charts/7.png" width=800> 
+
+<img src="assets/images/charts/8.png" width=800>  
+
+
 Link a encuesta enviada: https://docs.google.com/forms/d/e/1FAIpQLSeuQVsIGy44tBfqXXjuoK1ufCO_TC3EtfsLWnLcvZysprAnhQ/viewform?usp=header
 
-De acuerdo con encuestas realizadas a 20 personas que transitan diariamente por Lima Metropolitana:    
+De acuerdo con encuestas realizadas a 9 personas que transitan diariamente por Lima Metropolitana:
 
+1. La mayoría de los encuestados (promedio 4/5) enfrenta retrasos frecuentes debido al tráfico o al transporte público saturado.
 
+2. Ninguno de los encuestados ha usado bicicletas de alquiler antes.
+
+3. Todos indicaron que se sentirían cómodos usando bicicletas o scooters si fueran seguras, económicas y fáciles de usar.
+
+4. La mayoría manifestó interés en usar una app para alquilar bicicletas y scooters.
+Funciones más valoradas:
+- Reservar antes de salir
+- Pago rápido
+- Ver disponibilidad en tiempo real
+
+5. Síntesis general
+- Los encuestados tienen transporte fijo pero aún sufren retrasos.
+- No usan alternativas como bicicletas, pero están dispuestos a adoptarlas.
+- Buscan comodidad, rapidez y economía, todo lo que Bikelab puede ofrecer.
+
+Conclusión final:
+La encuesta demuestra que existe un mercado potencial interesado en una solución de movilidad ágil, económica y accesible, lo que justifica la necesidad de Bikelab como servicio de alquiler de bicicletas y scooters en Lima Metropolitana.
 
 ### Conclusión  
 La problemática es real y frecuente en Lima Metropolitana. Existe una clara demanda por alternativas de movilidad más confiables, sostenibles y seguras, especialmente dentro de la comunidad universitaria. Asimismo, las personas dispuestas a alquilar sus bicicletas y scooters encuentran aquí una oportunidad para ofrecer un servicio seguro y rentable, contribuyendo a una movilidad más eficiente para los estudiantes.  
