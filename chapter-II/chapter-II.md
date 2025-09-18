@@ -28,33 +28,29 @@ Después de revisar lo que ofrecen otras plataformas, y considerando el análisi
 
 ##### **Experiencia del cliente**
 
-Nuestro enfoque está en ofrecer un servicio mucho más simple y accesible que el de la competencia. La aplicación y la web estarán diseñadas para ser intuitivas, multilingües y compatibles con diferentes medios de pago, tanto locales como internacionales. Además, estudiantes y vecinos de la comunidad tendrán acceso a descuentos especiales que promuevan la inclusión. Para reforzar la cercanía con los usuarios, se habilitarán estaciones físicas en puntos estratégicos como universidades, mercados locales y municipalidades, donde también se podrán brindar guías digitales con consejos de cultivo, tips prácticos y rutas personalizadas de aprendizaje
+La competencia suele enfocarse en la funcionalidad básica de alquiler, pero no siempre en la usabilidad. Bikelab debe destacar con una interfaz intuitiva, tiempos de respuesta rápidos, diseño centrado en el usuario y un flujo de reserva simplificado. Esto genera fidelidad y reduce la tasa de abandono
 
-##### **Diferenciación de la competencia**
+##### **Posicionamiento en sostenibilidad y responsabilidad social**
 
-Nuestro servicio se distingue al integrar huertos urbanos inteligentes equipados con sensores de riego automático y monitoreo en tiempo real de las condiciones del cultivo. A esto se suma el respaldo de municipalidades, lo que genera confianza y facilita el acceso a espacios públicos. La propuesta también incluye una dimensión comunitaria a través de talleres, eventos y asesoría personalizada para los usuarios. Además, todo el proceso de reserva de parcelas será 100% digital, eliminando trámites presenciales y diferenciándonos de competidores más tradicionales. Finalmente, la gamificación de la plataforma permitirá a los usuarios obtener logros y recompensas, fomentando la constancia y el compromiso con la sostenibilidad
+A diferencia de otros competidores que solo promueven movilidad, Bikelab puede posicionarse como un actor clave en la movilidad urbana sostenible, fomentando el uso de bicicletas y vehículos eléctricos. Este enfoque responde a tendencias globales y puede ser un factor decisivo en ciudades con políticas verde
 
-##### **Precios más vistosos**
+##### **Fortalecimiento de confianza y seguridad en las transacciones**
 
-Nuestros planes están diseñados para ser flexibles y fáciles de entender, evitando las tarifas rígidas de otros competidores. Existirá una suscripción básica desde 20 a 30 soles mensuales para pequeños espacios, un plan premium desde 50 a 70 soles con mayores beneficios y servicios avanzados, y la opción de pago por uso desde 5 a 10 soles para talleres o asesorías específicas. Los precios se mostrarán en formatos simples, ya sea por metro cuadrado o por día/mes, transmitiendo mayor claridad y generando confianza en los usuarios al momento de tomar decisiones.
+Implementar procesos robustos de autenticación, validación de identidades y seguros básicos en los alquileres permite diferenciarse en un mercado donde la seguridad suele ser un punto débil. Esto genera credibilidad tanto en usuarios como en proveedores de vehículos
 
-##### **Alquiler y reserva más rápida que otros**
+##### **Flexibilidad en el modelo de negocio**
 
-Nuestra plataforma permitirá reservar parcelas de manera inmediata desde la aplicación, eliminando las largas listas de espera y procesos burocráticos. El sistema se integrará con mapas digitales para mostrar en tiempo real la disponibilidad de los espacios, además de enviar notificaciones automáticas sobre riegos, cosechas o talleres próximos. La experiencia de pago será mucho más ágil que en la competencia, ya que se aceptarán múltiples opciones, desde tarjetas hasta billeteras digitales como Yape, Plin y Paypal, lo que simplifica y acelera la interacción del usuario con el servicio.
+Mientras que competidores se centran en alquiler por uso puntual, Bikelab puede ofrecer planes híbridos: alquiler por hora/día y suscripciones personalizables, lo que otorga estabilidad financiera a la empresa y opciones atractivas para usuarios frecuentes
 
 #### **Tácticas**
 
-##### **Mejores parcelas urbanas**
+##### **Promociones de lanzamiento atractivas**
 
-Nuestras parcelas estarán gestionadas en alianza con municipalidades y organizaciones locales, lo que asegura espacios más seguros, bien ubicados y equipados. La infraestructura incluirá herramientas compartidas, sensores, áreas de compostaje y servicios complementarios que brindarán una experiencia integral y diferenciada para los usuarios
+Se pueden ofrecer descuentos, beneficios adicionales o pruebas gratuitas en la etapa inicial de la aplicación. Esta táctica busca captar rápidamente la atención de nuevos usuarios y generar una base inicial sólida, lo que permitirá competir con otras aplicaciones que ya tengan posicionamiento en el mercado
 
-##### **Mejor digitalización**
+##### **Proceso de mejora continua basado en retroalimentación**
 
-El servicio contará con una plataforma integrada a Google Maps que permitirá localizar parcelas y obtener información en tiempo real. Los usuarios podrán acceder a un panel de control desde la aplicación para monitorear métricas de crecimiento de sus cultivos, lo que genera un vínculo más cercano y tecnológico con su huerto. También se fomentará la retroalimentación solicitando reseñas después de un número determinado de usos, destacando en la página principal aquellas con mejor valoración.
-
-##### **Un servicio que evoluciona**
-
-Nuestro modelo está pensado para crecer y transformarse junto con la comunidad. Se irán sumando nuevos espacios de cultivo, más variedades de semillas y talleres tanto presenciales como virtuales. Asimismo, se buscarán alianzas con supermercados, ferias ecológicas y aplicaciones de pago como Yape, lo que abrirá la puerta a descuentos cruzados y beneficios adicionales. A futuro, también se incluirán funciones como la venta de productos cultivados por los usuarios a través de servicios de delivery sostenible, ampliando el alcance y el impacto del proyecto.
+Implementar encuestas, formularios dentro de la aplicación y análisis de métricas de uso para detectar áreas de mejora. Con esta táctica se asegura que la aplicación evolucione en función de las necesidades reales de los usuarios, lo que permite adaptarse más rápido que los competidores que no recogen activamente feedback
 
 ## 2.2. Entrevistas
 ### 2.2.1. Diseño de entrevistas
