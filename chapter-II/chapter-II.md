@@ -194,7 +194,7 @@ Estudiante & Proveedor
 | US06 | Editar información de perfil (nombre, foto, datos de contacto) |
 | US07 | Cerrar sesión |
 
-| EP02: Como arrendador quiero publicar, editar y administrar mis vehículos para ponerlos a disposición de los estudiantes y turistas.|  |
+| EP02: Como arrendador quiero publicar, editar y administrar mis vehículos para ponerlos a disposición de los estudiantes.|  |
 | :---- | :---- |
 | User Story ID | Título |
 | US08 | Registrar una bicicleta o scooter en la app |
