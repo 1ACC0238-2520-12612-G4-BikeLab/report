@@ -137,6 +137,17 @@ El objetivo principal del Sprint 1 fue establecer la base del backend del sistem
 | —                 | Tareas Generales            | T20         | Configuración PostgreSQL                                      | Esquema base y conexión                                | 4                      | Pedro Lecca | Done                                               |
 
 ##### 4.2.1.3. Development Evidence for Sprint Review 
+
+### 4.2.1.3. Development Evidence for Sprint Review
+
+Durante el Sprint 1 se inicializó el backend y, en un único commit, se incorporaron los cinco *bounded contexts* (**IAM**, **Providing**, **Vehicles**, **Renting**, **Payments**), junto con la configuración base (**Spring Boot 3**, **PostgreSQL**, **Swagger**, **JWT**).
+
+Se requieren varias mejoras y documentar los avences por más commits en vez de hacerlo en uno solo restaurar cambios y tener más evidencia, esa mejora se hará en el siguiente sprint.
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| leccapedro/bikelab-backend | main   | 5a0a23a   | feat(backend): initialize bikelab-backend project | Estructura DDD con BCs: IAM (register, login, me, admin/users); Providing (onboarding, kyc, approve, reject); Vehicles (CRUD, search, availability block/unblock, own); Renting (create, start, finish, cancel, mine/own); Payments (methods, authorize, capture, refund, payouts). Swagger habilitado y protegido con JWT; configuración inicial de PostgreSQL. | 2025-10-08         |
+
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review 
 ##### 4.2.1.5. Execution Evidence for Sprint Review 
 ##### 4.2.1.6. Services Documentation Evidence for Sprint Review 
