@@ -64,8 +64,20 @@ Se utilizará una paleta de colores moderna y enérgica, dominada por tonos verd
 
 ## 3.1.3. Landing Page UI Design 
 ### 3.1.3.1. Landing Page Wireframe 
+Enlace al Figma: [https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1](https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1)
+
+<img src="/assets/images/landingpage/wireframes/lanwireframe1.PNG" alt="Landing Wireframe 1" width=auto> 
+<img src="/assets/images/landingpage/wireframes/lanwireframe2.PNG" alt="Landing Wireframe 2" width=auto> 
+<img src="/assets/images/landingpage/wireframes/lanwireframe3.PNG" alt="Landing Wireframe 3" width=auto> 
+<img src="/assets/images/landingpage/wireframes/lanwireframe4.PNG" alt="Landing Wireframe 4" width=auto> 
 
 ### 3.1.3.2. Landing Page Mock-up 
+Enlace al Figma: [https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1](https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1)
+
+<img src="/assets/images/landingpage/mockups/lanmockup1.PNG" alt="Landing Mock-Ups 1" width=auto> 
+<img src="/assets/images/landingpage/mockups/lanmockup2.PNG" alt="Landing Mock-Ups 2" width=auto> 
+<img src="/assets/images/landingpage/mockups/lanmockup3.PNG" alt="Landing Mock-Ups 3" width=auto> 
+<img src="/assets/images/landingpage/mockups/lanmockup4.PNG" alt="Landing Mock-Ups 4" width=auto> 
 
 ## 3.1.4. Mobile Applications UX/UI Design
 
