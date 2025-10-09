@@ -542,3 +542,135 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 
 #### 4.3.3. Evaluaciones según heurísticas
 
+<h1>📊 Evaluación de UX – BikeLab (Heurísticas)</h1>
+<p>Este documento detalla los hallazgos de usabilidad y diseño encontrados en la aplicación <strong>BikeLab</strong> a partir de entrevistas con usuarios de los segmentos <strong>universitarios</strong> y <strong>arrendadores</strong>. El análisis sigue principios de <strong>Usability</strong>, <strong>Inclusive Design</strong> e <strong>Information Architecture</strong>.</p>
+
+<hr>
+
+<h2>📈 Escala de Severidad</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Nivel</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Problema superficial: Puede ser superado fácilmente por el usuario y ocurre con poca frecuencia. No requiere solución inmediata.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Problema menor: Ocurre ocasionalmente o es un poco más difícil de superar. Requiere solución para próximas versiones.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Problema mayor: Ocurre frecuentemente y afecta a varios usuarios. Debe corregirse con alta prioridad.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Problema muy grave: Bloquea el flujo de uso de la app. Debe corregirse antes del lanzamiento.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>📝 Tareas a Evaluar</h2>
+<p>Las siguientes tareas fueron definidas en base a las entrevistas y flujos principales de la aplicación BikeLab:</p>
+<ol>
+  <li>Registro de un usuario nuevo (segmento universitario)</li>
+  <li>Alquiler de bicicleta y pago</li>
+  <li>Visualización de rutas seguras y métricas</li>
+  <li>Gestión de perfil e historial</li>
+  <li>Registro de bicicletas (segmento arrendador)</li>
+  <li>Publicación y fijación de precios de alquiler</li>
+  <li>Confirmación y seguimiento de reservas</li>
+  <li>Gestión de pagos y comunicación con ciclistas</li>
+</ol>
+
+<hr>
+
+<h2>📉 Tabla Resumen de Problemas</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Problema</th>
+      <th>Escala de Severidad</th>
+      <th>Heurística/Principio violado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>No hay feedback visual al realizar una reserva o pago.</td>
+      <td>3</td>
+      <td>Usability: Visibilidad del estado del sistema</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>No se muestra confirmación clara al publicar una bicicleta (arrendador).</td>
+      <td>2</td>
+      <td>Usability: Visibilidad y control del usuario</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Falta de canal directo de comunicación entre arrendador y ciclista.</td>
+      <td>3</td>
+      <td>Information Architecture: Is it usable?</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>No hay recordatorio ni notificación por correo al recibir una reserva.</td>
+      <td>2</td>
+      <td>Usability: Feedback y consistencia</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Faltan indicadores visuales más claros en la interfaz de rutas.</td>
+      <td>2</td>
+      <td>Inclusive Design: Claridad y accesibilidad</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>🧠 Descripción de Problemas</h2>
+
+<h3>Problema #1: No hay feedback visual al realizar una reserva o pago</h3>
+<p><strong>Severidad:</strong> 3 – Problema mayor</p>
+<p><strong>Heurística violada:</strong> Usability - Visibilidad del estado del sistema</p>
+<p><strong>Descripción:</strong> El usuario no recibe una notificación clara (visual o auditiva) que confirme que su reserva fue procesada. Esto genera incertidumbre y puede llevar a repetir acciones innecesariamente.</p>
+<p><strong>Recomendación:</strong> Implementar mensajes de confirmación y estados de carga visibles en la UI (modal, toast o alertas dinámicas).</p>
+
+<h3>Problema #2: No se muestra confirmación clara al publicar una bicicleta</h3>
+<p><strong>Severidad:</strong> 2 – Problema menor</p>
+<p><strong>Heurística violada:</strong> Usability - Control del usuario</p>
+<p><strong>Descripción:</strong> Los arrendadores no reciben confirmación visual tras publicar su bicicleta, lo que genera dudas sobre si la acción fue exitosa.</p>
+<p><strong>Recomendación:</strong> Mostrar un modal o banner de “Publicación exitosa” con información básica de la bicicleta.</p>
+
+<h3>Problema #3: Falta de canal directo de comunicación</h3>
+<p><strong>Severidad:</strong> 3 – Problema mayor</p>
+<p><strong>Heurística violada:</strong> Information Architecture - Is it usable?</p>
+<p><strong>Descripción:</strong> Actualmente no hay un medio de contacto directo entre arrendador y ciclista, dificultando la coordinación o resolución rápida de incidencias.</p>
+<p><strong>Recomendación:</strong> Implementar un chat interno o botón de contacto directo.</p>
+
+<h3>Problema #4: Falta de notificación por correo</h3>
+<p><strong>Severidad:</strong> 2 – Problema menor</p>
+<p><strong>Heurística violada:</strong> Usability - Feedback y consistencia</p>
+<p><strong>Descripción:</strong> Los arrendadores no reciben correos automáticos al generarse una reserva, lo que afecta la visibilidad y control.</p>
+<p><strong>Recomendación:</strong> Configurar notificaciones automáticas por email y/o push.</p>
+
+<h3>Problema #5: Falta de indicadores visuales claros en rutas</h3>
+<p><strong>Severidad:</strong> 2 – Problema menor</p>
+<p><strong>Heurística violada:</strong> Inclusive Design - Accesibilidad</p>
+<p><strong>Descripción:</strong> Algunos elementos visuales de las rutas no son suficientemente evidentes para usuarios que no estén familiarizados con apps de movilidad.</p>
+<p><strong>Recomendación:</strong> Mejorar contraste de colores, iconografía clara y etiquetas visibles en los mapas de rutas.</p>
+
+<hr>
+
+<p><strong>🧭 Nota:</strong> Este análisis está basado en entrevistas reales realizadas con estudiantes universitarios y arrendadores de bicicletas, además de observación de prototipos y flujos del front.</p>
+
