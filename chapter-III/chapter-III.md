@@ -24,21 +24,90 @@ Los botones, menús y controles se diseñaron con tamaños cómodos para el uso 
 
 7. Control del Usuario y Retroalimentación Inmediata
 La app ofrece confirmaciones visuales y mensajes instantáneos ante cada acción: inicio y fin de recorrido, errores en el pago o conexión, y alertas de batería baja. Esto le da al usuario seguridad y sensación de control en todo momento.
-- Colores:
+
+---
+
+
+1. Colores: La paleta de colores de Bikelab combina verdes en distintos tono
+
+<div align="center"> <img src="/assets/images/paleta.png" alt="paleta.png" width="50%"> </div>
+
   
-- Logo:
+2. Logo: El logo de Bikelab está basado en un dardo estilizado que representa precisión, rapidez y exactitud, valores clave para una plataforma de alquiler de bicicletas.
+
+<div align="center"> <img src="/assets/images/bikelab_dart_logo.png" alt="bikelab_dart_logo.png" width="40%"> </div>
+
+- Color principal del dardo: Naranja (#FFA500) → destaca la acción y decisión de alquilar.
+
+- Color secundario del dardo: Verde neón (#8EAB6D) → transmite frescura, energía y dinamismo.
+
+- Tipografía junto al logo: Archivo Narrow, para el nombre “Bikelab”, usando variaciones bold y semibold según la jerarquía.
   
-- Color de fondo:
+
+3. Color de fondo:
+
+- Fondo principal: Verde pastel (#ADC197) → sensación amigable y cercana.
+- Secciones contrastantes: Negro oscuro (#2F2C2C) y blanco (#FFFFFF) para limpieza visual y legibilidad.
+- Detalles decorativos: Verde oscuro (#3B5226) para líneas o divisores, aportando profundidad y equilibrio.
+
+
+
+4. Colores del texto:
+
+- Títulos principales: Verde oscuro (#3B5226) sobre fondos claros.
+- Subtítulos: Blanco (#FFFFFF) sobre fondos oscuros.
+- Texto de formularios y placeholders: Gris (#B0B0B0).
+
   
-- Color de texto:
+5. Tipografía
+
+- Archivo Narrow: Principal para títulos y encabezados (variaciones: bold, semibold, regular).
+
+- System Font (fallback): Para textos secundarios y párrafos, ideal para legibilidad en la app móvil.
+
+Títulos y botones → Archivo Narrow Bold
+Subtítulos → Archivo Narrow Semibold
+Texto descriptivo y formularios → System Regular
+
+<div align="center"> <img src="/assets/images/tipografia.png" alt="tipografia.png" width="50%"> </div>
+
   
-- Tipografía:
+6. Botones:
+
+- Botón principal (acción): Fondo verde neón (#8BD53F), texto blanco, bordes redondeados 40%, sombra ligera. Ideal para “Alquilar ahora”.
+
+- Botón secundario (enlaces o menos prioritarios): Fondo negro con texto verde(#8EAB6D) o blanco según contraste, bordes redondeados del mismo bolor.
+
+<div align="center"> <img src="/assets/images/bikelab_buttons.png" alt="bikelab_buttons.png" width="50%"> </div>
   
-- Botones:
-  
-- Cabera:
-  
-- Iconografía:
+7. Cabera:
+
+Menú hamburguesa:
+-  Ubicado en la esquina izquierda.
+-  Permite acceder a navegación secundaria: planes, historial de alquileres, soporte.
+
+Logo y título:
+- Centrado horizontalmente.
+- Dardo estilizado en naranja (#FFA500) y verde neón (#8EAB6D).
+- Título “Bikelab”: Tipografía Archivo Narrow, color verde neón (#8EAB6D), destacando sobre el fondo.
+- Transmite precisión, dinamismo y tecnología.
+
+Perfil de usuario:
+- Ubicado en la esquina derecha.
+- Icono circular con avatar o inicial del usuario.
+- Acceso rápido a "mi perfil".
+
+Fondo de la cabecera:
+- Negro oscuro (#2F2C2C) para resaltar los elementos activos.
+
+<div align="center"> <img src="/assets/images/cabecera.png" alt="cabecera.png" width="50%"> </div>
+
+
+8. Iconografía:
+Se usaron iconos claros, minimalistas y funcionales para guiar al usuario:
+
+<div align="center"> <img src="/assets/images/iconos.png" alt="iconos.png" width="50%"> </div>
+
   
 ### 3.1.1.1. General Style Guidelines
 Para garantizar una experiencia fluida y agradable en cualquier dispositivo móvil, la aplicación de Bikelab se desarrollará con un diseño completamente responsivo y adaptable. Esto permitirá que todos los elementos —desde los mapas hasta los botones de acción— se visualicen correctamente en diferentes tamaños de pantalla, manteniendo siempre el orden, la legibilidad y la facilidad de uso.
@@ -48,7 +117,8 @@ La interfaz seguirá un patrón visual en forma de Z, lo que facilita la lectura
 Se utilizará una paleta de colores moderna y enérgica, dominada por tonos verdes y negros que evocan movilidad, sostenibilidad y tecnología. A esto se sumarán elementos visuales limpios, iconografía intuitiva, espacios bien equilibrados y transiciones suaves, que mejoran la comprensión del contenido y ofrecen una experiencia de navegación clara, dinámica y sin distracciones.
 
 <div align="center">
-<img src="assets/image/img2.png" width="40%">
+  <img src="/assets/images/img2.png" alt="img2.png" width=auto>
+
 <div align="left">
 
 ## 3.1.2. Information Architecture
