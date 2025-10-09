@@ -4,7 +4,7 @@
 
 ### 4.1.1. Software Development Environment Configuration  
 
-Esta sección establece el listado oficial del software, herramientas y plataformas que los miembros del equipo de la startup usaron para garantizar coherencia, colaboración y eficiencia en la construcción y mantenimiento de la web application
+Esta sección establece el listado oficial del software, herramientas y plataformas que los miembros del equipo de la startup usaron para garantizar coherencia, colaboración y eficiencia en la construcción y mantenimiento.
 
 | Actividad | Producto | Proposito | Ruta de referencia |
 | :---- | :---- | :---- | :---- |
