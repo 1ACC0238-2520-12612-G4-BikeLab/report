@@ -452,5 +452,93 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
   </tbody>
 </table>
 
+
+<h2>📎 Entrevistas – Segmento Arrendadores (BikeLab)</h2>
+<p>Estas entrevistas fueron realizadas con arrendadores para validar la experiencia de uso de la app <strong>BikeLab</strong> desde el punto de vista de quienes ofrecen bicicletas en alquiler.</p>
+
+<hr>
+
+<h3>🎧 Entrevista 40 – Hilton</h3>
+<p>
+  🔗 <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EVNWCXwlujtPvTBJGKd8fewBA9uPaFsq_FHnU0sW7Cnjgg?e=UjSqBy&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver entrevista en SharePoint</a>
+</p>
+<ul>
+  <li><strong>Diseño:</strong> Interesante, atractivo y fácil de entender al registrar bicicletas.</li>
+  <li><strong>Publicación:</strong> Muy sencilla, solo unos clics para establecer precio y disponibilidad.</li>
+  <li><strong>Sistema de reservas:</strong> Fácil de usar, clara confirmación de procesos.</li>
+  <li><strong>Seguridad y pagos:</strong> Alta percepción de seguridad gracias al seguimiento.</li>
+  <li><strong>Información:</strong> Suficiente y clara (estado, estrellas, historial).</li>
+  <li><strong>Interfaz:</strong> Intuitiva para seguimiento de alquileres.</li>
+  <li><strong>Mejoras:</strong> Sugiere un canal directo de comunicación con ciclistas.</li>
+  <li><strong>Satisfacción:</strong> 5/5 por facilidad y rapidez de uso.</li>
+</ul>
+
+<hr>
+
+<h3>🎧 Entrevista 50 – José</h3>
+<p>
+  🔗 <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EQPJv6HIALFCvuId4xXQjssBqPgCmAAl_MGxJQnX1H1GGQ?e=HX6s3b&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver entrevista en SharePoint</a>
+</p>
+<ul>
+  <li><strong>Diseño:</strong> Bien balanceado en colores, agradable visualmente.</li>
+  <li><strong>Publicación:</strong> Muy fácil, práctica e intuitiva.</li>
+  <li><strong>Sistema de reservas:</strong> Similar a otras apps, pero más simple y rápida.</li>
+  <li><strong>Seguridad y pagos:</strong> Sugiere mejorar confirmaciones vía correo electrónico.</li>
+  <li><strong>Información:</strong> Clara, adecuada para seguimiento de alquileres.</li>
+  <li><strong>Interfaz:</strong> Práctica y sin pasos innecesarios.</li>
+  <li><strong>Mejoras:</strong> Agregar notificaciones por correo cuando haya reservas/pagos.</li>
+  <li><strong>Satisfacción:</strong> 4/5 (baja solo por falta de notificaciones automáticas).</li>
+</ul>
+
+<hr>
+
+<h2>📊 Hallazgos Generales – Segmento Arrendadores</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Categoría</th>
+      <th>Opinión general</th>
+      <th>Oportunidades de mejora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diseño visual</td>
+      <td>Atractivo, balanceado y claro.</td>
+      <td>Reforzar identidad visual para arrendadores.</td>
+    </tr>
+    <tr>
+      <td>Publicación de bicicletas</td>
+      <td>Muy fácil, intuitiva y rápida.</td>
+      <td>Agregar opciones de personalización en tarifas.</td>
+    </tr>
+    <tr>
+      <td>Sistema de reservas</td>
+      <td>Sencillo y eficiente.</td>
+      <td>Agregar confirmaciones más visibles (email o push).</td>
+    </tr>
+    <tr>
+      <td>Seguridad y pagos</td>
+      <td>Alta confianza, pero con oportunidades de notificación.</td>
+      <td>Integrar alertas automáticas.</td>
+    </tr>
+    <tr>
+      <td>Información disponible</td>
+      <td>Suficiente para control básico.</td>
+      <td>Explorar panel de estadísticas y métricas.</td>
+    </tr>
+    <tr>
+      <td>Interfaz y experiencia</td>
+      <td>Muy práctica y fluida.</td>
+      <td>Canales de comunicación más directos con ciclistas.</td>
+    </tr>
+    <tr>
+      <td>Satisfacción general</td>
+      <td>Alta (promedio 4.5/5).</td>
+      <td>Incorporar sugerencias para cerrar brechas.</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.3.3. Evaluaciones según heurísticas
 
