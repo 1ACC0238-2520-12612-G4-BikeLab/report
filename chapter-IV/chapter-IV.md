@@ -329,6 +329,20 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
   <li>En general, ¿qué tan satisfecha/o estarías con la experiencia que ofrece la app? (Del 1 al 5)</li>
 </ol>
 
+<h2>📋 Guía de Entrevista – Segmento Arrendadores (Dueños que alquilan sus bicicletas)</h2>
+<p>Estas preguntas están dirigidas a usuarios que ofrecen sus bicicletas en la plataforma <strong>BikeLab</strong>, con el fin de validar la facilidad de uso, seguridad, gestión y experiencia general como arrendador.</p>
+
+<ol>
+  <li>¿Qué te pareció el diseño y la claridad de la app al momento de registrar tus bicicletas?</li>
+  <li>¿Qué tan fácil te resultó publicar una bicicleta y establecer su precio por hora?</li>
+  <li>¿Qué opinas del sistema de reservas y confirmaciones dentro de la aplicación?</li>
+  <li>¿Te sentiste seguro respecto al manejo de pagos, devoluciones y protección de tu bicicleta?</li>
+  <li>¿La información que muestra la app sobre tus bicicletas (estado, calificación, historial) te resulta suficiente y clara?</li>
+  <li>¿Qué tan intuitiva te parece la interfaz para hacer seguimiento a los alquileres y ver tus ganancias?</li>
+  <li>¿Qué parte de la app mejorarías para facilitar la gestión de tus bicicletas o comunicación con los ciclistas?</li>
+  <li>En general, ¿qué tan satisfecho estás con la experiencia de usar BikeLab como arrendador (del 1 al 5)? ¿Por qué?</li>
+</ol>
+
 
 #### 4.3.2. Registro de Entrevistas 
 
@@ -336,6 +350,7 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 <p>Estas entrevistas fueron realizadas con estudiantes universitarios como segmento objetivo, con el fin de validar la usabilidad, confianza, diseño e información de la aplicación <strong>BikeLab</strong>.</p>
 
 <hr>
+
 
 <h3>🎧 1. Camila Reyes</h3>
 <p>
