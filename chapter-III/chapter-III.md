@@ -117,7 +117,7 @@ La interfaz seguirá un patrón visual en forma de Z, lo que facilita la lectura
 Se utilizará una paleta de colores moderna y enérgica, dominada por tonos verdes y negros que evocan movilidad, sostenibilidad y tecnología. A esto se sumarán elementos visuales limpios, iconografía intuitiva, espacios bien equilibrados y transiciones suaves, que mejoran la comprensión del contenido y ofrecen una experiencia de navegación clara, dinámica y sin distracciones.
 
 <div align="center">
-  <img src="/assets/images/img2.png" alt="img2.png" width=auto>
+  <img src="/assets/images/img2.png" alt="img2.png" width=50%>
 
 <div align="left">
 
@@ -245,10 +245,40 @@ Enlace al Figma: [https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Pa
 
 ### 3.1.4.1. Mobile Applications Wireframes 
 
+#### SEGMENTO 1: Ciclista
+Pantalla de registro del ciclista con campos de correo, contraseña, universidad y teléfono.
+
+<img src="/assets/images/registro.png" alt=".." width=auto> 
+
+Perfil del ciclista con menú lateral (sidebar), opción de seleccionar vehículo y elegir arrendador.
+
+<img src="/assets/images/modelo.png" alt="..." width=auto> 
+
+Pantalla de rutas sugeridas con distancias, tiempo estimado y opciones según seguridad o tráfico.
+
+<img src="/assets/images/rutas.png" alt="..." width=auto> 
+
+Historial de alquileres activos y pasados con fechas, duración y plan usado.
+
+<img src="/assets/images/alquileres.png" alt="..." width=auto> 
+
+Proceso de devolución mostrando escaneo de QR, ubicación y confirmación de pago.
+
+<img src="/assets/images/devolucion.png" alt="..." width=auto> 
+
+Pantalla de soporte y notificaciones para reportar problemas o enviar mensajes.
+
+<img src="/assets/images/suport.png" alt="..." width=auto> 
+
+
+#### SEGMENTO 2: Arrentario
+
+
 ### 3.1.4.2. Mobile Applications Wireflow Diagrams 
 
 ### 3.1.4.3. Mobile Applications Mock-ups 
 
 ### 3.1.4.4. Mobile Applications User Flow Diagrams 
+
 
 ###  3.1.4.5. Mobile Applications Prototyping 
