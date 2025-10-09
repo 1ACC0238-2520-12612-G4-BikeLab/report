@@ -26,7 +26,6 @@ La administración y estructuración de las múltiples modificaciones se realiza
 | Repositorio en Github | BikeLab | [https://github.com/orgs/1ACC0238-2520-12612-G4-BikeLab/repositories](https://github.com/orgs/1ACC0238-2520-12612-G4-BikeLab/repositories) |
 | Landing Page | BikeLab-Landing-Page | [https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/](https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/) |
 
-
 * **Ramas Principales:** 
 
 Se usara el flujo de trabajo GitFlow para tener nuestras ramas correctamente estructuradas y usar buenas prácticas de GIT
@@ -150,7 +149,163 @@ Se requieren varias mejoras y documentar los avences por más commits en vez de 
 
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review 
 ##### 4.2.1.5. Execution Evidence for Sprint Review 
+
+Durante el Sprint 1 se habilitó el backend monolítico documentado con Swagger y protección JWT. A continuación, se presentan las evidencias de ejecución por *bounded context*, con un breve texto introductorio, una tabla de endpoints y un espacio para adjuntar la captura correspondiente.
+
+---
+
+#### IAM
+
+Se implementó la autenticación base del sistema (registro, login con emisión de JWT), la consulta del perfil del usuario y el inicio del proceso para convertirse en proveedor. Además, se expuso un endpoint administrativo para listar usuarios.
+
+| Método | Endpoint                     | Función                                  | Auth / Rol      |
+| ------ | ---------------------------- | ---------------------------------------- | --------------- |
+| POST   | `/api/iam/auth/register`     | Registrar nuevo usuario                  | Público         |
+| POST   | `/api/iam/auth/login`        | Autenticar y emitir JWT                  | Público         |
+| GET    | `/api/iam/me`                | Consultar perfil del usuario autenticado | JWT             |
+| GET    | `/api/admin/users`           | Listar usuarios registrados              | JWT (**Admin**) |
+| POST   | `/api/iam/providers/onboard` | Solicitar conversión a proveedor         | JWT (**User**)  |
+
+<img src="/assets/images/iam.png" alt="Swagger — IAM" width=auto>
+
+---
+
+#### Providing
+
+Se desarrolló el flujo de incorporación de proveedores: inicio de onboarding, envío de información KYC y resolución (aprobación o rechazo). También se añadieron las consultas del propio proveedor y el listado general.
+
+| Método | Endpoint                              | Función                         | Auth / Rol              |
+| ------ | ------------------------------------- | ------------------------------- | ----------------------- |
+| POST   | `/api/providing/onboarding`           | Iniciar onboarding de proveedor | JWT (**User/Provider**) |
+| POST   | `/api/providing/kyc`                  | Enviar información KYC          | JWT (**Provider**)      |
+| POST   | `/api/providing/{providerId}/approve` | Aprobar proveedor               | JWT (**Admin/Staff**)   |
+| POST   | `/api/providing/{providerId}/reject`  | Rechazar proveedor              | JWT (**Admin/Staff**)   |
+| GET    | `/api/providing/me`                   | Obtener mi ficha de proveedor   | JWT (**Provider**)      |
+| GET    | `/api/providing`                      | Listar proveedores              | JWT (**Admin/Staff**)   |
+
+<img src="/assets/images/providing.png" alt="Swagger — Providing" width=auto>
+
+---
+
+#### Vehicles
+
+Se habilitó el registro y actualización de vehículos, la búsqueda por ubicación y la gestión de disponibilidad (bloqueo/desbloqueo). El proveedor puede listar únicamente sus vehículos.
+
+| Método | Endpoint                                         | Función                      | Auth / Rol               |
+| ------ | ------------------------------------------------ | ---------------------------- | ------------------------ |
+| GET    | `/api/vehicles`                                  | Listar vehículos disponibles | Público                  |
+| POST   | `/api/vehicles`                                  | Registrar nuevo vehículo     | JWT (**Provider**)       |
+| GET    | `/api/vehicles/{vehicleId}`                      | Obtener vehículo por ID      | Público                  |
+| PATCH  | `/api/vehicles/{vehicleId}`                      | Actualizar vehículo          | JWT (**Owner/Provider**) |
+| GET    | `/api/vehicles/search`                           | Buscar por ubicación         | Público                  |
+| GET    | `/api/vehicles/own`                              | Listar mis vehículos         | JWT (**Provider**)       |
+| POST   | `/api/vehicles/{vehicleId}/availability/block`   | Bloquear disponibilidad      | JWT (**Owner/Provider**) |
+| POST   | `/api/vehicles/{vehicleId}/availability/unblock` | Liberar disponibilidad       | JWT (**Owner/Provider**) |
+
+<img src="/assets/images/vehicles.png" alt="Swagger — Vehicles" width=auto>
+
+---
+
+#### Renting
+
+Se completó el ciclo operativo de las reservas: creación, inicio y finalización del alquiler; cancelación por parte del cliente; y consultas filtradas por cliente y por propietario.
+
+| Método | Endpoint                                   | Función                     | Auth / Rol               |
+| ------ | ------------------------------------------ | --------------------------- | ------------------------ |
+| POST   | `/api/renting/bookings`                    | Crear reserva               | JWT (**Cliente**)        |
+| POST   | `/api/renting/bookings/{bookingId}/start`  | Iniciar alquiler            | JWT (**Provider/Owner**) |
+| POST   | `/api/renting/bookings/{bookingId}/finish` | Finalizar alquiler          | JWT (**Provider/Owner**) |
+| DELETE | `/api/renting/bookings/{bookingId}`        | Cancelar reserva            | JWT (**Cliente/Owner**)  |
+| GET    | `/api/renting/bookings/mine`               | Reservas del cliente actual | JWT (**Cliente**)        |
+| GET    | `/api/renting/bookings/own`                | Reservas de mis vehículos   | JWT (**Provider/Owner**) |
+
+<img src="/assets/images/renting.png" alt="Swagger — Renting" width=auto>
+
+---
+
+#### Payments
+
+Se desarrolló la pasarela básica: gestión de métodos de pago del cliente, ciclo de cobro (authorize → capture → refund) y consulta de **payouts** del proveedor.
+
+| Método | Endpoint                                   | Función                            | Auth / Rol                    |
+| ------ | ------------------------------------------ | ---------------------------------- | ----------------------------- |
+| GET    | `/api/payments/methods`                    | Listar métodos de pago del cliente | JWT (**Cliente**)             |
+| POST   | `/api/payments/methods`                    | Registrar método de pago           | JWT (**Cliente**)             |
+| DELETE | `/api/payments/methods/{methodId}`         | Eliminar método de pago            | JWT (**Cliente**)             |
+| POST   | `/api/payments/charges/authorize`          | Autorizar un cargo                 | JWT (**Cliente**)             |
+| POST   | `/api/payments/charges/{chargeId}/capture` | Capturar cargo autorizado          | JWT (**Provider/Plataforma**) |
+| POST   | `/api/payments/charges/{chargeId}/refund`  | Reembolsar cargo capturado         | JWT (**Admin/Soporte**)       |
+| GET    | `/api/payments/payouts/mine`               | Listar mis pagos como proveedor    | JWT (**Provider**)            |
+
+<img src="/assets/images/payments.png" alt="Swagger — Payments" width=auto>
+
 ##### 4.2.1.6. Services Documentation Evidence for Sprint Review 
+
+Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se habilitó autenticación **JWT** para los endpoints protegidos.
+**Swagger UI (local):** `http://localhost:8080/swagger-ui/index.html`
+**Repositorio Web Services:** `https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend` — **Branch:** `main` — **Commit:** `5a0a23a` (*initialize bikelab-backend project*).
+
+---
+
+#### IAM (controllers: `IamAuthController`, `IamProfileController`, `AdminUserController`, `ProviderOnboardingController`)
+
+| HTTP | Endpoint                     | Sintaxis de llamada                         | Parámetros                  | Ejemplo (request)                                                                                                                     | Ejemplo (response)                                          |
+| ---- | ---------------------------- | ------------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| POST | `/api/iam/auth/register`     | Body JSON                                   | `email`, `password`, `name` | `curl -X POST /api/iam/auth/register -H "Content-Type: application/json" -d '{"email":"user@ex.com","password":"***","name":"User"}'` | `201 Created` `{ "id": 1, "email":"user@ex.com" }`          |
+| POST | `/api/iam/auth/login`        | Body JSON                                   | `email`, `password`         | `curl -X POST /api/iam/auth/login -H "Content-Type: application/json" -d '{"email":"user@ex.com","password":"***"}'`                  | `200 OK` `{ "accessToken":"jwt...", "tokenType":"Bearer" }` |
+| GET  | `/api/iam/me`                | Header `Authorization: Bearer <jwt>`        | —                           | `curl -H "Authorization: Bearer <jwt>" /api/iam/me`                                                                                   | `200 OK` `{ "id":1, "email":"user@ex.com" }`                |
+| GET  | `/api/admin/users`           | (Protegido) Header JWT (rol administrativo) | —                           | `curl -H "Authorization: Bearer <admin-jwt>" /api/admin/users`                                                                        | `200 OK` `[ { "id":1, "email":"..." }, ... ]`               |
+| POST | `/api/iam/providers/onboard` | Header JWT                                  | —                           | `curl -X POST -H "Authorization: Bearer <jwt>" /api/iam/providers/onboard`                                                            | `200 OK` `{ "roleUpdated":"PROVIDER" }`                     |
+
+---
+
+#### Providing (controller: `ProviderController`)
+
+| HTTP | Endpoint                              | Sintaxis de llamada    | Parámetros                             | Reglas / Roles          | Ejemplo (request)                                                                                                                                           | Ejemplo (response)                                            |
+| ---- | ------------------------------------- | ---------------------- | -------------------------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| POST | `/api/providing/onboarding`           | Header JWT + Body JSON | `brandName`, `phone`                   | `CUSTOMER` o `PROVIDER` | `curl -X POST -H "Authorization: Bearer <jwt>" -H "Content-Type: application/json" -d '{"brandName":"MiBikes","phone":"+51..."}' /api/providing/onboarding` | `201 Created` `{ "providerId":123, "status":"pending_kyc" }`  |
+| POST | `/api/providing/kyc`                  | Header JWT + Body JSON | `documentType`, `documentId`           | `PROVIDER`              | `curl -X POST -H "Authorization: Bearer <jwt>" -H "Content-Type: application/json" -d '{"documentType":"DNI","documentId":"12345678"}' /api/providing/kyc`  | `200 OK` `{ "status":"in_review" }`                           |
+| POST | `/api/providing/{providerId}/approve` | Header JWT             | Path: `providerId`                     | `ADMIN` o `SUPPORT`     | `curl -X POST -H "Authorization: Bearer <admin-jwt>" /api/providing/123/approve`                                                                            | `200 OK` `{ "providerId":123, "status":"approved" }`          |
+| POST | `/api/providing/{providerId}/reject`  | Header JWT             | Path: `providerId`; Body opc. `reason` | `ADMIN` o `SUPPORT`     | `curl -X POST -H "Authorization: Bearer <admin-jwt>" -d '{"reason":"incomplete"}' /api/providing/123/reject`                                                | `200 OK` `{ "providerId":123, "status":"rejected" }`          |
+| GET  | `/api/providing/me`                   | Header JWT             | —                                      | `PROVIDER`              | `curl -H "Authorization: Bearer <jwt>" /api/providing/me`                                                                                                   | `200 OK` `{ "providerId":123, "status":"..." }`               |
+| GET  | `/api/providing`                      | Header JWT             | `status?`                              | `ADMIN` o `SUPPORT`     | `curl -H "Authorization: Bearer <staff-jwt>" "/api/providing?status=approved"`                                                                              | `200 OK` `[ { "providerId":123, "status":"approved" }, ... ]` |
+
+---
+
+#### Vehicles (controller: `VehiclesController`)
+
+| HTTP  | Endpoint                                         | Sintaxis de llamada       | Parámetros                                            | Reglas / Roles       | Ejemplo (request)                                                                                                                                                                             | Ejemplo (response)                             |
+| ----- | ------------------------------------------------ | ------------------------- | ----------------------------------------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| GET   | `/api/vehicles`                                  | Pública                   | `page?`, `size?`                                      | —                    | `curl /api/vehicles`                                                                                                                                                                          | `200 OK` `[ { "id":42, "title":"..." }, ... ]` |
+| GET   | `/api/vehicles/{vehicleId}`                      | Pública                   | Path: `vehicleId`                                     | —                    | `curl /api/vehicles/42`                                                                                                                                                                       | `200 OK` `{ "id":42, "title":"..." }`          |
+| GET   | `/api/vehicles/search`                           | Pública                   | `lat`, `lng`, `radiusKm`                              | —                    | `curl "/api/vehicles/search?lat=-9.1&lng=-78.6&radiusKm=5"`                                                                                                                                   | `200 OK` `[ ... ]`                             |
+| GET   | `/api/vehicles/own`                              | Header JWT                | —                                                     | `PROVIDER`           | `curl -H "Authorization: Bearer <jwt>" /api/vehicles/own`                                                                                                                                     | `200 OK` `[ ... ]`                             |
+| POST  | `/api/vehicles`                                  | Header JWT + Body JSON    | `title`, `model`, `pricePerHour`, `location{lat,lng}` | `PROVIDER`           | `curl -X POST -H "Authorization: Bearer <jwt>" -H "Content-Type: application/json" -d '{"title":"MTB","model":"2024","pricePerHour":12.5,"location":{"lat":-9.1,"lng":-78.6}}' /api/vehicles` | `201 Created` `{ "id":99 }`                    |
+| PATCH | `/api/vehicles/{vehicleId}`                      | Header JWT + Body parcial | Path: `vehicleId`                                     | `PROVIDER` o `ADMIN` | `curl -X PATCH -H "Authorization: Bearer <jwt>" -H "Content-Type: application/json" -d '{"pricePerHour":14}' /api/vehicles/99`                                                                | `200 OK` `{ "id":99, "pricePerHour":14 }`      |
+| POST  | `/api/vehicles/{vehicleId}/availability/block`   | Header JWT + Body JSON    | `from`, `to`                                          | `PROVIDER`           | `curl -X POST -H "Authorization: Bearer <jwt>" -H "Content-Type: application/json" -d '{"from":"2025-10-10T09:00","to":"2025-10-10T12:00"}' /api/vehicles/99/availability/block`              | `200 OK` `{ "blocked": true }`                 |
+| POST  | `/api/vehicles/{vehicleId}/availability/unblock` | Header JWT                | Path: `vehicleId`                                     | `PROVIDER`           | `curl -X POST -H "Authorization: Bearer <jwt>" /api/vehicles/99/availability/unblock`                                                                                                         | `200 OK` `{ "blocked": false }`                |
+
+---
+
+#### Renting (controller: `BookingController`)
+
+| HTTP   | Endpoint                                   | Sintaxis de llamada    | Parámetros                | Reglas / Roles | Ejemplo (request)                                                                                                                                                                 | Ejemplo (response)                                          |
+| ------ | ------------------------------------------ | ---------------------- | ------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| POST   | `/api/renting/bookings`                    | Header JWT + Body JSON | `vehicleId`, `from`, `to` | `CUSTOMER`     | `curl -X POST -H "Authorization: Bearer <jwt>" -H "Content-Type: application/json" -d '{"vehicleId":42,"from":"2025-10-12T09:00","to":"2025-10-12T12:00"}' /api/renting/bookings` | `201 Created` `{ "bookingId":"ab12", "status":"reserved" }` |
+| POST   | `/api/renting/bookings/{bookingId}/start`  | Header JWT             | Path: `bookingId`         | `PROVIDER`     | `curl -X POST -H "Authorization: Bearer <jwt>" /api/renting/bookings/ab12/start`                                                                                                  | `200 OK` `{ "status":"in_progress" }`                       |
+| POST   | `/api/renting/bookings/{bookingId}/finish` | Header JWT             | Path: `bookingId`         | `PROVIDER`     | `curl -X POST -H "Authorization: Bearer <jwt>" /api/renting/bookings/ab12/finish`                                                                                                 | `200 OK` `{ "status":"finished" }`                          |
+| DELETE | `/api/renting/bookings/{bookingId}`        | Header JWT             | Path: `bookingId`         | `CUSTOMER`     | `curl -X DELETE -H "Authorization: Bearer <jwt>" /api/renting/bookings/ab12`                                                                                                      | `204 No Content`                                            |
+| GET    | `/api/renting/bookings/mine`               | Header JWT             | `page?`, `size?`          | `CUSTOMER`     | `curl -H "Authorization: Bearer <jwt>" /api/renting/bookings/mine`                                                                                                                | `200 OK` `[ ... ]`                                          |
+| GET    | `/api/renting/bookings/own`                | Header JWT             | `page?`, `size?`          | `PROVIDER`     | `curl -H "Authorization: Bearer <jwt>" /api/renting/bookings/own`                                                                                                                 | `200 OK` `[ ... ]`                                          |
+
+---
+
+#### Payments (controller: `PayoutsController`)
+
+| HTTP | Endpoint                     | Sintaxis de llamada | Parámetros | Reglas / Roles | Ejemplo (request)                                                  | Ejemplo (response)                                       |
+| ---- | ---------------------------- | ------------------- | ---------- | -------------- | ------------------------------------------------------------------ | -------------------------------------------------------- |
+| GET  | `/api/payments/payouts/mine` | Header JWT          | —          | `PROVIDER`     | `curl -H "Authorization: Bearer <jwt>" /api/payments/payouts/mine` | `200 OK` `[ { "amount": "...", "status":"paid" }, ... ]` |
+
 ##### 4.2.1.7. Software Deployment Evidence for Sprint Review 
 ##### 4.2.1.8. Team Collaboration Insights during Sprint 
 ### 4.3. Validation Interviews 
