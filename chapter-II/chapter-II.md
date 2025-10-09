@@ -211,13 +211,12 @@ Estudiante & Proveedor
 | User Story ID | Título |
 | US01 | Registro de usuario estudiante |
 | US02 | Registro de usuario arrendador |
-| US03 | Registro de usuario turista |
 | US04 | Iniciar sesión en la aplicación |
 | US05 | Recuperar contraseña |
 | US06 | Editar información de perfil (nombre, foto, datos de contacto) |
 | US07 | Cerrar sesión |
 
-| EP02: Como arrendador quiero publicar, editar y administrar mis vehículos para ponerlos a disposición de los estudiantes y turistas.|  |
+| EP02: Como arrendador quiero publicar, editar y administrar mis vehículos para ponerlos a disposición de los estudiantes.|  |
 | :---- | :---- |
 | User Story ID | Título |
 | US08 | Registrar una bicicleta o scooter en la app |
@@ -264,6 +263,17 @@ Estudiante & Proveedor
 | US33 | Gestionar vehículos registrados |
 | US34 | Monitorear reservas y pagos |
 
+| EP07: Como administrador quiero gestionar usuarios y vehículos para asegurar el correcto funcionamiento de la aplicación.  |  |
+| :---- | :---- |
+| User Story ID | Título |
+| US31 | Acceder a panel de control con métricas (número de usuarios, alquileres activos, ingresos) |
+| US32 | Gestionar usuarios (activar, suspender, eliminar) |
+| US33 | Gestionar vehículos registrados |
+| US34 | Monitorear reservas y pagos |
+
+| EP08: Como visitante del sitio quiero explorar la landing page para conocer la aplicación y decidir si registrarme  |  |
+| :---- | :---- |
+
 ### User Stories
 
 
@@ -302,6 +312,15 @@ Estudiante & Proveedor
 | **US31** | **Gestionar usuarios** | Como arrendador quiero gestionar usuarios para asegurar el correcto uso de la app. | **Escenario 1: Eliminación de usuario exitosa**<br> Dado que necesito eliminar un usuario, cuando confirmo, entonces desaparece de la app. | **EP06** |
 | **US32** | **Gestionar vehículos registrados** | Como arrendador quiero gestionar vehículos para mantener control del sistema. | **Escenario 1: Edición o deshabilitación de vehículo**<br> Dado que accedo al panel, cuando selecciono vehículo, entonces puedo editarlo o deshabilitarlo. <br><br> **Escenario 2: Eliminación de vehículo**<br> Dado que elimino un vehículo, cuando confirmo, entonces desaparece de la app. <br><br> **Escenario 3: Actualización de estado de vehículo**<br> Dado que cambio estado, cuando consulto, entonces aparece actualizado.<br><br> | **EP06** |
 | **US33** | **Monitorear reservas y pagos** | Como arrendador quiero monitorear reservas y pagos | **Escenario 1: Visualización de reservas activas**<br> Dado que accedo al panel, cuando consulto, entonces veo reservas activas. <br><br> **Escenario 2: Registro de pago confirmado**<br> Dado que un usuario paga, cuando ocurre, entonces aparece "pagado". <br><br> **Escenario 3: Alerta por falla en pago**<br> Dado que ocurre una falla de pago, cuando se detecta, entonces recibo alerta.<br><br> | **EP06** |
+| **US34** | **Visualizar información general del servicio** | Como visitante del sitio quiero ver información clara sobre qué ofrece la aplicación, para entender su propósito y beneficios | **Escenario 1: Visualización del resumen general** <br> Dado que ingreso al sitio, cuando accedo a la landing page, entonces puedo leer una descripción general del servicio y su propósito<br><br>**Escenario 2: Exploración de secciones informativas** <br> Dado que estoy en la landing, cuando hago scroll, entonces visualizo secciones con beneficios, ejemplos e imágenes representativas <br> **Escenario 3: Ampliar información adicional** <br> Dado que quiero conocer más detalles, cuando selecciono “Ver más”, entonces se muestra contenido extendido o se redirige a una página con información completa .| EP08 |
+| **US35** | **Visualizar secciones de beneficios y características** | Como visitante del sitio quiero ver los beneficios y características principales para entender por qué debería usar la app. | **Escenario 1: Mostrar características clave** <br> Dado que accedo a la landing, cuando visualizo la sección de beneficios, entonces veo íconos, títulos y descripciones de las principales características. <br><br> **Escenario 2: Comparación de ventajas** <br> Dado que deseo comparar, cuando reviso cada característica, entonces puedo identificar las ventajas competitivas del servicio. <br><br> **Escenario 3: Redirección a registro desde CTA** <br> Dado que me interesa la aplicación, cuando hago clic en “Conocer más”, entonces soy redirigido a la página de registro o inicio de sesión. | EP08 |
+| **US36** | **Acceder al registro o inicio de sesión desde la landing** | Como visitante del sitio quiero acceder fácilmente al registro o inicio de sesión desde la landing page. | **Escenario 1: Redirección desde botones principales** <br> Dado que estoy en la landing, cuando hago clic en “Registrarme” o “Iniciar sesión”, entonces soy redirigido al formulario correspondiente. <br><br> **Escenario 2: Llamado a la acción en el pie de página** <br> Dado que llego al final de la página, cuando visualizo la sección final, entonces encuentro un llamado a la acción (CTA) que invita a registrarme. <br><br> **Escenario 3: Accesibilidad desde dispositivos móviles** <br> Dado que uso un dispositivo móvil, cuando abro el menú o barra superior, entonces puedo acceder fácilmente a las opciones de registro o inicio de sesión. | EP08 |
+| **US37** | **Visualizar diseño adaptable y atractivo** | Como visitante del sitio quiero que la landing se vea correctamente en cualquier dispositivo para tener una buena experiencia visual. | **Escenario 1: Adaptabilidad móvil** <br> Dado que ingreso desde un celular, cuando accedo a la landing, entonces el contenido se adapta al tamaño de pantalla sin perder legibilidad. <br><br> **Escenario 2: Visualización en distintos dispositivos** <br> Dado que navego desde una laptop o tablet, cuando recorro la página, entonces las secciones mantienen su estructura visual y diseño. <br><br> **Escenario 3: Rendimiento y carga óptimos** <br> Dado que la página incluye imágenes o animaciones, cuando hago scroll o navego, entonces no se presentan retrasos ni errores visuales. | EP08 |
+| **TS01** | **Implementar endpoints de autenticación y gestión de usuarios (IAM)** | Desarrollar endpoints RESTful para el registro, autenticación, recuperación de contraseña y gestión de perfiles de usuarios (estudiantes, arrendadores y turistas). | **Escenario 1: Endpoint de registro (POST /auth/register)** <br> Cuando se recibe un payload válido, se crea un usuario y se devuelve un código **201 Created** con los datos del usuario. <br><br> **Escenario 2: Endpoint de login (POST /auth/login)** <br> Cuando se envían credenciales válidas, el sistema devuelve un **token JWT** y un código **200 OK**. <br><br> **Escenario 3: Recuperación de contraseña (POST /auth/recover)** <br> Cuando se envía un correo válido, se genera un enlace de recuperación y se devuelve un **202 Accepted**. <br><br> **Escenario 4: Actualización de perfil (PUT /users/{id})** <br> Cuando el usuario autenticado envía cambios válidos, el sistema actualiza y responde con **200 OK**. | EP01 |
+| **TS02** | **Endpoints para publicación y administración de vehículos (Providing)** | Implementar endpoints para que los arrendadores puedan registrar, editar, eliminar y consultar los vehículos que ofrecen en la app. | **Escenario 1: Registro de vehículo (POST /providing/vehicles)** <br> Cuando se envía un payload con datos válidos, el sistema crea un nuevo registro y devuelve **201 Created**. <br><br> **Escenario 2: Edición de vehículo (PUT /providing/vehicles/{id})** <br> Cuando el arrendador actualiza un vehículo existente, el sistema guarda los cambios y devuelve **200 OK**. <br><br> **Escenario 3: Eliminación de vehículo (DELETE /providing/vehicles/{id})** <br> Cuando se solicita eliminar un vehículo, se elimina lógicamente y se devuelve **204 No Content**. <br><br> **Escenario 4: Consulta de listado (GET /providing/vehicles)** <br> Cuando el arrendador solicita sus publicaciones, el sistema devuelve una lista con **200 OK**. | EP02 |
+| **TS03** | **Implementar endpoints del catálogo de vehículos (Vehicles)** | Crear endpoints para listar, filtrar y mostrar detalles de bicicletas y scooters disponibles para los usuarios visitantes o registrados. | **Escenario 1: Listar vehículos disponibles (GET /vehicles)** <br> Cuando se consulta el catálogo sin filtros, se devuelven todos los vehículos disponibles con **200 OK**. <br><br> **Escenario 2: Filtro por tipo o cercanía (GET /vehicles?type=bike&location=... )** <br> Cuando se aplican filtros, el sistema devuelve solo los resultados que cumplen los criterios con **200 OK**. <br><br> **Escenario 3: Ver detalles del vehículo (GET /vehicles/{id})** <br> Cuando se consulta un ID válido, el sistema responde con la información completa del vehículo y su arrendador con **200 OK**. | EP03 |
+| **TS04** | **Endpoints para gestión de reservas y alquileres (Renting)** | Desarrollar endpoints para realizar, cancelar, confirmar y finalizar reservas de vehículos, incluyendo validaciones de disponibilidad y tiempo. | **Escenario 1: Crear reserva (POST /renting/reservations)** <br> Cuando un usuario envía datos válidos, el sistema crea una reserva y devuelve **201 Created**. <br><br> **Escenario 2: Cancelar reserva (PUT /renting/reservations/{id}/cancel)** <br> Cuando se solicita cancelar una reserva activa, el sistema actualiza el estado y devuelve **200 OK**. <br><br> **Escenario 3: Confirmar inicio de alquiler (PUT /renting/{id}/start)** <br> Cuando se confirma el inicio, el sistema actualiza el estado a “activo” y devuelve **200 OK**. <br><br> **Escenario 4: Finalizar alquiler (PUT /renting/{id}/end)** <br> Cuando se finaliza correctamente, el sistema registra la devolución y devuelve **200 OK**. | EP04 |
+| **TS05** | **Endpoints para pagos y liquidaciones (Payments)** | Implementar endpoints para registrar pagos, aplicar penalizaciones y generar liquidaciones automáticas para arrendadores. | **Escenario 1: Registrar pago de alquiler (POST /payments)** <br> Cuando un usuario realiza un pago válido, el sistema lo registra y devuelve **201 Created**. <br><br> **Escenario 2: Confirmar penalización (POST /payments/penalty)** <br> Cuando el sistema detecta un exceso de tiempo, se crea un registro de penalización con **201 Created**. <br><br> **Escenario 3: Generar liquidación automática (POST /payments/settlements)** <br> Cuando un pago se procesa, el sistema calcula y liquida el monto al arrendador con **200 OK**. <br><br> **Escenario 4: Consultar historial de pagos (GET /payments/history)** <br> Cuando el usuario consulta, el sistema devuelve los pagos y liquidaciones con **200 OK**. | EP04 |
 | **SPIKE01** | **Geolocalización y mapas** | Evaluar la integración de un servicio de geolocalización (Google Maps API o Mapbox) para mostrar bicicletas/scooters cercanos. | **Escenario 1: Comparación de servicios de mapas**<br>Dado que se revisan Google Maps y Mapbox, cuando se documenta precisión, costos y limitaciones, entonces se obtiene un cuadro comparativo.<br><br>**Escenario 2: Prototipo de visualización en mapa**<br>Dado que se integran ubicaciones de prueba, cuando se muestran en un mapa, entonces se valida la funcionalidad de geolocalización.<br><br>**Escenario 3: Conclusión sobre consumo de API**<br> Dado que se evalúan límites gratuitos y costos, cuando se selecciona un proveedor, entonces se documenta la recomendación. | EP03 |
 | **SPIKE02** | **Notificaciones push y en tiempo real** | Investigar cómo implementar notificaciones push para avisos de reservas, pagos y penalizaciones en la app. | **Escenario 1: Investigación de servicios de notificaciones**<br>Dado que se revisan Firebase y OneSignal, cuando se documentan ventajas y limitaciones, entonces se obtiene un informe comparativo.<br><br>**Escenario 2: Prueba de notificación enviada**<br> Dado que se prepara un backend de pruebas, cuando se envía una notificación a un dispositivo, entonces se valida la factibilidad técnica.<br><br>**Escenario 3: Selección de librería recomendada**<br>Dado que se analizan los resultados, cuando se determina la opción más estable, entonces se documenta la recomendación final. | EP05 |
 | **SPIKE03** | **Escalabilidad y rendimiento en backend **| Analizar la carga máxima que el sistema puede soportar y evaluar si es necesario implementar balanceadores de carga o servicios en la nube (AWS, Azure, GCP). | **Escenario 1: Pruebas de carga y estrés**<br> Dado que se simula un uso intensivo, cuando se mide el número de usuarios concurrentes soportados, entonces se obtienen métricas de rendimiento.<br><br>**Escenario 2: Identificación de cuellos de botella** <br>Dado que se monitorea el sistema, cuando se detectan procesos lentos o fallos, entonces se documentan las áreas críticas.<br><br>**Escenario 3: Recomendaciones de infraestructura**<br> Dado que se analizan los resultados, cuando se determina la capacidad mínima, entonces se proponen mejoras de escalabilidad. | EP06 |
@@ -314,43 +333,52 @@ Estudiante & Proveedor
 ### 2.4.3. Product Backlog 
 | # Orden | User Story Id | Título | Story Points (1 / 2 / 3 / 5 / 8) |
 |---------|---------------|--------|-----------------------------------|
-| 1 | US07 | Registrar una bicicleta o scooter en la app | 5 |
-| 2 | US08 | Editar información de un vehículo registrado | 3 |
-| 3 | US09 | Marcar vehículo disponible/no disponible | 2 |
-| 4 | US10 | Eliminar vehículo de la aplicación | 2 |
-| 5 | US11 | Consultar historial de alquileres de mis vehículos | 3 |
-| 6 | US12 | Buscar bicicletas/scooters por cercanía | 5 |
-| 7 | US13 | Filtrar resultados por tipo de vehículo | 3 |
-| 8 | US14 | Ver información detallada del vehículo y arrendador | 3 |
-| 9 | US15 | Realizar reserva de vehículo | 5 |
-| 10 | US16 | Cancelar reserva | 3 |
-| 11 | US17 | Confirmar inicio de alquiler | 3 |
-| 12 | US18 | Finalizar alquiler | 3 |
-| 13 | US19 | Vincular método de pago | 3 |
-| 14 | US20 | Pagar por alquiler al finalizar el uso | 5 |
-| 15 | US21 | Recibir confirmación de pago | 2 |
-| 16 | US22 | Recibir notificación de penalización si se excede el tiempo | 3 |
-| 17 | US23 | Consultar historial de pagos | 2 |
-| 18 | US24 | Arrendador recibe liquidación automática después del pago | 3 |
-| 19 | US25 | Validación de identidad | 3 |
-| 20 | US26 | Calificar al arrendador o arrendatario al finalizar un alquiler | 2 |
-| 21 | US27 | Ver puntuación y reseñas de otros usuarios | 2 |
-| 22 | US28 | Recibir notificaciones importantes | 3 |
-| 23 | US29 | Acceso a soporte o ayuda dentro de la app | 2 |
-| 24 | US30 | Acceder a panel de control con métricas | 3 |
-| 25 | US31 | Gestionar usuarios | 3 |
-| 26 | US32 | Gestionar vehículos registrados | 3 |
-| 27 | US33 | Monitorear reservas y pagos | 3 |
-| 28 | SPIKE01 | Geolocalización y mapas | 3 |
-| 29 | SPIKE02 | Notificaciones push y en tiempo real | 3 |
-| 30 | SPIKE03 | Escalabilidad y rendimiento en backend | 5 |
-| 31 | SPIKE04 | Seguridad y cumplimiento de datos | 5 |
-| 32 | US01 | Registro de usuario estudiante | 3 |
-| 33 | US02 | Registro de usuario arrendador | 3 |
-| 34 | US03 | Iniciar sesión en la aplicación | 2 |
-| 35 | US04 | Recuperar contraseña | 2 |
-| 36 | US05 | Editar información de perfil | 3 | 
-| 36 | US07 | Cerrar sesión | 2 |
+| 1 | US34 | Visualizar información general del servicio | 3 |
+| 2 | US35 | Visualizar secciones de beneficios y características | 3 |
+| 3 | US39 | Acceder al registro o inicio de sesión desde la landing | 2 |
+| 4 | US40 | Visualizar diseño adaptable y atractivo | 3 |
+| 5 | US07 | Registrar una bicicleta o scooter en la app | 5 |
+| 6 | US08 | Editar información de un vehículo registrado | 3 |
+| 7 | US09 | Marcar vehículo disponible/no disponible | 2 |
+| 8 | US10 | Eliminar vehículo de la aplicación | 2 |
+| 9 | US11 | Consultar historial de alquileres de mis vehículos | 3 |
+| 10 | US12 | Buscar bicicletas/scooters por cercanía | 5 |
+| 11 | US13 | Filtrar resultados por tipo de vehículo | 3 |
+| 12 | US14 | Ver información detallada del vehículo y arrendador | 3 |
+| 13 | US15 | Realizar reserva de vehículo | 5 |
+| 14 | US16 | Cancelar reserva | 3 |
+| 15 | US17 | Confirmar inicio de alquiler | 3 |
+| 16 | US18 | Finalizar alquiler | 3 |
+| 17 | US19 | Vincular método de pago | 3 |
+| 18 | US20 | Pagar por alquiler al finalizar el uso | 5 |
+| 19 | US21 | Recibir confirmación de pago | 2 |
+| 20 | US22 | Recibir notificación de penalización si se excede el tiempo | 3 |
+| 21 | US23 | Consultar historial de pagos | 2 |
+| 22 | US24 | Arrendador recibe liquidación automática después del pago | 3 |
+| 23 | US25 | Validación de identidad | 3 |
+| 24 | US26 | Calificar al arrendador o arrendatario al finalizar un alquiler | 2 |
+| 25 | US27 | Ver puntuación y reseñas de otros usuarios | 2 |
+| 26 | US28 | Recibir notificaciones importantes | 3 |
+| 27 | US29 | Acceso a soporte o ayuda dentro de la app | 2 |
+| 28 | US30 | Acceder a panel de control con métricas | 3 |
+| 29 | US31 | Gestionar usuarios | 3 |
+| 30 | US32 | Gestionar vehículos registrados | 3 |
+| 31 | US33 | Monitorear reservas y pagos | 3 |
+| 32 | TS02 | Endpoints para publicación y administración de vehículos (Providing) | 5 |
+| 33 | TS03 | Implementar endpoints del catálogo de vehículos (Vehicles) | 3 |
+| 34 | TS04 | Endpoints para gestión de reservas y alquileres (Renting) | 5 |
+| 35 | TS05 | Endpoints para pagos y liquidaciones (Payments) | 5 |
+| 36 | SPIKE01 | Geolocalización y mapas | 3 |
+| 37 | SPIKE02 | Notificaciones push y en tiempo real | 3 |
+| 38 | SPIKE03 | Escalabilidad y rendimiento en backend | 5 |
+| 39 | SPIKE04 | Seguridad y cumplimiento de datos | 5 |
+| 40 | TS01 | Implementar endpoints de autenticación y gestión de usuarios (IAM) | 5 |
+| 41 | US01 | Registro de usuario estudiante | 3 |
+| 42 | US02 | Registro de usuario arrendador | 3 |
+| 43 | US03 | Iniciar sesión en la aplicación | 2 |
+| 44 | US04 | Recuperar contraseña | 2 |
+| 45 | US05 | Editar información de perfil | 3 | 
+| 46 | US07 | Cerrar sesión | 2 |
 
 
 ## 2.5. Strategic-Level Domain-Driven Design 
