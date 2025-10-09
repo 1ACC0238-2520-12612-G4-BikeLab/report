@@ -161,8 +161,7 @@ En BIKELAB, la información se organiza según el tipo de usuario: Ciclista o Ar
 - **Matricial:**  
   - Comparación de ingresos por vehículo o por período.  
   - Visualización rápida del estado de cada bicicleta o scooter: disponible, alquilado o mantenimiento.
-
----
+    
 
 ### 3.1.2.2. Labelling Systems
 El sistema de etiquetado de BIKELAB se diseña para que los usuarios encuentren información de forma clara y rápida.
@@ -185,7 +184,6 @@ El sistema de etiquetado de BIKELAB se diseña para que los usuarios encuentren 
 - **Métodos de Cobro:** Configuración de cómo recibir pagos.  
 - **Notificaciones:** Alertas de alquileres y devoluciones.  
 
----
 
 ### 3.1.2.3. SEO Tags and Meta Tags
 Aunque BIKELAB es principalmente una app, la landing page web utiliza meta tags para mejorar su visibilidad:
@@ -195,7 +193,6 @@ Aunque BIKELAB es principalmente una app, la landing page web utiliza meta tags 
 - **Keywords:** bicicletas, scooters, alquiler, movilidad urbana, estudiantes, transporte sostenible.  
 - **Authors:** Equipo BIKELAB  
 
----
 
 ### 3.1.2.4. Searching Systems
 Se implementan sistemas de búsqueda eficientes según el tipo de usuario:
@@ -210,7 +207,6 @@ Se implementan sistemas de búsqueda eficientes según el tipo de usuario:
 - Filtrado de alquileres activos por usuario, fecha o vehículo.  
 - Historial de alquileres: búsqueda por fecha, plan o ingreso generado.
 
----
 
 ### 3.1.2.5. Navigation Systems
 Los sistemas de navegación de BIKELAB permiten desplazarse rápida y fácilmente por la app:
@@ -329,7 +325,34 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 
 ### 3.1.4.3. Mobile Applications Mock-ups 
 
+### Ciclista
 
+<img src="/assets/images/mok1_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok2_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok3_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok4_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok5_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok6_s1.png" alt="..." width=auto> 
+
+
+### Arrendador
+
+<img src="/assets/images/mok1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok2.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok3.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok4.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok5.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok6.png" alt="..." width=auto> 
 
 
 ### 3.1.4.4. Mobile Applications User Flow Diagrams 
