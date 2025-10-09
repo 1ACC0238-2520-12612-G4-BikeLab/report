@@ -43,10 +43,8 @@
 
 |   Versión |   Fecha   |           Autor           |               Descripción  de modificación               |
 |-----------|-----------|---------------------------|-------------------------------------------|
-
-|   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones      |
-| TB1 | 14/09/2025 | Hernandez Poma, Sebastian Eduardo | Elaboración, diseño y análisis de entrevistas a los segmentos objetivos (estudiantes universitarios y arrendatarios mayoristas). Incluyó la preparación de las guías de entrevista, recolección de hallazgos y sistematización de resultados para alimentar la definición de requisitos del proyecto. |
-| TB1 | 14/09/2025 | Pedro Omar, Lecca Villalobos | Realizó todo el punto 'Tactical-Level Domain-Driven Design' y lás imágenes en UXPRESSIA (User Journey Mapping, Empathy Mapping, User Persona, User Task Matrix y Impact Mapping) |
+|   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones	|
+|   TP   | 09/09/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Capítulo III: Solution UI/UX Design** y **Capítulo IV: Product Implementation & Validation** |
 
 ## Project Report Collaboration Insights 
 <h2>📚 Student Outcome</h2>
@@ -89,6 +87,9 @@
         <br><br>
         <strong>Cameron Bustamante – TB1:</strong><br>
         Desarrollé los <strong>Bounded Context Software Architecture Component Level Diagrams</strong> y los <strong>Code Level Diagrams</strong> (incluyendo Domain Layer Class Diagrams y el Database Design Diagram), lo que me permitió actualizar mis conocimientos en arquitectura de software y profundizar en el modelado técnico aplicado a contextos delimitados. Además, elaboré los segmentos y antecedentes, reforzando mis competencias en investigación y análisis de usuarios.
+        <br><br>
+        <strong>Cameron Bustamante – TP:</strong><br>
+        Diseñé la <strong>experiencia y la interfaz de usuario (UX/UI)</strong> de BikeLab, elaborando <em>wireframes</em>, <em>wireflows</em> y prototipos interactivos en Figma basados en los hallazgos de investigación. Apliqué principios de <strong>usabilidad</strong> y <strong>diseño centrado en el usuario</strong>, asegurando coherencia visual y accesibilidad en todas las pantallas del sistema.
       </td>
       <td>
         <strong>TB1:</strong><br>
@@ -124,6 +125,9 @@
         <br><br>
         <strong>Cameron Bustamante – TB1:</strong><br>
         Investigué referentes y buenas prácticas de modelado para la elaboración de Component Level Diagrams, Class Diagrams y Database Design Diagrams aplicados a contextos delimitados. A partir de ello, actualicé mis conocimientos en patrones de diseño y arquitectura, reconociendo la necesidad de mantener un aprendizaje continuo para poder aplicar enfoques técnicos modernos y alineados con escenarios reales en proyectos de software.
+        <br><br>
+        <strong>Cameron Bustamante – TP:</strong><br>
+        Reconocí la importancia del <strong>aprendizaje continuo</strong> al aplicar nuevas metodologías y herramientas de diseño UX/UI. La iteración y validación de los prototipos me permitió mejorar mis habilidades técnicas y comprender cómo el diseño contribuye al desarrollo integral de soluciones de software
       </td>
       <td>
         <strong>TB1:</strong><br>
