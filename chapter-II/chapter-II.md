@@ -331,6 +331,9 @@ Estudiante & Proveedor
 <img src="/assets/images/impact-map.png" alt="Impact Mapping" width=auto>
 
 ### 2.4.3. Product Backlog 
+
+<img src="/assets/images/productbacklog.PNG" alt="Product Backlog" width=auto>
+
 | # Orden | User Story Id | Título | Story Points (1 / 2 / 3 / 5 / 8) |
 |---------|---------------|--------|-----------------------------------|
 | 1 | US34 | Visualizar información general del servicio | 3 |
@@ -380,7 +383,7 @@ Estudiante & Proveedor
 | 45 | US05 | Editar información de perfil | 3 | 
 | 46 | US07 | Cerrar sesión | 2 |
 
-
+Link de Atlassian Jira: [https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9](https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9)
 ## 2.5. Strategic-Level Domain-Driven Design 
 ### 2.5.1. EventStorming 
 ### **Introdución**
