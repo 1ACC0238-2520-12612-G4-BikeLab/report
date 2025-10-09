@@ -384,7 +384,9 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 
 ###  3.1.4.5. Mobile Applications Prototyping 
 
-<img src="/assets/images/prototype.png" alt="..." width=auto> 
+<img src="/assets/images/prototype1.png" alt="..." width=auto> 
+
+<img src="/assets/images/prototype2.png" alt="..." width=auto> 
 
 Link del prototipo realizado en figma: 
 [https://www.figma.com/design/KTUEfi4W93Am8ExCLzuMU5/Prototype-SmartHire?node-id=0-1&t=lRdRK43RVlGPsXF8-1](https://www.figma.com/design/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=24-6075&t=gfk3a67aD6C4hHYN-1)
