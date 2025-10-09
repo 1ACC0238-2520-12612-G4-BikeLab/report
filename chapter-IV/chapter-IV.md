@@ -25,6 +25,8 @@ La administración y estructuración de las múltiples modificaciones se realiza
 | :---- | :---- | :---- |
 | Repositorio en Github | BikeLab | [https://github.com/orgs/1ACC0238-2520-12612-G4-BikeLab/repositories](https://github.com/orgs/1ACC0238-2520-12612-G4-BikeLab/repositories) |
 | Landing Page | BikeLab-Landing-Page | [https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/](https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/) |
+| FrontEnd | BikeLab-FrontEnd | [https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend) |
+| BackEnd | BikeLab-Backend | [https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend) |
 
 * **Ramas Principales:** 
 
