@@ -35,16 +35,31 @@
 # Anexos
 
 ## Anexo A: Links importantes:
-
-### Miro:
+### Jira
+- Link Product Backlog:
+[https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9](https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9)
+### Miro
 - Link Event Storming - Message Flow - Context Mapping: [https://miro.com/welcomeonboard/bzlvNUFBNC84d2tOeUhyalU5N1ZmcXZ6MEJFSDI3ZWNRVjNIZGs1QzMzODR3WnkwUFgwamtEQ09zSFJPME9YL0pvcUZwNDFuQ2o5K0N6N2FmREx1bWpPZ21SQTBZMnA0ZnA5SElYVGdUeGxpcjF2QWxwczZqYVFlVjVvcDNPUVNBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=963990692894](https://miro.com/welcomeonboard/bzlvNUFBNC84d2tOeUhyalU5N1ZmcXZ6MEJFSDI3ZWNRVjNIZGs1QzMzODR3WnkwUFgwamtEQ09zSFJPME9YL0pvcUZwNDFuQ2o5K0N6N2FmREx1bWpPZ21SQTBZMnA0ZnA5SElYVGdUeGxpcjF2QWxwczZqYVFlVjVvcDNPUVNBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=963990692894)
 
 - Link Bounded Context Canvas: [https://miro.com/welcomeonboard/My9hUE5GVzB4QWNmZ2V0UGhwdEJYZ2pZUm1nREpDNlBocXFhQ1JTU1JpdGFaTVMzK1dCUEJnRnJVdVNTSitIMWxBUmM0akJBZVlXQjRKNTNLaCtFMmpPZ21SQTBZMnA0ZnA5SElYVGdUeGtpMWtsWkR2VnJuZ1lYcnNONzBmSWhBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=93301827789](https://miro.com/welcomeonboard/My9hUE5GVzB4QWNmZ2V0UGhwdEJYZ2pZUm1nREpDNlBocXFhQ1JTU1JpdGFaTVMzK1dCUEJnRnJVdVNTSitIMWxBUmM0akJBZVlXQjRKNTNLaCtFMmpPZ21SQTBZMnA0ZnA5SElYVGdUeGtpMWtsWkR2VnJuZ1lYcnNONzBmSWhBS2NFMDFkcUNFSnM0d3FEN050ekl3PT0hdjE=?share_link_id=93301827789)
 
-### Domain-Driven Software Architecture / C4 Diagrams:
+### Domain-Driven Software Architecture / C4 Diagrams
 - Link a Structurizr: [https://structurizr.com/share/106219/13db1628-7b4d-4d6a-abfb-f37559b7c04b](https://structurizr.com/share/106219/13db1628-7b4d-4d6a-abfb-f37559b7c04b)
+
+### Figma
+- Figmas Landing Page: [https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1](https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1)
+- Figmas Mobile App: [https://www.figma.com/proto/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=87-1899&p=f&t=JnHcl5VBKm8r38WJ-1&scaling=min-zoom&content-scaling=fixed&page-id=24%3A6075&starting-point-node-id=54%3A3736](https://www.figma.com/proto/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=87-1899&p=f&t=JnHcl5VBKm8r38WJ-1&scaling=min-zoom&content-scaling=fixed&page-id=24%3A6075&starting-point-node-id=54%3A3736)
+
+### Landing Page
+- [https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/](https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/)
 
 ## Anexo B: Exposiciones:
 
+### Entrevistas:
+- 1er Sprint: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/ESS8nMNW8DtHtgz9a86ulzQBBr3fUWxfJBCfo8i_5RCgIw?e=Opy84t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/ESS8nMNW8DtHtgz9a86ulzQBBr3fUWxfJBCfo8i_5RCgIw?e=Opy84t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 ### TB1:
 - [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz)
+
+### TP:
+- 
