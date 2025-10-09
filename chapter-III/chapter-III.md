@@ -315,7 +315,7 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 
 | Pantalla / Paso               | Descripción                                                                                          | Imagen                                                                                  |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Registro / Inicio de sesión   | El arrendador se registra en la app (US02) y recibe notificación de confirmación.                    | <img src="/assets/images/registro_seg2.png" alt="registro_seg2.png" width=auto>    |
+| Registro / Inicio de sesión   | El arrendador se registra en la app (US02) y recibe notificación de confirmación.                    | <img src="/assets/images/registro2_seg2.png" alt="registro2_seg2.png" width=auto>    |
 | Perfil y gestión de vehículos | Edición de perfil (US06) y agregar vehículos (US08).                                                 | <img src="/assets/images/miperfil2.png" alt="miperfil2.png" width=auto>          |
 | Mis Vehículos                 | Listado de vehículos registrados; opción de editar (US09) o eliminar (US11).                         | <img src="/assets/images/misvehiculos_seg2.png" alt="misvehiculos_seg2.png" width=auto>            |
 | Calificaciones y reseñas      | Visualización de opiniones de usuarios sobre los vehículos (US27, US28).                             | <img src="/assets/images/calificacion_seg2.png" alt="calificacion_seg2.png" width=auto> |
@@ -360,25 +360,25 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 
 | User Persona         | User Goal                                   | Pantalla / Paso                                                      | Imagen                                                                             |
 | -------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Estudiante o Turista | Registrarse en la app y acceder a su cuenta | Registro de usuario (US01, US03)                                     | `<img src="/assets/images/registro.png" alt="Registro" width=auto>`                |
-| Estudiante o Turista | Iniciar sesión para acceder a su panel      | Inicio de sesión (US04)                                              | `<img src="/assets/images/registro.png" alt="Inicio de sesión" width=auto>`        |
-| Estudiante o Turista | Editar perfil y mantener datos actualizados | Perfil editable (US06)                                               | `<img src="/assets/images/modelo.png" alt="Perfil editable" width=auto>`           |
-| Estudiante o Turista | Buscar y filtrar vehículos cercanos         | Elección de vehículo, filtros por tipo y cercanía (US13, US14, US15) | `<img src="/assets/images/misvehiculos.png" alt="Buscar vehículos" width=auto>`    |
-| Estudiante o Turista | Realizar y confirmar reservas               | Reserva de vehículo (US16, US18)                                     | `<img src="/assets/images/misvehiculos.png" alt="Reserva de vehículo" width=auto>` |
-| Estudiante o Turista | Pagar alquiler y recibir confirmación       | Pago y confirmación (US20, US21, US22)                               | `<img src="/assets/images/devolucion.png" alt="Pago y confirmación" width=auto>`   |
-| Estudiante o Turista | Finalizar alquiler                          | Finalización del alquiler (US19)                                     | `<img src="/assets/images/devolucion.png" alt="Finalizar alquiler" width=auto>`    |
-| Estudiante o Turista | Recibir notificaciones y soporte            | Notificaciones y soporte (US29, US30)                                | `<img src="/assets/images/suport.png" alt="Notificaciones y soporte" width=auto>`  |
+| Estudiante o Turista | Registrarse en la app y acceder a su cuenta | Registro de usuario (US01, US03)                                     | `<img src="/assets/images/userflow1.png" alt="userflow1" width=auto>`                |
+| Estudiante o Turista | Iniciar sesión para acceder a su panel      | Inicio de sesión (US04)                                              | `<img src="/assets/images/userflow2.png" alt="userflow2" width=auto>`        |
+| Estudiante o Turista | Editar perfil y mantener datos actualizados | Perfil editable (US06)                                               | `<img src="/assets/images/userflow3.png" alt="Perfil editable" width=auto>`           |
+| Estudiante o Turista | Buscar y filtrar vehículos cercanos         | Elección de vehículo, filtros por tipo y cercanía (US13, US14, US15) | `<img src="/assets/images/userflow4.png" alt="Buscar vehículos" width=auto>`    |
+| Estudiante o Turista | Realizar y confirmar reservas               | Reserva de vehículo (US16, US18)                                     | `<img src="/assets/images/userflow5.png" alt="Reserva de vehículo" width=auto>` |
+| Estudiante o Turista | Pagar alquiler y recibir confirmación       | Pago y confirmación (US20, US21, US22)                               | `<img src="/assets/images/userflow6.png" alt="Pago y confirmación" width=auto>`   |
+| Estudiante o Turista | Finalizar alquiler                          | Finalización del alquiler (US19)                                     | `<img src="/assets/images/userflow7.png" alt="Finalizar alquiler" width=auto>`    |
+| Estudiante o Turista | Recibir notificaciones y soporte            | Notificaciones y soporte (US29, US30)                                | `<img src="/assets/images/userflow8.png" alt="Notificaciones y soporte" width=auto>`  |
 
 ### Arrendador
 
 | User Persona | User Goal                                     | Pantalla / Paso                                                                                    | Imagen                                                                                  |
 | ------------ | --------------------------------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Arrendador   | Registrarse para publicar vehículos           | Registro de arrendador (US02)                                                                      | `<img src="/assets/images/registro_seg2.png" alt="Registro Arrendador" width=auto>`     |
-| Arrendador   | Editar perfil                                 | Perfil editable (US06)                                                                             | `<img src="/assets/images/miperfil.png" alt="Perfil Arrendador" width=auto>`            |
-| Arrendador   | Gestionar vehículos publicados                | Mis Vehículos: agregar, editar, marcar disponible/no disponible, eliminar (US08, US09, US10, US11) | `<img src="/assets/images/misvehiculos.png" alt="Gestión de Vehículos" width=auto>`     |
-| Arrendador   | Consultar historial de alquileres             | Historial de alquileres (US12)                                                                     | `<img src="/assets/images/misvehiculos.png" alt="Historial de alquileres" width=auto>`  |
-| Arrendador   | Recibir ingresos automáticos y revisarlos     | Ingresos (US25)                                                                                    | `<img src="/assets/images/ingresos.png" alt="Ingresos" width=auto>`                     |
-| Arrendador   | Ver calificaciones y reseñas de sus vehículos | Calificaciones y reseñas (US27, US28)                                                              | `<img src="/assets/images/calificacion.png" alt="Calificaciones y reseñas" width=auto>` |
+| Arrendador   | Registrarse para publicar vehículos           | Registro de arrendador (US02)                                                                      | `<img src="/assets/images/userflow1_seg2.png" alt="Registro Arrendador" width=auto>`     |
+| Arrendador   | Editar perfil                                 | Perfil editable (US06)                                                                             | `<img src="/assets/images/userflow2_seg2" alt="Perfil Arrendador" width=auto>`            |
+| Arrendador   | Gestionar vehículos publicados                | Mis Vehículos: agregar, editar, marcar disponible/no disponible, eliminar (US08, US09, US10, US11) | `<img src="/assets/images/userflow3_seg2.png" alt="Gestión de Vehículos" width=auto>`     |
+| Arrendador   | Consultar historial de alquileres             | Historial de alquileres (US12)                                                                     | `<img src="/assets/images/userflow4_seg2.png" alt="Historial de alquileres" width=auto>`  |
+| Arrendador   | Recibir ingresos automáticos y revisarlos     | Ingresos (US25)                                                                                    | `<img src="/assets/images/userflow5_seg2.png" alt="Ingresos" width=auto>`                     |
+| Arrendador   | Ver calificaciones y reseñas de sus vehículos | Calificaciones y reseñas (US27, US28)                                                              | `<img src="/assets/images/userflow6_seg2.png" alt="Calificaciones y reseñas" width=auto>` |
 
 
 ###  3.1.4.5. Mobile Applications Prototyping 
@@ -388,4 +388,5 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 <img src="/assets/images/prototype2.png" alt="..." width=auto> 
 
 Link del prototipo realizado en figma: 
-[https://www.figma.com/design/KTUEfi4W93Am8ExCLzuMU5/Prototype-SmartHire?node-id=0-1&t=lRdRK43RVlGPsXF8-1](https://www.figma.com/design/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=24-6075&t=gfk3a67aD6C4hHYN-1)
+
+https://www.figma.com/proto/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=87-1899&p=f&t=JnHcl5VBKm8r38WJ-1&scaling=min-zoom&content-scaling=fixed&page-id=24%3A6075&starting-point-node-id=54%3A3736
