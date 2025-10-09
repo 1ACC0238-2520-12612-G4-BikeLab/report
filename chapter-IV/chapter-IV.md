@@ -308,6 +308,10 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 
 ##### 4.2.1.7. Software Deployment Evidence for Sprint Review 
 ##### 4.2.1.8. Team Collaboration Insights during Sprint 
+
+**Primera versión del backend:**
+<img src="/assets/images/backend-commits.png" alt="GitHub commits — Backend Sprint 1" width=auto>
+
 ### 4.3. Validation Interviews 
 #### 4.3.1. Diseño de Entrevistas 
 #### 4.3.2. Registro de Entrevistas 
