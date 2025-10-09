@@ -302,13 +302,12 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 ### Ciclista
 | Pantalla / Paso               | Descripción                                                                                            | Imagen                                                                                  |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| Registro / Inicio de sesión   | El estudiante o turista puede registrarse (US01, US03) o iniciar sesión (US04) y recibir confirmación. | `<img src="/assets/images/registro.png" alt="Registro" width=auto>`                     |
-| Perfil y selección de usuario | Acceso a perfil editable (US06), selección de vehículo y arrendador.                                   | `<img src="/assets/images/modelo.png" alt="Perfil y selección de vehículo" width=auto>` |
-| Elección de vehículo          | Visualización de vehículos disponibles, detalles, tarifas y arrendador (US13, US14, US15).             | `<img src="/assets/images/misvehiculos.png" alt="Elección de vehículo" width=auto>`     |
-| Rutas y planificación         | Consulta de rutas sugeridas, distancia, tiempo estimado y ahorro de CO₂.                               | `<img src="/assets/images/rutas.png" alt="Rutas" width=auto>`                           |
-| Alquiler y devoluciones       | Registro de alquiler (US16, US18), pago (US21, US20) y devolución mediante QR o puntos autorizados.    | `<img src="/assets/images/devolucion.png" alt="Alquiler y devoluciones" width=auto>`    |
-| Soporte y notificaciones      | Sección de soporte (US30) y alertas sobre el estado de alquileres, pagos y reservas (US29).            | `<img src="/assets/images/suport.png" alt="Soporte y                                    |
-
+| Registro / Inicio de sesión   | El estudiante o turista puede registrarse (US01, US03) o iniciar sesión (US04) y recibir confirmación. | <img src="/assets/images/registro2.png" alt="Registro" width=auto />                   |
+| Perfil y selección de usuario | Acceso a perfil editable (US06), selección de vehículo y arrendador.                                   | <img src="/assets/images/modelo2.png" alt="Perfil y selección de vehículo" width=auto /> |
+| Elección de vehículo          | Visualización de vehículos disponibles, detalles, tarifas y arrendador (US13, US14, US15).             | <img src="/assets/images/modelo2.png" alt="Elección de vehículo" width=auto />     |
+| Rutas y planificación         | Consulta de rutas sugeridas, distancia, tiempo estimado y ahorro de CO₂.                               | <img src="/assets/images/rutas2.png" alt="Rutas" width=auto />                          |
+| Alquiler y devoluciones       | Registro de alquiler (US16, US18), pago (US21, US20) y devolución mediante QR o puntos autorizados.    | <img src="/assets/images/devolucion2.png" alt="Alquiler y devoluciones" width=auto />    |
+| Soporte y notificaciones      | Sección de soporte (US30) y alertas sobre el estado de alquileres, pagos y reservas (US29).            | <img src="/assets/images/suport2.png" alt="Soporte" width=auto />                            |
 
 
 
@@ -316,11 +315,11 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 
 | Pantalla / Paso               | Descripción                                                                                          | Imagen                                                                                  |
 | ----------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Registro / Inicio de sesión   | El arrendador se registra en la app (US02) y recibe notificación de confirmación.                    | `<img src="/assets/images/registro_seg2.png" alt="Registro Arrendador" width=auto>`     |
-| Perfil y gestión de vehículos | Edición de perfil (US06) y agregar vehículos (US08).                                                 | `<img src="/assets/images/miperfil.png" alt="Perfil Arrendador" width=auto>`            |
-| Mis Vehículos                 | Listado de vehículos registrados; opción de editar (US09) o eliminar (US11).                         | `<img src="/assets/images/misvehiculos.png" alt="Mis Vehículos" width=auto>`            |
-| Calificaciones y reseñas      | Visualización de opiniones de usuarios sobre los vehículos (US27, US28).                             | `<img src="/assets/images/calificacion.png" alt="Calificaciones y reseñas" width=auto>` |
-| Ingresos                      | Visualización de ganancias generadas, ingresos por día/semana/mes y opción de retirar fondos (US25). | `<img src="/assets/images/ingresos.png" alt="Ingresos" width=auto>`                     |
+| Registro / Inicio de sesión   | El arrendador se registra en la app (US02) y recibe notificación de confirmación.                    | <img src="/assets/images/registro_seg2.png" alt="registro_seg2.png" width=auto>    |
+| Perfil y gestión de vehículos | Edición de perfil (US06) y agregar vehículos (US08).                                                 | <img src="/assets/images/miperfil2.png" alt="miperfil2.png" width=auto>          |
+| Mis Vehículos                 | Listado de vehículos registrados; opción de editar (US09) o eliminar (US11).                         | <img src="/assets/images/misvehiculos_seg2.png" alt="misvehiculos_seg2.png" width=auto>            |
+| Calificaciones y reseñas      | Visualización de opiniones de usuarios sobre los vehículos (US27, US28).                             | <img src="/assets/images/calificacion_seg2.png" alt="calificacion_seg2.png" width=auto> |
+| Ingresos                      | Visualización de ganancias generadas, ingresos por día/semana/mes y opción de retirar fondos (US25). | <img src="/assets/images/ingresos_seg2.png" alt="ingresos_seg2.png" width=auto>                     |
 
 
 ### 3.1.4.3. Mobile Applications Mock-ups 
