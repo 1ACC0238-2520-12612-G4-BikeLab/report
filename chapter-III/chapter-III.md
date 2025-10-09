@@ -278,7 +278,7 @@ Los wireflows representan la estructura y flujo de navegación de la app móvil 
 ### Ciclista
 | Pantalla / Paso               | Descripción                                                                                            | Imagen                                                                                  |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| Registro / Inicio de sesión   | El estudiante o turista puede registrarse (US01, US03) o iniciar sesión (US04) y recibir confirmación. | <img src="/assets/images/userflow1" alt="Registro" width=auto />                   |
+| Registro / Inicio de sesión   | El estudiante o turista puede registrarse (US01, US03) o iniciar sesión (US04) y recibir confirmación. | <img src="/assets/images/userflow1.png" alt="Registro" width=auto />                   |
 | Perfil y selección de usuario | Acceso a perfil editable (US06), selección de vehículo y arrendador.                                   | <img src="/assets/images/modelo2.png" alt="Perfil y selección de vehículo" width=auto /> |
 | Elección de vehículo          | Visualización de vehículos disponibles, detalles, tarifas y arrendador (US13, US14, US15).             | <img src="/assets/images/modelo2.png" alt="Elección de vehículo" width=auto />     |
 | Rutas y planificación         | Consulta de rutas sugeridas, distancia, tiempo estimado y ahorro de CO₂.                               | <img src="/assets/images/rutas2.png" alt="Rutas" width=auto />                          |
@@ -361,7 +361,7 @@ Pantalla de ingresos con monto total, además de opciones para retirar ganancias
 
 | User Persona         | User Goal                                   | Pantalla / Paso                                                      | Imagen                                                                             |
 | -------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Estudiante o Turista | Registrarse en la app y acceder a su cuenta | Registro de usuario (US01, US03)                                     | `<img src="/assets/images/registro22.png.png" alt="userflow1" width=auto>`                |
+| Estudiante o Turista | Registrarse en la app y acceder a su cuenta | Registro de usuario (US01, US03)                                     | `<img src="/assets/images/registro22.png" alt="userflow1" width=auto>`                |
 | Estudiante o Turista | Iniciar sesión para acceder a su panel      | Inicio de sesión (US04)                                              | `<img src="/assets/images/userflow2.png" alt="userflow2" width=auto>`        |
 | Estudiante o Turista | Editar perfil y mantener datos actualizados | Perfil editable (US06)                                               | `<img src="/assets/images/userflow3.png" alt="Perfil editable" width=auto>`           |
 | Estudiante o Turista | Buscar y filtrar vehículos cercanos         | Elección de vehículo, filtros por tipo y cercanía (US13, US14, US15) | `<img src="/assets/images/userflow4.png" alt="Buscar vehículos" width=auto>`    |
