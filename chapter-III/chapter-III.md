@@ -122,15 +122,107 @@ Se utilizará una paleta de colores moderna y enérgica, dominada por tonos verd
 <div align="left">
 
 ## 3.1.2. Information Architecture
-### 3.1.2.1. Organization Systems 
 
-### 3.1.2.2. Labelling Systems 
+### 3.1.2.1. Organization Systems
+En BIKELAB, la información se organiza según el tipo de usuario: Ciclista o Arrendador. Se prioriza la usabilidad y el flujo lógico de acciones para cada segmento.
 
-### 3.1.2.3. SEO Tags and Meta Tags 
+#### Segmento 1: Ciclista
+- **Jerárquica:**  
+  - Listado de planes: Diario, Mensual, etc.  
+  - Detalles de cada plan: precio, duración, beneficios.  
+  - Historial de alquileres: orden cronológico por fecha.  
 
-### 3.1.2.4. Searching Systems 
+- **Secuencial:**  
+  1. Registro / Inicio de sesión.  
+  2. Selección del tipo de usuario → Ciclista.  
+  3. Selección de plan de alquiler.  
+  4. Método de pago.  
+  5. Alquiler activo → seguimiento del vehículo.  
+  6. Devolución del vehículo.  
+  7. Calificación y comentarios sobre la experiencia.  
+
+- **Matricial:**  
+  - Historial de alquileres con métricas: duración total, distancia recorrida, CO₂ ahorrado.  
+  - Comparación de planes disponibles por costo y beneficios.  
+
+#### Segmento 2: Arrendador
+- **Jerárquica:**  
+  - Listado de vehículos registrados.  
+  - Alquileres activos y finalizados.  
+  - Métodos de cobro y configuración de perfil.  
+
+- **Secuencial:**  
+  1. Registro / Inicio de sesión → tipo de usuario: Arrendador.  
+  2. Agregar nuevo vehículo.  
+  3. Monitoreo de alquileres activos.  
+  4. Historial de alquileres y métricas de ingresos.  
+  5. Gestión de métodos de cobro.  
+
+- **Matricial:**  
+  - Comparación de ingresos por vehículo o por período.  
+  - Visualización rápida del estado de cada bicicleta o scooter: disponible, alquilado o mantenimiento.
+
+---
+
+### 3.1.2.2. Labelling Systems
+El sistema de etiquetado de BIKELAB se diseña para que los usuarios encuentren información de forma clara y rápida.
+
+#### Para la App - Ciclistas
+- **Inicio:** Bienvenida y selección de tipo de usuario.  
+- **Planes:** Información de planes de uso y precios.  
+- **Mis Alquileres:** Historial de alquileres y métricas del viaje.  
+- **Método de Pago:** Configuración de forma de pago.  
+- **Perfil:** Datos personales y permisos de ubicación.  
+- **Notificaciones:** Estado de reservas y devoluciones.  
+
+#### Para la App - Arrendadores
+- **Perfil:** Información del arrendador y contacto.  
+- **Mis Vehículos:** Lista de vehículos registrados.  
+- **Agregar Vehículo:** Registro de nuevos vehículos con precios y ubicación.  
+- **Alquileres Activos:** Seguimiento de alquileres en curso.  
+- **Historial de Alquileres:** Registro de alquileres pasados y métricas.  
+- **Ingresos:** Ganancias acumuladas.  
+- **Métodos de Cobro:** Configuración de cómo recibir pagos.  
+- **Notificaciones:** Alertas de alquileres y devoluciones.  
+
+---
+
+### 3.1.2.3. SEO Tags and Meta Tags
+Aunque BIKELAB es principalmente una app, la landing page web utiliza meta tags para mejorar su visibilidad:
+
+- **Title:** BIKELAB - Alquila bicicletas y scooters fácilmente  
+- **Description:** Plataforma de movilidad para estudiantes y arrendadores. Alquila bicicletas y scooters de forma rápida y segura.  
+- **Keywords:** bicicletas, scooters, alquiler, movilidad urbana, estudiantes, transporte sostenible.  
+- **Authors:** Equipo BIKELAB  
+
+---
+
+### 3.1.2.4. Searching Systems
+Se implementan sistemas de búsqueda eficientes según el tipo de usuario:
+
+#### Ciclistas
+- Buscador de planes o estaciones cercanas.  
+- Filtro por tipo de vehículo, ubicación o disponibilidad.  
+- Historial de alquileres: búsqueda por fecha, vehículo o ruta.
+
+#### Arrendadores
+- Buscador de vehículos registrados.  
+- Filtrado de alquileres activos por usuario, fecha o vehículo.  
+- Historial de alquileres: búsqueda por fecha, plan o ingreso generado.
+
+---
 
 ### 3.1.2.5. Navigation Systems
+Los sistemas de navegación de BIKELAB permiten desplazarse rápida y fácilmente por la app:
+
+#### Ciclistas
+- Barra inferior o menú principal: Inicio, Planes, Mis Alquileres, Perfil, Notificaciones.  
+- Acceso rápido a detalles del vehículo y opciones de pago.
+
+#### Arrendadores
+- Menú lateral o superior: Perfil, Mis Vehículos, Agregar Vehículo, Alquileres Activos, Historial, Ingresos, Métodos de Cobro, Notificaciones.  
+- Posibilidad de filtrar listas y acceder directamente a detalles de vehículos o alquileres.
+
 
 ## 3.1.3. Landing Page UI Design 
 ### 3.1.3.1. Landing Page Wireframe 
