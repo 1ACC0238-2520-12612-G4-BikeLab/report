@@ -69,8 +69,6 @@ Títulos y botones → Archivo Narrow Bold
 Subtítulos → Archivo Narrow Semibold
 Texto descriptivo y formularios → System Regular
 
-<div align="center"> <img src="/assets/images/tipografia.png" alt="tipografia.png" width="50%"> </div>
-
   
 6. Botones:
 
@@ -374,7 +372,7 @@ Pantalla de ingresos con monto total, además de opciones para retirar ganancias
 | User Persona | User Goal                                     | Pantalla / Paso                                                                                    | Imagen                                                                                  |
 | ------------ | --------------------------------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Arrendador   | Registrarse para publicar vehículos           | Registro de arrendador (US02)                                                                      | <img src="/assets/images/userflow1_seg2.png" alt="Registro Arrendador" width=auto>     |
-| Arrendador   | Editar perfil                                 | Perfil editable (US06)                                                                             | <img src="/assets/images/userflow2_seg2" alt="Perfil Arrendador" width=auto>          |
+| Arrendador   | Editar perfil                                 | Perfil editable (US06)                                                                             | <img src="/assets/images/userflow2_seg2.png" alt="Perfil Arrendador" width=auto>          |
 | Arrendador   | Gestionar vehículos publicados                | Mis Vehículos: agregar, editar, marcar disponible/no disponible, eliminar (US08, US09, US10, US11) | <img src="/assets/images/userflow3_seg2.png" alt="Gestión de Vehículos" width=auto>    |
 | Arrendador   | Consultar historial de alquileres             | Historial de alquileres (US12)                                                                     | <img src="/assets/images/userflow4_seg2.png" alt="Historial de alquileres" width=auto>  |
 | Arrendador   | Recibir ingresos automáticos y revisarlos     | Ingresos (US25)                                                                                    | <img src="/assets/images/userflow5_seg2.png" alt="Ingresos" width=auto>                     |
