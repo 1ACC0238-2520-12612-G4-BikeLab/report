@@ -367,7 +367,6 @@ Pantalla de ingresos con monto total, además de opciones para retirar ganancias
 | Estudiante  | Buscar y filtrar vehículos cercanos         | Elección de vehículo, filtros por tipo y cercanía (US13, US14, US15) | <img src="/assets/images/userflow4.png" alt="Buscar vehículos" width=auto>    |
 | Estudiante | Realizar y confirmar reservas               | Reserva de vehículo (US16, US18)                                     | <img src="/assets/images/userflow5.png" alt="Reserva de vehículo" width=auto>|
 | Estudiante  | Pagar alquiler y recibir confirmación       | Pago y confirmación (US20, US21, US22)                               | <img src="/assets/images/userflow6.png" alt="Pago y confirmación" width=auto>   |
-| Estudiante  | Finalizar alquiler                          | Finalización del alquiler (US19)                                     | <img src="/assets/images/userflow7.png" alt="Finalizar alquiler" width=auto>    |
 | Estudiante  | Recibir notificaciones y soporte            | Notificaciones y soporte (US29, US30)                                | <img src="/assets/images/userflow8.png" alt="Notificaciones y soporte" width=auto>  |
 
 ### Arrendador
