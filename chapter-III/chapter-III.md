@@ -241,6 +241,65 @@ Enlace al Figma: [https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Pa
 
 ### 3.1.4.1. Mobile Applications Wireframes 
 
+### Ciclista
+
+<img src="/assets/images/mok1_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok2_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok3_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok4_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok5_s1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok6_s1.png" alt="..." width=auto> 
+
+
+### Arrendador
+
+<img src="/assets/images/mok1.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok2.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok3.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok4.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok5.png" alt="..." width=auto> 
+
+<img src="/assets/images/mok6.png" alt="..." width=auto> 
+
+
+
+### 3.1.4.2. Mobile Applications Wireflow Diagrams 
+Los wireflows representan la estructura y flujo de navegación de la app móvil BIKELAB, mostrando cómo los usuarios ciclistas y arrendadores interactúan con cada pantalla de forma secuencial.
+
+### Ciclista
+| Pantalla / Paso               | Descripción                                                                                            | Imagen                                                                                  |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| Registro / Inicio de sesión   | El estudiante o turista puede registrarse (US01, US03) o iniciar sesión (US04) y recibir confirmación. | <img src="/assets/images/registro2.png" alt="Registro" width=auto />                   |
+| Perfil y selección de usuario | Acceso a perfil editable (US06), selección de vehículo y arrendador.                                   | <img src="/assets/images/modelo2.png" alt="Perfil y selección de vehículo" width=auto /> |
+| Elección de vehículo          | Visualización de vehículos disponibles, detalles, tarifas y arrendador (US13, US14, US15).             | <img src="/assets/images/modelo2.png" alt="Elección de vehículo" width=auto />     |
+| Rutas y planificación         | Consulta de rutas sugeridas, distancia, tiempo estimado y ahorro de CO₂.                               | <img src="/assets/images/rutas2.png" alt="Rutas" width=auto />                          |
+| Alquiler y devoluciones       | Registro de alquiler (US16, US18), pago (US21, US20) y devolución mediante QR o puntos autorizados.    | <img src="/assets/images/devolucion2.png" alt="Alquiler y devoluciones" width=auto />    |
+| Soporte y notificaciones      | Sección de soporte (US30) y alertas sobre el estado de alquileres, pagos y reservas (US29).            | <img src="/assets/images/suport2.png" alt="Soporte" width=auto />                            |
+
+
+
+### Arrendador 
+
+| Pantalla / Paso               | Descripción                                                                                          | Imagen                                                                                  |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Registro / Inicio de sesión   | El arrendador se registra en la app (US02) y recibe notificación de confirmación.                    | <img src="/assets/images/registro2_seg2.png" alt="registro2_seg2.png" width=auto>    |
+| Perfil y gestión de vehículos | Edición de perfil (US06) y agregar vehículos (US08).                                                 | <img src="/assets/images/miperfil2.png" alt="miperfil2.png" width=auto>          |
+| Mis Vehículos                 | Listado de vehículos registrados; opción de editar (US09) o eliminar (US11).                         | <img src="/assets/images/misvehiculos_seg2.png" alt="misvehiculos_seg2.png" width=auto>            |
+| Calificaciones y reseñas      | Visualización de opiniones de usuarios sobre los vehículos (US27, US28).                             | <img src="/assets/images/calificacion_seg2.png" alt="calificacion_seg2.png" width=auto> |
+| Ingresos                      | Visualización de ganancias generadas, ingresos por día/semana/mes y opción de retirar fondos (US25). | <img src="/assets/images/ingresos_seg2.png" alt="ingresos_seg2.png" width=auto>                     |
+
+
+### 3.1.4.3. Mobile Applications Mock-ups 
+
 #### SEGMENTO 1: Ciclista
 Pantalla de registro del ciclista con campos de correo, contraseña, universidad y teléfono.
 
@@ -294,64 +353,6 @@ Pantalla de ingresos con monto total, además de opciones para retirar ganancias
 
 <img src="/assets/images/ingresos.png" alt="..." width=auto> 
 
-
-
-### 3.1.4.2. Mobile Applications Wireflow Diagrams 
-Los wireflows representan la estructura y flujo de navegación de la app móvil BIKELAB, mostrando cómo los usuarios ciclistas y arrendadores interactúan con cada pantalla de forma secuencial.
-
-### Ciclista
-| Pantalla / Paso               | Descripción                                                                                            | Imagen                                                                                  |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| Registro / Inicio de sesión   | El estudiante o turista puede registrarse (US01, US03) o iniciar sesión (US04) y recibir confirmación. | <img src="/assets/images/registro2.png" alt="Registro" width=auto />                   |
-| Perfil y selección de usuario | Acceso a perfil editable (US06), selección de vehículo y arrendador.                                   | <img src="/assets/images/modelo2.png" alt="Perfil y selección de vehículo" width=auto /> |
-| Elección de vehículo          | Visualización de vehículos disponibles, detalles, tarifas y arrendador (US13, US14, US15).             | <img src="/assets/images/modelo2.png" alt="Elección de vehículo" width=auto />     |
-| Rutas y planificación         | Consulta de rutas sugeridas, distancia, tiempo estimado y ahorro de CO₂.                               | <img src="/assets/images/rutas2.png" alt="Rutas" width=auto />                          |
-| Alquiler y devoluciones       | Registro de alquiler (US16, US18), pago (US21, US20) y devolución mediante QR o puntos autorizados.    | <img src="/assets/images/devolucion2.png" alt="Alquiler y devoluciones" width=auto />    |
-| Soporte y notificaciones      | Sección de soporte (US30) y alertas sobre el estado de alquileres, pagos y reservas (US29).            | <img src="/assets/images/suport2.png" alt="Soporte" width=auto />                            |
-
-
-
-### Arrendador 
-
-| Pantalla / Paso               | Descripción                                                                                          | Imagen                                                                                  |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Registro / Inicio de sesión   | El arrendador se registra en la app (US02) y recibe notificación de confirmación.                    | <img src="/assets/images/registro2_seg2.png" alt="registro2_seg2.png" width=auto>    |
-| Perfil y gestión de vehículos | Edición de perfil (US06) y agregar vehículos (US08).                                                 | <img src="/assets/images/miperfil2.png" alt="miperfil2.png" width=auto>          |
-| Mis Vehículos                 | Listado de vehículos registrados; opción de editar (US09) o eliminar (US11).                         | <img src="/assets/images/misvehiculos_seg2.png" alt="misvehiculos_seg2.png" width=auto>            |
-| Calificaciones y reseñas      | Visualización de opiniones de usuarios sobre los vehículos (US27, US28).                             | <img src="/assets/images/calificacion_seg2.png" alt="calificacion_seg2.png" width=auto> |
-| Ingresos                      | Visualización de ganancias generadas, ingresos por día/semana/mes y opción de retirar fondos (US25). | <img src="/assets/images/ingresos_seg2.png" alt="ingresos_seg2.png" width=auto>                     |
-
-
-### 3.1.4.3. Mobile Applications Mock-ups 
-
-### Ciclista
-
-<img src="/assets/images/mok1_s1.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok2_s1.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok3_s1.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok4_s1.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok5_s1.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok6_s1.png" alt="..." width=auto> 
-
-
-### Arrendador
-
-<img src="/assets/images/mok1.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok2.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok3.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok4.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok5.png" alt="..." width=auto> 
-
-<img src="/assets/images/mok6.png" alt="..." width=auto> 
 
 
 ### 3.1.4.4. Mobile Applications User Flow Diagrams 
