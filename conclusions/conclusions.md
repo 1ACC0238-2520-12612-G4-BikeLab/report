@@ -50,10 +50,16 @@
 - Figmas Landing Page: [https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1](https://www.figma.com/design/1ocJneCEXxx2KhRRFpnmIa/Landing-Page---App-Movil?node-id=0-1&t=9TnkBaXYcU0P3wkw-1)
 - Figmas Mobile App: [https://www.figma.com/proto/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=87-1899&p=f&t=JnHcl5VBKm8r38WJ-1&scaling=min-zoom&content-scaling=fixed&page-id=24%3A6075&starting-point-node-id=54%3A3736](https://www.figma.com/proto/SC6RkHiZJlWAASax41hHuC/Untitled?node-id=87-1899&p=f&t=JnHcl5VBKm8r38WJ-1&scaling=min-zoom&content-scaling=fixed&page-id=24%3A6075&starting-point-node-id=54%3A3736)
 
+### Landing Page
+- [https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/](https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/)
+
 ## Anexo B: Exposiciones:
 
 ### Entrevistas:
 - 1er Sprint: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/ESS8nMNW8DtHtgz9a86ulzQBBr3fUWxfJBCfo8i_5RCgIw?e=Opy84t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/ESS8nMNW8DtHtgz9a86ulzQBBr3fUWxfJBCfo8i_5RCgIw?e=Opy84t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
-- Heuristicas: [
+
 ### TB1:
 - [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz)
+
+### TP:
+- 
