@@ -93,9 +93,11 @@ La problemática es real y frecuente en Lima Metropolitana. Existe una clara dem
 ### 1.2.2. Lean UX Process  
 
 #### 1.2.2.1. Lean UX Problem Statements  
-- Los estudiantes universitarios en Lima Metropolitana enfrentan retrasos frecuentes por el tráfico y carecen de opciones de transporte económico, seguro y confiable para movilizarse entre sus actividades diarias.  
-- Las personas que poseen bicicletas o scooters no utilizan sus vehículos constantemente y carecen de una plataforma segura y sencilla para alquilarlos, perdiendo así la oportunidad de generar ingresos adicionales.  
-- Los métodos de transporte actuales (taxis, buses, autos particulares) son costosos, inseguros o poco eficientes, lo que genera frustración en los usuarios y pérdida de tiempo en su día a día.  
+En la actualidad, los estudiantes universitarios en Lima Metropolitana enfrentan dificultades significativas para desplazarse entre sus actividades académicas y personales debido al tráfico intenso, los altos costos del transporte y la falta de opciones seguras y confiables. Este contexto limita su puntualidad, genera estrés y afecta su productividad diaria.
+
+A la par, existen personas que poseen bicicletas o scooters personales pero no los utilizan de manera constante, desaprovechando la oportunidad de generar ingresos adicionales al compartir sus vehículos con otros usuarios. La ausencia de una plataforma digital que conecte ambas necesidades —movilidad accesible y aprovechamiento de recursos personales— evidencia una brecha en el ecosistema urbano sostenible.
+
+¿Cómo podríamos desarrollar una aplicación móvil segura y sencilla que facilite la conexión entre quienes necesitan transportarse de forma económica y quienes disponen de vehículos personales, promoviendo una movilidad urbana más eficiente, colaborativa y sostenible en Lima Metropolitana?
 
 #### 1.2.2.2. Lean UX Assumptions  
 
@@ -119,18 +121,26 @@ La problemática es real y frecuente en Lima Metropolitana. Existe una clara dem
 ## Hipótesis por segmento
 
 ### Segmento 1: Estudiantes universitarios
-- Los estudiantes universitarios buscan opciones de transporte más económicas que taxis o apps de movilidad.  
-- Existe desconfianza en alquilar bicicletas a desconocidos, pero confiarían más si la plataforma valida correos universitarios.  
-- Prefieren soluciones rápidas y prácticas que les ahorren tiempo entre clases y actividades académicas.  
-- Valoran métodos de pago simples y accesibles como **Yape** o **Plin**, más que tarjetas de crédito.  
-- La sostenibilidad y el cuidado del medio ambiente son factores importantes para adoptar este servicio.  
+-  **Creemos que** ofrecer una opción de transporte más económica que taxis o aplicaciones de movilidad permitirá que los estudiantes universitarios reduzcan sus gastos de traslado y lleguen con mayor puntualidad a sus clases. Sabremos que estamos en lo correcto cuando al menos el 70% de los usuarios afirme haber reducido sus costos de transporte.
+
+-  **Creemos que** validar las cuentas mediante correos universitarios aumentará la confianza entre los usuarios al momento de alquilar bicicletas o scooters. Sabremos que estamos en lo correcto cuando más del 60% de los estudiantes encuestados indique sentirse seguros utilizando la plataforma.
+
+-  **Creemos que** proporcionar una interfaz rápida, práctica y de fácil acceso permitirá que los estudiantes gestionen sus viajes en menos de dos minutos. Sabremos que estamos en lo correcto cuando la mayoría de los usuarios complete el proceso de reserva sin dificultades técnicas ni demoras.
+
+-  **Creemos que** incorporar métodos de pago locales como Yape o Plin facilitará la adopción del servicio entre los jóvenes. Sabremos que estamos en lo correcto cuando más del 80% de las transacciones se realicen mediante estas plataformas.
+
+-  **Creemos que** incluir mensajes y funciones relacionadas con la sostenibilidad motivará a los estudiantes a elegir medios de transporte ecológicos. Sabremos que estamos en lo correcto cuando los usuarios indiquen que la razón principal para usar la aplicación es contribuir al cuidado ambiental.
 
 ### Segmento 2: Público general (personas que alquilan/usuarios externos)
-- Hay personas que tienen bicicletas o scooters sin uso que estarían dispuestas a alquilar para generar ingresos extras.  
-- Los usuarios externos prefieren una plataforma que garantice seguridad y evite riesgos en las transacciones.  
-- Consideran importante tener visibilidad de sus bicicletas en un **mapa**, ya que les permite llegar a más arrendatarios.  
-- Están interesados en un sistema que reduzca la fricción al cobrar, con pagos digitales inmediatos.  
-- Para muchos, el factor decisivo no es solo el dinero, sino también la **seguridad** y la confianza en la comunidad que usa la app.  
+-  **Creemos que** permitir a los propietarios de bicicletas o scooters alquilarlos mediante la aplicación les brindará una fuente adicional de ingresos. Sabremos que estamos en lo correcto cuando se registre un aumento mensual del 25% en los vehículos listados en la plataforma.
+
+-  **Creemos que** ofrecer un sistema seguro de validación de usuarios y pagos reducirá la desconfianza y el riesgo en las transacciones. Sabremos que estamos en lo correcto cuando las incidencias reportadas sean menores al 5% del total de alquileres realizados.
+
+-  **Creemos que** incorporar un mapa interactivo con la ubicación de las bicicletas aumentará la visibilidad de los propietarios y mejorará la experiencia de los arrendatarios. Sabremos que estamos en lo correcto cuando la mayoría de los usuarios utilice esta función para encontrar o alquilar vehículos.
+
+-  **Creemos que** integrar pagos digitales automáticos reducirá la fricción y agilizará el cobro a los propietarios. Sabremos que estamos en lo correcto cuando el 90% de los pagos se procese sin intervención manual.
+
+-  **Creemos que** construir una comunidad basada en confianza y reputación aumentará la fidelidad de los usuarios. Sabremos que estamos en lo correcto cuando más del 70% de los propietarios y arrendatarios repitan operaciones en la plataforma.
 
 #### 1.2.2.4. Lean UX Canvas
 
