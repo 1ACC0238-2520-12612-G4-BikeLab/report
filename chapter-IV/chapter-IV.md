@@ -308,6 +308,12 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 | GET  | `/api/payments/payouts/mine` | Header JWT          | —          | `PROVIDER`     | `curl -H "Authorization: Bearer <jwt>" /api/payments/payouts/mine` | `200 OK` `[ { "amount": "...", "status":"paid" }, ... ]` |
 
 ##### 4.2.1.7. Software Deployment Evidence for Sprint Review 
+- LANDING PAGE
+[https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/](https://1acc0238-2520-12612-g4-bikelab.github.io/BikeLab_Landing/)
+
+<img src="/assets/images/landingdesplegada.PNG" alt="Landing Desplegada" width=auto>
+<img src="/assets/images/landingdesplegada2.PNG" alt="Landing Desplegada 2" width=auto>
+
 ##### 4.2.1.8. Team Collaboration Insights during Sprint 
 
 **Primera versión del backend:**
