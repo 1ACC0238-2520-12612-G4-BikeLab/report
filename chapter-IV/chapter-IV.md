@@ -315,6 +315,126 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 
 ### 4.3. Validation Interviews 
 #### 4.3.1. Diseño de Entrevistas 
+<h2>📋 Guía de Entrevista – Segmento Universitario (BikeLab)</h2>
+<p>Estas preguntas fueron diseñadas para recopilar percepciones, opiniones y sugerencias de estudiantes universitarios sobre la experiencia de uso de la aplicación <strong>BikeLab</strong>.</p>
+
+<ol>
+  <li>¿Qué te pareció el diseño general de la aplicación? (Colores, organización, calidad visual)</li>
+  <li>¿Qué tan fácil te resultó navegar y entender las funciones principales (registro, alquiler, pago)?</li>
+  <li>¿Sentiste que la app transmite confianza y seguridad al realizar pagos o reservas?</li>
+  <li>¿Qué tan clara te pareció la información mostrada sobre las bicicletas? (precio, modelo, ubicación, estado)</li>
+  <li>¿Qué opinas sobre las opciones de rutas y métricas de viaje?</li>
+  <li>¿Qué tan útil te pareció la sección de perfil y el historial de alquileres o reservas?</li>
+  <li>¿Qué parte del app crees que debería mejorarse o simplificarse?</li>
+  <li>En general, ¿qué tan satisfecha/o estarías con la experiencia que ofrece la app? (Del 1 al 5)</li>
+</ol>
+
+
 #### 4.3.2. Registro de Entrevistas 
+
+<h2>📎 Entrevistas – Segmento Universitario (BikeLab)</h2>
+<p>Estas entrevistas fueron realizadas con estudiantes universitarios como segmento objetivo, con el fin de validar la usabilidad, confianza, diseño e información de la aplicación <strong>BikeLab</strong>.</p>
+
+<hr>
+
+<h3>🎧 1. Camila Reyes</h3>
+<p>
+  🔗 <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EcNvV4j4gjhMuFoH-zigevMBe4ifhSMJOUJD0X_xHn1AuQ?e=m7aeI4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver entrevista en SharePoint</a>
+</p>
+<ul>
+  <li><strong>Diseño:</strong> Atractivo, destaca contraste verde/negro por sostenibilidad.</li>
+  <li><strong>Usabilidad:</strong> Muy intuitiva, fácil navegación.</li>
+  <li><strong>Confianza:</strong> Alta seguridad percibida en pagos y reservas.</li>
+  <li><strong>Información:</strong> Clara, sugiere más detalles técnicos de bicicletas.</li>
+  <li><strong>Rutas y métricas:</strong> Valor agregado importante para seguridad.</li>
+  <li><strong>Perfil e historial:</strong> Útil, propone sistema de calificaciones y favoritos.</li>
+  <li><strong>Mejoras:</strong> Mayor detalle en rutas y ranking de usuarios.</li>
+  <li><strong>Satisfacción:</strong> 5/5</li>
+</ul>
+
+<hr>
+
+<h3>🎧 2. María José</h3>
+<p>
+  🔗 <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EeZYBEhkxRtLhIpXkdrHcYYB1fuyrSCCsA4LHpU2DOVM9A?e=bl0iLz&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver entrevista en SharePoint</a>
+</p>
+<ul>
+  <li><strong>Diseño:</strong> Colores llamativos, intuitivo.</li>
+  <li><strong>Usabilidad:</strong> Fácil de usar para cualquier universitario.</li>
+  <li><strong>Confianza:</strong> Alta por exclusividad universitaria.</li>
+  <li><strong>Información:</strong> Clara, sugiere incluir casco y accesorios.</li>
+  <li><strong>Rutas y métricas:</strong> Gran valor agregado percibido.</li>
+  <li><strong>Perfil e historial:</strong> Útil para guardar rutas y alquileres frecuentes.</li>
+  <li><strong>Mejoras:</strong> Incluir detalles de seguridad en bicicletas.</li>
+  <li><strong>Satisfacción:</strong> 5/5</li>
+</ul>
+
+<hr>
+
+<h3>🎧 3. Jocelyn</h3>
+<p>
+  🔗 <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c996_upc_edu_pe/EeQFw9foisZLjaRtQ-uwbfYBiU4WGrgsrLqVc38Gpzp9TA?e=hVY8zS&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D" target="_blank">Ver entrevista en SharePoint</a>
+</p>
+<ul>
+  <li><strong>Diseño:</strong> Positiva percepción, adaptada al público joven.</li>
+  <li><strong>Usabilidad:</strong> Navegación sencilla, funciones claras.</li>
+  <li><strong>Confianza:</strong> Transmite seguridad al segmentar por universidades.</li>
+  <li><strong>Información:</strong> Adecuada para decisiones rápidas de alquiler.</li>
+  <li><strong>Rutas y métricas:</strong> Bien valoradas como guía práctica.</li>
+  <li><strong>Perfil e historial:</strong> Bien recibido para seguimiento personal.</li>
+  <li><strong>Mejoras:</strong> Potenciar detalles en rutas y seguridad.</li>
+  <li><strong>Satisfacción:</strong> Alta.</li>
+</ul>
+
+<hr>
+
+<h2>📊 Hallazgos Generales</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Categoría</th>
+      <th>Opinión general (Segmento universitario)</th>
+      <th>Oportunidades de mejora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Diseño visual</td>
+      <td>Atractivo, ecológico, moderno.</td>
+      <td>Mantener coherencia visual y mejorar accesibilidad.</td>
+    </tr>
+    <tr>
+      <td>Usabilidad</td>
+      <td>Muy intuitiva.</td>
+      <td>Ajustes menores en interacción.</td>
+    </tr>
+    <tr>
+      <td>Seguridad y confianza</td>
+      <td>Alta percepción de seguridad por exclusividad universitaria.</td>
+      <td>Fortalecer validaciones y códigos de devolución.</td>
+    </tr>
+    <tr>
+      <td>Información de bicicletas</td>
+      <td>Clara y suficiente para alquilar.</td>
+      <td>Añadir detalles técnicos y accesorios.</td>
+    </tr>
+    <tr>
+      <td>Rutas y métricas</td>
+      <td>Muy valoradas como guía de seguridad.</td>
+      <td>Personalizar rutas e integrar ciclovías reales.</td>
+    </tr>
+    <tr>
+      <td>Perfil e historial</td>
+      <td>Útiles para control de alquileres y confianza.</td>
+      <td>Añadir calificaciones y favoritos.</td>
+    </tr>
+    <tr>
+      <td>Satisfacción general</td>
+      <td>Alta (promedio 5/5).</td>
+      <td>Consolidar mejoras sugeridas.</td>
+    </tr>
+  </tbody>
+</table>
+
 #### 4.3.3. Evaluaciones según heurísticas
 
