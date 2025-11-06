@@ -12,7 +12,7 @@
 
 **NRC:** 12612
 
-**Ciclo: 202520**
+**Periodo: 202520**
 
 **Profesor:** David Gerardo Quevedo Velasco
 
