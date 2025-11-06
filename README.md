@@ -10,10 +10,9 @@
 
 **Aplicaciones para Dispositivos Móviles**
 
-**Sección:** 12612
+**NRC:** 12612
 
-
-**Ciclo 2025-02**
+**Ciclo: 202520**
 
 **Profesor:** David Gerardo Quevedo Velasco
 
@@ -25,13 +24,13 @@
 
 <div align="center">
 
-| Nombre                                    | Código    |
+| Integrantes                                | Código    |
 | -----------------------------------       | ----------|
-| Cameron Charllotte Bustamante Leveau      | U20231a804|
-| Giancarlo Santiago Castañeda Guimas       |U202310601 |
-| Henry Kevin Diaz Gutierrez            | U201819674 |
-| Sebastian Eduardo Hernandez Poma          | U20231c996 |
-| Pedro Omar Lecca Villalobos         | U202223293 |
+| Bustamante Leveau, Cameron Charllotte      | U20231a804|
+| Castañeda Guimas, Giancarlo Santiago      |U202310601 |
+| Diaz Gutierrez, Henry Kevin        | U201819674 |
+| Hernandez Poma, Sebastian Eduardo         | U20231c996 |
+| Lecca Villalobos, Pedro Omar        | U202223293 |
 
 
 
