@@ -6,7 +6,7 @@
 
 **Ingeniería de software**
 
-**Ciclo 2025-02**
+**Periodo 2025-02**
 
 **Aplicaciones para Dispositivos Móviles**
 
@@ -20,24 +20,23 @@
 
 **Nombre del Producto:* BikeLab* 
 
-</div>
 
-<div align="center">
 
-| Nombre                                    | Código    |
-| -----------------------------------       | ----------|
-| Cameron Charllotte Bustamante Leveau      | U20231a804|
-| Giancarlo Santiago Castañeda Guimas       |U202310601 |
-| Henry Kevin Diaz Gutierrez            | U201819674 |
-| Sebastian Eduardo Hernandez Poma          | U20231c996 |
-| Pedro Omar Lecca Villalobos         | U202223293 |
+
+**Relación de Integrantes:**
+
+U20231a804, Cameron Charllotte Bustamante Leveau 
+U202310601, Giancarlo Santiago Castañeda Guimas  
+U201819674,  Henry Kevin Diaz Gutierrez           
+U20231c996, Sebastian Eduardo Hernandez Poma          
+U202223293, Pedro Omar Lecca Villalobos         
+
+
 
 **Noviembre, 2025**
 
 
 </div>
-
-
 ---
 
 ## Registro de Versiones del Informe
