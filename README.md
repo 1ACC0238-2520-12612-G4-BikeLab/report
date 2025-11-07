@@ -1,21 +1,20 @@
 <div align="center">
-
-# Informe del Trabajo Final
+  
+<img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC">
 
 **Universidad Peruana de Ciencias Aplicadas**
 
-<img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC">
-
 **Ingeniería de software**
+
+**Ciclo 2025-02**
 
 **Aplicaciones para Dispositivos Móviles**
 
 **Sección:** 12612
 
+**Docente:** David Gerardo Quevedo Velasco
 
-**Ciclo 2025-02**
-
-**Profesor:** David Gerardo Quevedo Velasco
+**"Informe de Trabajo Final"**
 
 **Nombre del StartUp:* Ridera* 
 
@@ -33,6 +32,7 @@
 | Sebastian Eduardo Hernandez Poma          | U20231c996 |
 | Pedro Omar Lecca Villalobos         | U202223293 |
 
+**Noviembre, 2025**
 
 
 </div>
