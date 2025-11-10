@@ -134,12 +134,32 @@ El objetivo principal del Sprint 1 fue establecer la base del backend del sistem
 | US05              | Reservas de Vehículos       | T16         | Endpoints `POST /bookings/{id}/start` y `/finish`             | Iniciar y finalizar alquiler                           | 6                      | Pedro Lecca | To-Review                                          |
 | US05              | Reservas de Vehículos       | T17         | Endpoint `DELETE /bookings/{id}`                              | Cancelar reserva                                       | 3                      | Pedro Lecca | Done                                               |
 | US05              | Reservas de Vehículos       | T18         | Endpoints `GET /bookings/mine` y `/own`                       | Listar reservas de cliente y de mis vehículos          | 4                      | Pedro Lecca | Done                                               |
+| **US07** | Registrar una bicicleta o scooter en la app | **T21** | Implementación lógica de registro de vehículos | Desarrollar la lógica de negocio para registrar un nuevo vehículo. | 7 | Giancarlo Castañeda | Done |
+| **US08** | Editar información de un vehículo registrado | **T22** | Implementación lógica de edición de vehículos | Desarrollar la lógica de negocio para modificar los datos de un vehículo existente. | 7 | Giancarlo Castañeda | Done |
+| **US10** | Eliminar vehículo de la aplicación | **T23** | Implementación lógica de eliminación de vehículos | Desarrollar la lógica para marcar un vehículo como eliminado/inactivo. | 7 | Giancarlo Castañeda | Done |
+| **US15** | Realizar reserva de vehículo | **T24** | Implementación lógica de la reserva | Desarrollar la lógica de negocio para crear y validar una nueva reserva. | 7 | Giancarlo Castañeda | Done |
+| **US16** | Cancelar reserva | **T25** | Implementación lógica de la cancelación | Desarrollar la lógica de negocio para anular una reserva con validaciones de tiempo. | 7 | Giancarlo Castañeda |  Done |
+| **US34** | Visualizar información general del servicio | **T26** | Implementación del componente de información general | Desarrollar el componente de frontend para visualizar la información principal. | 5 | Henry Diaz |  Done |
+| **US35** | Visualizar secciones de beneficios y características | **T27** | Implementación de componentes de beneficios | Desarrollar los componentes de frontend para mostrar secciones de beneficios y características. | 5 | Henry Diaz |  Done |
+| **US37** | Visualizar diseño adaptable y atractivo | **T28** | Refactorización de diseño adaptable (Responsive) | Asegurar que el diseño de la landing page y componentes clave sea responsive. | 5 | Henry Diaz |  Done |
 | —                 | Tareas Generales            | T19         | Swagger + JWT en Swagger UI                                   | Documentación y autorización por token                 | 3                      | Pedro Lecca         | Done                                               |
 | —                 | Tareas Generales            | T20         | Configuración PostgreSQL                                      | Esquema base y conexión                                | 4                      | Pedro Lecca | Done                                               |
 
-
 ### 4.2.1.3. Development Evidence for Sprint Review
 
+#### **LANDING PAGE**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | f90e7b4   | Add files via upload | - | 2025-10-07         |
+
+#### **MOBILE APP**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend) | main   | 0270f0e | feat: initial BikeLab3 app (Compose + Navigation + Drawer + Login offline) | - | 2025-10-07         |
+
+#### **WEB SERVICE**
 Durante el Sprint 1 se inicializó el backend y, en un único commit, se incorporaron los cinco *bounded contexts* (**IAM**, **Providing**, **Vehicles**, **Renting**, **Payments**), junto con la configuración base (**Spring Boot 3**, **PostgreSQL**, **Swagger**, **JWT**).
 
 Se requieren varias mejoras y documentar los avences por más commits en vez de hacerlo en uno solo restaurar cambios y tener más evidencia, esa mejora se hará en el siguiente sprint.
@@ -150,6 +170,12 @@ Se requieren varias mejoras y documentar los avences por más commits en vez de 
 
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review 
 ##### 4.2.1.5. Execution Evidence for Sprint Review 
+
+#### **LANDING PAGE**
+
+#### **MOBILE APP**
+
+#### **WEB SERVICE**
 
 Durante el Sprint 1 se habilitó el backend monolítico documentado con Swagger y protección JWT. A continuación, se presentan las evidencias de ejecución por *bounded context*, con un breve texto introductorio, una tabla de endpoints y un espacio para adjuntar la captura correspondiente.
 
@@ -319,6 +345,55 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 **Primera versión del backend:**
 
 <img src="/assets/images/backend-commits.png" alt="GitHub commits — Backend Sprint 1" width=auto>
+
+#### 4.2.2. Sprint 2
+
+##### 4.2.2.1. Sprint Planning 2
+
+| **Campo**                            | **Detalle**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sprint #**                         | Sprint 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Date**                             | 2025-11-10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Time**                             | 09:00 AM – 10:30 AM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Location**                         | Reunión virtual vía Discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Prepared By**                      | Giancarlo Santiago Castañeda Guimas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Attendees (to planning meeting)**  | Pedro Omar Lecca Villalobos / Cameron Charllotte Bustamante Leveau / Giancarlo Santiago Castañeda Guimas / Henry Kevin Díaz Gutiérrez / Sebastián Eduardo Hernández Poma                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Sprint n−2 Review Summary**        | Al ser el primer sprint del proyecto, no existió un sprint anterior. Se revisaron los avances del diseño UX/UI en Figma, la validación del Lean UX Canvas, los segmentos objetivos y los requerimientos funcionales priorizados. Además, se confirmó la estructura general de los *bounded contexts* (IAM, Providing, Vehicles, Renting y Payments).                                                                                                                                                                                                                             |
+| **Sprint n−2 Retrospective Summary** | Se establecieron acuerdos para mejorar la comunicación interna y la gestión del flujo de trabajo. Se decidió utilizar Trello para la planificación ágil de tareas y GitHub con el flujo **GitFlow** para mantener control de versiones. También se reforzó la importancia de documentar cada avance en Markdown y actualizar Swagger después de cada commit principal.                                                                                                                                                                                                           |
+| **Sprint n Goal**                    | Desarrollar la base del backend monolítico con **Spring Boot 3** y **PostgreSQL**, implementando los módulos iniciales del sistema de autenticación (registro, login y token JWT), gestión de usuarios y proveedores, así como el registro de vehículos y reservas. Integrar Swagger para documentar los endpoints y permitir pruebas con autenticación por token.                                                                                                                                                                                                               |
+| **Sprint 1 Velocity**                | 25 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**              | 25 Story Points (5 User Stories)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+##### 4.2.2.2. Sprint Backlog 2
+
+##### 4.2.2.3. Development Evidence for Sprint Review 
+
+##### 4.2.2.4. Testing Suite Evidence for Sprint Review 
+
+##### 4.2.2.5. Execution Evidence for Sprint Review 
+
+##### 4.2.2.6. Services Documentation Evidence for Sprint Review 
+
+##### 4.2.2.7. Software Deployment Evidence for Sprint Review 
+
+##### 4.2.2.8. Team Collaboration Insights during Sprint 
+
+#### 4.2.3. Sprint 3
+
+##### 4.2.3.1. Sprint Planning 3
+
+##### 4.2.3.2. Sprint Backlog 3
+
+##### 4.2.3.3. Development Evidence for Sprint Review 
+
+##### 4.2.3.4. Testing Suite Evidence for Sprint Review 
+
+##### 4.2.3.5. Execution Evidence for Sprint Review 
+
+##### 4.2.3.6. Services Documentation Evidence for Sprint Review 
+
+##### 4.2.3.7. Software Deployment Evidence for Sprint Review 
+
+##### 4.2.3.8. Team Collaboration Insights during Sprint 
 
 ### 4.3. Validation Interviews 
 #### 4.3.1. Diseño de Entrevistas 
