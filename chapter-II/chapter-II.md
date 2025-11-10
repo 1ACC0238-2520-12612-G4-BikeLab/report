@@ -275,35 +275,6 @@ Estudiante & Proveedor
 | :---- | :---- |
 
 ### User Stories
-
-
-
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        table-layout: fixed;
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: left;
-        vertical-align: top;
-    }
-    .header-row th {
-        background-color: #f2f2f2;
-        font-weight: bold;
-    }
-    .title-row td, .description-row td, .acceptance-row td {
-        font-weight: bold;
-    }
-    .content-cell {
-        font-weight: normal;
-        white-space: pre-wrap; 
-    }
-</style>
-
 <table>
     <tr class="header-row">
         <th>Story ID</th>
@@ -2002,54 +1973,67 @@ Estudiante & Proveedor
 
 <img src="/assets/images/productbacklog.PNG" alt="Product Backlog" width=auto>
 
-| # Orden | User Story Id | Título | Story Points (1 / 2 / 3 / 5 / 8) |
-|---------|---------------|--------|-----------------------------------|
-| 1 | US34 | Visualizar información general del servicio | 3 |
-| 2 | US35 | Visualizar secciones de beneficios y características | 3 |
-| 3 | US39 | Acceder al registro o inicio de sesión desde la landing | 2 |
-| 4 | US40 | Visualizar diseño adaptable y atractivo | 3 |
-| 5 | US07 | Registrar una bicicleta o scooter en la app | 5 |
-| 6 | US08 | Editar información de un vehículo registrado | 3 |
-| 7 | US09 | Marcar vehículo disponible/no disponible | 2 |
-| 8 | US10 | Eliminar vehículo de la aplicación | 2 |
-| 9 | US11 | Consultar historial de alquileres de mis vehículos | 3 |
-| 10 | US12 | Buscar bicicletas/scooters por cercanía | 5 |
-| 11 | US13 | Filtrar resultados por tipo de vehículo | 3 |
-| 12 | US14 | Ver información detallada del vehículo y arrendador | 3 |
-| 13 | US15 | Realizar reserva de vehículo | 5 |
-| 14 | US16 | Cancelar reserva | 3 |
-| 15 | US17 | Confirmar inicio de alquiler | 3 |
-| 16 | US18 | Finalizar alquiler | 3 |
-| 17 | US19 | Vincular método de pago | 3 |
-| 18 | US20 | Pagar por alquiler al finalizar el uso | 5 |
-| 19 | US21 | Recibir confirmación de pago | 2 |
-| 20 | US22 | Recibir notificación de penalización si se excede el tiempo | 3 |
-| 21 | US23 | Consultar historial de pagos | 2 |
-| 22 | US24 | Arrendador recibe liquidación automática después del pago | 3 |
-| 23 | US25 | Validación de identidad | 3 |
-| 24 | US26 | Calificar al arrendador o arrendatario al finalizar un alquiler | 2 |
-| 25 | US27 | Ver puntuación y reseñas de otros usuarios | 2 |
-| 26 | US28 | Recibir notificaciones importantes | 3 |
-| 27 | US29 | Acceso a soporte o ayuda dentro de la app | 2 |
-| 28 | US30 | Acceder a panel de control con métricas | 3 |
-| 29 | US31 | Gestionar usuarios | 3 |
-| 30 | US32 | Gestionar vehículos registrados | 3 |
-| 31 | US33 | Monitorear reservas y pagos | 3 |
-| 32 | TS02 | Endpoints para publicación y administración de vehículos (Providing) | 5 |
-| 33 | TS03 | Implementar endpoints del catálogo de vehículos (Vehicles) | 3 |
-| 34 | TS04 | Endpoints para gestión de reservas y alquileres (Renting) | 5 |
-| 35 | TS05 | Endpoints para pagos y liquidaciones (Payments) | 5 |
-| 36 | SPIKE01 | Geolocalización y mapas | 3 |
-| 37 | SPIKE02 | Notificaciones push y en tiempo real | 3 |
-| 38 | SPIKE03 | Escalabilidad y rendimiento en backend | 5 |
-| 39 | SPIKE04 | Seguridad y cumplimiento de datos | 5 |
-| 40 | TS01 | Implementar endpoints de autenticación y gestión de usuarios (IAM) | 5 |
-| 41 | US01 | Registro de usuario estudiante | 3 |
-| 42 | US02 | Registro de usuario arrendador | 3 |
-| 43 | US03 | Iniciar sesión en la aplicación | 2 |
-| 44 | US04 | Recuperar contraseña | 2 |
-| 45 | US05 | Editar información de perfil | 3 | 
-| 46 | US07 | Cerrar sesión | 2 |
+<table>
+    <thead>
+        <tr class="group-header">
+            <th colspan="4">Product Backlog</th>
+        </tr>
+        <tr class="group-header">
+            <th>Orden</th>
+            <th>User Story Id</th>
+            <th>Título</th>
+            <th>Story Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="core-row"><td>1</td><td>US07</td><td>Registrar una bicicleta o scooter en la app</td><td>5</td></tr>
+        <tr class="core-row"><td>2</td><td>US08</td><td>Editar información de un vehículo registrado</td><td>3</td></tr>
+        <tr class="core-row"><td>3</td><td>US09</td><td>Marcar vehículo disponible/no disponible</td><td>2</td></tr>
+        <tr class="core-row"><td>4</td><td>US10</td><td>Eliminar vehículo de la aplicación</td><td>2</td></tr>
+        <tr class="core-row"><td>5</td><td>US12</td><td>Buscar bicicletas/scooters por cercanía</td><td>5</td></tr>
+        <tr class="core-row"><td>6</td><td>US13</td><td>Filtrar resultados por tipo de vehículo</td><td>3</td></tr>
+        <tr class="core-row"><td>7</td><td>US14</td><td>Ver información detallada del vehículo y arrendador</td><td>3</td></tr>
+        <tr class="core-row"><td>8</td><td>US15</td><td>Realizar reserva de vehículo</td><td>5</td></tr>
+        <tr class="core-row"><td>9</td><td>US16</td><td>Cancelar reserva</td><td>3</td></tr>
+        <tr class="core-row"><td>10</td><td>US17</td><td>Confirmar inicio de alquiler</td><td>3</td></tr>
+        <tr class="core-row"><td>11</td><td>US18</td><td>Finalizar alquiler</td><td>3</td></tr>
+        <tr class="core-row"><td>12</td><td>US19</td><td>Vincular método de pago</td><td>3</td></tr>
+        <tr class="core-row"><td>13</td><td>US20</td><td>Pagar por alquiler al finalizar el uso</td><td>5</td></tr>
+        <tr class="core-row"><td>14</td><td>US24</td><td>Recibir liquidación automática después del pago</td><td>3</td></tr
+        <tr class="normal-row"><td>15</td><td>US01</td><td>Registrar usuario estudiante</td><td>3</td></tr>
+        <tr class="normal-row"><td>16</td><td>US02</td><td>Registrar usuario arrendador</td><td>3</td></tr>
+        <tr class="normal-row"><td>17</td><td>US03</td><td>Iniciar sesión en la aplicación</td><td>2</td></tr>
+        <tr class="normal-row"><td>18</td><td>US04</td><td>Recuperar contraseña</td><td>2</td></tr>
+        <tr class="normal-row"><td>19</td><td>US05</td><td>Editar información de perfil</td><td>3</td></tr>
+        <tr class="normal-row"><td>20</td><td>US46</td><td>Cerrar sesión</td><td>2</td></tr>
+        <tr class="normal-row"><td>21</td><td>US25</td><td>Validar identidad</td><td>3</td></tr>
+        <tr class="normal-row"><td>22</td><td>US11</td><td>Consultar historial de alquileres de mis vehículos</td><td>3</td></tr>
+        <tr class="normal-row"><td>23</td><td>US23</td><td>Consultar historial de pagos</td><td>2</td></tr>
+        <tr class="normal-row"><td>24</td><td>US26</td><td>Calificar al arrendador o arrendatario al finalizar un alquiler</td><td>2</td></tr>
+        <tr class="normal-row"><td>25</td><td>US27</td><td>Ver puntuación y reseñas de otros usuarios</td><td>2</td></tr>
+        <tr class="normal-row"><td>26</td><td>US29</td><td>Acceso a soporte o ayuda dentro de la app</td><td>2</td></tr>
+        <tr class="normal-row"><td>27</td><td>US30</td><td>Acceder a panel de control con métricas</td><td>3</td></tr>
+        <tr class="normal-row"><td>28</td><td>US31</td><td>Gestionar usuarios</td><td>3</td></tr>
+        <tr class="normal-row"><td>29</td><td>US32</td><td>Gestionar vehículos registrados</td><td>3</td></tr>
+        <tr class="normal-row"><td>30</td><td>US33</td><td>Monitorear reservas y pagos</td><td>3</td></tr>
+        <tr class="normal-row"><td>31</td><td>US34</td><td>Visualizar información general del servicio</td><td>3</td></tr>
+        <tr class="normal-row"><td>32</td><td>US35</td><td>Visualizar secciones de beneficios y características</td><td>3</td></tr>
+        <tr class="normal-row"><td>33</td><td>US39</td><td>Acceder al registro o inicio de sesión desde la landing</td><td>2</td></tr>
+        <tr class="normal-row"><td>34</td><td>US40</td><td>Visualizar diseño adaptable y atractivo</td><td>3</td></tr>
+        <tr class="rnf-row"><td>35</td><td>TS01</td><td>Implementar endpoints de autenticación y gestión de usuarios (IAM)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>36</td><td>TS02</td><td>Endpoints para publicación y administración de vehículos (Providing)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>37</td><td>TS03</td><td>Implementar endpoints del catálogo de vehículos (Vehicles)</td><td>3</td></tr>
+        <tr class="rnf-row"><td>38</td><td>TS04</td><td>Endpoints para gestión de reservas y alquileres (Renting)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>39</td><td>TS05</td><td>Endpoints para pagos y liquidaciones (Payments)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>40</td><td>US21</td><td>Recibir confirmación de pago</td><td>2</td></tr>
+        <tr class="rnf-row"><td>41</td><td>US22</td><td>Recibir notificación de penalización si se excede el tiempo</td><td>3</td></tr>
+        <tr class="rnf-row"><td>42</td><td>US28</td><td>Recibir notificaciones importantes</td><td>3</td></tr>
+        <tr class="rnf-row"><td>43</td><td>SPIKE01</td><td>Geolocalización y mapas</td><td>3</td></tr>
+        <tr class="rnf-row"><td>44</td><td>SPIKE02</td><td>Notificaciones push y en tiempo real</td><td>3</td></tr>
+        <tr class="rnf-row"><td>45</td><td>SPIKE03</td><td>Escalabilidad y rendimiento en backend</td><td>5</td></tr>
+        <tr class="rnf-row"><td>46</td><td>SPIKE04</td><td>Seguridad y cumplimiento de datos</td><td>5</td></tr>
+    </tbody>
+</table>
 
 Link de Atlassian Jira: [https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9](https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9)
 ## 2.5. Strategic-Level Domain-Driven Design 
