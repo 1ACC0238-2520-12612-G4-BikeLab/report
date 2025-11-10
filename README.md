@@ -1,9 +1,5 @@
 <div align="center">
 
-# Informe del Trabajo Final
-
-**Universidad Peruana de Ciencias Aplicadas**
-
 <img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC">
 
 **Ingeniería de software**
