@@ -388,39 +388,111 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 | **Attendees (to planning meeting)**  | Pedro Omar Lecca Villalobos / Cameron Charllotte Bustamante Leveau / Giancarlo Santiago Castañeda Guimas / Henry Kevin Díaz Gutiérrez / Sebastián Eduardo Hernández Poma                                                                                                                                                                                                                                                                                                                                                                                                         |
 | **Sprint n−2 Review Summary**        | Correción del Sprint 1, desarrollo y deploy por completo del backend, primera versión de la aplicación deployada                                                                                                                                                                                                                             |
 | **Sprint n−2 Retrospective Summary** | Pudimos tener una mejor comunicación y saber corregir nuestros errores, gracias a ello tuvimos un ritmo de trabajo mejor y mas ordenado                                                                                                                                                                                                        |
-| **Sprint 2 Goal**                    | Desarrollar la aplicación movil en flutter, contando con sus funciones principales                                                                                                                                                                                                            |
+| **Sprint 2 Goal**                    | Desarrollar la aplicación movil en flutter, desplegar la 1era versión de la app movil de kotlin y tener listo el backend deployado                                                                                                                                                                                                          |
 | **Sprint 2 Velocity**                | 50 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Sum of Story Points**              | 48 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 ##### 4.2.2.2. Sprint Backlog 2
 
 | **User Story Id** | **User Story Title**                                                 | **Task Id** | **Task Title**                                               | **Description**                                                                           | **Estimation (Hours)** | **Assigned To**     | **Status**   |
 | ----------------- | -------------------------------------------------------------------- | ----------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ---------------------- | ------------------- | ------------ |
-| **US09**          | Marcar vehículo disponible/no disponible                             | **T01**     | Implementar cambio de estado de disponibilidad (endpoint)    | Desarrollar la lógica de negocio para habilitar/deshabilitar un vehículo para alquiler.   | 5                      | Giancarlo Castañeda |  To-Review |
-| **US10**          | Eliminar vehículo de la aplicación                                   | **T02**     | Implementar eliminación lógica de vehículo (endpoint)        | Desarrollar la función para eliminar lógicamente un vehículo de las publicaciones.        | 7                      | Giancarlo Castañeda |  To-Review |
-| **US11**          | Consultar historial de alquileres de mis vehículos                   | **T03**     | Endpoint GET /api/vehicles/{id}/history                      | Implementar la consulta del historial de alquileres por vehículo.                         | 5                      | Giancarlo Castañeda |  To-Review |
-| **US20**          | Pagar por alquiler al finalizar el uso                               | **T04**     | Implementar lógica de pago final y validación de fondos      | Desarrollar la lógica para procesar el pago al finalizar el alquiler.                     | 4                      | Giancarlo Castañeda |  To-Review |
-| **US21**          | Recibir confirmación de pago                                         | **T05**     | Implementar envío de notificación de confirmación de pago    | Desarrollar el servicio para notificar al usuario sobre el éxito del pago.                | 7                      | Giancarlo Castañeda |  To-Review |
+| **US09**          | Marcar vehículo disponible/no disponible                             | **T01**     | Implementar cambio de estado de disponibilidad (endpoint)    | Desarrollar la lógica de negocio para habilitar/deshabilitar un vehículo para alquiler.   | 5                      | Giancarlo Castañeda |  Done |
+| **US10**          | Eliminar vehículo de la aplicación                                   | **T02**     | Implementar eliminación lógica de vehículo (endpoint)        | Desarrollar la función para eliminar lógicamente un vehículo de las publicaciones.        | 7                      | Giancarlo Castañeda |  Done |
+| **US11**          | Consultar historial de alquileres de mis vehículos                   | **T03**     | Endpoint GET /api/vehicles/{id}/history                      | Implementar la consulta del historial de alquileres por vehículo.                         | 5                      | Giancarlo Castañeda |  Done |
+| **US20**          | Pagar por alquiler al finalizar el uso                               | **T04**     | Implementar lógica de pago final y validación de fondos      | Desarrollar la lógica para procesar el pago al finalizar el alquiler.                     | 4                      | Giancarlo Castañeda |  Done |
+| **US21**          | Recibir confirmación de pago                                         | **T05**     | Implementar envío de notificación de confirmación de pago    | Desarrollar el servicio para notificar al usuario sobre el éxito del pago.                | 7                      | Giancarlo Castañeda |  Done |
 | **US22**          | Recibir notificación de penalización si se excede el tiempo          | **T06**     | Implementar lógica de cálculo y notificación de penalización | Desarrollar la función para detectar exceso de tiempo y aplicar/notificar penalización.   | 6                      | Giancarlo Castañeda |  To-Review |
 | **US23**          | Consultar historial de pagos                                         | **T07**     | Endpoint GET /api/payments/history/user                      | Implementar la consulta del historial de pagos del usuario.                               | 8                      | Giancarlo Castañeda |  To-Review |
 | **US24**          | Recibir liquidación automática después del pago                      | **T08**     | Implementar lógica de liquidación automática a arrendador    | Desarrollar el proceso automatizado para transferir fondos al arrendador tras el pago.    | 5                      | Giancarlo Castañeda |  To-Review |
-| **TS01**          | Implementar endpoints de autenticación y gestión de usuarios (IAM)   | **T09**     | Revisión e integración final de Endpoints IAM                | Revisión y documentación de los endpoints de autenticación.                               | 4                      | Giancarlo Castañeda |  To-Review |
-| **TS02**          | Endpoints para publicación y administración de vehículos (Providing) | **T10**     | Revisión e integración de Endpoints de Publicación           | Revisión y documentación de los endpoints para la gestión de vehículos.                   | 5                      | Giancarlo Castañeda |  To-Review |
-| **TS03**          | Implementar endpoints del catálogo de vehículos (Vehicles)           | **T11**     | Revisión e integración de Endpoints de Catálogo              | Revisión y documentación de los endpoints de búsqueda y catálogo.                         | 6                      | Giancarlo Castañeda |  To-Review |
-| **TS04**          | Endpoints para gestión de reservas y alquileres (Renting)            | **T12**     | Revisión e integración de Endpoints de Renting               | Revisión y documentación de los endpoints de reservas y alquileres.                       | 7                      | Giancarlo Castañeda |  To-Review |
-| **TS05**          | Endpoints para pagos y liquidaciones (Payments)                      | **T13**     | Revisión e integración de Endpoints de Pagos                 | Revisión y documentación de los endpoints de pagos y liquidaciones.                       | 8                      | Giancarlo Castañeda |  To-Review |
-| **SPIKE01**       | Geolocalización y mapas                                              | **T14**     | Ejecución de Spike de Geolocalización (API Mapas)            | Investigar, probar y documentar la mejor API de mapas para la visualización.              | 6                      | Giancarlo Castañeda |  To-Review |
+| **TS02**          | Endpoints para publicación y administración de vehículos (Providing) | **T10**     | Revisión e integración de Endpoints de Publicación           | Revisión y documentación de los endpoints para la gestión de vehículos.                   | 5                      | Pedro Lecca |  Done |
+| **TS03**          | Implementar endpoints del catálogo de vehículos (Vehicles)           | **T11**     | Revisión e integración de Endpoints de Catálogo              | Revisión y documentación de los endpoints de búsqueda y catálogo.                         | 6                      | Pedro Lecca |  Done |
+| **TS04**          | Endpoints para gestión de reservas y alquileres (Renting)            | **T12**     | Revisión e integración de Endpoints de Renting               | Revisión y documentación de los endpoints de reservas y alquileres.                       | 7                      | Pedro Lecca |  Done |
+| **TS05**          | Endpoints para pagos y liquidaciones (Payments)                      | **T13**     | Revisión e integración de Endpoints de Pagos                 | Revisión y documentación de los endpoints de pagos y liquidaciones.                       | 8                      | Giancarlo Castañeda |  Done |
+| **SPIKE01**       | Geolocalización y mapas                                              | **T14**     | Ejecución de Spike de Geolocalización (API Mapas)            | Investigar, probar y documentar la mejor API de mapas para la visualización.              | 6                      | Giancarlo Castañeda | Done |
 
 ##### 4.2.2.3. Development Evidence for Sprint Review 
+
+#### **MOBILE APP**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend) | main   | e212f9d | feat: add google maps api and firebase upload | - | 2025-11-12         |
+
+#### **LANDING PAGE**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | bb944d2  | Add files via upload | - | 2025-11-12         |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | e71e428  | Update privacy.html | - | 2025-11-12         |
 
 ##### 4.2.2.4. Testing Suite Evidence for Sprint Review 
 
 ##### 4.2.2.5. Execution Evidence for Sprint Review 
 
+#### **LANDING PAGE**
+
+<div align="center">
+<img src="/assets/images/s2evidencialp.PNG" alt="Landing Page Evidencia 1 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/s2evidencialp2.PNG" alt="Landing Page Evidencia 2 Sprint 2" width=auto>
+</div>
+
+#### **MOBILE APP**
+
+<div align="center">
+<img src="/assets/images/amexecution1.jpg" alt="Front-End Evidencia 1 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution2.jpg" alt="Front-End Evidencia 2 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution3.jpg" alt="Front-End Evidencia 3 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution4.jpg" alt="Front-End Evidencia 4 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution5.jpg" alt="Front-End Evidencia 5 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution6.jpg" alt="Front-End Evidencia 6 Sprint 2" width=auto>
+</div>
+
 ##### 4.2.2.6. Services Documentation Evidence for Sprint Review 
 
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review 
 
+#### **MOBILE APP**
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy.PNG" alt="App Movil Deploy 1 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy2.PNG" alt="App Movil Deploy 2 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy3.PNG" alt="App Movil Deploy 3 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy4.PNG" alt="App Movil Deploy 4 Sprint 2" width=auto>
+</div>
+
+Link de la aplicación en Firebase: [https://appdistribution.firebase.dev/i/c7d637b96abff7fc](https://appdistribution.firebase.dev/i/c7d637b96abff7fc)
+
 ##### 4.2.2.8. Team Collaboration Insights during Sprint 
+
+#### **LANDING PAGE**
+
+#### **MOBILE APP**
 
 #### 4.2.3. Sprint 3
 
