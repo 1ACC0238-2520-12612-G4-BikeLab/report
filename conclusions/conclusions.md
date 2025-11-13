@@ -64,3 +64,7 @@
 ### About The Product:
 - Youtube: [https://youtu.be/mzjE_LIRTQo](https://youtu.be/mzjE_LIRTQo)
 - Microsoft Stream: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQBxMXVJBk-kTqGQ18k63GvnAcKwF5xWWN4fA1gxog9uoVo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IqsSff](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQBxMXVJBk-kTqGQ18k63GvnAcKwF5xWWN4fA1gxog9uoVo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IqsSff)
+
+### About The Team:
+- Youtube: [https://youtu.be/SruqaTmF4wc](https://youtu.be/SruqaTmF4wc)
+- Microsoft Stream: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQAT3_KRElnPQ6h79jphXSOFAeTCm4yRGEd8dtokKur-bN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=iBe0hZ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQAT3_KRElnPQ6h79jphXSOFAeTCm4yRGEd8dtokKur-bN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=iBe0hZ)
