@@ -393,18 +393,19 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 | **Sum of Story Points**              | 48 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 ##### 4.2.2.2. Sprint Backlog 2
 
-| **User Story Id** | **User Story Title**                                                 | **Task Id** | **Task Title**                                               | **Description**                                                                           | **Estimation (Hours)** | **Assigned To**     | **Status**   |
-| ----------------- | -------------------------------------------------------------------- | ----------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | ---------------------- | ------------------- | ------------ |
-| **US09**          | Marcar vehículo disponible/no disponible                             | **T01**     | Implementar cambio de estado de disponibilidad   | Desarrollar la lógica de negocio para habilitar/deshabilitar un vehículo para alquiler.   | 5                      | Giancarlo Castañeda |  Done |
-| **US10**          | Eliminar vehículo de la aplicación                                   | **T02**     | Implementar eliminación lógica de vehículo        | Desarrollar la función para eliminar lógicamente un vehículo de las publicaciones.        | 7                      | Giancarlo Castañeda |  Done |
-| **US11**          | Consultar historial de alquileres de mis vehículos                   | **T03**     | Implementar historial de alquileres de vehiculos                   | Implementar la consulta del historial de alquileres por vehículo.                         | 5                      | Giancarlo Castañeda |  Done |
-| **US26**          | Calificar al arrendador o arrendatario                | **T04**    | Implementar UI y lógica de sistema de calificación       | Interfaz para ingresar estrellas y comentarios después de un alquiler.      | 6                   | Giancarlo Castañeda | Done     |
-| **US27**          | Ver puntuación y reseñas de otros usuarios             | **T05**     | Implementar visualización de puntuación y reseñas        | Componentes para mostrar calificaciones y comentarios.                      | 7                   | Giancarlo Castañeda  | Done      |
-| **TS02**          | Endpoints para publicación y administración de vehículos (Providing) | **T06**     | Revisión e integración de Endpoints de Publicación           | Revisión y documentación de los endpoints para la gestión de vehículos.                   | 5                      | Pedro Lecca |  Done |
-| **TS03**          | Implementar endpoints del catálogo de vehículos (Vehicles)           | **T07**     | Revisión e integración de Endpoints de Catálogo              | Revisión y documentación de los endpoints de búsqueda y catálogo.                         | 6                      | Pedro Lecca |  Done |
-| **TS04**          | Endpoints para gestión de reservas y alquileres (Renting)            | **T08**     | Revisión e integración de Endpoints de Renting               | Revisión y documentación de los endpoints de reservas y alquileres.                       | 7                      | Pedro Lecca |  Done |
-| **TS05**          | Endpoints para pagos y liquidaciones (Payments)                      | **T09**     | Revisión e integración de Endpoints de Pagos                 | Revisión y documentación de los endpoints de pagos y liquidaciones.                       | 8                      | Pedro Lecca |  Done |
-| **SPIKE01**       | Geolocalización y mapas                                              | **T10**     | Ejecución de Spike de Geolocalización (API Mapas)            | Investigar, probar y documentar la mejor API de mapas para la visualización.              | 6                      | Giancarlo Castañeda | Done |
+| **User Story Id** | **User Story Title**                                                 | **Task Id** | **Task Title**                                     | **Description**                                                                                                                                                         | **Estimation (Hours)** | **Assigned To**     | **Status** |
+| ----------------- | -------------------------------------------------------------------- | ----------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------- | ---------- |
+| **US09**          | Marcar vehículo disponible/no disponible                             | **T01**     | Implementar cambio de estado de disponibilidad     | Desarrollar la lógica de negocio para habilitar/deshabilitar un vehículo para alquiler.                                                                                 | 5                      | Giancarlo Castañeda | Done       |
+| **US10**          | Eliminar vehículo de la aplicación                                   | **T02**     | Implementar eliminación lógica de vehículo         | Desarrollar la función para eliminar lógicamente un vehículo de las publicaciones.                                                                                      | 7                      | Giancarlo Castañeda | Done       |
+| **US11**          | Consultar historial de alquileres de mis vehículos                   | **T03**     | Implementar historial de alquileres de vehículos   | Implementar la consulta del historial de alquileres por vehículo.                                                                                                       | 5                      | Giancarlo Castañeda | Done       |
+| **US26**          | Calificar al arrendador o arrendatario                               | **T04**     | Implementar UI y lógica de sistema de calificación | Interfaz para ingresar estrellas y comentarios después de un alquiler.                                                                                                  | 6                      | Giancarlo Castañeda | Done       |
+| **US27**          | Ver puntuación y reseñas de otros usuarios                           | **T05**     | Implementar visualización de puntuación y reseñas  | Componentes para mostrar calificaciones y comentarios.                                                                                                                  | 7                      | Giancarlo Castañeda | Done       |
+| **TS02**          | Endpoints para publicación y administración de vehículos (Providing) | **T06**     | Revisión e integración de Endpoints de Publicación | Revisión y documentación de endpoints para la gestión de vehículos.                                                                                                     | 5                      | Pedro Lecca         | Done       |
+| **TS03**          | Implementar endpoints del catálogo de vehículos (Vehicles)           | **T07**     | Revisión e integración de Endpoints de Catálogo    | Revisión y documentación de endpoints de búsqueda y catálogo.                                                                                                           | 6                      | Pedro Lecca         | Done       |
+| **TS04**          | Endpoints para gestión de reservas y alquileres (Renting)            | **T08**     | Revisión e integración de Endpoints de Renting     | Revisión y documentación de endpoints de reservas y alquileres.                                                                                                         | 7                      | Pedro Lecca         | Done       |
+| **TS05**          | Endpoints para pagos y liquidaciones (Payments)                      | **T09**     | Revisión e integración de Endpoints de Pagos       | Revisión y documentación de endpoints de pagos y liquidaciones.                                                                                                         | 8                      | Pedro Lecca         | Done       |
+| **SPIKE01**       | Geolocalización y mapas                                              | **T10**     | Ejecución de Spike de Geolocalización (API Mapas)  | Investigar, probar y documentar la mejor API de mapas para visualización.                                                                                               | 6                      | Giancarlo Castañeda | Done       |
+| **US40**          | Visualizar métricas generales del sistema (Metrics BC)               | **T11**     | **Implementar bounded context “Metrics”**          | Crear BC independiente que expone métricas del sistema (total usuarios, proveedores, reservas, ingresos simulados, etc.). Documentar endpoints y exponerlos en Swagger. | 6                      | **Pedro Lecca**     | Done       |
 
 ##### 4.2.2.3. Development Evidence for Sprint Review 
 
@@ -420,6 +421,150 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 | -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
 | [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | bb944d2  | Add files via upload | - | 2025-11-12         |
 | [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | e71e428  | Update privacy.html | - | 2025-11-12         |
+
+## **WEB SERVICE — BACKEND DEPLOYMENT**
+
+Durante el Sprint 2 se realizó el **despliegue completo del backend monolítico en un servidor VPS Ubuntu**, utilizando **Docker** para contenerizar la aplicación Spring Boot previamente compilada. Este proceso permitió que el servicio quedara accesible públicamente a través del puerto **8080**, con Swagger habilitado y conexión estable hacia PostgreSQL.
+
+### **1. Instalación de Docker en el VPS**
+
+Para habilitar el despliegue mediante contenedores, se instaló Docker en el servidor Linux ejecutando:
+
+```
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+Se validó la instalación con:
+
+```
+docker ps
+docker images
+```
+
+<img width="814" height="93" alt="image" src="https://github.com/user-attachments/assets/5ee9be24-b159-4b76-99b5-71b860ae7cf0" />
+
+---
+
+### **2. Construcción del contenedor del backend**
+
+En la carpeta del proyecto se generó el artefacto `.jar` mediante Maven:
+
+```
+mvn clean package -DskipTests
+```
+
+<img width="908" height="142" alt="image" src="https://github.com/user-attachments/assets/1429131c-f61c-4e6a-80da-3ebae4055cbf" />
+<img width="1606" height="257" alt="image" src="https://github.com/user-attachments/assets/1ffd7403-9acb-4a2e-80b1-770e96a8b622" />
+
+Luego se creó el archivo **Dockerfile**, basado en una imagen ligera de Eclipse Temurin:
+
+```dockerfile
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+COPY target/bikelab-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
+```
+
+<img width="1896" height="987" alt="Captura de pantalla 2025-11-13 155107" src="https://github.com/user-attachments/assets/f92059d5-035a-412b-8633-249ead5b0ff9" />
+
+Con el Dockerfile listo, se construyó la imagen:
+
+```
+docker build -t bikelab-backend .
+```
+<img width="1382" height="993" alt="Captura de pantalla 2025-11-13 160437" src="https://github.com/user-attachments/assets/1017947d-d058-4f4c-8752-11f8c070b67c" />
+<img width="870" height="251" alt="Captura de pantalla 2025-11-13 160716" src="https://github.com/user-attachments/assets/e7cedf25-7d4d-4345-b9a2-eb42820dbfc9" />
+
+La imagen se generó correctamente y aparece listada con:
+
+```
+docker images
+```
+
+<img width="804" height="102" alt="Captura de pantalla 2025-11-13 160810" src="https://github.com/user-attachments/assets/4a532d2f-fe10-4a16-ae5a-288d043b8a15" />
+
+---
+
+### **3. Ejecución del contenedor usando la red del host**
+
+Ejecución final del backend:
+
+```
+docker run -d \
+  --name bikelab-backend \
+  --network host \
+  bikelab-backend
+```
+
+<img width="1061" height="135" alt="Captura de pantalla 2025-11-13 160835" src="https://github.com/user-attachments/assets/2f8d12b8-d3c3-4271-9f40-532e04266635" />
+
+Verificación del contenedor activo:
+
+```
+docker ps
+```
+
+<img width="1296" height="417" alt="Captura de pantalla 2025-11-13 160915" src="https://github.com/user-attachments/assets/d71b4bf2-32bb-411d-baef-6a270bf25f8a" />
+
+---
+
+### **4. Configuración del Firewall en Azure**
+
+Se creó una regla VPC para exponer el backend públicamente:
+
+* **Nombre:** allow-backend-8080
+* **Red:** default
+* **Dirección:** Ingress
+* **Origen:** `0.0.0.0/0`
+* **Protocolo/puertos:** TCP:8080
+* **Acción:** Allow
+
+Esta regla permitió acceder al backend desde internet.
+
+---
+
+### **5. Acceso al servicio y a Swagger**
+
+Una vez el contenedor estuvo corriendo correctamente y el firewall configurado, Swagger quedó disponible desde la IP pública del VPS:
+
+```
+http://http://34.16.215.14:8080/swagger-ui/index.html
+```
+
+<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/3dda64d8-c487-4aa0-be2e-fa9a62f54ccc" />
+<img width="1893" height="745" alt="image" src="https://github.com/user-attachments/assets/9305bbc9-652b-4922-a142-6a6313b52234" />
+
+---
+
+### **6. Conexión con PostgreSQL**
+
+El backend logró conectarse correctamente a PostgreSQL (instancia local del VPS) gracias al uso de `--network host` y a la configuración existente en el jar.
+
+Además, se ajustaron permisos del usuario `bikeuser` para permitir migraciones Flyway:
+
+```
+GRANT ALL PRIVILEGES ON DATABASE bikelab TO bikeuser;
+GRANT ALL ON SCHEMA public TO bikeuser;
+ALTER SCHEMA public OWNER TO bikeuser;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bikeuser;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO bikeuser;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO bikeuser;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO bikeuser;
+```
+
+---
+
+### **7. Resultado final del Sprint 2**
+
+* El backend quedó **contenedorizado y ejecutándose de forma estable**.
+* Swagger accesible públicamente desde la IP del servidor.
+* Conexión validada con PostgreSQL.
+* Docker funcionando como entorno de despliegue en producción inicial.
+* El backend del Sprint 2 quedó funcional y operativo para la aplicación móvil.
 
 ##### 4.2.2.4. Testing Suite Evidence for Sprint Review 
 
@@ -462,6 +607,71 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 </div>
 
 ##### 4.2.2.6. Services Documentation Evidence for Sprint Review 
+
+## **WEB SERVICE — BACKEND DEPLOYMENT**
+
+### **1. Swagger UI desplegado en entorno VPS (Producción Inicial)**
+
+El servidor expone correctamente los endpoints REST descritos en los *bounded contexts* del backend (**IAM**, **Providing**, **Vehicles**, **Renting**, **Payments**, **Metrics**), accesibles vía navegador a través de:
+
+```
+http://http://34.16.215.14:8080/swagger-ui/index.html
+```
+
+La documentación se genera automáticamente a partir de las anotaciones del proyecto y refleja:
+
+* Estructura de request/response
+* Tipos de datos de cada servicio
+* Códigos HTTP de éxito y error
+* Requerimientos de autenticación mediante JWT
+* Ejemplos interactivos ejecutables desde Swagger UI
+
+<img width="1919" height="502" alt="image" src="https://github.com/user-attachments/assets/3518cb03-ec2c-41b2-aa15-39f277134c96" />
+
+---
+
+### **2. Validación de JWT en entorno de despliegue**
+
+Se verificó que el flujo de autenticación continúa funcionando tras contenerizar y desplegar el backend:
+
+1. Registro de usuario (`/api/iam/auth/register`)
+2. Login y obtención de token JWT (`/api/iam/auth/login`)
+3. Acceso autorizado mediante
+
+   ```
+   Authorization: Bearer <token>
+   ```
+   
+4. Consumo de endpoints protegidos:
+
+   * IAM → `/api/iam/me`, `/api/admin/users`
+   * Providing → `/api/providing/me`, `/api/providing/{id}/approve`
+   * Vehicles → `/api/vehicles/own`, `/api/vehicles/{id}/availability/block`
+   * Renting → `/api/renting/bookings`
+   * Payments → `/api/payments/payouts/mine`
+   
+<img width="1891" height="853" alt="image" src="https://github.com/user-attachments/assets/801d3860-8f49-4d65-8032-414d032102da" />
+<img width="1815" height="787" alt="image" src="https://github.com/user-attachments/assets/42c629a2-6f37-4d38-a113-8ccdab93cd4b" />
+<img width="1822" height="898" alt="image" src="https://github.com/user-attachments/assets/fd318341-d40f-46a2-a4a9-12d65c93d325" />
+
+---
+
+### **3. Servicios activos después del despliegue con Docker**
+
+El backend ejecutado mediante:
+
+```
+docker run -d --name bikelab-backend --network host bikelab-backend
+```
+
+permitió validar que:
+
+* Todos los endpoints mantienen su funcionalidad tras el despliegue.
+* Las migraciones Flyway (schema history) se ejecutan correctamente al iniciar el contenedor.
+* Swagger detecta y documenta automáticamente todos los servicios activos.
+* No se presentan conflictos de puertos luego de contenerizar la aplicación.
+
+<img width="1270" height="74" alt="image" src="https://github.com/user-attachments/assets/cd7c479b-a520-4b46-80d8-8f229347e5a8" />
 
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review 
 
