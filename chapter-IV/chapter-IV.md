@@ -441,27 +441,27 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 #### **MOBILE APP**
 
 <div align="center">
-<img src="/assets/images/amexecution1.jpg" alt="Front-End Evidencia 1 Sprint 2" width=auto>
+<img src="/assets/images/amexecution1.jpg" alt="Front-End Evidencia 1 Sprint 2" width=300>
 </div>
 
 <div align="center">
-<img src="/assets/images/amexecution2.jpg" alt="Front-End Evidencia 2 Sprint 2" width=auto>
+<img src="/assets/images/amexecution2.jpg" alt="Front-End Evidencia 2 Sprint 2" width=300>
 </div>
 
 <div align="center">
-<img src="/assets/images/amexecution3.jpg" alt="Front-End Evidencia 3 Sprint 2" width=auto>
+<img src="/assets/images/amexecution3.jpg" alt="Front-End Evidencia 3 Sprint 2" width=300>
 </div>
 
 <div align="center">
-<img src="/assets/images/amexecution4.jpg" alt="Front-End Evidencia 4 Sprint 2" width=auto>
+<img src="/assets/images/amexecution4.jpg" alt="Front-End Evidencia 4 Sprint 2" width=300>
 </div>
 
 <div align="center">
-<img src="/assets/images/amexecution5.jpg" alt="Front-End Evidencia 5 Sprint 2" width=auto>
+<img src="/assets/images/amexecution5.jpg" alt="Front-End Evidencia 5 Sprint 2" width=300>
 </div>
 
 <div align="center">
-<img src="/assets/images/amexecution6.jpg" alt="Front-End Evidencia 6 Sprint 2" width=auto>
+<img src="/assets/images/amexecution6.jpg" alt="Front-End Evidencia 6 Sprint 2" width=300>
 </div>
 
 ##### 4.2.2.6. Services Documentation Evidence for Sprint Review 
