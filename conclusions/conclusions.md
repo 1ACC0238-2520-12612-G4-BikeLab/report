@@ -61,5 +61,6 @@
 ### TB1:
 - [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz)
 
-### TP:
-- 
+### About The Product:
+- Youtube: [https://youtu.be/mzjE_LIRTQo](https://youtu.be/mzjE_LIRTQo)
+- Microsoft Stream: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQBxMXVJBk-kTqGQ18k63GvnAcKwF5xWWN4fA1gxog9uoVo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IqsSff](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQBxMXVJBk-kTqGQ18k63GvnAcKwF5xWWN4fA1gxog9uoVo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IqsSff)
