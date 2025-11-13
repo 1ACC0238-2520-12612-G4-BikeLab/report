@@ -1,39 +1,50 @@
-<div align="center">
-
-<img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC">
-
-**Ingeniería de software**
-
-**Aplicaciones para Dispositivos Móviles**
-
-**NRC:** 12612
-
-**Periodo: 202520**
-
-**Profesor:** David Gerardo Quevedo Velasco
-
-**Nombre del StartUp:* Ridera* 
-
-**Nombre del Producto:* BikeLab* 
-
-</div>
-
-<div align="center">
-
-| Integrantes                                | Código    |
-| -----------------------------------       | ----------|
-| Bustamante Leveau, Cameron Charllotte      | U20231a804|
-| Castañeda Guimas, Giancarlo Santiago      |U202310601 |
-| Diaz Gutierrez, Henry Kevin        | U201819674 |
-| Hernandez Poma, Sebastian Eduardo         | U20231c996 |
-| Lecca Villalobos, Pedro Omar        | U202223293 |
+<div align="center" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; line-height: 1.8; font-family: 'Segoe UI', Arial, sans-serif;">
 
 
+<img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC" width="180">
 
-</div>
+### **Universidad Peruana de Ciencias Aplicadas**
 
+### **Ingeniería de Software**
+
+#### **Periodo 202520**
+
+#### Aplicaciones para Dispositivos Móviles
+
+
+#### **NRC:** 12612
+
+#### **Docente:** David Gerardo Quevedo Velasco
 
 ---
+
+#### “Informe de Trabajo Final”
+
+**Nombre del StartUp:** *BikeLab*  
+**Nombre del Producto:** *BikeLab*
+
+---
+
+#### Relación de Integrantes
+
+U20231a804 — Bustamante Leveau, Cameron Charllotte   
+U202310601 — Castañeda Guimas, Giancarlo Santiago  
+U201819674 — Diaz Gutierrez, Henry Kevin   
+U20231c996 — Hernandez Poma, Sebastian Eduardo   
+U202223293 — Lecca Villalobos, Pedro Omar   
+
+---
+
+Noviembre, 2025
+
+
+<br><br>
+
+
+</div>
+
+
+
 
 ## Registro de Versiones del Informe
 
@@ -43,7 +54,6 @@
 |   TP   | 09/10/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Capítulo III: Solution UI/UX Design** y **Capítulo IV: Product Implementation & Validation** |
 |   TB2   | 10/11/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Sprint 2** y **Desarrollo de la Aplicación Movil en Kotlin y Flutter** |
 
-## Project Report Collaboration Insights 
 <h2> Student Outcome</h2>
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
@@ -179,6 +189,9 @@
 <img src="/assets/images/insights1.PNG">  
 <img src="/assets/images/insights2.PNG">  
 
+### **TP**
+<img src="/assets/images/insightstp.PNG">  
+<img src="/assets/images/insightstp2.PNG">  
 
 ## Objetivos SMART
 

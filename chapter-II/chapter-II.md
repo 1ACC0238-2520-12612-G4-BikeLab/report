@@ -275,56 +275,1695 @@ Estudiante & Proveedor
 | :---- | :---- |
 
 ### User Stories
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US01</td>
+        <td>Estudiante</td>
+        <td>Media</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Registrar usuario estudiante</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero registrarme en la aplicación para acceder a los beneficios de usuario.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Registro exitoso con datos válidos</strong><br> Dado que soy un estudiante nuevo, cuando el sistema recibe mis datos válidos, entonces el sistema debe crear mi cuenta de usuario exitosamente. <br><br>
+            <strong>Escenario 2: Error por correo duplicado</strong><br> Dado que el sistema recibe un correo ya registrado, cuando se intenta procesar el registro, entonces el sistema debe notificar un mensaje de error por duplicidad. <br><br>
+            <strong>Escenario 3: Validación de campos obligatorios</strong><br> Dado que el sistema recibe un registro con campos obligatorios incompletos, cuando se intenta crear la cuenta, entonces el sistema debe bloquear el registro y solicitar la información faltante.
+        </td>
+    </tr>
+</table>
 
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US02</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Registrar usuario arrendador</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero registrarme en la aplicación para poder publicar mis vehículos.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Registro exitoso con datos válidos</strong><br> Dado que soy un arrendador nuevo, cuando el sistema recibe mis datos válidos, entonces el sistema debe crear mi cuenta de usuario exitosamente. <br><br>
+            <strong>Escenario 2: Error por número de identificación inválido</strong><br> Dado que el sistema recibe un número de identificación inválido, cuando se intenta procesar el registro, entonces el sistema debe notificar un mensaje de error de validación. <br><br>
+            <strong>Escenario 3: Confirmación de registro exitoso</strong><br> Dado que el sistema registra la cuenta con datos válidos, cuando el proceso finaliza, entonces el sistema debe enviar una notificación de confirmación al arrendador.
+        </td>
+    </tr>
+</table>
 
-| Story ID | Título | Descripción | Criterios de aceptación | Epic ID |
-|----------|---------|-------------|--------------------------|---------|
-| **US01** | **Registro de usuario estudiante** | Como estudiante quiero registrarme en la aplicación para acceder a los beneficios de usuario. | **Escenario 1: Registro exitoso con datos válidos** <br>Dado que soy un estudiante nuevo, cuando ingreso mis datos válidos en el formulario de registro, entonces mi cuenta se crea exitosamente. <br><br> **Escenario 2: Error por correo duplicado**<br> Dado que ingreso un correo ya registrado, cuando intento registrarme, entonces el sistema me muestra un mensaje de error. <br><br> **Escenario 3: Validación de campos obligatorios**<br> Dado que omito un campo obligatorio, cuando intento completar el registro, entonces la app me solicita completar el campo faltante. | **EP01** |
-| **US02** | **Registro de usuario arrendador** | Como arrendador quiero registrarme en la aplicación para poder publicar mis vehículos. | **Escenario 1: Registro exitoso con datos válidos**<br> Dado que soy un arrendador nuevo, cuando ingreso mis datos válidos, entonces mi cuenta se crea exitosamente. <br><br> **Escenario 2: Error por número de identificación inválido** <br>Dado que ingreso un número de identificación inválido, cuando intento registrarme, entonces recibo un mensaje de error. <br><br> **Escenario 3: Confirmación de registro exitoso**<br> Dado que registro con datos válidos, cuando confirmo el registro, entonces recibo una notificacion de confirmación. | **EP01** |
-| **US03** | **Iniciar sesión en la aplicación** | Como usuario quiero iniciar sesión para acceder a mi cuenta. | **Escenario 1: Inicio de sesión exitoso **<br> Dado que soy un usuario registrado, cuando ingreso mis credenciales correctas, entonces accedo a mi cuenta. <br><br> **Escenario 2: Error por credenciales incorrectas** <br>Dado que ingreso una contraseña incorrecta, cuando intento acceder, entonces recibo un mensaje de error. <br><br> | **EP01** |
-| **US04** | **Recuperar contraseña** | Como usuario quiero recuperar mi contraseña para poder volver a acceder a la aplicación. | **Escenario 1: Solicitud de enlace de recuperación**<br> Dado que olvidé mi contraseña, cuando ingreso mi correo registrado, entonces recibo un enlace de recuperación. <br><br> **Escenario 2: Error por correo no registrado**<br> Dado que ingreso un correo no registrado, cuando intento recuperar, entonces recibo un mensaje de error. <br><br> **Escenario 3: Definición de nueva contraseña** Dado que recibo el enlace, cuando lo utilizo, entonces puedo definir una nueva contraseña. | **EP01** |
-| **US05** | **Editar información de perfil** | Como usuario quiero editar mi información personal para mantener mis datos actualizados. | **Escenario 1: Edición de nombre o foto exitosa**<br> Dado que accedo a mi perfil, cuando modifico mi nombre o foto, entonces los cambios se guardan correctamente. <br><br> **Escenario 2: Error por número de contacto inválido**<br> Dado que ingreso un número de contacto inválido, cuando intento guardar, entonces recibo un mensaje de error. <br><br> **Escenario 3: Confirmación de cambios exitosos**<br> Dado que edito mi perfil, cuando confirmo los cambios, entonces recibo una notificación de actualización exitosa. | **EP01** |
-| **US06** | **Cerrar sesión** | Como usuario quiero cerrar sesión para mantener la seguridad de mi cuenta. | **Escenario 1: Cierre de sesión exitoso**<br> Dado que estoy dentro de la app, cuando selecciono “Cerrar sesión”, entonces se cierra mi sesión. <br><br> **Escenario 2: Reingreso con credenciales tras cerrar sesión**<br> Dado que cierro sesión, cuando intento volver a ingresar, entonces debo introducir mis credenciales. <br><br> **Escenario 3: Desconexión en dispositivos distintos**<br> Dado que cierro sesión en un dispositivo, cuando abro la app en otro, entonces mi sesión no aparece activa. | **EP01** |
-| **US07** | **Registrar una bicicleta o scooter en la app** | Como arrendador quiero registrar una bicicleta o scooter en la app para ponerla en alquiler. | **Escenario 1: Registro exitoso de vehículo**<br> Dado que soy arrendador, cuando ingreso los datos del vehículo, entonces queda registrado en la app. <br><br> **Escenario 2: Error por datos incompletos**<br> Dado que omito datos obligatorios, cuando intento registrar, entonces recibo un mensaje de error. <br><br> **Escenario 3: Confirmación de vehículo en listado**<br> Dado que registro el vehículo, cuando confirmo, entonces aparece en mi listado. | **EP02** |
-| **US08** | **Editar información de un vehículo registrado** | Como arrendador quiero editar la información de mis vehículos para mantenerlos actualizados. | **Escenario 1: Edición de campo válida y exitosa **<br> Dado que accedo a mi listado de vehículos, cuando edito un campo válido, entonces los cambios se guardan. <br><br> **Escenario 2: Edición de campo válida y exitosa** <br>Dado que edito y confirmo, cuando reviso mi listado, entonces veo la información actualizada. | **EP02** |
-| **US09** | **Marcar vehículo disponible/no disponible** | Como arrendador quiero habilitar o deshabilitar mis vehículos para controlar su uso. | **Escenario 1: Vehículo marcado como disponible**<br> Dado que accedo a mi vehículo, cuando lo marco como “disponible”, entonces queda visible para usuarios. <br><br> **Escenario 2: Vehículo marcado como no disponible**<br> Dado que lo marco como “no disponible”, cuando un usuario lo busca, entonces aparece ocupado en resultados. <br><br> | **EP02** |
-| **US10** | **Eliminar vehículo de la aplicación** | Como arrendador quiero eliminar un vehículo de la aplicación para que no esté disponible. | **Escenario 1: Eliminación exitosa del vehículo**<br> Dado que selecciono un vehículo, cuando elijo “eliminar”, entonces desaparece de mi listado. <br><br> **Escenario 2: Vehículo eliminado no aparece en búsquedas**<br> Dado que elimino un vehículo, cuando un usuario lo busca, entonces ya no aparece. <br><br> | **EP02** |
-| **US11** | **Consultar historial de alquileres de mis vehículos** | Como arrendador quiero consultar el historial de mis vehículos para ver su uso. | **Escenario 1: Visualización de reservas en historial**<br> Dado que accedo a mi panel, cuando consulto el historial, entonces veo todas las reservas realizadas. <br><br> **Escenario 2: Historial filtrado por fechas**<br> Dado que filtro por fechas, cuando aplico el filtro, entonces obtengo resultados específicos. <br><br> **Escenario 3: Historial vacío sin alquileres**<br> Dado que un vehículo no ha sido alquilado, cuando consulto su historial, entonces aparece vacío. | **EP02** |
-| **US12** | **Buscar bicicletas/scooters por cercanía** | Como estudiante o turista quiero buscar bicicletas/scooters cercanos para encontrarlos rápido. | **Escenario 1: Visualización de vehículos más cercanos en mapa**<br> Dado que estoy en la app, cuando activo la búsqueda, entonces veo los vehículos más cercanos en un mapa. <br><br> **Escenario 2: Mensaje informativo por ausencia de vehículos cercanos**<br> Dado que no hay vehículos cerca, cuando realizo la búsqueda, entonces recibo un mensaje informativo. <br><br>| **EP03** |
-| **US13** | **Filtrar resultados por tipo de vehículo** | Como estudiante o turista quiero filtrar por tipo de vehículo para elegir bicicleta o scooter. | **Escenario 1: Filtro aplicado: bicicletas**<br> Dado que busco vehículos, cuando aplico filtro “bicicleta”, entonces solo aparecen bicicletas. <br><br> **Escenario 2: Filtro aplicado: scooters**<br> Dado que aplico filtro “scooter”, cuando confirmo, entonces solo aparecen scooters. <br><br> **Escenario 3: Resultados sin filtros aplicados** Dado que quito los filtros, cuando consulto de nuevo, entonces aparecen todos los vehículos disponibles. | **EP03** |
-| **US14** | **Ver información detallada del vehículo y arrendador** | Como estudiante o turista quiero ver la información del vehículo y arrendador para decidir si alquilarlo. | **Escenario 1: Visualización de detalles de vehículo**<br> Dado que selecciono un vehículo, cuando abro detalles, entonces veo su descripción, fotos y estado. <br><br> **Escenario 2: Visualización de perfil del arrendador**<br> Dado que consulto arrendador, cuando accedo a su perfil, entonces veo su puntuación y reseñas. <br><br> **Escenario 3: Estado de vehículo ocupado**<br> Dado que el vehículo está ocupado, cuando consulto detalles, entonces aparece como “en uso”. | **EP03** |
-| **US15** | **Realizar reserva de vehículo** | Como estudiante o turista quiero reservar un vehículo para asegurarme que esté disponible al momento de usarlo. | **Escenario 1: Reserva exitosa registrada**<br> Dado que elijo un vehículo, cuando confirmo la reserva, entonces queda registrada en mi cuenta. <br><br> **Escenario 2: Error por vehículo ya reservado**<br> Dado que reservo un vehículo ya reservado, cuando confirmo, entonces recibo un mensaje de error. <br><br> **Escenario 3: Notificación recordatoria al inicio de la reserva**<br> Dado que reservo con éxito, cuando llega la hora de inicio, entonces recibo una notificación recordatoria. | **EP03** |
-| **US16** | **Cancelar reserva** | Como estudiante o turista quiero cancelar una reserva para liberar el vehículo si ya no lo necesito. | **Escenario 1: Cancelación de reserva activa**<br> Dado que tengo una reserva activa, cuando selecciono “cancelar”, entonces queda anulada. <br><br> **Escenario 2: Cancelación anticipada con disponibilidad liberada**<br> Dado que cancelo antes del inicio, cuando confirmo, entonces el vehículo vuelve a estar disponible. <br><br> **Escenario 3: Cancelación tardía con penalización**<br> Dado que cancelo después del inicio, cuando confirmo, entonces aplican penalizaciones. | **EP03** |
-| **US17** | **Confirmar inicio de alquiler** | Como estudiante o turista quiero confirmar el inicio de alquiler para comenzar a usar el vehículo. | **Escenario 1: Activación de alquiler tras confirmación**<br> Dado que tengo una reserva, cuando llego al punto y confirmo inicio, entonces se activa el alquiler. <br><br> **Escenario 2: Cancelación automática por falta de confirmación**<br> Dado que no confirmo el inicio, cuando pasa el tiempo límite, entonces la reserva se cancela automáticamente. <br><br> **Escenario 3: Estado actualizado a alquiler activo**<br> Dado que confirmo inicio, cuando reviso mi estado, entonces aparece como “alquiler activo”. | **EP03** |
-| **US18** | **Finalizar alquiler** | Como estudiante o turista quiero finalizar mi alquiler para cerrar el uso del vehículo. | **Escenario 1: Finalización de alquiler exitoso**<br> Dado que estoy en alquiler activo, cuando selecciono “finalizar”, entonces termina el uso. <br><br> **Escenario 2: Penalización por finalización fuera de tiempo**<br> Dado que termino fuera del tiempo, cuando confirmo, entonces recibo penalización. <br><br> **Escenario 3: Registro en historial tras finalizar**<br> Dado que finalizo alquiler, cuando reviso mi historial, entonces aparece registrado. | **EP03** |
-| **US19** | **Vincular método de pago** | Como usuario quiero vincular un método de pago para poder pagar alquileres. | **Escenario 1: Registro exitoso de método de pago**<br> Dado que ingreso metodo de pago, cuando confirmo, entonces queda registrada. <br><br> **Escenario 2: Error por método inválido**<br> Dado que ingreso un metodo de pago invalido, entonces recibo mensaje de error. <br><br> **Escenario 3: Confirmación en listado de métodos**<br> Dado que vinculo correctamente, cuando reviso mis métodos de pago, entonces aparece en la lista. | **EP04** |
-| **US20** | **Pagar por alquiler al finalizar el uso** | Como usuario quiero pagar mi alquiler al finalizarlo para completar el proceso. | **Escenario 1: Pago exitoso procesado**<br> Dado que finalizo un alquiler, cuando selecciono método de pago válido, entonces se procesa el cobro. <br><br> **Escenario 2: Error por fondos insuficientes**<br> Dado que no tengo fondos suficientes, cuando intento pagar, entonces recibo mensaje de error. <br><br> **Escenario 3: Registro de pago en historial**<br> Dado que pago con éxito, cuando reviso historial, entonces aparece registrado. | **EP04** |
-| **US21** | **Recibir confirmación de pago** | Como usuario quiero recibir confirmación de pago para asegurarme que la transacción fue exitosa. | **Escenario 1: Notificación de éxito en pago**<br> Dado que pago correctamente, cuando confirmo, entonces recibo notificación de éxito.<br><br> **Escenario 2: Visualización de estado “pagado” en historial**<br> Dado que pago, cuando reviso historial, entonces veo la operación marcada como “pagado”. | **EP04** |
-| **US22** | **Recibir notificación de penalización si se excede el tiempo** | Como usuario quiero recibir notificación si excedo el tiempo de alquiler para saber el costo extra. | **Escenario 1: Notificación de penalización por tiempo excedido**<br> Dado que supero el tiempo límite, cuando sigo usando el vehículo, entonces recibo notificación de penalización. <br><br> **Escenario 2: Registro de cobro adicional en historial**<br> Dado que recibo notificación, cuando reviso historial, entonces aparece el cobro adicional. <br><br> **Escenario 3: Liquidación de penalización tras pago**<br> Dado que recibo penalización, cuando pago, entonces se liquida el monto extra. | **EP04** |
-| **US23** | **Consultar historial de pagos** | Como usuario quiero consultar mi historial de pagos para llevar control de mis gastos. | **Escenario 1: Visualización de historial de pagos pasados**<br> Dado que accedo a mi cuenta, cuando reviso historial, entonces veo mis pagos pasados. <br><br> **Escenario 2: Historial vacío sin pagos registrados**<br> Dado que no tengo pagos, cuando consulto, entonces aparece historial vacío. | **EP04** |
-| **US24** | **Arrendador recibe liquidación automática después del pago** | Como arrendador quiero recibir liquidación automática después de cada pago para asegurar mis ingresos. | **Escenario 1: Liquidación exitosa tras pago de usuario**<br> Dado que un usuario paga, cuando el sistema procesa, entonces recibo abono en mi cuenta. <br><br> **Escenario 2: Registro de liquidación en historial**<br> Dado que recibo liquidación, cuando reviso historial, entonces aparece reflejado. <br><br> **Escenario 3: Notificación de error en caso de fallo**<br> Dado que ocurre un fallo, cuando no se liquida, entonces recibo notificación de error. | **EP04** |
-| **US25** | **Validación de identidad** | Como usuario quiero validar mi identidad para aumentar la confianza en la comunidad. | **Escenario 1: Cuenta verificada con documento válido** <br>Dado que ingreso documento válido, cuando confirmo, entonces mi cuenta queda verificada. <br><br>| **EP05** |
-| **US26** | **Calificar al arrendador o arrendatario al finalizar un alquiler** | Como usuario quiero calificar a otros después de un alquiler para compartir mi experiencia. | **Escenario 1: Calificación con estrellas registrada**<br> Dado que finalizo un alquiler, cuando califico con estrellas, entonces se guarda mi evaluación. <br><br> **Escenario 2: Comentario publicado con éxito**<br> Dado que escribo un comentario, cuando confirmo, entonces queda publicado. <br><br> **Escenario 3: Visualización de reseñas por otros usuarios**<br> Dado que califico, cuando otros consultan, entonces ven mi reseña. | **EP05** |
-| **US27** | **Ver puntuación y reseñas de otros usuarios** | Como usuario quiero ver calificaciones y reseñas de otros para confiar en mis decisiones. | **Escenario 1: Visualización de puntuación promedio del arrendador**<br> Dado que selecciono un arrendador, cuando abro su perfil, entonces veo su puntuación promedio. <br><br> **Escenario 2: Visualización de comentarios recientes**<br> Dado que consulto reseñas, cuando accedo, entonces veo comentarios recientes. <br><br> **Escenario 3: Perfil vacío sin reseñas**<br> Dado que un usuario no tiene reseñas, cuando lo consulto, entonces aparece vacío. | **EP05** |
-| **US28** | **Recibir notificaciones importantes** | Como usuario quiero recibir notificaciones sobre alquileres, pagos y reservas para estar informado. | **Escenario 1: Recordatorio de reserva próximo**<br> Dado que reservo un vehículo, cuando se acerca la hora, entonces recibo recordatorio. <br><br> **Escenario 2: Notificación de cierre tras finalizar alquiler**<br> Dado que finalizo un alquiler, cuando confirmo, entonces recibo notificación de cierre. <br><br> **Escenario 3: Confirmación de pago procesado**<br> Dado que ocurre un pago, cuando se procesa, entonces recibo confirmación. | **EP05** |
-| **US29** | **Acceso a soporte o ayuda dentro de la app** | Como usuario quiero acceder a soporte dentro de la app para resolver mis dudas. | **Escenario 1: Envío de mensaje desde soporte**<br> Dado que tengo una duda, cuando ingreso a soporte, entonces puedo enviar mensaje. <br><br> **Escenario 2: Comunicación con agente por chat**<br> Dado que abro soporte, cuando selecciono chat, entonces me comunico con un agente. | **EP05** |
-| **US30** | **Acceder a panel de control con métricas** | Como arrendador quiero acceder a un panel con métricas para supervisar el funcionamiento de la aplicación. | **Escenario 1: Visualización de métricas generales**<br> Dado que soy arrendador, cuando ingreso, entonces veo número de usuarios, alquileres e ingresos. <br><br> **Escenario 2: Métricas filtradas por rango de fechas**<br> Dado que filtro métricas, cuando aplico rango de fechas, entonces obtengo resultados específicos. <br><br> | **EP06** |
-| **US31** | **Gestionar usuarios** | Como arrendador quiero gestionar usuarios para asegurar el correcto uso de la app. | **Escenario 1: Eliminación de usuario exitosa**<br> Dado que necesito eliminar un usuario, cuando confirmo, entonces desaparece de la app. | **EP06** |
-| **US32** | **Gestionar vehículos registrados** | Como arrendador quiero gestionar vehículos para mantener control del sistema. | **Escenario 1: Edición o deshabilitación de vehículo**<br> Dado que accedo al panel, cuando selecciono vehículo, entonces puedo editarlo o deshabilitarlo. <br><br> **Escenario 2: Eliminación de vehículo**<br> Dado que elimino un vehículo, cuando confirmo, entonces desaparece de la app. <br><br> **Escenario 3: Actualización de estado de vehículo**<br> Dado que cambio estado, cuando consulto, entonces aparece actualizado.<br><br> | **EP06** |
-| **US33** | **Monitorear reservas y pagos** | Como arrendador quiero monitorear reservas y pagos | **Escenario 1: Visualización de reservas activas**<br> Dado que accedo al panel, cuando consulto, entonces veo reservas activas. <br><br> **Escenario 2: Registro de pago confirmado**<br> Dado que un usuario paga, cuando ocurre, entonces aparece "pagado". <br><br> **Escenario 3: Alerta por falla en pago**<br> Dado que ocurre una falla de pago, cuando se detecta, entonces recibo alerta.<br><br> | **EP06** |
-| **US34** | **Visualizar información general del servicio** | Como visitante del sitio quiero ver información clara sobre qué ofrece la aplicación, para entender su propósito y beneficios | **Escenario 1: Visualización del resumen general** <br> Dado que ingreso al sitio, cuando accedo a la landing page, entonces puedo leer una descripción general del servicio y su propósito<br><br>**Escenario 2: Exploración de secciones informativas** <br> Dado que estoy en la landing, cuando hago scroll, entonces visualizo secciones con beneficios, ejemplos e imágenes representativas <br> **Escenario 3: Ampliar información adicional** <br> Dado que quiero conocer más detalles, cuando selecciono “Ver más”, entonces se muestra contenido extendido o se redirige a una página con información completa .| EP08 |
-| **US35** | **Visualizar secciones de beneficios y características** | Como visitante del sitio quiero ver los beneficios y características principales para entender por qué debería usar la app. | **Escenario 1: Mostrar características clave** <br> Dado que accedo a la landing, cuando visualizo la sección de beneficios, entonces veo íconos, títulos y descripciones de las principales características. <br><br> **Escenario 2: Comparación de ventajas** <br> Dado que deseo comparar, cuando reviso cada característica, entonces puedo identificar las ventajas competitivas del servicio. <br><br> **Escenario 3: Redirección a registro desde CTA** <br> Dado que me interesa la aplicación, cuando hago clic en “Conocer más”, entonces soy redirigido a la página de registro o inicio de sesión. | EP08 |
-| **US36** | **Acceder al registro o inicio de sesión desde la landing** | Como visitante del sitio quiero acceder fácilmente al registro o inicio de sesión desde la landing page. | **Escenario 1: Redirección desde botones principales** <br> Dado que estoy en la landing, cuando hago clic en “Registrarme” o “Iniciar sesión”, entonces soy redirigido al formulario correspondiente. <br><br> **Escenario 2: Llamado a la acción en el pie de página** <br> Dado que llego al final de la página, cuando visualizo la sección final, entonces encuentro un llamado a la acción (CTA) que invita a registrarme. <br><br> **Escenario 3: Accesibilidad desde dispositivos móviles** <br> Dado que uso un dispositivo móvil, cuando abro el menú o barra superior, entonces puedo acceder fácilmente a las opciones de registro o inicio de sesión. | EP08 |
-| **US37** | **Visualizar diseño adaptable y atractivo** | Como visitante del sitio quiero que la landing se vea correctamente en cualquier dispositivo para tener una buena experiencia visual. | **Escenario 1: Adaptabilidad móvil** <br> Dado que ingreso desde un celular, cuando accedo a la landing, entonces el contenido se adapta al tamaño de pantalla sin perder legibilidad. <br><br> **Escenario 2: Visualización en distintos dispositivos** <br> Dado que navego desde una laptop o tablet, cuando recorro la página, entonces las secciones mantienen su estructura visual y diseño. <br><br> **Escenario 3: Rendimiento y carga óptimos** <br> Dado que la página incluye imágenes o animaciones, cuando hago scroll o navego, entonces no se presentan retrasos ni errores visuales. | EP08 |
-| **TS01** | **Implementar endpoints de autenticación y gestión de usuarios (IAM)** | Desarrollar endpoints RESTful para el registro, autenticación, recuperación de contraseña y gestión de perfiles de usuarios (estudiantes, arrendadores y turistas). | **Escenario 1: Endpoint de registro (POST /auth/register)** <br> Cuando se recibe un payload válido, se crea un usuario y se devuelve un código **201 Created** con los datos del usuario. <br><br> **Escenario 2: Endpoint de login (POST /auth/login)** <br> Cuando se envían credenciales válidas, el sistema devuelve un **token JWT** y un código **200 OK**. <br><br> **Escenario 3: Recuperación de contraseña (POST /auth/recover)** <br> Cuando se envía un correo válido, se genera un enlace de recuperación y se devuelve un **202 Accepted**. <br><br> **Escenario 4: Actualización de perfil (PUT /users/{id})** <br> Cuando el usuario autenticado envía cambios válidos, el sistema actualiza y responde con **200 OK**. | EP01 |
-| **TS02** | **Endpoints para publicación y administración de vehículos (Providing)** | Implementar endpoints para que los arrendadores puedan registrar, editar, eliminar y consultar los vehículos que ofrecen en la app. | **Escenario 1: Registro de vehículo (POST /providing/vehicles)** <br> Cuando se envía un payload con datos válidos, el sistema crea un nuevo registro y devuelve **201 Created**. <br><br> **Escenario 2: Edición de vehículo (PUT /providing/vehicles/{id})** <br> Cuando el arrendador actualiza un vehículo existente, el sistema guarda los cambios y devuelve **200 OK**. <br><br> **Escenario 3: Eliminación de vehículo (DELETE /providing/vehicles/{id})** <br> Cuando se solicita eliminar un vehículo, se elimina lógicamente y se devuelve **204 No Content**. <br><br> **Escenario 4: Consulta de listado (GET /providing/vehicles)** <br> Cuando el arrendador solicita sus publicaciones, el sistema devuelve una lista con **200 OK**. | EP02 |
-| **TS03** | **Implementar endpoints del catálogo de vehículos (Vehicles)** | Crear endpoints para listar, filtrar y mostrar detalles de bicicletas y scooters disponibles para los usuarios visitantes o registrados. | **Escenario 1: Listar vehículos disponibles (GET /vehicles)** <br> Cuando se consulta el catálogo sin filtros, se devuelven todos los vehículos disponibles con **200 OK**. <br><br> **Escenario 2: Filtro por tipo o cercanía (GET /vehicles?type=bike&location=... )** <br> Cuando se aplican filtros, el sistema devuelve solo los resultados que cumplen los criterios con **200 OK**. <br><br> **Escenario 3: Ver detalles del vehículo (GET /vehicles/{id})** <br> Cuando se consulta un ID válido, el sistema responde con la información completa del vehículo y su arrendador con **200 OK**. | EP03 |
-| **TS04** | **Endpoints para gestión de reservas y alquileres (Renting)** | Desarrollar endpoints para realizar, cancelar, confirmar y finalizar reservas de vehículos, incluyendo validaciones de disponibilidad y tiempo. | **Escenario 1: Crear reserva (POST /renting/reservations)** <br> Cuando un usuario envía datos válidos, el sistema crea una reserva y devuelve **201 Created**. <br><br> **Escenario 2: Cancelar reserva (PUT /renting/reservations/{id}/cancel)** <br> Cuando se solicita cancelar una reserva activa, el sistema actualiza el estado y devuelve **200 OK**. <br><br> **Escenario 3: Confirmar inicio de alquiler (PUT /renting/{id}/start)** <br> Cuando se confirma el inicio, el sistema actualiza el estado a “activo” y devuelve **200 OK**. <br><br> **Escenario 4: Finalizar alquiler (PUT /renting/{id}/end)** <br> Cuando se finaliza correctamente, el sistema registra la devolución y devuelve **200 OK**. | EP04 |
-| **TS05** | **Endpoints para pagos y liquidaciones (Payments)** | Implementar endpoints para registrar pagos, aplicar penalizaciones y generar liquidaciones automáticas para arrendadores. | **Escenario 1: Registrar pago de alquiler (POST /payments)** <br> Cuando un usuario realiza un pago válido, el sistema lo registra y devuelve **201 Created**. <br><br> **Escenario 2: Confirmar penalización (POST /payments/penalty)** <br> Cuando el sistema detecta un exceso de tiempo, se crea un registro de penalización con **201 Created**. <br><br> **Escenario 3: Generar liquidación automática (POST /payments/settlements)** <br> Cuando un pago se procesa, el sistema calcula y liquida el monto al arrendador con **200 OK**. <br><br> **Escenario 4: Consultar historial de pagos (GET /payments/history)** <br> Cuando el usuario consulta, el sistema devuelve los pagos y liquidaciones con **200 OK**. | EP04 |
-| **SPIKE01** | **Geolocalización y mapas** | Evaluar la integración de un servicio de geolocalización (Google Maps API o Mapbox) para mostrar bicicletas/scooters cercanos. | **Escenario 1: Comparación de servicios de mapas**<br>Dado que se revisan Google Maps y Mapbox, cuando se documenta precisión, costos y limitaciones, entonces se obtiene un cuadro comparativo.<br><br>**Escenario 2: Prototipo de visualización en mapa**<br>Dado que se integran ubicaciones de prueba, cuando se muestran en un mapa, entonces se valida la funcionalidad de geolocalización.<br><br>**Escenario 3: Conclusión sobre consumo de API**<br> Dado que se evalúan límites gratuitos y costos, cuando se selecciona un proveedor, entonces se documenta la recomendación. | EP03 |
-| **SPIKE02** | **Notificaciones push y en tiempo real** | Investigar cómo implementar notificaciones push para avisos de reservas, pagos y penalizaciones en la app. | **Escenario 1: Investigación de servicios de notificaciones**<br>Dado que se revisan Firebase y OneSignal, cuando se documentan ventajas y limitaciones, entonces se obtiene un informe comparativo.<br><br>**Escenario 2: Prueba de notificación enviada**<br> Dado que se prepara un backend de pruebas, cuando se envía una notificación a un dispositivo, entonces se valida la factibilidad técnica.<br><br>**Escenario 3: Selección de librería recomendada**<br>Dado que se analizan los resultados, cuando se determina la opción más estable, entonces se documenta la recomendación final. | EP05 |
-| **SPIKE03** | **Escalabilidad y rendimiento en backend **| Analizar la carga máxima que el sistema puede soportar y evaluar si es necesario implementar balanceadores de carga o servicios en la nube (AWS, Azure, GCP). | **Escenario 1: Pruebas de carga y estrés**<br> Dado que se simula un uso intensivo, cuando se mide el número de usuarios concurrentes soportados, entonces se obtienen métricas de rendimiento.<br><br>**Escenario 2: Identificación de cuellos de botella** <br>Dado que se monitorea el sistema, cuando se detectan procesos lentos o fallos, entonces se documentan las áreas críticas.<br><br>**Escenario 3: Recomendaciones de infraestructura**<br> Dado que se analizan los resultados, cuando se determina la capacidad mínima, entonces se proponen mejoras de escalabilidad. | EP06 |
-| **SPIKE04** | **Seguridad y cumplimiento de datos** | Investigar los requerimientos de seguridad y normativas de protección de datos aplicables al sistema. | **Escenario 1: Revisión de normativas relevantes**<br> Dado que se consultan ISO 27001, GDPR y ley local, cuando se documentan requisitos clave, entonces se obtiene un informe normativo.<br><br>**Escenario 2: Identificación de riesgos de seguridad**<br> Dado que se analiza el flujo de datos en la app, cuando se detectan vulnerabilidades, entonces se listan riesgos documentados.<br><br>**Escenario 3: Propuesta de controles mínimos**<br> Dado que se conocen los riesgos, cuando se establecen medidas de seguridad, entonces se documenta la propuesta de cumplimiento. | EP06 |
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US03</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Iniciar sesión en la aplicación</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero iniciar sesión para acceder a mi cuenta.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Inicio de sesión exitoso</strong><br> Dado que soy un usuario registrado, cuando el sistema recibe mis credenciales correctas, entonces el sistema debe autenticarme y otorgar acceso a mi cuenta. <br><br>
+            <strong>Escenario 2: Error por credenciales incorrectas</strong><br> Dado que el sistema recibe una contraseña incorrecta, cuando se intenta autenticar, entonces el sistema debe denegar el acceso y notificar un mensaje de error.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US04</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Recuperar contraseña</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero recuperar mi contraseña para poder volver a acceder a la aplicación.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Solicitud de enlace de recuperación</strong><br> Dado que olvidé mi contraseña, cuando el sistema recibe mi correo registrado, entonces el sistema debe enviar un enlace de recuperación al correo. <br><br>
+            <strong>Escenario 2: Error por correo no registrado</strong><br> Dado que el sistema recibe un correo no registrado, cuando se intenta iniciar la recuperación, entonces el sistema debe notificar un mensaje de error indicando que el correo no existe. <br><br>
+            <strong>Escenario 3: Definición de nueva contraseña</strong><br> Dado que el usuario utiliza el enlace de recuperación, cuando el sistema recibe la nueva contraseña, entonces el sistema debe actualizar la contraseña del usuario para permitir el acceso.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US05</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Editar información de perfil</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero editar mi información personal para mantener mis datos actualizados.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Edición de nombre o foto exitosa</strong><br> Dado que el usuario modifica un dato personal válido, cuando el sistema recibe el cambio, entonces el sistema debe guardar la información correctamente. <br><br>
+            <strong>Escenario 2: Error por número de contacto inválido</strong><br> Dado que el sistema recibe un número de contacto inválido, cuando se intenta guardar el cambio, entonces el sistema debe notificar un mensaje de error y no aplicar la modificación. <br><br>
+            <strong>Escenario 3: Confirmación de cambios exitosos</strong><br> Dado que el sistema guarda los cambios del perfil, cuando el proceso finaliza, entonces el sistema debe enviar una notificación de actualización exitosa.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US06</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Cerrar sesión</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero cerrar sesión para mantener la seguridad de mi cuenta.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Cierre de sesión exitoso</strong><br> Dado que el usuario solicita cerrar la sesión, cuando el sistema procesa la solicitud, entonces el sistema debe invalidar la sesión actual. <br><br>
+            <strong>Escenario 2: Reingreso con credenciales tras cerrar sesión</strong><br> Dado que la sesión ha sido cerrada, cuando el usuario intenta reingresar, entonces el sistema debe requerir que el usuario ingrese sus credenciales nuevamente. <br><br>
+            <strong>Escenario 3: Desconexión en dispositivos distintos</strong><br> Dado que el usuario cierra sesión en un dispositivo, cuando se consulta el estado de la sesión en otro dispositivo, entonces el sistema debe reflejar el estado de inactividad.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US07</td>
+        <td>Arrendador</td>
+        <td>Alta</td>
+        <td>EP02</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Registrar una bicicleta o scooter en la app</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero registrar una bicicleta o scooter en la app para ponerla en alquiler.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Registro exitoso de vehículo</strong><br> Dado que soy arrendador, cuando el sistema recibe todos los datos válidos del vehículo, entonces el sistema debe registrar el vehículo en la base de datos de publicaciones. <br><br>
+            <strong>Escenario 2: Error por datos incompletos</strong><br> Dado que el sistema recibe datos incompletos, cuando se intenta registrar el vehículo, entonces el sistema debe notificar un mensaje de error y solicitar los datos obligatorios. <br><br>
+            <strong>Escenario 3: Confirmación de vehículo en listado</strong><br> Dado que el sistema registra el vehículo, cuando el arrendador consulta su listado de publicaciones, entonces el sistema debe mostrar el nuevo vehículo registrado.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US08</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP02</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Editar información de un vehículo registrado</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero editar la información de mis vehículos para mantenerlos actualizados.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Edición de campo válida y exitosa</strong><br> Dado que el arrendador actualiza un campo válido, cuando el sistema recibe los cambios, entonces el sistema debe guardar la información del vehículo. <br><br>
+            <strong>Escenario 2: Verificación de información actualizada</strong><br> Dado que el sistema guarda la edición del vehículo, cuando el arrendador consulta el listado de vehículos, entonces el sistema debe mostrar la información actualizada.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US09</td>
+        <td>Arrendador</td>
+        <td>Baja</td>
+        <td>EP02</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Marcar vehículo disponible/no disponible</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero habilitar o deshabilitar mis vehículos para controlar su uso.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Vehículo marcado como disponible</strong><br> Dado que el arrendador marca un vehículo como disponible, cuando el sistema actualiza el estado, entonces el vehículo debe aparecer visible y disponible en las búsquedas de los usuarios. <br><br>
+            <strong>Escenario 2: Vehículo marcado como no disponible</strong><br> Dado que el arrendador marca un vehículo como no disponible, cuando un usuario lo busca, entonces el sistema debe mostrar el vehículo como ocupado o no disponible en los resultados de búsqueda.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US10</td>
+        <td>Arrendador</td>
+        <td>Baja</td>
+        <td>EP02</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Eliminar vehículo de la aplicación</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero eliminar un vehículo de la aplicación para que no esté disponible.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Eliminación exitosa del vehículo</strong><br> Dado que el arrendador solicita eliminar un vehículo, cuando el sistema procesa la solicitud, entonces el sistema debe eliminar lógicamente el vehículo de su listado. <br><br>
+            <strong>Escenario 2: Vehículo eliminado no aparece en búsquedas</strong><br> Dado que el vehículo es eliminado del sistema, cuando un usuario realiza una búsqueda, entonces el vehículo no debe aparecer en los resultados.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US11</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP02</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Consultar historial de alquileres de mis vehículos</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero consultar el historial de mis vehículos para ver su uso.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de reservas en historial</strong><br> Dado que el arrendador solicita su historial, cuando el sistema procesa la consulta, entonces el sistema debe mostrar todas las reservas realizadas para sus vehículos. <br><br>
+            <strong>Escenario 2: Historial filtrado por fechas</strong><br> Dado que el arrendador aplica un filtro de fechas, cuando el sistema aplica el filtro, entonces el sistema debe mostrar solo los resultados específicos dentro de ese rango. <br><br>
+            <strong>Escenario 3: Historial vacío sin alquileres</strong><br> Dado que un vehículo no ha sido alquilado, cuando el arrendador consulta su historial, entonces el sistema debe mostrar el historial como vacío o sin registros.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US12</td>
+        <td>Estudiante</td>
+        <td>Alta</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Buscar bicicletas/scooters por cercanía</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero buscar bicicletas/scooters cercanos para encontrarlos rápido.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de vehículos más cercanos en mapa</strong><br> Dado que el usuario activa la búsqueda por cercanía, cuando el sistema localiza vehículos disponibles, entonces el sistema debe mostrar los vehículos más cercanos en un mapa. <br><br>
+            <strong>Escenario 2: Mensaje informativo por ausencia de vehículos cercanos</strong><br> Dado que no hay vehículos cerca de la ubicación del usuario, cuando se realiza la búsqueda, entonces el sistema debe notificar un mensaje informativo.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US13</td>
+        <td>Estudiante</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Filtrar resultados por tipo de vehículo</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero filtrar por tipo de vehículo para elegir bicicleta o scooter.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Filtro aplicado: bicicletas</strong><br> Dado que el usuario aplica el filtro “bicicleta”, cuando el sistema actualiza la búsqueda, entonces el sistema debe mostrar únicamente bicicletas disponibles. <br><br>
+            <strong>Escenario 2: Filtro aplicado: scooters</strong><br> Dado que el usuario aplica el filtro “scooter”, cuando el sistema actualiza la búsqueda, entonces el sistema debe mostrar únicamente scooters disponibles. <br><br>
+            <strong>Escenario 3: Resultados sin filtros aplicados</strong><br> Dado que el usuario quita los filtros, cuando el sistema actualiza la búsqueda, entonces el sistema debe mostrar todos los vehículos disponibles.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US14</td>
+        <td>Estudiante</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Ver información detallada del vehículo y arrendador</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero ver la información del vehículo y arrendador para decidir si alquilarlo.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de detalles de vehículo</strong><br> Dado que el usuario solicita detalles de un vehículo, cuando el sistema accede a la información, entonces el sistema debe mostrar la descripción, fotos y estado del vehículo. <br><br>
+            <strong>Escenario 2: Visualización de perfil del arrendador</strong><br> Dado que el usuario solicita detalles del arrendador, cuando el sistema accede a la información, entonces el sistema debe mostrar la puntuación y las reseñas del perfil. <br><br>
+            <strong>Escenario 3: Estado de vehículo ocupado</strong><br> Dado que el vehículo está ocupado en ese momento, cuando el usuario consulta sus detalles, entonces el sistema debe mostrar el estado como “en uso”.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US15</td>
+        <td>Estudiante</td>
+        <td>Alta</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Realizar reserva de vehículo</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero reservar un vehículo para asegurarme que esté disponible al momento de usarlo.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Reserva exitosa registrada</strong><br> Dado que el usuario selecciona un vehículo disponible, cuando el sistema confirma la reserva, entonces el sistema debe registrar la reserva en la cuenta del usuario. <br><br>
+            <strong>Escenario 2: Error por vehículo ya reservado</strong><br> Dado que el usuario intenta reservar un vehículo que ya tiene una reserva activa, cuando el sistema intenta registrar la reserva, entonces el sistema debe notificar un mensaje de error por indisponibilidad. <br><br>
+            <strong>Escenario 3: Notificación recordatoria al inicio de la reserva</strong><br> Dado que la hora de inicio de la reserva se acerca, cuando el sistema verifica el tiempo, entonces el sistema debe enviar una notificación recordatoria al usuario.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US16</td>
+        <td>Estudiante</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Cancelar reserva</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero cancelar una reserva para liberar el vehículo si ya no lo necesito.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Cancelación de reserva activa</strong><br> Dado que el usuario solicita la cancelación de una reserva activa, cuando el sistema procesa la solicitud, entonces el sistema debe anular la reserva. <br><br>
+            <strong>Escenario 2: Cancelación anticipada con disponibilidad liberada</strong><br> Dado que la cancelación ocurre antes del inicio del tiempo de reserva, cuando el sistema anula la reserva, entonces el vehículo debe volver a estar disponible para otros usuarios. <br><br>
+            <strong>Escenario 3: Cancelación tardía con penalización</strong><br> Dado que la cancelación ocurre después del inicio del tiempo de reserva, cuando el sistema anula la reserva, entonces el sistema debe aplicar las penalizaciones correspondientes.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US17</td>
+        <td>Estudiante</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Confirmar inicio de alquiler</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero confirmar el inicio de alquiler para comenzar a usar el vehículo.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Activación de alquiler tras confirmación</strong><br> Dado que el usuario confirma el inicio del alquiler en el punto de recogida, cuando el sistema recibe la confirmación, entonces el sistema debe activar el alquiler del vehículo. <br><br>
+            <strong>Escenario 2: Cancelación automática por falta de confirmación</strong><br> Dado que el usuario no confirma el inicio dentro del tiempo límite, cuando el tiempo expira, entonces el sistema debe cancelar automáticamente la reserva. <br><br>
+            <strong>Escenario 3: Estado actualizado a alquiler activo</strong><br> Dado que el sistema activa el alquiler, cuando el usuario revisa su estado, entonces el sistema debe mostrar su estado como “alquiler activo”.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US18</td>
+        <td>Estudiante</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Finalizar alquiler</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como estudiante quiero finalizar mi alquiler para cerrar el uso del vehículo.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Finalización de alquiler exitoso</strong><br> Dado que el usuario solicita finalizar el alquiler activo, cuando el sistema registra la devolución, entonces el sistema debe terminar el periodo de uso del vehículo. <br><br>
+            <strong>Escenario 2: Penalización por finalización fuera de tiempo</strong><br> Dado que el usuario finaliza el alquiler fuera del tiempo límite acordado, cuando el sistema registra la devolución, entonces el sistema debe calcular y aplicar una penalización. <br><br>
+            <strong>Escenario 3: Registro en historial tras finalizar</strong><br> Dado que el alquiler finaliza con éxito, cuando el usuario revisa su historial, entonces el sistema debe registrar la operación.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US19</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Vincular método de pago</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero vincular un método de pago para poder pagar alquileres.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Registro exitoso de método de pago</strong><br> Dado que el usuario proporciona datos de un método de pago válido, cuando el sistema valida la información, entonces el sistema debe registrar el método de pago en la cuenta. <br><br>
+            <strong>Escenario 2: Error por método inválido</strong><br> Dado que el usuario proporciona datos de un método de pago inválido, cuando el sistema intenta validarlo, entonces el sistema debe notificar un mensaje de error. <br><br>
+            <strong>Escenario 3: Confirmación en listado de métodos</strong><br> Dado que el sistema registra el método de pago correctamente, cuando el usuario revisa sus métodos, entonces el sistema debe mostrar el nuevo método en la lista.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US20</td>
+        <td>Usuario</td>
+        <td>Alta</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Pagar por alquiler al finalizar el uso</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero pagar mi alquiler al finalizarlo para completar el proceso.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Pago exitoso procesado</strong><br> Dado que el alquiler finaliza y el usuario selecciona un método de pago válido, cuando el sistema procesa el cobro, entonces el sistema debe registrar el pago como exitoso. <br><br>
+            <strong>Escenario 2: Error por fondos insuficientes</strong><br> Dado que el método de pago seleccionado no tiene fondos suficientes, cuando el sistema intenta procesar el pago, entonces el sistema debe notificar un mensaje de error por fallo en la transacción. <br><br>
+            <strong>Escenario 3: Registro de pago en historial</strong><br> Dado que el pago se procesa con éxito, cuando el usuario revisa su historial, entonces el sistema debe registrar la transacción de pago.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US21</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Recibir confirmación de pago</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero recibir confirmación de pago para asegurarme que la transacción fue exitosa.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Notificación de éxito en pago</strong><br> Dado que el pago se procesa correctamente, cuando el sistema finaliza la transacción, entonces el sistema debe enviar una notificación de éxito al usuario. <br><br>
+            <strong>Escenario 2: Visualización de estado “pagado” en historial</strong><br> Dado que el pago es exitoso, cuando el usuario revisa el detalle del alquiler en su historial, entonces el sistema debe mostrar la operación marcada como “pagado”.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US22</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Recibir notificación de penalización si se excede el tiempo</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero recibir notificación si excedo el tiempo de alquiler para saber el costo extra.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Notificación de penalización por tiempo excedido</strong><br> Dado que el usuario supera el tiempo límite del alquiler, cuando el sistema detecta el exceso, entonces el sistema debe enviar una notificación de penalización. <br><br>
+            <strong>Escenario 2: Registro de cobro adicional en historial</strong><br> Dado que se aplica una penalización, cuando el usuario revisa su historial de pagos, entonces el sistema debe reflejar el cobro adicional. <br><br>
+            <strong>Escenario 3: Liquidación de penalización tras pago</strong><br> Dado que el usuario paga el monto de la penalización, cuando el sistema registra el cobro, entonces el sistema debe liquidar el monto extra.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US23</td>
+        <td>Usuario</td>
+        <td>Baja</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Consultar historial de pagos</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero consultar mi historial de pagos para llevar control de mis gastos.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de historial de pagos pasados</strong><br> Dado que el usuario solicita su historial de pagos, cuando el sistema accede a los registros, entonces el sistema debe mostrar todos los pagos pasados realizados. <br><br>
+            <strong>Escenario 2: Historial vacío sin pagos registrados</strong><br> Dado que el usuario no tiene pagos registrados, cuando solicita el historial, entonces el sistema debe mostrar el historial como vacío o sin transacciones.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US24</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Recibir liquidación automática después del pago</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero recibir liquidación automática después de cada pago para asegurar mis ingresos.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Liquidación exitosa tras pago de usuario</strong><br> Dado que un usuario completa un pago, cuando el sistema procesa la transacción, entonces el sistema debe abonar automáticamente el monto correspondiente a la cuenta del arrendador. <br><br>
+            <strong>Escenario 2: Registro de liquidación en historial</strong><br> Dado que el arrendador recibe una liquidación, cuando consulta su historial de ingresos, entonces el sistema debe reflejar el abono. <br><br>
+            <strong>Escenario 3: Notificación de error en caso de fallo</strong><br> Dado que ocurre un fallo durante el proceso de liquidación, cuando el sistema lo detecta, entonces el sistema debe notificar al arrendador sobre el error.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US25</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP05</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Validar identidad</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero validar mi identidad para aumentar la confianza en la comunidad.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Cuenta verificada con documento válido</strong><br> Dado que el sistema recibe un documento de identidad válido, cuando el sistema verifica la información, entonces el sistema debe marcar la cuenta del usuario como verificada.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US26</td>
+        <td>Usuario</td>
+        <td>Baja</td>
+        <td>EP05</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Calificar al arrendador o arrendatario al finalizar un alquiler</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero calificar a otros después de un alquiler para compartir mi experiencia.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Calificación con estrellas registrada</strong><br> Dado que el usuario proporciona una calificación con estrellas, cuando el sistema recibe la evaluación, entonces el sistema debe registrar y actualizar la puntuación promedio del otro usuario. <br><br>
+            <strong>Escenario 2: Comentario publicado con éxito</strong><br> Dado que el usuario proporciona un comentario, cuando el sistema lo recibe, entonces el sistema debe registrar el comentario en el perfil del otro usuario. <br><br>
+            <strong>Escenario 3: Visualización de reseñas por otros usuarios</strong><br> Dado que el sistema registra la calificación, cuando otros usuarios consultan el perfil, entonces el sistema debe mostrar la reseña.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US27</td>
+        <td>Usuario</td>
+        <td>Baja</td>
+        <td>EP05</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Ver puntuación y reseñas de otros usuarios</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero ver calificaciones y reseñas de otros para confiar en mis decisiones.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de puntuación promedio del arrendador</strong><br> Dado que el usuario consulta el perfil de un arrendador, cuando el sistema accede a la información, entonces el sistema debe mostrar la puntuación promedio del arrendador. <br><br>
+            <strong>Escenario 2: Visualización de comentarios recientes</strong><br> Dado que el usuario accede a la sección de reseñas, cuando el sistema carga los datos, entonces el sistema debe mostrar los comentarios recientes. <br><br>
+            <strong>Escenario 3: Perfil vacío sin reseñas</strong><br> Dado que un usuario no tiene reseñas registradas, cuando consulta su perfil, entonces el sistema debe mostrar la sección de reseñas como vacía.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US28</td>
+        <td>Usuario</td>
+        <td>Media</td>
+        <td>EP05</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Recibir notificaciones importantes</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero recibir notificaciones sobre alquileres, pagos y reservas para estar informado.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Recordatorio de reserva próximo</strong><br> Dado que la hora de reserva se acerca, cuando el sistema detecta el evento, entonces el sistema debe enviar un recordatorio al usuario. <br><br>
+            <strong>Escenario 2: Notificación de cierre tras finalizar alquiler</strong><br> Dado que el alquiler finaliza, cuando el sistema registra el cierre, entonces el sistema debe enviar una notificación de cierre exitoso al usuario. <br><br>
+            <strong>Escenario 3: Confirmación de pago procesado</strong><br> Dado que ocurre un pago, cuando el sistema procesa la transacción, entonces el sistema debe enviar una notificación de confirmación de pago.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US29</td>
+        <td>Usuario</td>
+        <td>Baja</td>
+        <td>EP05</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Acceder a soporte o ayuda dentro de la app</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como usuario quiero acceder a soporte dentro de la app para resolver mis dudas.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Envío de mensaje desde soporte</strong><br> Dado que el usuario tiene una duda, cuando envía un mensaje a soporte, entonces el sistema debe registrar el mensaje y enviarlo al equipo de asistencia. <br><br>
+            <strong>Escenario 2: Comunicación con agente por chat</strong><br> Dado que el usuario selecciona la opción de chat, cuando el sistema establece la conexión, entonces el sistema debe permitir la comunicación en tiempo real con un agente.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US30</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP06</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Acceder a panel de control con métricas</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero acceder a un panel con métricas para supervisar el funcionamiento de la aplicación.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de métricas generales</strong><br> Dado que el arrendador accede al panel, cuando el sistema carga los datos, entonces el sistema debe mostrar las métricas generales de usuarios, alquileres e ingresos. <br><br>
+            <strong>Escenario 2: Métricas filtradas por rango de fechas</strong><br> Dado que el arrendador aplica un rango de fechas, cuando el sistema procesa el filtro, entonces el sistema debe mostrar las métricas específicas para ese periodo.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US31</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP06</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Gestionar usuarios</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero gestionar usuarios para asegurar el correcto uso de la app.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Eliminación de usuario exitosa</strong><br> Dado que el arrendador selecciona un usuario para eliminar, cuando el sistema procesa la solicitud, entonces el sistema debe eliminar lógicamente al usuario de la aplicación.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US32</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP06</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Gestionar vehículos registrados</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero gestionar vehículos para mantener control del sistema.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Edición o deshabilitación de vehículo</strong><br> Dado que el arrendador selecciona un vehículo, cuando envía la solicitud de edición o deshabilitación, entonces el sistema debe aplicar el cambio de datos o estado. <br><br>
+            <strong>Escenario 2: Eliminación de vehículo</strong><br> Dado que el arrendador solicita eliminar un vehículo, cuando el sistema procesa la eliminación, entonces el sistema debe desaparecer lógicamente el vehículo de la aplicación. <br><br>
+            <strong>Escenario 3: Actualización de estado de vehículo</strong><br> Dado que el arrendador cambia el estado de un vehículo, cuando el sistema actualiza el registro, entonces el sistema debe mostrar el estado actualizado en el panel.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US33</td>
+        <td>Arrendador</td>
+        <td>Media</td>
+        <td>EP06</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Monitorear reservas y pagos</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como arrendador quiero monitorear reservas y pagos</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización de reservas activas</strong><br> Dado que el arrendador accede al panel de monitoreo, cuando el sistema carga los datos, entonces el sistema debe mostrar todas las reservas que se encuentran activas. <br><br>
+            <strong>Escenario 2: Registro de pago confirmado</strong><br> Dado que un usuario completa un pago, cuando el sistema registra la transacción, entonces el sistema debe mostrar el pago como "pagado" en el panel. <br><br>
+            <strong>Escenario 3: Alerta por falla en pago</strong><br> Dado que ocurre una falla en el procesamiento de un pago, cuando el sistema detecta el error, entonces el sistema debe generar una alerta.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US34</td>
+        <td>Visitante del sitio</td>
+        <td>Media</td>
+        <td>EP08</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Visualizar información general del servicio</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como visitante del sitio quiero ver información clara sobre qué ofrece la aplicación, para entender su propósito y beneficios</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Visualización del resumen general</strong><br> Dado que el visitante accede a la página de inicio, cuando el sistema carga la landing page, entonces el sistema debe mostrar una descripción general del servicio. <br><br>
+            <strong>Escenario 2: Exploración de secciones informativas</strong><br> Dado que el visitante navega la página, cuando el sistema carga las secciones, entonces el sistema debe mostrar contenido sobre beneficios y ejemplos representativos. <br><br>
+            <strong>Escenario 3: Ampliar información adicional</strong><br> Dado que el visitante solicita más detalles, cuando el sistema recibe la petición, entonces el sistema debe mostrar contenido extendido o redirigir a una página de información completa.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US35</td>
+        <td>Visitante del sitio</td>
+        <td>Media</td>
+        <td>EP08</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Visualizar secciones de beneficios y características</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como visitante del sitio quiero ver los beneficios y características principales para entender por qué debería usar la app.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Mostrar características clave</strong><br> Dado que el visitante visualiza la sección de beneficios, cuando el sistema carga los elementos, entonces el sistema debe mostrar los títulos y descripciones de las principales características. <br><br>
+            <strong>Escenario 2: Comparación de ventajas</strong><br> Dado que el visitante revisa la sección, cuando el sistema muestra cada característica, entonces el sistema debe permitir identificar las ventajas competitivas. <br><br>
+            <strong>Escenario 3: Redirección a registrarse desde CTA</strong><br> Dado que el visitante selecciona un llamado a la acción (CTA) de registro, cuando el sistema procesa la acción, entonces el sistema debe redirigir a la página de registro o inicio de sesión.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US36</td>
+        <td>Visitante del sitio</td>
+        <td>Baja</td>
+        <td>EP08</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Acceder al registro o inicio de sesión desde la landing</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como visitante del sitio quiero acceder fácilmente al registro o inicio de sesión desde la landing page.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Redirección desde botones principales</strong><br> Dado que el visitante selecciona un botón de registro o inicio de sesión, cuando el sistema procesa la acción, entonces el sistema debe redirigir al formulario correspondiente. <br><br>
+            <strong>Escenario 2: Llamado a la acción en el pie de página</strong><br> Dado que el visitante llega al final de la página, cuando el sistema muestra la sección final, entonces el sistema debe incluir un llamado a la acción (CTA) para invitar al registro. <br><br>
+            <strong>Escenario 3: Accesibilidad desde dispositivos móviles</strong><br> Dado que el visitante usa un dispositivo móvil, cuando accede al menú, entonces el sistema debe mostrar fácilmente las opciones de registro o inicio de sesión.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>US37</td>
+        <td>Visitante del sitio</td>
+        <td>Media</td>
+        <td>EP08</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Visualizar diseño adaptable y atractivo</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Como visitante del sitio quiero que la landing se vea correctamente en cualquier dispositivo para tener una buena experiencia visual.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Adaptabilidad móvil</strong><br> Dado que el visitante accede desde un celular, cuando el sistema carga la landing, entonces el contenido debe adaptarse al tamaño de pantalla sin perder legibilidad. <br><br>
+            <strong>Escenario 2: Visualización en distintos dispositivos</strong><br> Dado que el visitante navega desde diferentes dispositivos, cuando el sistema muestra la página, entonces la estructura visual debe mantener su diseño. <br><br>
+            <strong>Escenario 3: Rendimiento y carga óptimos</strong><br> Dado que la página tiene elementos visuales, cuando el sistema carga o navega, entonces el sistema debe evitar retrasos o errores visuales para una experiencia óptima.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>TS01</td>
+        <td>Programador</td>
+        <td>Alta</td>
+        <td>EP01</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Implementar endpoints de autenticación y gestión de usuarios (IAM)</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Desarrollar endpoints RESTful para el registro, autenticación, recuperación de contraseña y gestión de perfiles de usuarios (estudiantes, arrendadores y turistas).</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Endpoint de registro</strong><br> Dado que el sistema recibe una solicitud de registro con datos válidos, cuando el sistema procesa el payload, entonces el sistema debe crear un nuevo usuario y devolver una respuesta de creación exitosa. <br><br>
+            <strong>Escenario 2: Endpoint de login</strong><br> Dado que el sistema recibe credenciales válidas, cuando el sistema procesa la autenticación, entonces el sistema debe devolver un token JWT y una respuesta de éxito. <br><br>
+            <strong>Escenario 3: Recuperación de contraseña</strong><br> Dado que el sistema recibe una solicitud de recuperación con un correo válido, cuando el sistema procesa la solicitud, entonces el sistema debe generar un enlace de recuperación y devolver una respuesta de aceptación. <br><br>
+            <strong>Escenario 4: Actualización de perfil</strong><br> Dado que el usuario autenticado envía cambios válidos a su perfil, cuando el sistema procesa la actualización, entonces el sistema debe guardar los cambios y devolver una respuesta de éxito.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>TS02</td>
+        <td>Programador</td>
+        <td>Alta</td>
+        <td>EP02</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Endpoints para publicación y administración de vehículos (Providing)</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Implementar endpoints para que los arrendadores puedan registrar, editar, eliminar y consultar los vehículos que ofrecen en la app.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Registro de vehículo</strong><br> Dado que el sistema recibe un payload con datos válidos de un vehículo, cuando el sistema procesa la solicitud, entonces el sistema debe crear un nuevo registro y devolver una respuesta de creación exitosa. <br><br>
+            <strong>Escenario 2: Edición de vehículo</strong><br> Dado que el arrendador actualiza un vehículo existente, cuando el sistema procesa la actualización, entonces el sistema debe guardar los cambios y devolver una respuesta de éxito. <br><br>
+            <strong>Escenario 3: Eliminación de vehículo</strong><br> Dado que el sistema recibe una solicitud para eliminar lógicamente un vehículo, cuando el sistema procesa la eliminación, entonces el sistema debe marcar el vehículo como eliminado y devolver una respuesta de contenido vacío. <br><br>
+            <strong>Escenario 4: Consulta de listado</strong><br> Dado que el arrendador solicita una lista de sus publicaciones, cuando el sistema procesa la consulta, entonces el sistema debe devolver la lista de vehículos con una respuesta de éxito.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>TS03</td>
+        <td>Programador</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Implementar endpoints del catálogo de vehículos (Vehicles)</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Crear endpoints para listar, filtrar y mostrar detalles de bicicletas y scooters disponibles para los usuarios visitantes o registrados.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Listar vehículos disponibles</strong><br> Dado que el sistema recibe una consulta sin filtros, cuando el sistema procesa la solicitud, entonces el sistema debe devolver todos los vehículos disponibles con una respuesta de éxito. <br><br>
+            <strong>Escenario 2: Filtro por tipo o cercanía</strong><br> Dado que se aplican filtros de tipo o ubicación en la consulta, cuando el sistema procesa los filtros, entonces el sistema debe devolver solo los resultados que cumplen los criterios con una respuesta de éxito. <br><br>
+            <strong>Escenario 3: Ver detalles del vehículo</strong><br> Dado que el sistema recibe una consulta para un ID de vehículo válido, cuando el sistema procesa la solicitud, entonces el sistema debe responder con la información completa del vehículo y su arrendador con una respuesta de éxito.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>TS04</td>
+        <td>Programador</td>
+        <td>Alta</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Endpoints para gestión de reservas y alquileres (Renting)</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Desarrollar endpoints para realizar, cancelar, confirmar y finalizar reservas de vehículos, incluyendo validaciones de disponibilidad y tiempo.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Crear reserva</strong><br> Dado que el sistema recibe datos válidos para una reserva, cuando el sistema procesa la solicitud, entonces el sistema debe crear la reserva y devolver una respuesta de creación exitosa. <br><br>
+            <strong>Escenario 2: Cancelar reserva</strong><br> Dado que el sistema recibe una solicitud para cancelar una reserva activa, cuando el sistema procesa la solicitud, entonces el sistema debe actualizar el estado de la reserva y devolver una respuesta de éxito. <br><br>
+            <strong>Escenario 3: Confirmar inicio de alquiler</strong><br> Dado que el sistema recibe la confirmación de inicio de alquiler, cuando el sistema procesa la confirmación, entonces el sistema debe actualizar el estado a “activo” y devolver una respuesta de éxito. <br><br>
+            <strong>Escenario 4: Finalizar alquiler</strong><br> Dado que el sistema recibe la solicitud de finalización del alquiler, cuando el sistema procesa el cierre, entonces el sistema debe registrar la devolución y devolver una respuesta de éxito.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>TS05</td>
+        <td>Programador</td>
+        <td>Media</td>
+        <td>EP04</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Endpoints para pagos y liquidaciones (Payments)</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Implementar endpoints para registrar pagos, aplicar penalizaciones y generar liquidaciones automáticas para arrendadores.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Registrar pago de alquiler</strong><br> Dado que el sistema recibe una solicitud de pago válido, cuando el sistema procesa el pago, entonces el sistema debe registrarlo y devolver una respuesta de creación exitosa. <br><br>
+            <strong>Escenario 2: Confirmar penalización</strong><br> Dado que el sistema detecta un exceso de tiempo en un alquiler, cuando el sistema procesa la penalización, entonces el sistema debe crear un registro de penalización con una respuesta de creación exitosa. <br><br>
+            <strong>Escenario 3: Generar liquidación automática</strong><br> Dado que un pago se ha procesado, cuando el sistema inicia la liquidación, entonces el sistema debe calcular y liquidar el monto al arrendador con una respuesta de éxito. <br><br>
+            <strong>Escenario 4: Consultar historial de pagos</strong><br> Dado que el usuario solicita su historial de pagos, cuando el sistema procesa la consulta, entonces el sistema debe devolver los pagos y liquidaciones con una respuesta de éxito.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>SPIKE01</td>
+        <td>Programador</td>
+        <td>Media</td>
+        <td>EP03</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Geolocalización y mapas</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Evaluar la integración de un servicio de geolocalización (Google Maps API o Mapbox) para mostrar bicicletas/scooters cercanos.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Comparación de servicios de mapas</strong><br> Dado que se revisan Google Maps y Mapbox, cuando se documenta precisión, costos y limitaciones, entonces se obtiene un cuadro comparativo. <br><br>
+            <strong>Escenario 2: Prototipo de visualización en mapa</strong><br> Dado que se integran ubicaciones de prueba, cuando se muestran en un mapa, entonces se valida la funcionalidad de geolocalización. <br><br>
+            <strong>Escenario 3: Conclusión sobre consumo de API</strong><br> Dado que se evalúan límites gratuitos y costos, cuando se selecciona un proveedor, entonces se documenta la recomendación.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>SPIKE02</td>
+        <td>Programador</td>
+        <td>Media</td>
+        <td>EP05</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Notificaciones push y en tiempo real</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Investigar cómo implementar notificaciones push para avisos de reservas, pagos y penalizaciones en la app.</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Investigación de servicios de notificaciones</strong><br> Dado que se revisan Firebase y OneSignal, cuando se documentan ventajas y limitaciones, entonces se obtiene un informe comparativo. <br><br>
+            <strong>Escenario 2: Prueba de notificación enviada</strong><br> Dado que se prepara un backend de pruebas, cuando se envía una notificación a un dispositivo, entonces se valida la factibilidad técnica. <br><br>
+            <strong>Escenario 3: Selección de librería recomendada</strong><br> Dado que se analizan los resultados, cuando se determina la opción más estable, entonces se documenta la recomendación final.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>SPIKE03</td>
+        <td>Programador</td>
+        <td>Alta</td>
+        <td>EP06</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Escalabilidad y rendimiento en backend</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Analizar la carga máxima que el sistema puede soportar y evaluar si es necesario implementar balanceadores de carga o servicios en la nube (AWS, Azure, GCP).</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Pruebas de carga y estrés</strong><br> Dado que se simula un uso intensivo, cuando se mide el número de usuarios concurrentes soportados, entonces se obtienen métricas de rendimiento. <br><br>
+            <strong>Escenario 2: Identificación de cuellos de botella</strong><br> Dado que se monitorea el sistema, cuando se detectan procesos lentos o fallos, entonces se documentan las áreas críticas. <br><br>
+            <strong>Escenario 3: Recomendaciones de infraestructura</strong><br> Dado que se analizan los resultados, cuando se determina la capacidad mínima, entonces se proponen mejoras de escalabilidad.
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr class="header-row">
+        <th>Story ID</th>
+        <th>User</th>
+        <th>Priority</th>
+        <th>Epic</th>
+    </tr>
+    <tr>
+        <td>SPIKE04</td>
+        <td>Programador</td>
+        <td>Alta</td>
+        <td>EP</td>
+    </tr>
+    <tr class="title-row">
+        <td colspan="4">Título:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">Seguridad y cumplimiento de datos</td>
+    </tr>
+    <tr class="description-row">
+        <td colspan="4">Descripción:</td>
+    </tr>
+    <tr class="acceptance-row">
+        <td colspan="4">Criterios de Aceptación:</td>
+    </tr>
+    <tr>
+        <td colspan="4" class="content-cell">
+            <strong>Escenario 1: Revisión de normativas relevantes</strong><br> Dado que se consultan ISO 27001, GDPR y ley local, cuando se documentan requisitos clave, entonces se obtiene un informe normativo. <br><br>
+            <strong>Escenario 2: Identificación de riesgos de seguridad</strong><br> Dado que se analiza el flujo de datos en la app, cuando se detectan vulnerabilidades, entonces se listan riesgos documentados. <br><br>
+            <strong>Escenario 3: Propuesta de controles mínimos</strong><br> Dado que se conocen los riesgos, cuando se establecen medidas de seguridad, entonces se documenta la propuesta de cumplimiento.
+        </td>
+    </tr>
+</table>
 
 ### 2.4.2. Impact Mapping 
 
@@ -334,54 +1973,67 @@ Estudiante & Proveedor
 
 <img src="/assets/images/productbacklog.PNG" alt="Product Backlog" width=auto>
 
-| # Orden | User Story Id | Título | Story Points (1 / 2 / 3 / 5 / 8) |
-|---------|---------------|--------|-----------------------------------|
-| 1 | US34 | Visualizar información general del servicio | 3 |
-| 2 | US35 | Visualizar secciones de beneficios y características | 3 |
-| 3 | US39 | Acceder al registro o inicio de sesión desde la landing | 2 |
-| 4 | US40 | Visualizar diseño adaptable y atractivo | 3 |
-| 5 | US07 | Registrar una bicicleta o scooter en la app | 5 |
-| 6 | US08 | Editar información de un vehículo registrado | 3 |
-| 7 | US09 | Marcar vehículo disponible/no disponible | 2 |
-| 8 | US10 | Eliminar vehículo de la aplicación | 2 |
-| 9 | US11 | Consultar historial de alquileres de mis vehículos | 3 |
-| 10 | US12 | Buscar bicicletas/scooters por cercanía | 5 |
-| 11 | US13 | Filtrar resultados por tipo de vehículo | 3 |
-| 12 | US14 | Ver información detallada del vehículo y arrendador | 3 |
-| 13 | US15 | Realizar reserva de vehículo | 5 |
-| 14 | US16 | Cancelar reserva | 3 |
-| 15 | US17 | Confirmar inicio de alquiler | 3 |
-| 16 | US18 | Finalizar alquiler | 3 |
-| 17 | US19 | Vincular método de pago | 3 |
-| 18 | US20 | Pagar por alquiler al finalizar el uso | 5 |
-| 19 | US21 | Recibir confirmación de pago | 2 |
-| 20 | US22 | Recibir notificación de penalización si se excede el tiempo | 3 |
-| 21 | US23 | Consultar historial de pagos | 2 |
-| 22 | US24 | Arrendador recibe liquidación automática después del pago | 3 |
-| 23 | US25 | Validación de identidad | 3 |
-| 24 | US26 | Calificar al arrendador o arrendatario al finalizar un alquiler | 2 |
-| 25 | US27 | Ver puntuación y reseñas de otros usuarios | 2 |
-| 26 | US28 | Recibir notificaciones importantes | 3 |
-| 27 | US29 | Acceso a soporte o ayuda dentro de la app | 2 |
-| 28 | US30 | Acceder a panel de control con métricas | 3 |
-| 29 | US31 | Gestionar usuarios | 3 |
-| 30 | US32 | Gestionar vehículos registrados | 3 |
-| 31 | US33 | Monitorear reservas y pagos | 3 |
-| 32 | TS02 | Endpoints para publicación y administración de vehículos (Providing) | 5 |
-| 33 | TS03 | Implementar endpoints del catálogo de vehículos (Vehicles) | 3 |
-| 34 | TS04 | Endpoints para gestión de reservas y alquileres (Renting) | 5 |
-| 35 | TS05 | Endpoints para pagos y liquidaciones (Payments) | 5 |
-| 36 | SPIKE01 | Geolocalización y mapas | 3 |
-| 37 | SPIKE02 | Notificaciones push y en tiempo real | 3 |
-| 38 | SPIKE03 | Escalabilidad y rendimiento en backend | 5 |
-| 39 | SPIKE04 | Seguridad y cumplimiento de datos | 5 |
-| 40 | TS01 | Implementar endpoints de autenticación y gestión de usuarios (IAM) | 5 |
-| 41 | US01 | Registro de usuario estudiante | 3 |
-| 42 | US02 | Registro de usuario arrendador | 3 |
-| 43 | US03 | Iniciar sesión en la aplicación | 2 |
-| 44 | US04 | Recuperar contraseña | 2 |
-| 45 | US05 | Editar información de perfil | 3 | 
-| 46 | US07 | Cerrar sesión | 2 |
+<table>
+    <thead>
+        <tr class="group-header">
+            <th colspan="4">Product Backlog</th>
+        </tr>
+        <tr class="group-header">
+            <th>Orden</th>
+            <th>User Story Id</th>
+            <th>Título</th>
+            <th>Story Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="core-row"><td>1</td><td>US07</td><td>Registrar una bicicleta o scooter en la app</td><td>5</td></tr>
+        <tr class="core-row"><td>2</td><td>US08</td><td>Editar información de un vehículo registrado</td><td>3</td></tr>
+        <tr class="core-row"><td>3</td><td>US09</td><td>Marcar vehículo disponible/no disponible</td><td>2</td></tr>
+        <tr class="core-row"><td>4</td><td>US10</td><td>Eliminar vehículo de la aplicación</td><td>2</td></tr>
+        <tr class="core-row"><td>5</td><td>US12</td><td>Buscar bicicletas/scooters por cercanía</td><td>5</td></tr>
+        <tr class="core-row"><td>6</td><td>US13</td><td>Filtrar resultados por tipo de vehículo</td><td>3</td></tr>
+        <tr class="core-row"><td>7</td><td>US14</td><td>Ver información detallada del vehículo y arrendador</td><td>3</td></tr>
+        <tr class="core-row"><td>8</td><td>US15</td><td>Realizar reserva de vehículo</td><td>5</td></tr>
+        <tr class="core-row"><td>9</td><td>US16</td><td>Cancelar reserva</td><td>3</td></tr>
+        <tr class="core-row"><td>10</td><td>US17</td><td>Confirmar inicio de alquiler</td><td>3</td></tr>
+        <tr class="core-row"><td>11</td><td>US18</td><td>Finalizar alquiler</td><td>3</td></tr>
+        <tr class="core-row"><td>12</td><td>US19</td><td>Vincular método de pago</td><td>3</td></tr>
+        <tr class="core-row"><td>13</td><td>US20</td><td>Pagar por alquiler al finalizar el uso</td><td>5</td></tr>
+        <tr class="core-row"><td>14</td><td>US24</td><td>Recibir liquidación automática después del pago</td><td>3</td></tr
+        <tr class="normal-row"><td>15</td><td>US01</td><td>Registrar usuario estudiante</td><td>3</td></tr>
+        <tr class="normal-row"><td>16</td><td>US02</td><td>Registrar usuario arrendador</td><td>3</td></tr>
+        <tr class="normal-row"><td>17</td><td>US03</td><td>Iniciar sesión en la aplicación</td><td>2</td></tr>
+        <tr class="normal-row"><td>18</td><td>US04</td><td>Recuperar contraseña</td><td>2</td></tr>
+        <tr class="normal-row"><td>19</td><td>US05</td><td>Editar información de perfil</td><td>3</td></tr>
+        <tr class="normal-row"><td>20</td><td>US46</td><td>Cerrar sesión</td><td>2</td></tr>
+        <tr class="normal-row"><td>21</td><td>US25</td><td>Validar identidad</td><td>3</td></tr>
+        <tr class="normal-row"><td>22</td><td>US11</td><td>Consultar historial de alquileres de mis vehículos</td><td>3</td></tr>
+        <tr class="normal-row"><td>23</td><td>US23</td><td>Consultar historial de pagos</td><td>2</td></tr>
+        <tr class="normal-row"><td>24</td><td>US26</td><td>Calificar al arrendador o arrendatario al finalizar un alquiler</td><td>2</td></tr>
+        <tr class="normal-row"><td>25</td><td>US27</td><td>Ver puntuación y reseñas de otros usuarios</td><td>2</td></tr>
+        <tr class="normal-row"><td>26</td><td>US29</td><td>Acceso a soporte o ayuda dentro de la app</td><td>2</td></tr>
+        <tr class="normal-row"><td>27</td><td>US30</td><td>Acceder a panel de control con métricas</td><td>3</td></tr>
+        <tr class="normal-row"><td>28</td><td>US31</td><td>Gestionar usuarios</td><td>3</td></tr>
+        <tr class="normal-row"><td>29</td><td>US32</td><td>Gestionar vehículos registrados</td><td>3</td></tr>
+        <tr class="normal-row"><td>30</td><td>US33</td><td>Monitorear reservas y pagos</td><td>3</td></tr>
+        <tr class="normal-row"><td>31</td><td>US34</td><td>Visualizar información general del servicio</td><td>3</td></tr>
+        <tr class="normal-row"><td>32</td><td>US35</td><td>Visualizar secciones de beneficios y características</td><td>3</td></tr>
+        <tr class="normal-row"><td>33</td><td>US39</td><td>Acceder al registro o inicio de sesión desde la landing</td><td>2</td></tr>
+        <tr class="normal-row"><td>34</td><td>US40</td><td>Visualizar diseño adaptable y atractivo</td><td>3</td></tr>
+        <tr class="rnf-row"><td>35</td><td>TS01</td><td>Implementar endpoints de autenticación y gestión de usuarios (IAM)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>36</td><td>TS02</td><td>Endpoints para publicación y administración de vehículos (Providing)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>37</td><td>TS03</td><td>Implementar endpoints del catálogo de vehículos (Vehicles)</td><td>3</td></tr>
+        <tr class="rnf-row"><td>38</td><td>TS04</td><td>Endpoints para gestión de reservas y alquileres (Renting)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>39</td><td>TS05</td><td>Endpoints para pagos y liquidaciones (Payments)</td><td>5</td></tr>
+        <tr class="rnf-row"><td>40</td><td>US21</td><td>Recibir confirmación de pago</td><td>2</td></tr>
+        <tr class="rnf-row"><td>41</td><td>US22</td><td>Recibir notificación de penalización si se excede el tiempo</td><td>3</td></tr>
+        <tr class="rnf-row"><td>42</td><td>US28</td><td>Recibir notificaciones importantes</td><td>3</td></tr>
+        <tr class="rnf-row"><td>43</td><td>SPIKE01</td><td>Geolocalización y mapas</td><td>3</td></tr>
+        <tr class="rnf-row"><td>44</td><td>SPIKE02</td><td>Notificaciones push y en tiempo real</td><td>3</td></tr>
+        <tr class="rnf-row"><td>45</td><td>SPIKE03</td><td>Escalabilidad y rendimiento en backend</td><td>5</td></tr>
+        <tr class="rnf-row"><td>46</td><td>SPIKE04</td><td>Seguridad y cumplimiento de datos</td><td>5</td></tr>
+    </tbody>
+</table>
 
 Link de Atlassian Jira: [https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9](https://upc-team-rhhq7so6.atlassian.net/jira/software/projects/US/boards/1/backlog?atlOrigin=eyJpIjoiZWM3ZmY5NTA3ZGU0NDIwNzg4OWNjNzFhZTEwM2I1YWIiLCJwIjoiaiJ9)
 ## 2.5. Strategic-Level Domain-Driven Design 
