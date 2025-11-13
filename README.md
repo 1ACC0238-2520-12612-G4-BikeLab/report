@@ -40,7 +40,8 @@
 |   Versión |   Fecha   |           Autor           |               Descripción  de modificación               |
 |-----------|-----------|---------------------------|-------------------------------------------|
 |   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones	|
-|   TP   | 09/09/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Capítulo III: Solution UI/UX Design** y **Capítulo IV: Product Implementation & Validation** |
+|   TP   | 09/10/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Capítulo III: Solution UI/UX Design** y **Capítulo IV: Product Implementation & Validation** |
+|   TB2   | 10/11/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Sprint 2** y **Desarrollo de la Aplicación Movil en Kotlin y Flutter** |
 
 ## Project Report Collaboration Insights 
 <h2> Student Outcome</h2>
@@ -63,11 +64,17 @@
         <strong>Giancarlo Castañeda - TP:</strong><br>
         Realicé la actualización y corrección de las <em>User Stories</em> para garantizar su coherencia con los criterios de aceptación y la priorización del <em>Product Backlog</em>. Apliqué conceptos de gestión ágil para estructurar correctamente el orden y tipo de historias (core, technical, spikes). Además, participé activamente en el desarrollo del <em>frontend</em>, implementando componentes visuales y funcionales de la aplicación siguiendo buenas prácticas de arquitectura y diseño. Finalmente, colaboré en la preparación y ejecución del <em>Sprint Review</em>, verificando la integración de las funcionalidades completadas y contribuyendo a la retroalimentación del equipo.
         <br><br>
+         <strong>Giancarlo Castañeda - TB2:</strong><br>
+        Realicé el desarrollo del <strong>Sprint 2</strong>, en el cual reforcé mis conocimientos en integración continua y despliegue de aplicaciones móviles. Implementé el proceso de deploy de  la aplicación Kotlin y participé en la programación y desarrollo de la aplicación en Flutter. Apliqué buenas prácticas de arquitectura limpia, manejo de estados y consumo de servicios REST, asegurando un flujo de trabajo estable y una correcta interoperabilidad entre módulos.
+        <br><br>
         <strong>Pedro Lecca – TB1:</strong><br>
         Implementé el <em>Tactical-Level Domain-Driven Design</em> del sistema, definiendo <strong>agregados</strong>, <strong>entidades</strong>, <strong>value objects</strong>, <strong>servicios de dominio</strong> y <strong>eventos de dominio</strong>; además, precisé invariantes y límites de consistencia para asegurar integridad transaccional. Aterricé el lenguaje ubicuo en cada agregado y alineé los repositorios y servicios de aplicación con las necesidades del negocio. Complementé el modelado con artefactos en <strong>UXPRESSIA</strong> (User Journey Mapping, Empathy Mapping, User Persona, User Task Matrix, Impact Mapping) para conectar las decisiones tácticas con hallazgos de usuario.
         <br><br>
         <strong>Pedro Lecca - TP:</strong><br>
         Implementé el backend monolítico de BikeLab en Spring Boot 3 / Java 21 aplicando DDD. Modelé y expuse los BC IAM, Renting, Vehicles, Providing y Payments con capas DDD, JWT con roles, PostgreSQL + JPA/Flyway, Swagger y Actuator; validaciones y reglas clave del ciclo de alquiler y pagos.
+        <br><br>
+         <strong>Pedro Lecca - TB2:</strong><br>
+        Desarrollé y desplegué el <strong>backend</strong> del sistema, fortaleciendo mis conocimientos en arquitectura de servicios y configuración de entornos productivos. Apliqué técnicas de integración con base de datos, seguridad y manejo de endpoints, garantizando la estabilidad y escalabilidad del sistema. Además, realicé pruebas de conexión entre el backend y la aplicación móvil, asegurando la correcta comunicación entre capas.
         <br><br>
         <strong>Henry Diaz - TB1:</strong><br>
         Redacté y estructuré las epics, logré definir las user stories y elaborar el product backlog, organizando los requerimientos de forma priorizada y alineada con los objetivos del proyecto. Además, detallé los criterios de aceptación en cada historia de usuario para garantizar claridad en el desarrollo y facilitar la validación de los entregables.
@@ -75,17 +82,25 @@
         <strong>Henry Diaz - TP:</strong><br>
         Realicé el apartado de software configuration management, software development environment configuration, source code style guide & conventions y software deployment configuration, definiendo el entorno de desarrollo y asegurando la coherencia entre los miembros del equipo.
         <br><br>
+        <strong>Henry Diaz - TB2:</strong><br>
+        Me encargué del diseño y desarrollo de la <strong>Landing Page</strong> del proyecto, aplicando buenas prácticas de diseño responsive y principios de accesibilidad. Implementé componentes visuales con estructura modular y estilos coherentes con la identidad visual de la aplicación. Esta tarea me permitió actualizar mis conocimientos en maquetación moderna, optimización de carga y experiencia de usuario web.
+        <br><br>
         <strong>Sebastián Hernández - TB1:</strong><br>
         Diseñé, elaboré y apliqué entrevistas a los segmentos objetivos (estudiantes universitarios y arrendadores). Preparé guías de preguntas, recopilé hallazgos y realicé análisis comparativo de respuestas, categorizando aspectos como confianza, medios de pago, disponibilidad y sostenibilidad. Sistematizé los resultados para que sirvieran como insumo directo en la definición de requisitos del sistema.
         <br><br>
         <strong>Sebastián Hernández - TP:</strong><br>
         A partir de la investigación realizada, desarrollé un análisis heurístico de usabilidad aplicando principios de <strong>Usability</strong>, <strong>Inclusive Design</strong> e <strong>Information Architecture</strong>. Clasifiqué los hallazgos según su severidad, documentando la tabla resumen y la descripción detallada de cada problema con recomendaciones priorizadas. Además, integré los resultados en un formato estandarizado para GitHub, facilitando su trazabilidad y uso como insumo directo para el desarrollo del producto y la priorización de mejoras de UX.
         <br><br>
+         <strong>Sebastián Hernández - TB2:</strong><br>
+        Brindé <strong>apoyo al desarrollo de la aplicación</strong>, participando en la revisión de funcionalidades, pruebas de interfaz y corrección de errores. Esta labor me permitió reforzar mis conocimientos en control de versiones, pruebas funcionales y trabajo colaborativo en entornos ágiles. Además, aporté en la validación visual y funcional de los módulos desarrollados durante el sprint.<br><br>
         <strong>Cameron Bustamante – TB1:</strong><br>
         Desarrollé los <strong>Bounded Context Software Architecture Component Level Diagrams</strong> y los <strong>Code Level Diagrams</strong> (incluyendo Domain Layer Class Diagrams y el Database Design Diagram), lo que me permitió actualizar mis conocimientos en arquitectura de software y profundizar en el modelado técnico aplicado a contextos delimitados. Además, elaboré los segmentos y antecedentes, reforzando mis competencias en investigación y análisis de usuarios.
         <br><br>
         <strong>Cameron Bustamante – TP:</strong><br>
         Diseñé la <strong>experiencia y la interfaz de usuario (UX/UI)</strong> de BikeLab, elaborando <em>wireframes</em>, <em>wireflows</em> y prototipos interactivos en Figma basados en los hallazgos de investigación. Apliqué principios de <strong>usabilidad</strong> y <strong>diseño centrado en el usuario</strong>, asegurando coherencia visual y accesibilidad en todas las pantallas del sistema.
+        <br><br>
+        <strong>Cameron Bustamante - TB2:</strong><br>
+        Me enfoqué en la <strong>corrección y optimización del User Flow</strong> de la aplicación, analizando los flujos de navegación, validando la coherencia entre pantallas y mejorando la experiencia del usuario final. Apliqué principios de <em>User Experience</em> y técnicas de diseño centrado en el usuario para simplificar la interacción y reducir fricciones en la navegación general.
       </td>
       <td>
         <strong>TB1:</strong><br>
@@ -93,6 +108,9 @@
         <br><br>
         <strong>TP:</strong><br>
         Como grupo, desarrollamos el diseño UI-UX del proyecto, definiendo la estructura visual y la experiencia de usuario a partir de los requerimientos levantados. Además, ejecutamos nuestro primer sprint, en el cual implementamos tanto el frontend como el backend inicial del sistema. Estas actividades reforzaron nuestras competencias en el desarrollo colaborativo de soluciones de software, la aplicación de principios de arquitectura limpia y la integración entre capas de la aplicación. Asimismo, nos permitieron afianzar conocimientos técnicos en frameworks modernos y metodologías ágiles, consolidando un flujo de trabajo más organizado y orientado a la entrega de valor continuo.
+        <br><br>
+        <strong>TB2:</strong><br>
+        Como grupo concluimos que el segundo sprint nos permitió consolidar nuestros conocimientos técnicos en desarrollo y despliegue de soluciones de software. Cada integrante aplicó aprendizajes específicos —desde el backend hasta la experiencia de usuario—, integrando los distintos componentes del sistema en un entorno funcional. Este avance fortaleció nuestras competencias en trabajo colaborativo, gestión ágil y aplicación práctica de herramientas modernas para el desarrollo de software completo.
       </td>
     </tr>
     <tr>
@@ -104,11 +122,17 @@
         <strong>Giancarlo Castañeda - TP:</strong><br>
         A lo largo del desarrollo del proyecto, reforcé mis conocimientos en gestión ágil y en la organización de requerimientos mediante la corrección de <em>User Stories</em> y la actualización del <em>Product Backlog</em>. Además, amplié mis habilidades en desarrollo frontend, aplicando buenas prácticas en la implementación de vistas e integración con el backend.
         <br><br>
+         <strong>Giancarlo Castañeda - TB2:</strong><br>
+        A lo largo del Sprint 2, reconocí la importancia del aprendizaje continuo al enfrentar nuevos retos en la configuración de entornos de despliegue y el desarrollo multiplataforma con Flutter. Adquirí nuevos conocimientos en integración de APIs y buenas prácticas de testing móvil, reafirmando la necesidad de mantener una actualización constante en tecnologías emergentes.
+        <br><br>
         <strong>Pedro Lecca – TB1:</strong><br>
         Investigué prácticas recomendadas para modelado táctico (diseño de agregados, partición de transacciones, publicación de eventos) y las adapté al contexto de Bikelab. Iteré los diagramas y las vistas de arquitectura con feedback del equipo, refinando límites de agregados y reglas de negocio. Documenté trade-offs (consistencia vs. rendimiento, sincrónico vs. asincrónico) y ajusté los artefactos de UXPRESSIA para mantenerlos alineados con el diseño del dominio.
         <br><br>
         <strong>Pedro Lecca - TP:</strong><br>
         Apliqué buenas prácticas para agregados, transacciones y eventos; iteré endpoints y configuraciones (seguridad, migraciones, perfiles) y añadí pruebas básicas de servicios/seguridad.
+        <br><br>
+         <strong>Pedro Lecca - TB2:</strong><br>
+        Profundicé en la automatización del despliegue y configuración de entornos backend, aplicando nuevos enfoques de arquitectura de software y DevOps. Comprendí que la mejora continua es clave para mantener la calidad y escalabilidad de los proyectos, y que el aprendizaje constante permite adaptarse a nuevas herramientas y metodologías de integración continua.
         <br><br>
         <strong>Henry Diaz - TB1:</strong><br>
         Investigué las mejores prácticas para la gestión de requisitos en proyectos de software, adapté ejemplos de referencia al caso específico de Bikelab y elaboré las epics, user stories y el product backlog. Además, realicé los ajustes necesarios para que la planificación y priorización de funcionalidades se alinearan con un escenario real de desarrollo.
@@ -116,14 +140,23 @@
         <strong>Henry Diaz - TP:</strong><br>
         Reconocí la importancia del aprendizaje continuo al gestionar la configuración, entorno y despliegue del software en BikeLab, fortaleciendo mis habilidades en desarrollo y buenas prácticas de ingeniería.
         <br><br>
+        <strong>Henry Diaz - TB2:</strong><br>
+        Durante la implementación de la Landing Page, reforcé mis habilidades en diseño web y aprendí nuevas herramientas y técnicas para la optimización del rendimiento y accesibilidad. Este proceso me permitió comprender la relevancia del aprendizaje permanente en un entorno de tecnologías cambiantes, especialmente en el desarrollo de interfaces modernas y eficientes.
+        <br><br>
         <strong>Sebastián Hernández - TB1:</strong><br>
         Investigué metodologías y buenas prácticas para el diseño y análisis de entrevistas en proyectos de software. Ajusté las guías al contexto de Bikelab y realicé un análisis de patrones de respuesta para validar hipótesis iniciales. Además, documenté aprendizajes sobre cómo la investigación de usuarios contribuye a construir soluciones más precisas y alineadas con escenarios reales.
+        <br><br>
+        <strong>Sebastián Hernández - TB2:</strong><br>
+        A través del apoyo al desarrollo, fortalecí mis competencias en control de calidad y pruebas de software, comprendiendo la relevancia del aprendizaje permanente para mejorar la eficiencia en la colaboración técnica y en la resolución de problemas dentro de un entorno ágil.
         <br><br>
         <strong>Cameron Bustamante – TB1:</strong><br>
         Investigué referentes y buenas prácticas de modelado para la elaboración de Component Level Diagrams, Class Diagrams y Database Design Diagrams aplicados a contextos delimitados. A partir de ello, actualicé mis conocimientos en patrones de diseño y arquitectura, reconociendo la necesidad de mantener un aprendizaje continuo para poder aplicar enfoques técnicos modernos y alineados con escenarios reales en proyectos de software.
         <br><br>
         <strong>Cameron Bustamante – TP:</strong><br>
         Reconocí la importancia del <strong>aprendizaje continuo</strong> al aplicar nuevas metodologías y herramientas de diseño UX/UI. La iteración y validación de los prototipos me permitió mejorar mis habilidades técnicas y comprender cómo el diseño contribuye al desarrollo integral de soluciones de software
+        <br><br>
+         <strong>Cameron Bustamante - TB2:</strong><br>
+        Al realizar la corrección del User Flow, adquirí nuevos conocimientos sobre análisis de experiencia de usuario y validación de flujos interactivos. Este proceso me reafirmó la importancia de mantener una actitud de aprendizaje constante para adaptar las decisiones de diseño a las necesidades cambiantes de los usuarios y del producto
       </td>
       <td>
         <strong>TB1:</strong><br>
@@ -131,6 +164,9 @@
         <br><br>
         <strong>TP:</strong><br>
         Como grupo, reconocimos la importancia del aprendizaje continuo para adaptarnos a los retos técnicos y de diseño presentes durante el desarrollo del proyecto. La ejecución del primer sprint nos permitió aplicar nuevas herramientas y metodologías en el desarrollo del frontend y backend, fortaleciendo nuestras competencias técnicas y de trabajo colaborativo. Además, comprendimos que el aprendizaje permanente no solo implica adquirir nuevos conocimientos, sino también mejorar nuestros procesos, comunicación y capacidad de respuesta ante los cambios del entorno del proyecto.
+        <br><br>
+        <strong>TB2:</strong><br>
+        Como grupo reconocimos que el aprendizaje permanente fue esencial para superar los desafíos técnicos y de integración del Sprint 2. El proyecto nos permitió aprender nuevas herramientas, adaptarnos a distintos entornos tecnológicos y reforzar habilidades de trabajo colaborativo. Este proceso nos demostró que la actualización constante es una parte fundamental del desarrollo profesional en el ámbito del software y que cada reto técnico representa una oportunidad de crecimiento y mejora continua.
       </td>
     </tr>
   </tbody>
