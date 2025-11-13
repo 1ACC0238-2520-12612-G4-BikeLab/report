@@ -6,11 +6,11 @@
 
 ### **Ingeniería de Software**
 
-#### **Periodo 2025-02**
+#### **Periodo 202520**
 
 #### Aplicaciones para Dispositivos Móviles
 
-#### **Sección:** 12612
+#### **NRC:** 12612
 
 #### **Docente:** David Gerardo Quevedo Velasco
 
@@ -18,18 +18,18 @@
 
 #### “Informe de Trabajo Final”
 
-**Nombre del StartUp:** *Ridera*  
+**Nombre del StartUp:** *BikeLab*  
 **Nombre del Producto:** *BikeLab*
 
 ---
 
 #### Relación de Integrantes
 
-U20231a804 — Cameron Charllotte Bustamante Leveau  
-U202310601 — Giancarlo Santiago Castañeda Guimas  
-U201819674 — Henry Kevin Diaz Gutierrez  
-U20231c996 — Sebastian Eduardo Hernandez Poma  
-U202223293 — Pedro Omar Lecca Villalobos  
+U20231a804 — Bustamante Leveau, Cameron Charllotte   
+U202310601 — Castañeda Guimas, Giancarlo Santiago  
+U201819674 — Diaz Gutierrez, Henry Kevin   
+U20231c996 — Hernandez Poma, Sebastian Eduardo   
+U202223293 — Lecca Villalobos, Pedro Omar   
 
 ---
 
