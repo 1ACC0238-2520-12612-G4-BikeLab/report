@@ -1,43 +1,57 @@
-<div align="center">
-  
-<img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC">
+<div align="center" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; line-height: 1.8; font-family: 'Segoe UI', Arial, sans-serif;">
 
-**Universidad Peruana de Ciencias Aplicadas**
+<img src="/assets/images/UPC_logo_transparente.png" alt="Logo UPC" width="180">
 
-**Ingeniería de software**
+### **Universidad Peruana de Ciencias Aplicadas**
 
-**Periodo 2025-02**
+### **Ingeniería de Software**
 
-**Aplicaciones para Dispositivos Móviles**
+#### **Periodo 2025-02**
 
-**Sección:** 12612
+#### Aplicaciones para Dispositivos Móviles
 
-**Docente:** David Gerardo Quevedo Velasco
+#### **Sección:** 12612
 
-**"Informe de Trabajo Final"**
+#### **Docente:** David Gerardo Quevedo Velasco
 
-**Nombre del StartUp:* Ridera* 
+---
 
-**Nombre del Producto:* BikeLab* 
+#### “Informe de Trabajo Final”
+
+**Nombre del StartUp:** *Ridera*  
+**Nombre del Producto:** *BikeLab*
+
+---
+
+#### Relación de Integrantes
+
+U20231a804 — Cameron Charllotte Bustamante Leveau  
+U202310601 — Giancarlo Santiago Castañeda Guimas  
+U201819674 — Henry Kevin Diaz Gutierrez  
+U20231c996 — Sebastian Eduardo Hernandez Poma  
+U202223293 — Pedro Omar Lecca Villalobos  
+
+---
+
+Noviembre, 2025
 
 
-
-
-**Relación de Integrantes:**
-
-U20231a804, Cameron Charllotte Bustamante Leveau 
-U202310601, Giancarlo Santiago Castañeda Guimas  
-U201819674,  Henry Kevin Diaz Gutierrez           
-U20231c996, Sebastian Eduardo Hernandez Poma          
-U202223293, Pedro Omar Lecca Villalobos         
-
-
-
-**Noviembre, 2025**
 
 
 </div>
----
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Registro de Versiones del Informe
 
