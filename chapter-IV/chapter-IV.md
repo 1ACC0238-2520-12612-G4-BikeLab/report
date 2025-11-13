@@ -169,6 +169,10 @@ Se requieren varias mejoras y documentar los avences por más commits en vez de 
 | [https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend) | main   | 5a0a23a   | feat(backend): initialize bikelab-backend project | Estructura DDD con BCs: IAM (register, login, me, admin/users); Providing (onboarding, kyc, approve, reject); Vehicles (CRUD, search, availability block/unblock, own); Renting (create, start, finish, cancel, mine/own); Payments (methods, authorize, capture, refund, payouts). Swagger habilitado y protegido con JWT; configuración inicial de PostgreSQL. | 2025-10-08         |
 
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review 
+
+Para la validación de las US en este Sprint realizamos el archivo UserStoriesValidation.Feature, utilizando todas las user stories para validarlas mediante el formato Gherkin
+Link de la documentación: [https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature](https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature)
+
 ##### 4.2.1.5. Execution Evidence for Sprint Review 
 
 #### **LANDING PAGE**
@@ -568,6 +572,9 @@ ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO b
 
 ##### 4.2.2.4. Testing Suite Evidence for Sprint Review 
 
+Para la validación de las US en este Sprint realizamos el archivo UserStoriesValidation.Feature, utilizando todas las user stories para validarlas mediante el formato Gherkin
+Link de la documentación: [https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature](https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature)
+
 ##### 4.2.2.5. Execution Evidence for Sprint Review 
 
 #### **LANDING PAGE**
@@ -699,7 +706,21 @@ Link de la aplicación en Firebase: [https://appdistribution.firebase.dev/i/c7d6
 
 #### **LANDING PAGE**
 
+<div align="center">
+<img src="/assets/images/insightslps2.PNG" alt="Insights Landing Page Sprint 2" width=auto>
+</div>
+
 #### **MOBILE APP**
+
+<div align="center">
+<img src="/assets/images/insightsfes2.PNG" alt="Insights Front-End Sprint 2" width=auto>
+</div>
+
+#### **WEB SERVICES**
+
+<div align="center">
+<img src="/assets/images/insightsbes2.PNG" alt="Insights Back-end Sprint 2" width=auto>
+</div>
 
 #### 4.2.3. Sprint 3
 
