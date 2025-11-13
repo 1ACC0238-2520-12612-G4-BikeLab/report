@@ -19,12 +19,6 @@
   
 - Desarrollar no solo competencias técnicas, sino también habilidades blandas como liderazgo, negociación y resolución de conflictos, que resultan esenciales en contextos colaborativos
   
-# Video App Validation
-
-# Video About the Product
-
-# Video About-the-Team
-
 # Bibliografía
 - Özkan, O., Babur, Ö., & van den Brand, M. (2023). Domain-Driven Design in Software Development: A Systematic Literature Review on Implementation, Challenges, and Effectiveness. arXiv [https://arxiv.org/abs/2310.01905?](https://arxiv.org/abs/2310.01905?)
   
@@ -61,10 +55,10 @@
 ### TB1:
 - [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/EdEf_qJdv0hNn06RNkHx8P8BkrSQ-S__3hV_-00CnpIsrg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=OL74Uz)
 
-### About The Product:
+# About The Product:
 - Youtube: [https://youtu.be/mzjE_LIRTQo](https://youtu.be/mzjE_LIRTQo)
 - Microsoft Stream: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQBxMXVJBk-kTqGQ18k63GvnAcKwF5xWWN4fA1gxog9uoVo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IqsSff](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQBxMXVJBk-kTqGQ18k63GvnAcKwF5xWWN4fA1gxog9uoVo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=IqsSff)
 
-### About The Team:
+# About The Team:
 - Youtube: [https://youtu.be/SruqaTmF4wc](https://youtu.be/SruqaTmF4wc)
 - Microsoft Stream: [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQAT3_KRElnPQ6h79jphXSOFAeTCm4yRGEd8dtokKur-bN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=iBe0hZ](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202310601_upc_edu_pe/IQAT3_KRElnPQ6h79jphXSOFAeTCm4yRGEd8dtokKur-bN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=iBe0hZ)
