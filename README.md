@@ -46,7 +46,6 @@ U202223293, Pedro Omar Lecca Villalobos
 |   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones	|
 |   TP   | 09/09/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Capítulo III: Solution UI/UX Design** y **Capítulo IV: Product Implementation & Validation** |
 
-## Project Report Collaboration Insights 
 <h2> Student Outcome</h2>
 
 <table border="1" cellpadding="8" cellspacing="0" width="100%">
@@ -147,6 +146,9 @@ U202223293, Pedro Omar Lecca Villalobos
 <img src="/assets/images/insights1.PNG">  
 <img src="/assets/images/insights2.PNG">  
 
+### **TP**
+<img src="/assets/images/insightstp.PNG">  
+<img src="/assets/images/insightstp2.PNG">  
 
 ## Objetivos SMART
 
