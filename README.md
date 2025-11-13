@@ -193,6 +193,9 @@ Noviembre, 2025
 <img src="/assets/images/insightstp.PNG">  
 <img src="/assets/images/insightstp2.PNG">  
 
+### **TB2**
+<img src="/assets/images/Insightss2.PNG">  
+
 ## Objetivos SMART
 
 - Giancarlo Castañeda
