@@ -134,22 +134,72 @@ El objetivo principal del Sprint 1 fue establecer la base del backend del sistem
 | US05              | Reservas de Vehículos       | T16         | Endpoints `POST /bookings/{id}/start` y `/finish`             | Iniciar y finalizar alquiler                           | 6                      | Pedro Lecca | To-Review                                          |
 | US05              | Reservas de Vehículos       | T17         | Endpoint `DELETE /bookings/{id}`                              | Cancelar reserva                                       | 3                      | Pedro Lecca | Done                                               |
 | US05              | Reservas de Vehículos       | T18         | Endpoints `GET /bookings/mine` y `/own`                       | Listar reservas de cliente y de mis vehículos          | 4                      | Pedro Lecca | Done                                               |
+| **US07** | Registrar una bicicleta o scooter en la app | **T21** | Implementación lógica de registro de vehículos | Desarrollar la lógica de negocio para registrar un nuevo vehículo. | 7 | Giancarlo Castañeda | Done |
+| **US08** | Editar información de un vehículo registrado | **T22** | Implementación lógica de edición de vehículos | Desarrollar la lógica de negocio para modificar los datos de un vehículo existente. | 7 | Giancarlo Castañeda | Done |
+| **US10** | Eliminar vehículo de la aplicación | **T23** | Implementación lógica de eliminación de vehículos | Desarrollar la lógica para marcar un vehículo como eliminado/inactivo. | 7 | Giancarlo Castañeda | Done |
+| **US15** | Realizar reserva de vehículo | **T24** | Implementación lógica de la reserva | Desarrollar la lógica de negocio para crear y validar una nueva reserva. | 7 | Giancarlo Castañeda | Done |
+| **US16** | Cancelar reserva | **T25** | Implementación lógica de la cancelación | Desarrollar la lógica de negocio para anular una reserva con validaciones de tiempo. | 7 | Giancarlo Castañeda |  Done |
+| **US34** | Visualizar información general del servicio | **T26** | Implementación del componente de información general | Desarrollar el componente de frontend para visualizar la información principal. | 5 | Henry Diaz |  Done |
+| **US35** | Visualizar secciones de beneficios y características | **T27** | Implementación de componentes de beneficios | Desarrollar los componentes de frontend para mostrar secciones de beneficios y características. | 5 | Henry Diaz |  Done |
+| **US37** | Visualizar diseño adaptable y atractivo | **T28** | Refactorización de diseño adaptable (Responsive) | Asegurar que el diseño de la landing page y componentes clave sea responsive. | 5 | Henry Diaz |  Done |
 | —                 | Tareas Generales            | T19         | Swagger + JWT en Swagger UI                                   | Documentación y autorización por token                 | 3                      | Pedro Lecca         | Done                                               |
 | —                 | Tareas Generales            | T20         | Configuración PostgreSQL                                      | Esquema base y conexión                                | 4                      | Pedro Lecca | Done                                               |
 
-
 ### 4.2.1.3. Development Evidence for Sprint Review
 
+#### **LANDING PAGE**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | f90e7b4   | Add files via upload | - | 2025-10-07         |
+
+#### **MOBILE APP**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend) | main   | 0270f0e | feat: initial BikeLab3 app (Compose + Navigation + Drawer + Login offline) | - | 2025-10-07         |
+
+#### **WEB SERVICE**
 Durante el Sprint 1 se inicializó el backend y, en un único commit, se incorporaron los cinco *bounded contexts* (**IAM**, **Providing**, **Vehicles**, **Renting**, **Payments**), junto con la configuración base (**Spring Boot 3**, **PostgreSQL**, **Swagger**, **JWT**).
 
 Se requieren varias mejoras y documentar los avences por más commits en vez de hacerlo en uno solo restaurar cambios y tener más evidencia, esa mejora se hará en el siguiente sprint.
 
 | Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
 | -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| leccapedro/bikelab-backend | main   | 5a0a23a   | feat(backend): initialize bikelab-backend project | Estructura DDD con BCs: IAM (register, login, me, admin/users); Providing (onboarding, kyc, approve, reject); Vehicles (CRUD, search, availability block/unblock, own); Renting (create, start, finish, cancel, mine/own); Payments (methods, authorize, capture, refund, payouts). Swagger habilitado y protegido con JWT; configuración inicial de PostgreSQL. | 2025-10-08         |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/backend) | main   | 5a0a23a   | feat(backend): initialize bikelab-backend project | Estructura DDD con BCs: IAM (register, login, me, admin/users); Providing (onboarding, kyc, approve, reject); Vehicles (CRUD, search, availability block/unblock, own); Renting (create, start, finish, cancel, mine/own); Payments (methods, authorize, capture, refund, payouts). Swagger habilitado y protegido con JWT; configuración inicial de PostgreSQL. | 2025-10-08         |
 
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review 
+
+Para la validación de las US en este Sprint realizamos el archivo UserStoriesValidation.Feature, utilizando todas las user stories para validarlas mediante el formato Gherkin
+Link de la documentación: [https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature](https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature)
+
 ##### 4.2.1.5. Execution Evidence for Sprint Review 
+
+#### **LANDING PAGE**
+
+<div align="center">
+<img src="/assets/images/evidencelp1.PNG" alt="Evidencia 1" width=auto>
+</div>
+<div align="center">
+<img src="/assets/images/evidencelp2.PNG" alt="Evidencia 2" width=auto>
+</div>
+<div align="center">
+<img src="/assets/images/evidencelp3.PNG" alt="Evidencia 3" width=auto>
+</div>
+#### **MOBILE APP**
+<div align="center">
+<img src="/assets/images/evidenciaam1.PNG" alt="Evidencia 4" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/evidenciaam2.PNG" alt="Evidencia 5" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/evidenciaam3.PNG" alt="Evidencia 6" width=auto>
+</div>
+
+#### **WEB SERVICE**
 
 Durante el Sprint 1 se habilitó el backend monolítico documentado con Swagger y protección JWT. A continuación, se presentan las evidencias de ejecución por *bounded context*, con un breve texto introductorio, una tabla de endpoints y un espacio para adjuntar la captura correspondiente.
 
@@ -316,9 +366,416 @@ Durante el Sprint 1 se documentaron los servicios con **OpenAPI/Swagger** y se h
 
 ##### 4.2.1.8. Team Collaboration Insights during Sprint 
 
+**Landing Page**
+
+<img src="/assets/images/insightslanding.PNG" alt="Insights Landing" width=auto>
+
+**App Movil**
+
+<img src="/assets/images/insightsfront.PNG" alt="Insights Frontend" width=auto>
+
 **Primera versión del backend:**
 
 <img src="/assets/images/backend-commits.png" alt="GitHub commits — Backend Sprint 1" width=auto>
+
+#### 4.2.2. Sprint 2
+
+##### 4.2.2.1. Sprint Planning 2
+
+| **Campo**                            | **Detalle**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sprint #**                         | Sprint 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Date**                             | 2025-11-10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Time**                             | 09:00 AM – 10:30 AM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Location**                         | Reunión virtual vía Discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Prepared By**                      | Giancarlo Santiago Castañeda Guimas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Attendees (to planning meeting)**  | Pedro Omar Lecca Villalobos / Cameron Charllotte Bustamante Leveau / Giancarlo Santiago Castañeda Guimas / Henry Kevin Díaz Gutiérrez / Sebastián Eduardo Hernández Poma                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Sprint n−2 Review Summary**        | Correción del Sprint 1, desarrollo y deploy por completo del backend, primera versión de la aplicación deployada                                                                                                                                                                                                                             |
+| **Sprint n−2 Retrospective Summary** | Pudimos tener una mejor comunicación y saber corregir nuestros errores, gracias a ello tuvimos un ritmo de trabajo mejor y mas ordenado                                                                                                                                                                                                        |
+| **Sprint 2 Goal**                    | Desarrollar la aplicación movil en flutter, desplegar la 1era versión de la app movil de kotlin y tener listo el backend deployado                                                                                                                                                                                                          |
+| **Sprint 2 Velocity**                | 50 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**              | 48 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+##### 4.2.2.2. Sprint Backlog 2
+
+| **User Story Id** | **User Story Title**                                                 | **Task Id** | **Task Title**                                     | **Description**                                                                                                                                                         | **Estimation (Hours)** | **Assigned To**     | **Status** |
+| ----------------- | -------------------------------------------------------------------- | ----------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- | ------------------- | ---------- |
+| **US09**          | Marcar vehículo disponible/no disponible                             | **T01**     | Implementar cambio de estado de disponibilidad     | Desarrollar la lógica de negocio para habilitar/deshabilitar un vehículo para alquiler.                                                                                 | 5                      | Giancarlo Castañeda | Done       |
+| **US10**          | Eliminar vehículo de la aplicación                                   | **T02**     | Implementar eliminación lógica de vehículo         | Desarrollar la función para eliminar lógicamente un vehículo de las publicaciones.                                                                                      | 7                      | Giancarlo Castañeda | Done       |
+| **US11**          | Consultar historial de alquileres de mis vehículos                   | **T03**     | Implementar historial de alquileres de vehículos   | Implementar la consulta del historial de alquileres por vehículo.                                                                                                       | 5                      | Giancarlo Castañeda | Done       |
+| **US26**          | Calificar al arrendador o arrendatario                               | **T04**     | Implementar UI y lógica de sistema de calificación | Interfaz para ingresar estrellas y comentarios después de un alquiler.                                                                                                  | 6                      | Giancarlo Castañeda | Done       |
+| **US27**          | Ver puntuación y reseñas de otros usuarios                           | **T05**     | Implementar visualización de puntuación y reseñas  | Componentes para mostrar calificaciones y comentarios.                                                                                                                  | 7                      | Giancarlo Castañeda | Done       |
+| **TS02**          | Endpoints para publicación y administración de vehículos (Providing) | **T06**     | Revisión e integración de Endpoints de Publicación | Revisión y documentación de endpoints para la gestión de vehículos.                                                                                                     | 5                      | Pedro Lecca         | Done       |
+| **TS03**          | Implementar endpoints del catálogo de vehículos (Vehicles)           | **T07**     | Revisión e integración de Endpoints de Catálogo    | Revisión y documentación de endpoints de búsqueda y catálogo.                                                                                                           | 6                      | Pedro Lecca         | Done       |
+| **TS04**          | Endpoints para gestión de reservas y alquileres (Renting)            | **T08**     | Revisión e integración de Endpoints de Renting     | Revisión y documentación de endpoints de reservas y alquileres.                                                                                                         | 7                      | Pedro Lecca         | Done       |
+| **TS05**          | Endpoints para pagos y liquidaciones (Payments)                      | **T09**     | Revisión e integración de Endpoints de Pagos       | Revisión y documentación de endpoints de pagos y liquidaciones.                                                                                                         | 8                      | Pedro Lecca         | Done       |
+| **SPIKE01**       | Geolocalización y mapas                                              | **T10**     | Ejecución de Spike de Geolocalización (API Mapas)  | Investigar, probar y documentar la mejor API de mapas para visualización.                                                                                               | 6                      | Giancarlo Castañeda | Done       |
+| **US40**          | Visualizar métricas generales del sistema (Metrics BC)               | **T11**     | **Implementar bounded context “Metrics”**          | Crear BC independiente que expone métricas del sistema (total usuarios, proveedores, reservas, ingresos simulados, etc.). Documentar endpoints y exponerlos en Swagger. | 6                      | **Pedro Lecca**     | Done       |
+
+##### 4.2.2.3. Development Evidence for Sprint Review 
+
+#### **MOBILE APP**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend](https://github.com/1ACC0238-2520-12612-G4-BikeLab/frontend) | main   | e212f9d | feat: add google maps api and firebase upload | - | 2025-11-12         |
+
+#### **LANDING PAGE**
+
+| Repository                 | Branch | Commit Id | Commit Message                                    | Commit Message Body                                                                                                                                                                                                                                                                                                                                              | Commited on (Date) |
+| -------------------------- | ------ | --------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | bb944d2  | Add files via upload | - | 2025-11-12         |
+| [https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing](https://github.com/1ACC0238-2520-12612-G4-BikeLab/BikeLab_Landing) | main   | e71e428  | Update privacy.html | - | 2025-11-12         |
+
+## **WEB SERVICE — BACKEND DEPLOYMENT**
+
+Durante el Sprint 2 se realizó el **despliegue completo del backend monolítico en un servidor VPS Ubuntu**, utilizando **Docker** para contenerizar la aplicación Spring Boot previamente compilada. Este proceso permitió que el servicio quedara accesible públicamente a través del puerto **8080**, con Swagger habilitado y conexión estable hacia PostgreSQL.
+
+### **1. Instalación de Docker en el VPS**
+
+Para habilitar el despliegue mediante contenedores, se instaló Docker en el servidor Linux ejecutando:
+
+```
+sudo apt update
+sudo apt install -y docker.io
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+Se validó la instalación con:
+
+```
+docker ps
+docker images
+```
+
+<img width="814" height="93" alt="image" src="https://github.com/user-attachments/assets/5ee9be24-b159-4b76-99b5-71b860ae7cf0" />
+
+---
+
+### **2. Construcción del contenedor del backend**
+
+En la carpeta del proyecto se generó el artefacto `.jar` mediante Maven:
+
+```
+mvn clean package -DskipTests
+```
+
+<img width="908" height="142" alt="image" src="https://github.com/user-attachments/assets/1429131c-f61c-4e6a-80da-3ebae4055cbf" />
+<img width="1606" height="257" alt="image" src="https://github.com/user-attachments/assets/1ffd7403-9acb-4a2e-80b1-770e96a8b622" />
+
+Luego se creó el archivo **Dockerfile**, basado en una imagen ligera de Eclipse Temurin:
+
+```dockerfile
+FROM eclipse-temurin:21-jre-alpine
+WORKDIR /app
+COPY target/bikelab-0.0.1-SNAPSHOT.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]
+```
+
+<img width="1896" height="987" alt="Captura de pantalla 2025-11-13 155107" src="https://github.com/user-attachments/assets/f92059d5-035a-412b-8633-249ead5b0ff9" />
+
+Con el Dockerfile listo, se construyó la imagen:
+
+```
+docker build -t bikelab-backend .
+```
+<img width="1382" height="993" alt="Captura de pantalla 2025-11-13 160437" src="https://github.com/user-attachments/assets/1017947d-d058-4f4c-8752-11f8c070b67c" />
+<img width="870" height="251" alt="Captura de pantalla 2025-11-13 160716" src="https://github.com/user-attachments/assets/e7cedf25-7d4d-4345-b9a2-eb42820dbfc9" />
+
+La imagen se generó correctamente y aparece listada con:
+
+```
+docker images
+```
+
+<img width="804" height="102" alt="Captura de pantalla 2025-11-13 160810" src="https://github.com/user-attachments/assets/4a532d2f-fe10-4a16-ae5a-288d043b8a15" />
+
+---
+
+### **3. Ejecución del contenedor usando la red del host**
+
+Ejecución final del backend:
+
+```
+docker run -d \
+  --name bikelab-backend \
+  --network host \
+  bikelab-backend
+```
+
+<img width="1061" height="135" alt="Captura de pantalla 2025-11-13 160835" src="https://github.com/user-attachments/assets/2f8d12b8-d3c3-4271-9f40-532e04266635" />
+
+Verificación del contenedor activo:
+
+```
+docker ps
+```
+
+<img width="1296" height="417" alt="Captura de pantalla 2025-11-13 160915" src="https://github.com/user-attachments/assets/d71b4bf2-32bb-411d-baef-6a270bf25f8a" />
+
+---
+
+### **4. Configuración del Firewall en Azure**
+
+Se creó una regla VPC para exponer el backend públicamente:
+
+* **Nombre:** allow-backend-8080
+* **Red:** default
+* **Dirección:** Ingress
+* **Origen:** `0.0.0.0/0`
+* **Protocolo/puertos:** TCP:8080
+* **Acción:** Allow
+
+Esta regla permitió acceder al backend desde internet.
+
+---
+
+### **5. Acceso al servicio y a Swagger**
+
+Una vez el contenedor estuvo corriendo correctamente y el firewall configurado, Swagger quedó disponible desde la IP pública del VPS:
+
+```
+http://http://34.16.215.14:8080/swagger-ui/index.html
+```
+
+<img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/3dda64d8-c487-4aa0-be2e-fa9a62f54ccc" />
+<img width="1893" height="745" alt="image" src="https://github.com/user-attachments/assets/9305bbc9-652b-4922-a142-6a6313b52234" />
+
+---
+
+### **6. Conexión con PostgreSQL**
+
+El backend logró conectarse correctamente a PostgreSQL (instancia local del VPS) gracias al uso de `--network host` y a la configuración existente en el jar.
+
+Además, se ajustaron permisos del usuario `bikeuser` para permitir migraciones Flyway:
+
+```
+GRANT ALL PRIVILEGES ON DATABASE bikelab TO bikeuser;
+GRANT ALL ON SCHEMA public TO bikeuser;
+ALTER SCHEMA public OWNER TO bikeuser;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO bikeuser;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO bikeuser;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO bikeuser;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO bikeuser;
+```
+
+---
+
+### **7. Resultado final del Sprint 2**
+
+* El backend quedó **contenedorizado y ejecutándose de forma estable**.
+* Swagger accesible públicamente desde la IP del servidor.
+* Conexión validada con PostgreSQL.
+* Docker funcionando como entorno de despliegue en producción inicial.
+* El backend del Sprint 2 quedó funcional y operativo para la aplicación móvil.
+
+##### 4.2.2.4. Testing Suite Evidence for Sprint Review 
+
+Para la validación de las US en este Sprint realizamos el archivo UserStoriesValidation.Feature, utilizando todas las user stories para validarlas mediante el formato Gherkin
+Link de la documentación: [https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature](https://github.com/1ACC0238-2520-12612-G4-BikeLab/report/blob/develop/Features/UserStoriesValidation.feature)
+
+##### 4.2.2.5. Execution Evidence for Sprint Review 
+
+#### **LANDING PAGE**
+
+<div align="center">
+<img src="/assets/images/s2evidencialp.PNG" alt="Landing Page Evidencia 1 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/s2evidencialp2.PNG" alt="Landing Page Evidencia 2 Sprint 2" width=auto>
+</div>
+
+#### **MOBILE APP**
+
+<div align="center">
+<img src="/assets/images/amexecution1.jpg" alt="Front-End Evidencia 1 Sprint 2" width=300>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution2.jpg" alt="Front-End Evidencia 2 Sprint 2" width=300>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution3.jpg" alt="Front-End Evidencia 3 Sprint 2" width=300>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution4.jpg" alt="Front-End Evidencia 4 Sprint 2" width=300>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution5.jpg" alt="Front-End Evidencia 5 Sprint 2" width=300>
+</div>
+
+<div align="center">
+<img src="/assets/images/amexecution6.jpg" alt="Front-End Evidencia 6 Sprint 2" width=300>
+</div>
+
+##### 4.2.2.6. Services Documentation Evidence for Sprint Review 
+
+## **WEB SERVICE — BACKEND DEPLOYMENT**
+
+### **1. Swagger UI desplegado en entorno VPS (Producción Inicial)**
+
+El servidor expone correctamente los endpoints REST descritos en los *bounded contexts* del backend (**IAM**, **Providing**, **Vehicles**, **Renting**, **Payments**, **Metrics**), accesibles vía navegador a través de:
+
+```
+http://http://34.16.215.14:8080/swagger-ui/index.html
+```
+
+La documentación se genera automáticamente a partir de las anotaciones del proyecto y refleja:
+
+* Estructura de request/response
+* Tipos de datos de cada servicio
+* Códigos HTTP de éxito y error
+* Requerimientos de autenticación mediante JWT
+* Ejemplos interactivos ejecutables desde Swagger UI
+
+<img width="1919" height="502" alt="image" src="https://github.com/user-attachments/assets/3518cb03-ec2c-41b2-aa15-39f277134c96" />
+
+---
+
+### **2. Validación de JWT en entorno de despliegue**
+
+Se verificó que el flujo de autenticación continúa funcionando tras contenerizar y desplegar el backend:
+
+1. Registro de usuario (`/api/iam/auth/register`)
+2. Login y obtención de token JWT (`/api/iam/auth/login`)
+3. Acceso autorizado mediante
+
+   ```
+   Authorization: Bearer <token>
+   ```
+   
+4. Consumo de endpoints protegidos:
+
+   * IAM → `/api/iam/me`, `/api/admin/users`
+   * Providing → `/api/providing/me`, `/api/providing/{id}/approve`
+   * Vehicles → `/api/vehicles/own`, `/api/vehicles/{id}/availability/block`
+   * Renting → `/api/renting/bookings`
+   * Payments → `/api/payments/payouts/mine`
+   
+<img width="1891" height="853" alt="image" src="https://github.com/user-attachments/assets/801d3860-8f49-4d65-8032-414d032102da" />
+<img width="1815" height="787" alt="image" src="https://github.com/user-attachments/assets/42c629a2-6f37-4d38-a113-8ccdab93cd4b" />
+<img width="1822" height="898" alt="image" src="https://github.com/user-attachments/assets/fd318341-d40f-46a2-a4a9-12d65c93d325" />
+
+---
+
+### **3. Servicios activos después del despliegue con Docker**
+
+El backend ejecutado mediante:
+
+```
+docker run -d --name bikelab-backend --network host bikelab-backend
+```
+
+permitió validar que:
+
+* Todos los endpoints mantienen su funcionalidad tras el despliegue.
+* Las migraciones Flyway (schema history) se ejecutan correctamente al iniciar el contenedor.
+* Swagger detecta y documenta automáticamente todos los servicios activos.
+* No se presentan conflictos de puertos luego de contenerizar la aplicación.
+
+<img width="1270" height="74" alt="image" src="https://github.com/user-attachments/assets/cd7c479b-a520-4b46-80d8-8f229347e5a8" />
+
+##### 4.2.2.7. Software Deployment Evidence for Sprint Review 
+
+#### **MOBILE APP**
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy.PNG" alt="App Movil Deploy 1 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy2.PNG" alt="App Movil Deploy 2 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy3.PNG" alt="App Movil Deploy 3 Sprint 2" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/bikelabfirebasedeploy4.PNG" alt="App Movil Deploy 4 Sprint 2" width=auto>
+</div>
+
+Link de la aplicación en Firebase: [https://appdistribution.firebase.dev/i/c7d637b96abff7fc](https://appdistribution.firebase.dev/i/c7d637b96abff7fc)
+
+##### 4.2.2.8. Team Collaboration Insights during Sprint 
+
+#### **LANDING PAGE**
+
+<div align="center">
+<img src="/assets/images/insightslps2.PNG" alt="Insights Landing Page Sprint 2" width=auto>
+</div>
+
+#### **MOBILE APP**
+
+<div align="center">
+<img src="/assets/images/insightsfes2.PNG" alt="Insights Front-End Sprint 2" width=auto>
+</div>
+
+#### **WEB SERVICES**
+
+<div align="center">
+<img src="/assets/images/insightsbes2.PNG" alt="Insights Back-end Sprint 2" width=auto>
+</div>
+
+#### 4.2.3. Sprint 3
+
+##### 4.2.3.1. Sprint Planning 3
+
+| **Campo**                            | **Detalle**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sprint #**                         | Sprint 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Date**                             | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Time**                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **Location**                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Prepared By**                      | Giancarlo Santiago Castañeda Guimas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| **Attendees (to planning meeting)**  | Pedro Omar Lecca Villalobos / Cameron Charllotte Bustamante Leveau / Giancarlo Santiago Castañeda Guimas / Henry Kevin Díaz Gutiérrez / Sebastián Eduardo Hernández Poma                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Sprint n−3 Review Summary**        |                                                                                                                                                                                                                             |
+| **Sprint n−3 Retrospective Summary** |                                                                                                                                                                                                        |
+| **Sprint 3 Goal**                    | Terminar la App Movil y conectarla con el Web Service                                                                                                                                                                                                         |
+| **Sprint 3 Velocity**                | 50 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**              | 46 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+
+##### 4.2.3.2. Sprint Backlog 3
+
+| User Story Id | User Story Title                                     | Task Id | Task Title                                               | Description                                                                 | Estimation (Hours) | Assigned To     | Status      |
+|---------------|--------------------------------------------------------|---------|-----------------------------------------------------------|-----------------------------------------------------------------------------|---------------------|------------------|-------------|
+| US03          | Iniciar sesión en la aplicación                       | T01     | Implementar la UI y lógica de inicio de sesión           | Desarrollo del formulario de login y manejo de autenticación.              | 6                   | To Be Assigned  | To-do       |
+| US04          | Recuperar contraseña                                  | T02     | Implementar el flujo de recuperación de contraseña (UI)  | Desarrollo de la interfaz para solicitar y reestablecer contraseña.         | 7                   | To Be Assigned  | To-do       |
+| US01          | Registrar usuario estudiante                           | T03     | Implementar la UI de registro para estudiantes           | Desarrollo del formulario de registro específico para estudiantes.          | 5                   | To Be Assigned  | To-do       |
+| US02          | Registrar usuario arrendador                           | T04     | Implementar la UI de registro para arrendadores          | Desarrollo del formulario de registro específico para arrendadores.         | 6                   | To Be Assigned  | To-do       |
+| US46          | Cerrar sesión                                          | T05     | Implementar función de cierre de sesión (UI/lógica)      | Desarrollo del botón y lógica para finalizar la sesión del usuario.         | 7                   | To Be Assigned  | To-do       |
+| US05          | Editar información de perfil                           | T06     | Implementar UI y lógica de edición de perfil             | Desarrollo de la interfaz para editar datos personales y de contacto.        | 6                   | To Be Assigned  | To-do       |
+| **US20**          | Pagar por alquiler al finalizar el uso                               | **T04**     | Implementar lógica de pago final y validación de fondos      | Desarrollar la lógica para procesar el pago al finalizar el alquiler.                     | 4                      | Giancarlo Castañeda |  Done |
+| **US23**          | Consultar historial de pagos                                         | **T07**     | Endpoint GET /api/payments/history/user                      | Implementar la consulta del historial de pagos del usuario.                               | 8                      | Giancarlo Castañeda |  To-Review |
+| **US24**          | Recibir liquidación automática después del pago                      | **T08**     | Implementar lógica de liquidación automática a arrendador    | Desarrollar el proceso automatizado para transferir fondos al arrendador tras el pago.    | 5                      | Giancarlo Castañeda |  To-Review |
+| **US21**          | Recibir confirmación de pago                                         | **T05**     | Implementar envío de notificación de confirmación de pago    | Desarrollar el servicio para notificar al usuario sobre el éxito del pago.                | 7                      | Giancarlo Castañeda |  Done |
+| **US22**          | Recibir notificación de penalización si se excede el tiempo          | **T06**     | Implementar lógica de cálculo y notificación de penalización | Desarrollar la función para detectar exceso de tiempo y aplicar/notificar penalización.   | 6                      | Giancarlo Castañeda |  To-Review |
+| US25          | Validar identidad                                      | T07     | Implementar UI y flujo de validación de identidad        | Interfaz para subir documentos y seguir el proceso de validación.           | 7                   | To Be Assigned  | To-do       |
+| US13          | Filtrar resultados por tipo de vehículo                | T08     | Implementar UI del filtro por tipo de vehículo           | Componente de filtro de búsqueda para bicicletas/scooters.                  | 5                   | To Be Assigned  | To-do       |
+| US29          | Acceso a soporte o ayuda dentro de la app              | T11     | Implementar UI del chat de soporte                       | Interfaz de soporte y chat con un agente.                                   | 5                   | To Be Assigned  | To-do       |
+| US28          | Recibir notificaciones importantes                     | T12     | Implementar UI de notificaciones y banners               | Componentes de interfaz para mostrar notificaciones dentro de la app.       | 6                   | To Be Assigned  | To-do       |
+| US30          | Acceder a panel de control con métricas                | T13     | Implementar UI del panel de control de métricas          | Interfaz para visualizar métricas clave (ingresos, uso).                    | 7                   | To Be Assigned  | To-do       |
+| US39          | Acceder al registro o inicio de sesión desde la landing| T17     | Asegurar redireccionamiento y CTAs en Landing            | Desarrollo y testing de enlaces de acceso directo desde la landing.         | 5                   | To Be Assigned  | To-do       |
+| SPIKE02       | Notificaciones push y en tiempo real                   | T19     | Ejecución de Spike de Notificaciones                     | Investigar, probar y documentar solución (Firebase/OneSignal).              | 6                   | To Be Assigned  | To-do       |
+| SPIKE03       | Escalabilidad y rendimiento en backend                 | T20     | Ejecución de Spike de Rendimiento y Escalabilidad        | Pruebas de carga iniciales y propuesta de arquitectura escalable.           | 6                   | To Be Assigned  | To-do       |
+| SPIKE04       | Seguridad y cumplimiento de datos                      | T21     | Ejecución de Spike de Seguridad y Cumplimiento           | Investigar normativas (GDPR, ISO) y proponer controles de seguridad.        | 6                   | To Be Assigned  | To-do       |
+
+##### 4.2.3.3. Development Evidence for Sprint Review 
+
+##### 4.2.3.4. Testing Suite Evidence for Sprint Review 
+
+##### 4.2.3.5. Execution Evidence for Sprint Review 
+
+##### 4.2.3.6. Services Documentation Evidence for Sprint Review 
+
+##### 4.2.3.7. Software Deployment Evidence for Sprint Review 
+
+##### 4.2.3.8. Team Collaboration Insights during Sprint 
 
 ### 4.3. Validation Interviews 
 #### 4.3.1. Diseño de Entrevistas 

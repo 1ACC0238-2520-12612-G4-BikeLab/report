@@ -354,29 +354,173 @@ Pantalla de ingresos con monto total, además de opciones para retirar ganancias
 
 
 ### 3.1.4.4. Mobile Applications User Flow Diagrams 
+A continuación, se describen los principales flujos de usuario (User Flows) de la aplicación móvil, organizados según los dos tipos de usuarios: Ciclista (Estudiante) y Arrendador. Cada flujo representa un objetivo principal  y los pasos que el usuario realiza para alcanzarlo.
 
-### Ciclista
+### Ciclista (Estudiante)
+---
+#### User Goal 1: Registrarse e iniciar sesión en la aplicación
 
-| User Persona         | User Goal                                   | Pantalla / Paso                                                      | Imagen                                                                             |
-| -------------------- | ------------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Estudiante  | Registrarse en la app y acceder a su cuenta | Registro de usuario (US01, US03)                                     | <img src="/assets/images/registro22.png" alt="userflow1" width=auto>                |
-| Estudiante| Iniciar sesión para acceder a su panel      | Inicio de sesión (US04)                                              | <img src="/assets/images/userflow2.png" alt="userflow2" width=auto>       |
-| Estudiante | Editar perfil y mantener datos actualizados | Perfil editable (US06)                                               | <img src="/assets/images/userflow3.png" alt="Perfil editable" width=auto>           |
-| Estudiante  | Buscar y filtrar vehículos cercanos         | Elección de vehículo, filtros por tipo y cercanía (US13, US14, US15) | <img src="/assets/images/userflow4.png" alt="Buscar vehículos" width=auto>    |
-| Estudiante | Realizar y confirmar reservas               | Reserva de vehículo (US16, US18)                                     | <img src="/assets/images/userflow5.png" alt="Reserva de vehículo" width=auto>|
-| Estudiante  | Pagar alquiler y recibir confirmación       | Pago y confirmación (US20, US21, US22)                               | <img src="/assets/images/userflow6.png" alt="Pago y confirmación" width=auto>   |
-| Estudiante  | Recibir notificaciones y soporte            | Notificaciones y soporte (US29, US30)                                | <img src="/assets/images/userflow8.png" alt="Notificaciones y soporte" width=auto>  |
+Descripción:
+El estudiante desea crear una cuenta para acceder a las funcionalidades del sistema y gestionar sus alquileres de forma personalizada.
+
+Flujo:
+
+- El usuario abre la aplicación y selecciona la opción “Registrarse”.
+- Ingresa sus datos personales y confirma el registro (US01, US03).
+- Luego inicia sesión con sus credenciales (US04) y accede a su panel principal.
+
+Pantallas involucradas:
+- Registro de usuario
+- Inicio de sesión
+- Panel principal
+  
+Comportamientos adicionales:
+
+Si los datos ingresados son inválidos, se muestra un mensaje de error y se solicita corrección.
+Una vez autenticado, el sistema guarda la sesión activa para próximos ingresos automáticos.
+
+<img src="/assets/images/registro22.png" alt="Registro de usuario" width=auto> <img src="/assets/images/userflow2.png" alt="Inicio de sesión" width=auto>
+
+
+#### User Goal 2: Buscar y filtrar vehículos cercanos
+
+Descripción:
+El estudiante desea explorar las opciones disponibles de bicicletas o scooters cercanos, aplicando filtros por tipo, precio o distancia para encontrar la mejor alternativa.
+
+Pantallas involucradas:
+- Panel principal
+- Pantalla de búsqueda / mapa
+- Detalle del vehículo seleccionado
+
+Comportamientos adicionales:
+
+El sistema obtiene la ubicación actual del usuario y actualiza los resultados en tiempo real.
+Si no hay vehículos disponibles, se muestra un mensaje informativo con la opción de ampliar el rango de búsqueda.
+
+<img src="/assets/images/userflow4.png" alt="Buscar vehículos" width=auto>
+
+
+#### User Goal 3: Realizar y confirmar una reserva
+
+Descripción:
+El estudiante selecciona un vehículo disponible, define el horario y confirma la reserva para garantizar su uso en el periodo deseado.
+
+Pantallas involucradas:
+- Detalle del vehículo
+- Pantalla de reserva
+- Confirmación de reserva
+
+Comportamientos adicionales:
+
+Si otro usuario reserva el mismo vehículo antes de la confirmación, se notifica la indisponibilidad.
+Al confirmar, el estado del vehículo cambia automáticamente a “reservado”.
+
+<img src="/assets/images/userflow5.png" alt="Reserva de vehículo" width=auto>
+
+
+#### User Goal 4: Pagar el alquiler y recibir confirmación
+
+Descripción:
+El estudiante completa el pago del alquiler mediante la pasarela integrada y recibe una confirmación inmediata de la transacción.
+
+Pantallas involucradas:
+- Pantalla de pago
+- Confirmación de pago
+- Recibo o comprobante
+
+Comportamientos adicionales:
+
+Si el pago falla, el sistema permite reintentar o elegir otro método de pago.
+Tras un pago exitoso, se genera un comprobante digital y se actualiza el historial del usuario.
+
+<img src="/assets/images/userflow6.png" alt="Pago y confirmación" width=auto>
+
 
 ### Arrendador
+--- 
 
-| User Persona | User Goal                                     | Pantalla / Paso                                                                                    | Imagen                                                                                  |
-| ------------ | --------------------------------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Arrendador   | Registrarse para publicar vehículos           | Registro de arrendador (US02)                                                                      | <img src="/assets/images/userflow1_seg2.png" alt="Registro Arrendador" width=auto>     |
-| Arrendador   | Editar perfil                                 | Perfil editable (US06)                                                                             | <img src="/assets/images/userflow2_seg2.png" alt="Perfil Arrendador" width=auto>          |
-| Arrendador   | Gestionar vehículos publicados                | Mis Vehículos: agregar, editar, marcar disponible/no disponible, eliminar (US08, US09, US10, US11) | <img src="/assets/images/userflow3_seg2.png" alt="Gestión de Vehículos" width=auto>    |
-| Arrendador   | Consultar historial de alquileres             | Historial de alquileres (US12)                                                                     | <img src="/assets/images/userflow4_seg2.png" alt="Historial de alquileres" width=auto>  |
-| Arrendador   | Recibir ingresos automáticos y revisarlos     | Ingresos (US25)                                                                                    | <img src="/assets/images/userflow5_seg2.png" alt="Ingresos" width=auto>                     |
-| Arrendador   | Ver calificaciones y reseñas de sus vehículos | Calificaciones y reseñas (US27, US28)                                                              | <img src="/assets/images/userflow6_seg2.png" alt="Calificaciones y reseñas" width=auto> |
+#### User Goal 1: Registrarse como arrendador
+
+Descripción:
+El arrendador crea una cuenta para ofrecer sus vehículos en la plataforma y administrar su disponibilidad.
+
+Pantallas involucradas:
+- Registro de arrendador
+- Inicio de sesión
+- Panel principal
+
+Comportamientos adicionales:
+
+El sistema valida los datos de contacto y activa el perfil tras la verificación del correo electrónico.
+
+<img src="/assets/images/userflow1_seg2.png" alt="Registro Arrendador" width=auto>
+
+
+#### User Goal 2: Gestionar vehículos publicados
+
+Descripción:
+El arrendador puede agregar, editar o eliminar vehículos, además de cambiar su estado de disponibilidad según la situación.
+
+Pantallas involucradas:
+- Panel principal
+- Pantalla “Mis vehículos”
+- Formulario de edición de vehículo
+
+Comportamientos adicionales:
+
+Los cambios se reflejan inmediatamente en la vista pública del catálogo.
+Si el vehículo está actualmente reservado, el sistema impide su eliminación hasta finalizar el alquiler activo.
+
+<img src="/assets/images/userflow3_seg2.png" alt="Gestión de Vehículos" width=auto>
+
+
+#### User Goal 3: Consultar historial de alquileres
+
+Descripción:
+El arrendador revisa los registros de alquileres pasados para llevar control de sus operaciones y analizar la demanda de cada vehículo.
+
+Pantallas involucradas:
+- Panel principal
+- Pantalla de historial de alquileres
+
+Comportamientos adicionales:
+
+Se permite filtrar el historial por rango de fechas o vehículo.
+
+<img src="/assets/images/userflow4_seg2.png" alt="Historial de alquileres" width=auto>
+
+
+#### User Goal 4: Revisar ingresos automáticos
+
+Descripción:
+El arrendador visualiza los ingresos generados por los alquileres, con la posibilidad de filtrarlos por periodo o tipo de vehículo.
+
+Pantallas involucradas:
+- Panel principal
+- Pantalla de ingresos
+- Detalle de transacciones
+
+Comportamientos adicionales:
+
+Los ingresos se actualizan en tiempo real conforme a nuevas reservas.
+Si no hay movimientos en el periodo seleccionado, el sistema muestra un mensaje informativo.
+<img src="/assets/images/userflow5_seg2.png" alt="Ingresos" width=auto>
+
+
+#### User Goal 5: Ver y responder calificaciones y reseñas
+
+Descripción:
+El arrendador consulta las valoraciones y comentarios realizados por los usuarios sobre sus vehículos, y puede responder para mantener una buena reputación.
+
+Pantallas involucradas:
+- Pantalla de reseñas
+- Detalle de reseña
+- Panel principal
+
+Comportamientos adicionales:
+
+Al responder una reseña, el sistema notifica al usuario que su comentario fue atendido.
+<img src="/assets/images/userflow6_seg2.png" alt="Calificaciones y reseñas" width=auto>
 
 
 ###  3.1.4.5. Mobile Applications Prototyping 
