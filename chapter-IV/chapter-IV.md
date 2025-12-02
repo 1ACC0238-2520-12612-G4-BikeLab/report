@@ -729,14 +729,14 @@ Link de la aplicación en Firebase: [https://appdistribution.firebase.dev/i/c7d6
 | **Campo**                            | **Detalle**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Sprint #**                         | Sprint 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **Date**                             | -                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Time**                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **Location**                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Date**                             | 28-11-2025                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Time**                             | 09:00 PM – 10:30 PM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Location**                         | Reunión virtual vía Discord                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Prepared By**                      | Giancarlo Santiago Castañeda Guimas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | **Attendees (to planning meeting)**  | Pedro Omar Lecca Villalobos / Cameron Charllotte Bustamante Leveau / Giancarlo Santiago Castañeda Guimas / Henry Kevin Díaz Gutiérrez / Sebastián Eduardo Hernández Poma                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **Sprint n−3 Review Summary**        |                                                                                                                                                                                                                             |
-| **Sprint n−3 Retrospective Summary** |                                                                                                                                                                                                        |
-| **Sprint 3 Goal**                    | Terminar la App Movil y conectarla con el Web Service                                                                                                                                                                                                         |
+| **Sprint n−3 Review Summary**        |   Correción del Sprint 2, conexión del backend con la aplicación del flutter y kotlin. Finalización del proyecto y distribución mediante Firebase                                                                                                                                                                                                                         |
+| **Sprint n−3 Retrospective Summary** | Nos falto tiempo para algunas cosas pero al final logramos obtener el resultado deseado.                                                                                                                                                                                                     |
+| **Sprint 3 Goal**                    | Conexión con el Backend y distribución mediante Firebase                                                                                                                                                                                                       |
 | **Sprint 3 Velocity**                | 50 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **Sum of Story Points**              | 46 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
@@ -744,32 +744,88 @@ Link de la aplicación en Firebase: [https://appdistribution.firebase.dev/i/c7d6
 
 | User Story Id | User Story Title                                     | Task Id | Task Title                                               | Description                                                                 | Estimation (Hours) | Assigned To     | Status      |
 |---------------|--------------------------------------------------------|---------|-----------------------------------------------------------|-----------------------------------------------------------------------------|---------------------|------------------|-------------|
-| US03          | Iniciar sesión en la aplicación                       | T01     | Implementar la UI y lógica de inicio de sesión           | Desarrollo del formulario de login y manejo de autenticación.              | 6                   | To Be Assigned  | To-do       |
+| US03          | Iniciar sesión en la aplicación                       | T01     | Implementar la UI y lógica de inicio de sesión           | Desarrollo del formulario de login y manejo de autenticación.              | 6                   | To Be Assigned  | Done       |
 | US04          | Recuperar contraseña                                  | T02     | Implementar el flujo de recuperación de contraseña (UI)  | Desarrollo de la interfaz para solicitar y reestablecer contraseña.         | 7                   | To Be Assigned  | To-do       |
-| US01          | Registrar usuario estudiante                           | T03     | Implementar la UI de registro para estudiantes           | Desarrollo del formulario de registro específico para estudiantes.          | 5                   | To Be Assigned  | To-do       |
-| US02          | Registrar usuario arrendador                           | T04     | Implementar la UI de registro para arrendadores          | Desarrollo del formulario de registro específico para arrendadores.         | 6                   | To Be Assigned  | To-do       |
-| US46          | Cerrar sesión                                          | T05     | Implementar función de cierre de sesión (UI/lógica)      | Desarrollo del botón y lógica para finalizar la sesión del usuario.         | 7                   | To Be Assigned  | To-do       |
-| US05          | Editar información de perfil                           | T06     | Implementar UI y lógica de edición de perfil             | Desarrollo de la interfaz para editar datos personales y de contacto.        | 6                   | To Be Assigned  | To-do       |
-| **US20**          | Pagar por alquiler al finalizar el uso                               | **T04**     | Implementar lógica de pago final y validación de fondos      | Desarrollar la lógica para procesar el pago al finalizar el alquiler.                     | 4                      | Giancarlo Castañeda |  Done |
-| **US23**          | Consultar historial de pagos                                         | **T07**     | Endpoint GET /api/payments/history/user                      | Implementar la consulta del historial de pagos del usuario.                               | 8                      | Giancarlo Castañeda |  To-Review |
-| **US24**          | Recibir liquidación automática después del pago                      | **T08**     | Implementar lógica de liquidación automática a arrendador    | Desarrollar el proceso automatizado para transferir fondos al arrendador tras el pago.    | 5                      | Giancarlo Castañeda |  To-Review |
-| **US21**          | Recibir confirmación de pago                                         | **T05**     | Implementar envío de notificación de confirmación de pago    | Desarrollar el servicio para notificar al usuario sobre el éxito del pago.                | 7                      | Giancarlo Castañeda |  Done |
-| **US22**          | Recibir notificación de penalización si se excede el tiempo          | **T06**     | Implementar lógica de cálculo y notificación de penalización | Desarrollar la función para detectar exceso de tiempo y aplicar/notificar penalización.   | 6                      | Giancarlo Castañeda |  To-Review |
-| US25          | Validar identidad                                      | T07     | Implementar UI y flujo de validación de identidad        | Interfaz para subir documentos y seguir el proceso de validación.           | 7                   | To Be Assigned  | To-do       |
-| US13          | Filtrar resultados por tipo de vehículo                | T08     | Implementar UI del filtro por tipo de vehículo           | Componente de filtro de búsqueda para bicicletas/scooters.                  | 5                   | To Be Assigned  | To-do       |
-| US29          | Acceso a soporte o ayuda dentro de la app              | T11     | Implementar UI del chat de soporte                       | Interfaz de soporte y chat con un agente.                                   | 5                   | To Be Assigned  | To-do       |
+| US01          | Registrar usuario estudiante                           | T03     | Implementar la UI de registro para estudiantes           | Desarrollo del formulario de registro específico para estudiantes.          | 5                   | To Be Assigned  |  Done       |
+| US02          | Registrar usuario arrendador                           | T04     | Implementar la UI de registro para arrendadores          | Desarrollo del formulario de registro específico para arrendadores.         | 6                   | To Be Assigned  |  Done      |
+| US46          | Cerrar sesión                                          | T05     | Implementar función de cierre de sesión (UI/lógica)      | Desarrollo del botón y lógica para finalizar la sesión del usuario.         | 7                   | To Be Assigned  |  Done       |
+| US05          | Editar información de perfil                           | T06     | Implementar UI y lógica de edición de perfil             | Desarrollo de la interfaz para editar datos personales y de contacto.        | 6                   | To Be Assigned  |  Done      |
 | US28          | Recibir notificaciones importantes                     | T12     | Implementar UI de notificaciones y banners               | Componentes de interfaz para mostrar notificaciones dentro de la app.       | 6                   | To Be Assigned  | To-do       |
-| US30          | Acceder a panel de control con métricas                | T13     | Implementar UI del panel de control de métricas          | Interfaz para visualizar métricas clave (ingresos, uso).                    | 7                   | To Be Assigned  | To-do       |
-| US39          | Acceder al registro o inicio de sesión desde la landing| T17     | Asegurar redireccionamiento y CTAs en Landing            | Desarrollo y testing de enlaces de acceso directo desde la landing.         | 5                   | To Be Assigned  | To-do       |
-| SPIKE02       | Notificaciones push y en tiempo real                   | T19     | Ejecución de Spike de Notificaciones                     | Investigar, probar y documentar solución (Firebase/OneSignal).              | 6                   | To Be Assigned  | To-do       |
-| SPIKE03       | Escalabilidad y rendimiento en backend                 | T20     | Ejecución de Spike de Rendimiento y Escalabilidad        | Pruebas de carga iniciales y propuesta de arquitectura escalable.           | 6                   | To Be Assigned  | To-do       |
-| SPIKE04       | Seguridad y cumplimiento de datos                      | T21     | Ejecución de Spike de Seguridad y Cumplimiento           | Investigar normativas (GDPR, ISO) y proponer controles de seguridad.        | 6                   | To Be Assigned  | To-do       |
+| US30          | Acceder a panel de control con métricas                | T13     | Implementar UI del panel de control de métricas          | Interfaz para visualizar métricas clave (ingresos, uso).                    | 7                   | To Be Assigned  | Done       |
+| US39          | Acceder al registro o inicio de sesión desde la landing| T17     | Asegurar redireccionamiento y CTAs en Landing            | Desarrollo y testing de enlaces de acceso directo desde la landing.         | 5                   | To Be Assigned  | Done       |
+| SPIKE02       | Notificaciones push y en tiempo real                   | T19     | Ejecución de Spike de Notificaciones                     | Investigar, probar y documentar solución (Firebase/OneSignal).              | 6                   | To Be Assigned  | Done        |
+| SPIKE03       | Escalabilidad y rendimiento en backend                 | T20     | Ejecución de Spike de Rendimiento y Escalabilidad        | Pruebas de carga iniciales y propuesta de arquitectura escalable.           | 6                   | To Be Assigned  | Done       |
+
 
 ##### 4.2.3.3. Development Evidence for Sprint Review 
 
-##### 4.2.3.4. Testing Suite Evidence for Sprint Review 
+<div align="center">
+<img src="/assets/images/evidensprint31.jpg" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/evidensprint32.jpg" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/evidensprint33.jpg" width=auto>
+</div>
+
+##### 4.2.3.4. Testing Suite Evidence for Sprint Review
+
+### WEB SERVICE – Sprint 3
+
+Durante el Sprint 3 se extendió el backend monolítico documentado con Swagger y protección JWT.  
+A continuación, se presentan las evidencias de ejecución por **bounded context**, con un breve texto
+introductorio, una tabla de endpoints y un espacio para adjuntar la captura correspondiente.
+
+---
+
+#### Bounded Context: Vehicle Image
+
+Este contexto se encarga de gestionar las imágenes asociadas a un vehículo específico.
+
+| Método | Endpoint                               | Función                                      | Auth / Rol |
+|--------|----------------------------------------|----------------------------------------------|-----------|
+| POST   | `/api/vehicles/{vehicleId}/image`      | Subir o actualizar la imagen de un vehículo  | Público   |
+
+<img width="1887" height="173" alt="Captura de pantalla 2025-12-02 172350" src="https://github.com/user-attachments/assets/730e1667-2d7b-4ae8-9621-0a94928f746c" />
+
+---
+
+#### Bounded Context: Reviews
+
+Este contexto administra las reseñas que los usuarios realizan sobre los vehículos.
+
+| Método | Endpoint                                  | Función                                                | Auth / Rol |
+|--------|-------------------------------------------|--------------------------------------------------------|-----------|
+| GET    | `/api/reviews`                            | Listar reseñas (permite filtrar por `vehicleId`)       | JWT       |
+| GET    | `/api/reviews/vehicle/{vehicleId}`        | Obtener reseñas asociadas a un vehículo específico     | JWT       |
+
+<img width="1850" height="213" alt="Captura de pantalla 2025-12-02 171755" src="https://github.com/user-attachments/assets/ed62160e-15c2-4449-a737-4218ec33810b" />
+
+---
+
+#### Bounded Context: Notifications
+
+Este contexto gestiona las notificaciones personales del usuario dentro de la plataforma.
+
+| Método | Endpoint                                         | Función                                     | Auth / Rol |
+|--------|--------------------------------------------------|---------------------------------------------|-----------|
+| GET    | `/api/notifications`                             | Listar mis notificaciones                   | JWT       |
+| DELETE | `/api/notifications/{notificationId}`            | Eliminar una notificación del usuario       | JWT       |
+
+<img width="1640" height="205" alt="Captura de pantalla 2025-12-02 171821" src="https://github.com/user-attachments/assets/30939e60-cb39-4893-bb9a-da1c0c22bdfe" />
 
 ##### 4.2.3.5. Execution Evidence for Sprint Review 
+
+<div align="center">
+<img src="/assets/images/apmain.PNG" width=auto>
+</div>
+
+<div align="center">
+<img src="/assets/images/apflutter.PNG" width=auto>
+</div>
 
 ##### 4.2.3.6. Services Documentation Evidence for Sprint Review 
 
