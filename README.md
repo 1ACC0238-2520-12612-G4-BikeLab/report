@@ -103,8 +103,7 @@ Noviembre, 2025
         Me encargué del diseño y desarrollo de la <strong>Landing Page</strong> del proyecto, aplicando buenas prácticas de diseño responsive y principios de accesibilidad. Implementé componentes visuales con estructura modular y estilos coherentes con la identidad visual de la aplicación. Esta tarea me permitió actualizar mis conocimientos en maquetación moderna, optimización de carga y experiencia de usuario web.
         <br><br>
         <strong>Henry Diaz - TF:</strong><br>
-        Durante el Sprint 3 apoyé en las tareas asociadas al despliegue del backend, especialmente en la documentación técnica y la validación del entorno de ejecución. Además, participé en la preparación de la distribución de la aplicación, revisando configuraciones y asegurando que los componentes estuvieran correctamente alineados para su liberación
-        <br><br>
+        Me enfoqué en finalizar y perfeccionar la landing page del proyecto. Realicé mejoras clave optimizando su mensaje principal, la estructura de contenido y el diseño visual para asegurar una experiencia de entrada clara, atractiva y efectiva, aplicando principios de UX/UI que reforzaran la identidad y maximizaran la conversión.<br><br>
         <strong>Sebastián Hernández - TB1:</strong><br>
         Diseñé, elaboré y apliqué entrevistas a los segmentos objetivos (estudiantes universitarios y arrendadores). Preparé guías de preguntas, recopilé hallazgos y realicé análisis comparativo de respuestas, categorizando aspectos como confianza, medios de pago, disponibilidad y sostenibilidad. Sistematizé los resultados para que sirvieran como insumo directo en la definición de requisitos del sistema.
         <br><br>
@@ -124,10 +123,9 @@ Noviembre, 2025
         <br><br>
         <strong>Cameron Bustamante - TB2:</strong><br>
         Me enfoqué en la <strong>corrección y optimización del User Flow</strong> de la aplicación, analizando los flujos de navegación, validando la coherencia entre pantallas y mejorando la experiencia del usuario final. Apliqué principios de <em>User Experience</em> y técnicas de diseño centrado en el usuario para simplificar la interacción y reducir fricciones en la navegación general.
-        <br><br>
-        <strong>Cameron Bustamante – TF:</strong><br>
-        Durante el Sprint 3 apoyé en el proceso de distribución de la aplicación revisando flujos, pantallas y coherencia visual después del despliegue del backend. También participé en la validación de la experiencia de usuario en el entorno liberado, asegurando que el sistema mantuviera consistencia y accesibilidad en su versión distribuida
-        <br><br>
+         <br><br>
+        <strong>Cameron Bustamante - TF:</strong><br>
+   Me enfoqué en la mejora de la aplicación, revisando y optimizando los flujos de navegación para asegurar que las rutas entre pantallas fueran coherentes, simples y fáciles de entender para el usuario. Para ello, apliqué principios de UX como consistencia, reducción de fricción y claridad en los puntos de decisión.
       </td>
       <td>
         <strong>TB1:</strong><br>
@@ -180,7 +178,7 @@ Noviembre, 2025
         Durante la implementación de la Landing Page, reforcé mis habilidades en diseño web y aprendí nuevas herramientas y técnicas para la optimización del rendimiento y accesibilidad. Este proceso me permitió comprender la relevancia del aprendizaje permanente en un entorno de tecnologías cambiantes, especialmente en el desarrollo de interfaces modernas y eficientes.
         <br><br>
         <strong>Henry Diaz - TF:</strong><br>
-        El Sprint 3 me permitió ampliar mis conocimientos sobre la documentación, configuración y validación necesarias para el despliegue del backend y la distribución de la aplicación. Reconocí la importancia de continuar aprendiendo sobre entornos productivos y gestión técnica en proyectos de software
+        Identifiqué la oportunidad de actualizar y aplicar conocimientos específicos sobre diseño conversional y usabilidad web. Este enfoque me permitió no solo pulir un entregable clave, sino también reforzar cómo el aprendizaje continuo se traduce en mejoras tangibles para la efectividad de un producto digital.
         <br><br>
         <strong>Sebastián Hernández - TB1:</strong><br>
         Investigué metodologías y buenas prácticas para el diseño y análisis de entrevistas en proyectos de software. Ajusté las guías al contexto de Bikelab y realicé un análisis de patrones de respuesta para validar hipótesis iniciales. Además, documenté aprendizajes sobre cómo la investigación de usuarios contribuye a construir soluciones más precisas y alineadas con escenarios reales.
@@ -202,6 +200,9 @@ Noviembre, 2025
         <br><br>
         <strong>Cameron Bustamante - TF:</strong><br>
         Durante el Sprint 3 fortalecí mi entendimiento sobre cómo el diseño debe adaptarse al entorno desplegado, aprendiendo de manera continua a ajustar flujos visuales y experiencia de usuario tras la distribución de la aplicación. Reconocí que el aprendizaje continuo es clave para mantener coherencia y calidad en escenarios reales
+               <br><br>
+         <strong>Cameron Bustamante - TF:</strong><br>
+      Durante la corrección de identifiqué áreas donde era necesario actualizar mis conocimientos sobre flujos de interacción, patrones modernos de navegación y heurísticas de usabilidad.
       </td>
       <td>
         <strong>TB1:</strong><br>
@@ -230,6 +231,9 @@ Noviembre, 2025
 ### **TP**
 <img src="/assets/images/insightstp.PNG">  
 <img src="/assets/images/insightstp2.PNG">  
+
+### **TB2**
+<img src="/assets/images/Insightss2.PNG">  
 
 ## Objetivos SMART
 
