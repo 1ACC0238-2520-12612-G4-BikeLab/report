@@ -53,6 +53,7 @@ Noviembre, 2025
 |   TB1     | 13/09/2025| Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | Capitulo 1: Presentación y Capitulo 2: Requirements Development and Software Solution Design junto a las conclusiones y recomendaciones	|
 |   TP   | 09/10/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Capítulo III: Solution UI/UX Design** y **Capítulo IV: Product Implementation & Validation** |
 |   TB2   | 10/11/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Sprint 2** y **Desarrollo de la Aplicación Movil en Kotlin y Flutter** |
+|   TF    | 29/11/2025   | Cameron Bustamante, Giancarlo Castañeda, Henry Diaz, Sebastian Hernandez, Pedro Lecca | **Sprint 3** y **Despliegue del Backend y Distribución** |
 
 <h2> Student Outcome</h2>
 
@@ -77,6 +78,9 @@ Noviembre, 2025
          <strong>Giancarlo Castañeda - TB2:</strong><br>
         Realicé el desarrollo del <strong>Sprint 2</strong>, en el cual reforcé mis conocimientos en integración continua y despliegue de aplicaciones móviles. Implementé el proceso de deploy de  la aplicación Kotlin y participé en la programación y desarrollo de la aplicación en Flutter. Apliqué buenas prácticas de arquitectura limpia, manejo de estados y consumo de servicios REST, asegurando un flujo de trabajo estable y una correcta interoperabilidad entre módulos.
         <br><br>
+        <strong>Giancarlo Castañeda - TF:</strong><br>
+         Durante el Sprint 3 brindé apoyo en el proceso de despliegue del backend, revisando configuraciones del entorno y validando la correcta exposición de endpoints. También participé en la preparación para la distribución de la aplicación, ajustando la integración entre frontend, backend y servicios externos para asegurar un funcionamiento estable en el entorno final
+        <br><br>
         <strong>Pedro Lecca – TB1:</strong><br>
         Implementé el <em>Tactical-Level Domain-Driven Design</em> del sistema, definiendo <strong>agregados</strong>, <strong>entidades</strong>, <strong>value objects</strong>, <strong>servicios de dominio</strong> y <strong>eventos de dominio</strong>; además, precisé invariantes y límites de consistencia para asegurar integridad transaccional. Aterricé el lenguaje ubicuo en cada agregado y alineé los repositorios y servicios de aplicación con las necesidades del negocio. Complementé el modelado con artefactos en <strong>UXPRESSIA</strong> (User Journey Mapping, Empathy Mapping, User Persona, User Task Matrix, Impact Mapping) para conectar las decisiones tácticas con hallazgos de usuario.
         <br><br>
@@ -85,6 +89,9 @@ Noviembre, 2025
         <br><br>
          <strong>Pedro Lecca - TB2:</strong><br>
         Desarrollé y desplegué el <strong>backend</strong> del sistema, fortaleciendo mis conocimientos en arquitectura de servicios y configuración de entornos productivos. Apliqué técnicas de integración con base de datos, seguridad y manejo de endpoints, garantizando la estabilidad y escalabilidad del sistema. Además, realicé pruebas de conexión entre el backend y la aplicación móvil, asegurando la correcta comunicación entre capas.
+        <br><br>
+        <strong>Pedro Lecca - TF:</strong><br>
+        En el Sprint 3 contribuí al despliegue del backend, afinando configuraciones de seguridad, base de datos y servicios API antes del paso a producción. Asimismo, colaboré en la preparación de la aplicación para su distribución, verificando compatibilidades, rutas e integraciones críticas que garantizan un despliegue fluido del sistema completo
         <br><br>
         <strong>Henry Diaz - TB1:</strong><br>
         Redacté y estructuré las epics, logré definir las user stories y elaborar el product backlog, organizando los requerimientos de forma priorizada y alineada con los objetivos del proyecto. Además, detallé los criterios de aceptación en cada historia de usuario para garantizar claridad en el desarrollo y facilitar la validación de los entregables.
@@ -105,6 +112,9 @@ Noviembre, 2025
         <br><br>
          <strong>Sebastián Hernández - TB2:</strong><br>
         Brindé <strong>apoyo al desarrollo de la aplicación</strong>, participando en la revisión de funcionalidades, pruebas de interfaz y corrección de errores. Esta labor me permitió reforzar mis conocimientos en control de versiones, pruebas funcionales y trabajo colaborativo en entornos ágiles. Además, aporté en la validación visual y funcional de los módulos desarrollados durante el sprint.<br><br>
+        <strong>Sebastián Hernández - TF:</strong><br>
+       En el Sprint 3 brindé soporte en la validación de la aplicación posterior al despliegue del backend, realizando pruebas funcionales y verificando la comunicación entre los módulos distribuidos. También colaboré en la preparación de la distribución general del sistema, contribuyendo a la revisión visual y operativa de la aplicación final
+        <br><br>
         <strong>Cameron Bustamante – TB1:</strong><br>
         Desarrollé los <strong>Bounded Context Software Architecture Component Level Diagrams</strong> y los <strong>Code Level Diagrams</strong> (incluyendo Domain Layer Class Diagrams y el Database Design Diagram), lo que me permitió actualizar mis conocimientos en arquitectura de software y profundizar en el modelado técnico aplicado a contextos delimitados. Además, elaboré los segmentos y antecedentes, reforzando mis competencias en investigación y análisis de usuarios.
         <br><br>
@@ -127,6 +137,9 @@ Noviembre, 2025
         <strong>TB2:</strong><br>
         Como grupo concluimos que el segundo sprint nos permitió consolidar nuestros conocimientos técnicos en desarrollo y despliegue de soluciones de software. Cada integrante aplicó aprendizajes específicos —desde el backend hasta la experiencia de usuario—, integrando los distintos componentes del sistema en un entorno funcional. Este avance fortaleció nuestras competencias en trabajo colaborativo, gestión ágil y aplicación práctica de herramientas modernas para el desarrollo de software completo.
       </td>
+      <strong>TF:</strong><br>
+        Como grupo concluimos que el Sprint 3 fortaleció nuestras habilidades en despliegue backend y distribución de aplicaciones. La colaboración permitió integrar los componentes técnicos en un entorno unificado, reforzando conocimientos en ambientes productivos, pruebas posteriores al despliegue y coordinación entre capas del sistema.
+        <br><br>
     </tr>
     <tr>
       <td>Reconocen la necesidad del aprendizaje permanente profesional y el desarrollo de proyectos en soluciones de software.</td>
@@ -140,6 +153,9 @@ Noviembre, 2025
          <strong>Giancarlo Castañeda - TB2:</strong><br>
         A lo largo del Sprint 2, reconocí la importancia del aprendizaje continuo al enfrentar nuevos retos en la configuración de entornos de despliegue y el desarrollo multiplataforma con Flutter. Adquirí nuevos conocimientos en integración de APIs y buenas prácticas de testing móvil, reafirmando la necesidad de mantener una actualización constante en tecnologías emergentes.
         <br><br>
+         <strong>Giancarlo Castañeda - TF:</strong><br>
+        En el Sprint 3 reafirmé la importancia del aprendizaje continuo al enfrentar retos en la preparación del backend para su despliegue y en la distribución de la aplicación. Esta etapa me permitió actualizar conocimientos sobre integración final del sistema y buenas prácticas para asegurar el funcionamiento en entornos reales
+        <br><br>
         <strong>Pedro Lecca – TB1:</strong><br>
         Investigué prácticas recomendadas para modelado táctico (diseño de agregados, partición de transacciones, publicación de eventos) y las adapté al contexto de Bikelab. Iteré los diagramas y las vistas de arquitectura con feedback del equipo, refinando límites de agregados y reglas de negocio. Documenté trade-offs (consistencia vs. rendimiento, sincrónico vs. asincrónico) y ajusté los artefactos de UXPRESSIA para mantenerlos alineados con el diseño del dominio.
         <br><br>
@@ -148,6 +164,9 @@ Noviembre, 2025
         <br><br>
          <strong>Pedro Lecca - TB2:</strong><br>
         Profundicé en la automatización del despliegue y configuración de entornos backend, aplicando nuevos enfoques de arquitectura de software y DevOps. Comprendí que la mejora continua es clave para mantener la calidad y escalabilidad de los proyectos, y que el aprendizaje constante permite adaptarse a nuevas herramientas y metodologías de integración continua.
+        <br><br>
+        <strong>Pedro Lecca - TF:</strong><br>
+        Durante el Sprint 3 profundicé en estrategias de despliegue y ajustes avanzados del backend, reconociendo la necesidad de mantenerme actualizado en herramientas de infraestructura y automatización. La experiencia reforzó la importancia del aprendizaje constante en entornos de desarrollo modernos
         <br><br>
         <strong>Henry Diaz - TB1:</strong><br>
         Investigué las mejores prácticas para la gestión de requisitos en proyectos de software, adapté ejemplos de referencia al caso específico de Bikelab y elaboré las epics, user stories y el product backlog. Además, realicé los ajustes necesarios para que la planificación y priorización de funcionalidades se alinearan con un escenario real de desarrollo.
@@ -167,6 +186,9 @@ Noviembre, 2025
         <strong>Sebastián Hernández - TB2:</strong><br>
         A través del apoyo al desarrollo, fortalecí mis competencias en control de calidad y pruebas de software, comprendiendo la relevancia del aprendizaje permanente para mejorar la eficiencia en la colaboración técnica y en la resolución de problemas dentro de un entorno ágil.
         <br><br>
+        <strong>Sebastián Hernández - TF:</strong><br>
+           A lo largo del Sprint 3 comprendí la relevancia del aprendizaje permanente al realizar pruebas y validaciones tras el despliegue backend. Esta experiencia reforzó mis habilidades en control de calidad y verificación en sistemas distribuidos, motivándome a seguir explorando técnicas de testing y QA
+        <br><br>
         <strong>Cameron Bustamante – TB1:</strong><br>
         Investigué referentes y buenas prácticas de modelado para la elaboración de Component Level Diagrams, Class Diagrams y Database Design Diagrams aplicados a contextos delimitados. A partir de ello, actualicé mis conocimientos en patrones de diseño y arquitectura, reconociendo la necesidad de mantener un aprendizaje continuo para poder aplicar enfoques técnicos modernos y alineados con escenarios reales en proyectos de software.
         <br><br>
@@ -175,6 +197,9 @@ Noviembre, 2025
         <br><br>
          <strong>Cameron Bustamante - TB2:</strong><br>
         Al realizar la corrección del User Flow, adquirí nuevos conocimientos sobre análisis de experiencia de usuario y validación de flujos interactivos. Este proceso me reafirmó la importancia de mantener una actitud de aprendizaje constante para adaptar las decisiones de diseño a las necesidades cambiantes de los usuarios y del producto
+        <br><br>
+        <strong>Cameron Bustamante - TF:</strong><br>
+        Durante el Sprint 3 fortalecí mi entendimiento sobre cómo el diseño debe adaptarse al entorno desplegado, aprendiendo de manera continua a ajustar flujos visuales y experiencia de usuario tras la distribución de la aplicación. Reconocí que el aprendizaje continuo es clave para mantener coherencia y calidad en escenarios reales
                <br><br>
          <strong>Cameron Bustamante - TF:</strong><br>
       Durante la corrección de identifiqué áreas donde era necesario actualizar mis conocimientos sobre flujos de interacción, patrones modernos de navegación y heurísticas de usabilidad.
@@ -188,6 +213,9 @@ Noviembre, 2025
         <br><br>
         <strong>TB2:</strong><br>
         Como grupo reconocimos que el aprendizaje permanente fue esencial para superar los desafíos técnicos y de integración del Sprint 2. El proyecto nos permitió aprender nuevas herramientas, adaptarnos a distintos entornos tecnológicos y reforzar habilidades de trabajo colaborativo. Este proceso nos demostró que la actualización constante es una parte fundamental del desarrollo profesional en el ámbito del software y que cada reto técnico representa una oportunidad de crecimiento y mejora continua.
+         <br><br>
+        <strong>TF:</strong><br>
+        Como grupo reconocimos que el Sprint 3 nos permitió experimentar directamente con procesos reales de despliegue backend y distribución de software. Este aprendizaje reforzó la necesidad de mantener una formación constante para adaptarse a tecnologías, entornos y metodologías que evolucionan rápidamente en el desarrollo profesional
       </td>
     </tr>
   </tbody>
