@@ -746,7 +746,51 @@ Link de la aplicación en Firebase: [https://appdistribution.firebase.dev/i/c7d6
 
 ##### 4.2.3.3. Development Evidence for Sprint Review 
 
-##### 4.2.3.4. Testing Suite Evidence for Sprint Review 
+##### 4.2.3.4. Testing Suite Evidence for Sprint Review
+
+### WEB SERVICE – Sprint 3
+
+Durante el Sprint 3 se extendió el backend monolítico documentado con Swagger y protección JWT.  
+A continuación, se presentan las evidencias de ejecución por **bounded context**, con un breve texto
+introductorio, una tabla de endpoints y un espacio para adjuntar la captura correspondiente.
+
+---
+
+#### Bounded Context: Vehicle Image
+
+Este contexto se encarga de gestionar las imágenes asociadas a un vehículo específico.
+
+| Método | Endpoint                               | Función                                      | Auth / Rol |
+|--------|----------------------------------------|----------------------------------------------|-----------|
+| POST   | `/api/vehicles/{vehicleId}/image`      | Subir o actualizar la imagen de un vehículo  | Público   |
+
+<img width="1887" height="173" alt="Captura de pantalla 2025-12-02 172350" src="https://github.com/user-attachments/assets/730e1667-2d7b-4ae8-9621-0a94928f746c" />
+
+---
+
+#### Bounded Context: Reviews
+
+Este contexto administra las reseñas que los usuarios realizan sobre los vehículos.
+
+| Método | Endpoint                                  | Función                                                | Auth / Rol |
+|--------|-------------------------------------------|--------------------------------------------------------|-----------|
+| GET    | `/api/reviews`                            | Listar reseñas (permite filtrar por `vehicleId`)       | JWT       |
+| GET    | `/api/reviews/vehicle/{vehicleId}`        | Obtener reseñas asociadas a un vehículo específico     | JWT       |
+
+<img width="1850" height="213" alt="Captura de pantalla 2025-12-02 171755" src="https://github.com/user-attachments/assets/ed62160e-15c2-4449-a737-4218ec33810b" />
+
+---
+
+#### Bounded Context: Notifications
+
+Este contexto gestiona las notificaciones personales del usuario dentro de la plataforma.
+
+| Método | Endpoint                                         | Función                                     | Auth / Rol |
+|--------|--------------------------------------------------|---------------------------------------------|-----------|
+| GET    | `/api/notifications`                             | Listar mis notificaciones                   | JWT       |
+| DELETE | `/api/notifications/{notificationId}`            | Eliminar una notificación del usuario       | JWT       |
+
+<img width="1640" height="205" alt="Captura de pantalla 2025-12-02 171821" src="https://github.com/user-attachments/assets/30939e60-cb39-4893-bb9a-da1c0c22bdfe" />
 
 ##### 4.2.3.5. Execution Evidence for Sprint Review 
 
