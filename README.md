@@ -111,6 +111,9 @@ Noviembre, 2025
         <br><br>
         <strong>Cameron Bustamante - TB2:</strong><br>
         Me enfoqué en la <strong>corrección y optimización del User Flow</strong> de la aplicación, analizando los flujos de navegación, validando la coherencia entre pantallas y mejorando la experiencia del usuario final. Apliqué principios de <em>User Experience</em> y técnicas de diseño centrado en el usuario para simplificar la interacción y reducir fricciones en la navegación general.
+         <br><br>
+        <strong>Cameron Bustamante - TF:</strong><br>
+   Me enfoqué en la mejora de la aplicación, revisando y optimizando los flujos de navegación para asegurar que las rutas entre pantallas fueran coherentes, simples y fáciles de entender para el usuario. Para ello, apliqué principios de UX como consistencia, reducción de fricción y claridad en los puntos de decisión.
       </td>
       <td>
         <strong>TB1:</strong><br>
@@ -167,6 +170,9 @@ Noviembre, 2025
         <br><br>
          <strong>Cameron Bustamante - TB2:</strong><br>
         Al realizar la corrección del User Flow, adquirí nuevos conocimientos sobre análisis de experiencia de usuario y validación de flujos interactivos. Este proceso me reafirmó la importancia de mantener una actitud de aprendizaje constante para adaptar las decisiones de diseño a las necesidades cambiantes de los usuarios y del producto
+               <br><br>
+         <strong>Cameron Bustamante - TF:</strong><br>
+      Durante la corrección de identifiqué áreas donde era necesario actualizar mis conocimientos sobre flujos de interacción, patrones modernos de navegación y heurísticas de usabilidad.
       </td>
       <td>
         <strong>TB1:</strong><br>
